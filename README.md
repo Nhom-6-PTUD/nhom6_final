@@ -1,4 +1,6 @@
-# A-Responsive-Ecommerce-Website-Project
-A Responsive Ecommerce Website Project With HTML CSS JavaScript
+# Nhóm 6 | Project Cuối Kỳ
+Link source code tham khảo: https://github.com/billalben/evara-ecommerce <br>
 
-[View Demo](https://billalben.github.io/evara-ecommerce/)
+Link source admin: <br>
+
+Link figma: 
