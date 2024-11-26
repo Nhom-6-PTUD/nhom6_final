@@ -4,25 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== FLATICON ===============-->
+    <!--Cài đặt thư viện Flaticon-->
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
     />
 
-    <!--=============== SWIPER CSS ===============-->
+    <!--Cài đặt thư viện Swiper CSS-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <!--=============== CSS ===============-->
+    <!--Liên kết đến file CSS-->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
     <title>Ecommerce Website</title>
   </head>
   <body>
     <!--=============== HEADER ===============-->
+    <!--Thông tin trang web-->
     <header class="header">
       <div class="header__top">
         <div class="header__container container">
@@ -39,6 +40,7 @@
         </div>
       </div>
 
+      <!--Gắn logo trang web-->
       <nav class="nav container">
         <a href="index.html" class="nav__logo">
           <img
@@ -102,7 +104,7 @@
 
     <!--=============== MAIN ===============-->
     <main class="main">
-      <!--=============== HOME ===============-->
+      <!--=============== TRANG CHỦ ===============-->
       <section class="home section--lg">
         <div class="home__container container grid">
           <div class="home__content">
@@ -119,9 +121,10 @@
         </div>
       </section>
 
-      <!--=============== CATEGORIES ===============-->
+      <!--=============== DANH MỤC SẢN PHẨM ===============-->
       <section class="categories container section">
         <h3 class="section__title"><span>Popular</span> Categories</h3>
+        <!--Slider hiển thị các danh mục sản phẩm phổ biến với chức năng cuộn trái/phải-->
         <div class="categories__container swiper">
           <div class="swiper-wrapper">
             <a href="shop.html" class="category__item swiper-slide">
@@ -212,6 +215,7 @@
         <div class="tab__items">
           <div class="tab__item active-tab" content id="featured">
             <div class="products__container grid">
+              <!--Trình bày sản phẩm với hình ảnh, tên và giá-->
               <div class="product__item">
                 <div class="product__banner">
                   <a href="details.html" class="product__images">
