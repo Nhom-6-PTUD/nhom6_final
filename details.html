@@ -4,19 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== FLATICON ===============-->
+    <!--========Cài đặt thư viện Flaticon=========-->
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
     />
 
-    <!--=============== SWIPER CSS ===============-->
+    <!--==========Cài đặt thư viện Swiper CSS======-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <!--=============== CSS ===============-->
+    <!--=====Liên kết đến file CSS======-->
     <link rel="stylesheet" href="./assets/css/styles.css" />
 
     <title>Ecommerce Website</title>
@@ -24,6 +24,7 @@
   <body>
     <!--=============== HEADER ===============-->
     <header class="header">
+       <!--Thông tin trang web-->
       <div class="header__top">
         <div class="header__container container">
           <div class="header__contact">
@@ -38,7 +39,7 @@
           </a>
         </div>
       </div>
-
+ <!--Gắn logo trang web-->
       <nav class="nav container">
         <a href="index.html" class="nav__logo">
           <img
@@ -91,7 +92,7 @@
 
     <!--=============== MAIN ===============-->
     <main class="main">
-      <!--=============== BREADCRUMB ===============-->
+         <!--=============== Tạo hướng dẫn điều hướng===============-->
       <section class="breadcrumb">
         <ul class="breadcrumb__list flex container">
           <li><a href="index.html" class="breadcrumb__link">Home</a></li>
@@ -102,9 +103,10 @@
         </ul>
       </section>
 
-      <!--=============== DETAILS ===============-->
+      <!--=============== CHI TIẾT SẢN PHẨM ===============-->
       <section class="details section--lg">
         <div class="details__container container grid">
+             <!-- Nhóm đầu tiên: Hình ảnh sản phẩm -->
           <div class="details__group">
             <img
               src="./assets/img/product-8-1.jpg"
@@ -129,6 +131,7 @@
               />
             </div>
           </div>
+           <!-- Nhóm thứ hai: Thông tin chi tiết sản phẩm -->
           <div class="details__group">
             <h3 class="details__title">Henley Shirt</h3>
             <p class="details__brand">Brand: <span>adidas</span></p>
@@ -155,6 +158,7 @@
                 <i class="fi-rs-credit-card"></i> Cash on Delivery available
               </li>
             </ul>
+              <!-- Lựa chọn màu sắc sản phẩm -->
             <div class="details__color flex">
               <span class="details__color-title">Color</span>
               <ul class="color__list">
@@ -195,6 +199,7 @@
                 </li>
               </ul>
             </div>
+               <!-- Lựa chọn kích thước sản phẩm -->
             <div class="details__size flex">
               <span class="details__size-title">Size</span>
               <ul class="size__list">
@@ -212,6 +217,7 @@
                 </li>
               </ul>
             </div>
+             <!-- Hành động thêm vào giỏ hàng -->
             <div class="details__action">
               <input type="number" class="quantity" value="3" />
               <a href="#" class="btn btn--sm">Add To Card</a>
@@ -232,9 +238,10 @@
         </div>
       </section>
 
-      <!--=============== DETAILS TAB ===============-->
+      <!--========= CÁC TAB LIÊN QUAN TRONG CHI TIẾT SẢN PHẨM ==========-->
       <section class="details__tab container">
         <div class="detail__tabs">
+           <!-- Các nút để chuyển đổi giữa các nội dung tab -->
           <span class="detail__tab active-tab" data-target="#info">
             Additional Info
           </span>
@@ -301,6 +308,7 @@
               </tr>
             </table>
           </div>
+           <!-- Khu vực hiển thị các đánh giá -->
           <div class="details__tab-content" content id="reviews">
             <div class="reviews__container grid">
               <div class="review__single">
@@ -335,6 +343,7 @@
                   />
                   <h4 class="review__title">Meriem Js</h4>
                 </div>
+        <!--Hiển thị Xếp hạng 5 sao -->
                 <div class="review__data">
                   <div class="review__rating">
                     <i class="fi fi-rs-star"></i>
@@ -383,6 +392,7 @@
                 <i class="fi fi-rs-star"></i>
                 <i class="fi fi-rs-star"></i>
               </div>
+               <!-- Form nhập thông tin đánh giá -->
               <form action="" class="form grid">
                 <textarea
                   class="form__input textarea"
@@ -401,7 +411,7 @@
         </div>
       </section>
 
-      <!--=============== PRODUCTS ===============-->
+      <!--=============== DANH MỤC SẢN PHẨM ===============-->
       <section class="products container section--lg">
         <h3 class="section__title"><span>Related</span> Products</h3>
         <div class="products__container grid">
@@ -419,6 +429,7 @@
                   class="product__img hover"
                 />
               </a>
+                <!-- Các hành động của sản phẩm -->
               <div class="product__actions">
                 <a href="#" class="action__btn" aria-label="Quick View">
                   <i class="fi fi-rs-eye"></i>
@@ -436,11 +447,13 @@
               </div>
               <div class="product__badge light-pink">Hot</div>
             </div>
+             <!-- Nội dung sản phẩm -->
             <div class="product__content">
               <span class="product__category">Clothing</span>
               <a href="details.html">
                 <h3 class="product__title">Colorful Pattern Shirts</h3>
               </a>
+                <!-- Hiển thị đánh giá sản phẩm bằng sao -->
               <div class="product__rating">
                 <i class="fi fi-rs-star"></i>
                 <i class="fi fi-rs-star"></i>
@@ -452,6 +465,7 @@
                 <span class="new__price">$238.85</span>
                 <span class="old__price">$245.8</span>
               </div>
+                 <!-- Nút thêm vào giỏ hàng -->
               <a
                 href="#"
                 class="action__btn cart__btn"
@@ -461,6 +475,7 @@
               </a>
             </div>
           </div>
+          
           <div class="product__item">
             <div class="product__banner">
               <a href="details.html" class="product__images">
@@ -632,7 +647,7 @@
         </div>
       </section>
 
-      <!--=============== NEWSLETTER ===============-->
+      <!--=============== Bảng tin điện tử cửa hàng  ===============-->
       <section class="newsletter section">
         <div class="newsletter__container container grid">
           <h3 class="newsletter__title flex">
@@ -661,6 +676,7 @@
     <!--=============== FOOTER ===============-->
     <footer class="footer container">
       <div class="footer__container grid">
+        <!-- Phần logo và thông tin liên hệ -->
         <div class="footer__content">
           <a href="index.html" class="footer__logo">
             <img src="./assets/img/logo.svg" alt="" class="footer__logo-img" />
@@ -675,6 +691,7 @@
           <p class="footer__description">
             <span>Hours:</span> 10:00 - 18:00, Mon - Sat
           </p>
+            <!-- Mạng xã hội -->
           <div class="footer__social">
             <h4 class="footer__subtitle">Follow Me</h4>
             <div class="footer__links flex">
@@ -716,6 +733,7 @@
             </div>
           </div>
         </div>
+          <!-- Liên kết địa chỉ và thông tin liên hệ của cửa hàng -->
         <div class="footer__content">
           <h3 class="footer__title">Address</h3>
           <ul class="footer__links">
