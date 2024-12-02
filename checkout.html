@@ -126,76 +126,69 @@
               ></textarea>
             </form>
           </div>
+          
             <!--  Thông tin thanh toán chi tiết -->
-          <div class="checkout__group">
-            <h3 class="section__title">Tổng đơn</h3>
-            <table class="order__table">
-              <thead>
-                <tr>
-                  <th colspan="3">Tên sản phẩm</th>
-                    <th>Số lượng</th>
-                  <th>Tổng tiền</th>
-                
-                </tr>
-              </thead>
+         <table class="order__table">
+  <thead>
+    <tr>
+      <th style="width: 15%;">Hình ảnh</th>
+      <th style="width: 40%;">Tên sản phẩm</th>
+      <th style="width: 15%;">Số lượng</th>
+      <th style="width: 30%;">Tổng tiền</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <img
+          src="https://scontent.fsgn2-11.fna.fbcdn.net/v/t39.30808-6/467342373_122117435714564247_147268966889359253_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=J7f0WvtNK4QQ7kNvgGO-ONz&_nc_zt=23&_nc_ht=scontent.fsgn2-11.fna&_nc_gid=AIZXw8bjTduZYK-MdwxDdMN&oh=00_AYD6bMmgoU9S1UWttK1CZNrd2KD8o5cLcPwKhOYaJabjJw&oe=675346C0"
+          alt="Bellini Hair Clip"
+          class="order__img"
+        />
+      </td>
+      <td>
+        <h3 class="table__title">Bellini Hair Clip</h3>
+      </td>
+      <td>
+        <p class="table__quantity">1</p>
+      </td>
+      <td>
+        <span class="table__price">45.000 VNĐ</span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img
+          src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/463664346_122105504042564247_1312733669050435022_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=KZ4X03vaabkQ7kNvgFcp9Sa&_nc_zt=23&_nc_ht=scontent.fsgn2-6.fna&_nc_gid=AQQJeqMa-ZlNuqxMzJZlgaQ&oh=00_AYBoTB1HbyFHdvBv7XJAUCU9YmZURvHL151p0T3htYjFKQ&oe=6753613F"
+          alt="Pinky Lady Hair Clip"
+          class="order__img"
+        />
+      </td>
+      <td>
+        <h3 class="table__title">Pinky Lady Hair Clip</h3>
+      </td>
+      <td>
+        <p class="table__quantity">1</p>
+      </td>
+      <td>
+        <span class="table__price">45.000 VNĐ</span>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3"><span class="order__subtitle">Tổng tiền</span></td>
+      <td><span class="table__price">90.000 VNĐ</span></td>
+    </tr>
+    <tr>
+      <td colspan="3"><span class="order__subtitle">Phí vận chuyển</span></td>
+      <td><span class="table__price">35.000 VNĐ</span></td>
+    </tr>
+    <tr>
+      <td colspan="3"><span class="order__subtitle">Thành tiền</span></td>
+      <td><span class="order__grand-total">125.000 VNĐ</span></td>
+    </tr>
+  </tbody>
+</table>
 
-              <tbody>
-                <tr>
-                  <td>
-                    <img
-                      src="https://scontent.fsgn2-11.fna.fbcdn.net/v/t39.30808-6/467342373_122117435714564247_147268966889359253_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=J7f0WvtNK4QQ7kNvgGO-ONz&_nc_zt=23&_nc_ht=scontent.fsgn2-11.fna&_nc_gid=AIZXw8bjTduZYK-MdwxDdMN&oh=00_AYD6bMmgoU9S1UWttK1CZNrd2KD8o5cLcPwKhOYaJabjJw&oe=675346C0"
-                      alt=""
-                      class="order__img"
-                    />
-                  </td>
-                  <td>
-                    <h3 class="table__title">Bellini Hair Clip</h3>
-                    <p class="table__quantity"> 1 </p>
-                  </td>
-                 <td> 
-                   <p class="table__quantity"> 1 </p>
-                 </td>
-                  <td><span class="table__price"> 45.000 VNĐ </span></td>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/463664346_122105504042564247_1312733669050435022_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=KZ4X03vaabkQ7kNvgFcp9Sa&_nc_zt=23&_nc_ht=scontent.fsgn2-6.fna&_nc_gid=AQQJeqMa-ZlNuqxMzJZlgaQ&oh=00_AYBoTB1HbyFHdvBv7XJAUCU9YmZURvHL151p0T3htYjFKQ&oe=6753613F"
-                      alt=""
-                      class="order__img"
-                    />
-                  </td>
-                  <td>
-                    <h3 class="table__title">Pinky Lady Hair Clip</h3>
-               
-                  </td>
-                   <td> 
-                   <p class="table__quantity"> 1 </p>
-                   </td>
-                  <td>
-                    <span class="table__price"> 45.000 VNĐ </span>
-                  </td>
-                </tr>
-                <tr>
-                
-                <tr>
-                  <td><span class="order__subtitle">Tổng tiền</span></td>
-                  <td colspan="2"><span class="table__price">90.000 VNĐ</span></td>
-                </tr>
-                <tr>
-                  <td><span class="order__subtitle">Phí vận chuyển</span></td>
-                  <td colspan="2">
-                    <span class="table__price">35.000 VNĐ</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td><span class="order__subtitle">Thành tiền</span></td>
-                  <td colspan="2">
-                    <span class="order__grand-total">90.000 VNĐ</span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
               <!-- Phần chọn phương thức thanh toán -->
             <div class="payment__methods">
               <h3 class="checkout__title payment__title">Thanh toán</h3>
