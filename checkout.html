@@ -111,14 +111,14 @@
           <div class="checkout__group">
             <h3 class="section__title">Billing Details</h3>
             <form class="form grid">
-              <input type="text" placeholder="Name" class="form__input" />
-              <input type="text" placeholder="Address" class="form__input" />
-              <input type="text" placeholder="City" class="form__input" />
-              <input type="text" placeholder="Country" class="form__input" />
-              <input type="text" placeholder="Postcode" class="form__input" />
-              <input type="text" placeholder="Phone" class="form__input" />
+              <input type="text" placeholder="Họ Tên" class="form__input" />
+              <input type="text" placeholder="Địa chỉ" class="form__input" />
+              <input type="text" placeholder="Thành phố" class="form__input" />
+              <input type="text" placeholder="Quận" class="form__input" />
+              <input type="text" placeholder="Huyện" class="form__input" />
+              <input type="text" placeholder="Số điện thoại" class="form__input" />
               <input type="email" placeholder="Email" class="form__input" />
-              <h3 class="checkout__title">Additional Information</h3>
+              <h3 class="checkout__title">Ghi chú</h3>
               <textarea
                 name=""
                 placeholder="order note"
@@ -126,14 +126,16 @@
               ></textarea>
             </form>
           </div>
-            <!--  Thông tin tổng quan giỏ hàng -->
+            <!--  Thông tin thanh toán chi tiết -->
           <div class="checkout__group">
-            <h3 class="section__title">Cart Totals</h3>
+            <h3 class="section__title">Tổng đơn</h3>
             <table class="order__table">
               <thead>
                 <tr>
-                  <th colspan="2">Products</th>
-                  <th>Total</th>
+                  <th colspan="3">Tên sản phẩm</th>
+                    <th>Số lượng</th>
+                  <th>Tổng tiền</th>
+                
                 </tr>
               </thead>
 
@@ -141,66 +143,62 @@
                 <tr>
                   <td>
                     <img
-                      src="./assets/img/product-1-2.jpg"
+                      src="https://scontent.fsgn2-11.fna.fbcdn.net/v/t39.30808-6/467342373_122117435714564247_147268966889359253_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=J7f0WvtNK4QQ7kNvgGO-ONz&_nc_zt=23&_nc_ht=scontent.fsgn2-11.fna&_nc_gid=AIZXw8bjTduZYK-MdwxDdMN&oh=00_AYD6bMmgoU9S1UWttK1CZNrd2KD8o5cLcPwKhOYaJabjJw&oe=675346C0"
                       alt=""
                       class="order__img"
                     />
                   </td>
                   <td>
-                    <h3 class="table__title">Yidarton Women Summer Blue</h3>
-                    <p class="table__quantity">x 2</p>
+                    <h3 class="table__title">Bellini Hair Clip</h3>
+                    <p class="table__quantity"> 1 </p>
                   </td>
-                  <td><span class="table__price">$180.00</span></td>
+                 <td> 
+                   <p class="table__quantity"> 1 </p>
+                 </td>
+                  <td><span class="table__price"> 45.000 VNĐ </span></td>
                 </tr>
                 <tr>
                   <td>
                     <img
-                      src="./assets/img/product-2-1.jpg"
+                      src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/463664346_122105504042564247_1312733669050435022_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=KZ4X03vaabkQ7kNvgFcp9Sa&_nc_zt=23&_nc_ht=scontent.fsgn2-6.fna&_nc_gid=AQQJeqMa-ZlNuqxMzJZlgaQ&oh=00_AYBoTB1HbyFHdvBv7XJAUCU9YmZURvHL151p0T3htYjFKQ&oe=6753613F"
                       alt=""
                       class="order__img"
                     />
                   </td>
                   <td>
-                    <h3 class="table__title">LDB Moon Summer</h3>
-                    <p class="table__quantity">x 1</p>
+                    <h3 class="table__title">Pinky Lady Hair Clip</h3>
+               
                   </td>
-                  <td><span class="table__price">$65.00</span></td>
-                </tr>
-                <tr>
+                   <td> 
+                   <p class="table__quantity"> 1 </p>
+                   </td>
                   <td>
-                    <img
-                      src="./assets/img/product-7-1.jpg"
-                      alt=""
-                      class="order__img"
-                    />
+                    <span class="table__price"> 45.000 VNĐ </span>
                   </td>
-                  <td>
-                    <h3 class="table__title">Women Short Sleeve Loose</h3>
-                    <p class="table__quantity">x 2</p>
-                  </td>
-                  <td><span class="table__price">$35.00</span></td>
                 </tr>
                 <tr>
-                  <td><span class="order__subtitle">Subtotal</span></td>
-                  <td colspan="2"><span class="table__price">$280.00</span></td>
+                
+                <tr>
+                  <td><span class="order__subtitle">Tổng tiền</span></td>
+                  <td colspan="2"><span class="table__price">90.000 VNĐ</span></td>
                 </tr>
                 <tr>
-                  <td><span class="order__subtitle">Shipping</span></td>
+                  <td><span class="order__subtitle">Phí vận chuyển</span></td>
                   <td colspan="2">
-                    <span class="table__price">Free Shipping</span>
+                    <span class="table__price">35.000 VNĐ</span>
                   </td>
                 </tr>
                 <tr>
-                  <td><span class="order__subtitle">Total</span></td>
+                  <td><span class="order__subtitle">Thành tiền</span></td>
                   <td colspan="2">
-                    <span class="order__grand-total">$280.00</span>
+                    <span class="order__grand-total">90.000 VNĐ</span>
                   </td>
                 </tr>
               </tbody>
             </table>
               <!-- Phần chọn phương thức thanh toán -->
             <div class="payment__methods">
-              <h3 class="checkout__title payment__title">Payment</h3>
+              <h3 class="checkout__title payment__title">Thanh toán</h3>
               <div class="payment__option flex">
                 <input
                   type="radio"
@@ -210,7 +208,7 @@
                   class="payment__input"
                 />
                 <label for="l1" class="payment__label"
-                  >Direct Bank Transfer</label
+                  >Ngân Hàng</label
                 >
               </div>
               <div class="payment__option flex">
@@ -220,7 +218,7 @@
                   id="l2"
                   class="payment__input"
                 />
-                <label for="l2" class="payment__label">Check Payment</label>
+                <label for="l2" class="payment__label">Momo</label>
               </div>
               <div class="payment__option flex">
                 <input
@@ -229,10 +227,10 @@
                   id="l3"
                   class="payment__input"
                 />
-                <label for="l3" class="payment__label">Paypal</label>
+                <label for="l3" class="payment__label">Thanh toán khi nhận hàng</label>
               </div>
             </div>
-            <button class="btn btn--md">Place Order</button>
+            <button class="btn btn--md">Đặt hàngr</button>
           </div>
         </div>
       </section>
