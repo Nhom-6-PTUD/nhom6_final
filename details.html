@@ -4,72 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--========Cài đặt thư viện Flaticon=========-->
+    <!--=============== FLATICON ===============-->
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
     />
 
-    <!--==========Cài đặt thư viện Swiper CSS======-->
+    <!--=============== SWIPER CSS ===============-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <!--=====Liên kết đến file CSS======-->
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <title>Ecommerce Website</title>
+    <title>ChicCharm Official Store</title>
   </head>
   <body>
     <!--=============== HEADER ===============-->
     <header class="header">
-       <!--Thông tin trang web-->
       <div class="header__top">
         <div class="header__container container">
           <div class="header__contact">
-            <span>(+01) - 2345 - 6789</span>
-            <span>Our location</span>
+            <span id="contact1">Merry Chrismas</span> 
           </div>
-          <p class="header__alert-news">
-            Super Values Deals - Save more coupons
-          </p>
-          <a href="login-register.html" class="header__top-action">
-            Log In / Sign Up
-          </a>
+          <p class="header__alert-news" id="news" style="color: #fa97ca">ƯU ĐÃI SIÊU GIÁ TRỊ - TIẾT KIỆM THÊM VỚI NHIỀU MÃ GIẢM GIÁ</p>
+          <a href="login-register.html" id="login-link" class="header__top-action">Đăng nhập / Đăng ký</a>
         </div>
       </div>
- <!--Gắn logo trang web-->
+      
       <nav class="nav container">
         <a href="index.html" class="nav__logo">
           <img
             class="nav__logo-img"
-            src="assets/img/logo.svg"
+            src="assets/img/1.png"
             alt="website logo"
           />
         </a>
         <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu-top">
+            <a href="index.html" class="nav__menu-logo">
+              <img src="./assets/img/logo.svg" alt="">
+            </a>
+            <div class="nav__close" id="nav-close">
+              <i class="fi fi-rs-cross-small"></i>
+            </div>
+          </div>
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="index.html" class="nav__link">Trang chủ</a>
+              <a href="index.html" class="nav__link">Trang Chủ</a>
             </li>
             <li class="nav__item">
-              <a href="shop.html" class="nav__link">Cửa hàng</a>
+              <a href="shop.html" class="nav__link active-link">Cửa Hàng</a>
             </li>
             <li class="nav__item">
-              <a href="accounts.html" class="nav__link">Tài khoản của tôi</a>
+              <a href="accounts.html" class="nav__link">Tài Khoản</a>
             </li>
             <li class="nav__item">
-              <a href="compare.html" class="nav__link">Compare</a>
-            </li>
-            <li class="nav__item">
-              <a href="login-register.html" class="nav__link">Login</a>
+              <a href="login-register.html" class="nav__link">Đăng nhập</a>
             </li>
           </ul>
           <div class="header__search">
             <input
               type="text"
-              placeholder="Search For Items..."
+              placeholder="Tìm kiếm"
               class="form__input"
             />
             <button class="search__btn">
@@ -86,6 +85,9 @@
             <img src="assets/img/icon-cart.svg" alt="" />
             <span class="count">3</span>
           </a>
+          <div class="header__action-btn nav__toggle" id="nav-toggle">
+            <img src="./assets//img/menu-burger.svg" alt="">
+          </div>
         </div>
       </nav>
     </header>
@@ -101,85 +103,139 @@
           <li><span class="breadcrumb__link"></span>></li>
           <li><span class="breadcrumb__link">Set Alcoholicity</span></li>
         </ul>
-      </section
-
+      </section>
+      
       <!--=============== CHI TIẾT SẢN PHẨM ===============-->
       <section class="details section--lg">
         <div class="details__container container grid">
-             <!-- Nhóm đầu tiên: Hình ảnh sản phẩm -->
-          <div class="details__group">
-             <!-- Hình ảnh chính của sản phẩm -->
-            <img
-              src="./assets/img/alcoholicity.png "
-              alt="Set Alcoholicity "
-              class="details__img"
-            />
-            <div class="details__small-images grid">
-              <!-- Các hình ảnh phụ của sản phẩm -->
-              <img
-                src="./assets/img/martini2.png"
-                alt="  gương cầm tay Martini"
-                class="details__small-img"
-              />
-              <img
-                src="./assets/img/martini3.png"
-                alt="gương cầm tay Martini"
-                class="details__small-img"
-              />
-              <img
-                src="./assets/img/pinklady2.png"
-                alt=" Kẹp tóc Pinky Lady"
-                class="details__small-img"
-              />
-            </div>
-          </div>
-           <!-- Nhóm thứ hai: Thông tin chi tiết sản phẩm -->
-          <div class="details__group">
-            <h3 class="details__title">Set Alcoholicity</h3>
-            <p class="details__brand">Brand <span>Chic</span></p>
-             <!-- Giá sản phẩm bao gồm giá mới, giá cũ và mức giảm giá -->
-            <div class="details__price flex">
-              <span class="new__price">95.000đ</span>
-              <span class="old__price">105.000đ</span>
-              <span class="save__price">10% Off</span>
-            </div>
-            <p class="short__description">
-               Set Alcoholicity gồm:
-              <ul> 1 gương cầm tay Martini (giá lẻ 60.000đ)</ul> 
-              <ul>1 Kẹp tóc Pinky Lady (giá lẻ 45.000đ)</ul> 
-          
-              <ul  style="border: 2px solid pink; padding: 10px; margin-top: 10px;  background-color: #ffffff; border-radius: 3px; color: #333;">
-                ✨ Đặc biệt, các quý cô sẽ được tự do lựa chọn Charm mình iu thích để gắn lên hai bé điệu này khi rinh về nha</ul>
-            </p>
-           
-             <!-- Hành động thêm vào giỏ hàng -->
-           <div class="details__action" style="margin-top: 20px;">
-                <input type="number" class="quantity" value="3" />
-                <a href="#" class="btn btn--sm">Add To Card</a>
-                <a href="#" class="details__action-btn">
-                <i class="fi fi-rs-heart"></i>
-                </a>
+          <!-- Nhóm đầu tiên: Hình ảnh sản phẩm -->
+          <div class="product-images"> 
+            <!-- Carousel chứa thumbnails -->
+              <div class="thumbnails-carousel">
+                <div class="thumbnails">
+                  <img src="assets\img\xmas_combo.jpg" alt="Set Urban Chic" class="thumbnail active">
+                  <img src="assets\img\shirleytemple.jpg" alt="Gương trái tim Shirley Temple" class="thumbnail">
+                  <img src="assets\img\bellini.jpg" alt="Kẹp tóc Bellini" class="thumbnail">
+                  <img src="assets\img\kol.jpg" alt="KOL" class="thumbnail">
                 </div>
+              </div>
+              
+              <!-- Hình ảnh chính -->
+                <div class="main-image">
+                  <img src="assets\img\xmas_combo.jpg" alt="Set Urban Chic" id="main-img">
+                </div>
+          </div>
+          
+          <!-- Nhóm thứ hai: Thông tin chi tiết sản phẩm -->
+            <div class="details__group">
+              <h3 class="details__title">Set Urban Chic</h3>
+              <!-- Giá sản phẩm bao gồm giá mới, giá cũ và mức giảm giá -->
+                <div class="details__price flex">
+                  <span class="new__price">100.000đ</span>
+                  <span class="old__price">110.000đ</span>
+                  <span class="save__price">10% Off</span>
+                </div>
+                <p class="short__description">
+                  💕 Set Urban Chic bao gồm:<br><br>
+                  ○ 1 gương cầm tay Shirley Temple (giá lẻ 65.000đ)<br>
+                  ○ 1 Kẹp tóc Bellini (giá lẻ 45.000đ)</ul> 
+                  <ul style="border: 2px solid pink; padding: 10px; margin-top: 10px;  background-color: #ffffff; border-radius: 3px; color: #333; line-height: 1.5; font-weight: bold;">
+                    ✨ Đặc biệt, các quý cô sẽ được tự do lựa chọn Charm mình iu thích để gắn lên hai bé điệu này khi rinh về nha!</ul>
+                </p><br><br>
+
+                <ul class="products__list">
+                  <li class="list__item flex">
+                    <i class="fi-rs-crown"></i> Bảo hành keo sản phẩm 1 tháng
+                  </li>
+                  <li class="list__item flex">
+                    <i class="fi-rs-refresh"></i> 1 Đổi 1 cho sản phẩm lỗi
+                  </li>
+                </ul>
+                <div class="details__color flex">
+                  <span class="details__lettercharm-title">Chọn màu charm chữ:</span>
+                  <ul class="color__list">
+                    <li>
+                      <a
+                        href="#"
+                        class="color__link active-link"
+                        style="background-color: #ffb2dbb6"
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="color__link"
+                        style="background-color: hsl(206, 98%, 83%)"
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="color__link"
+                        style="background-color: #000000"
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div class="details__color flex">
+                  <span class="details__letterinput-title">Điền tên custom:</span>
+                  <ul class="color__list">
+                    <input
+                    type="text"
+                    placeholder="Tối đa 6 ký tự"
+                    class="form__input"
+                  />
+                  </ul>
+                </div>
+                
+                <div class="details__size flex">
+                  <span class="details__decorcharm-title">Chọn charm hình:</span>
+                  <ul class="size__list">
+                    <li>
+                      <a href="#" class="size__link size-active">Charm nơ</a>
+                    </li>
+                    <li>
+                      <a href="#" class="size__link">Charm bướm</a>
+                    </li>
+                    <li>
+                      <a href="#" class="size__link">Charm vỏ sò</a>
+                    </li>
+                    <li>
+                      <a href="#" class="size__link">Charm sao biển</a>
+                    </li>
+                  </ul>
+                </div>
+                
+                <!-- Hành động thêm vào giỏ hàng -->
+                  <div class="details__action" style="margin-top: 20px;">
+                    <input type="number" class="quantity" value="1" />
+                    <a href="#" class="btn btn--sm">Thêm vào giỏ hàng</a>
+                    <a href="#" class="details__action-btn">
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+                  </div>
       </section>
-              <!--========= CÁC MỤC ĐỂ XEM THÊM THÔNG TIN ==========-->
-     <section class="details__tab container">
+ 
+      <!--========= CÁC MỤC ĐỂ XEM THÊM THÔNG TIN ==========-->
+      <section class="details__tab container">
         <!-- Phân chia 2 tab chính là Xem thêm thông tin và Đánh giá -->
         <div class="detail__tabs">
           <span class="detail__tab active-tab" data-target="#info">
-           Xem thêm thông tin
+           Thông Tin Sản Phẩm
           </span>
-          <span class="detail__tab" data-target="#reviews">Đánh giá(3)</span>
+          <span class="detail__tab" data-target="#reviews">Đánh Giá (3)</span>
         </div>
         <div class="details__tabs-content">
           <div class="details__tab-content active-tab" content id="info">
             <table class="info__table">
               <tr>
-                <th>Tên set</th>
-                <td> Set Alcoholicity</td>
+                <th>Tên Set</th>
+                <td>Set Urban Chic</td>
               </tr>
               <tr>
                 <th>Bao gồm</th>
-                <td> 1 gương cầm tay Martini, 1 Kẹp tóc Pinky Lady </td>
+                <td>1 gương cầm tay Shirley Temple, 1 kẹp tóc Bellini</td>
               </tr>
               <tr>
                 <th>Màu sắc</th>
@@ -187,7 +243,7 @@
               </tr>
               <tr>
                 <th>Charm</th>
-                <td>Chữ và hình tự chọn</td>
+                <td>Charm chữ và hình tự chọn</td>
               </tr>
             </table>
             <ul class="details__tabs-content" style="padding-left: 20px; line-height: 1.8;">
@@ -303,7 +359,7 @@
 
       <!--=============== DANH MỤC SẢN PHẨM ===============-->
       <section class="products container section--lg">
-        <!==========Hiển thị sản phẩm tương tự===============>
+        <!--==========Hiển thị sản phẩm tương tự===============>-->
         <h3 class="section__title"><span>Sản phẩm tương tự</span>
         <div class="products__container grid">
           <div class="product__item">

@@ -4,74 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <!--Cài đặt thư viện Flaticon-->
+    <!--=============== FLATICON ===============-->
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
     />
 
-     <!--Cài đặt thư viện Swiper CSS-->
+    <!--=============== SWIPER CSS ===============-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <!--Liên kết đến file CSS-->
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <title>Ecommerce Website</title>
+    <title>ChicCharm Official Store</title>
   </head>
-  <body> 
-    <!--Thông tin trang web-->
+  <body>
+    <!--=============== HEADER ===============-->
     <header class="header">
       <div class="header__top">
         <div class="header__container container">
           <div class="header__contact">
-            <span>(+01) - 2345 - 6789</span>
-            <span>Our location</span>
+            <span id="contact1">Merry Chrismas</span> 
           </div>
-          <p class="header__alert-news">
-            Super Values Deals - Save more coupons
-          </p>
-          <a href="login-register.html" class="header__top-action">
-            Log In / Sign Up
-          </a>
+          <p class="header__alert-news" id="news" style="color: #fa97ca">ƯU ĐÃI SIÊU GIÁ TRỊ - TIẾT KIỆM THÊM VỚI NHIỀU MÃ GIẢM GIÁ</p>
+          <a href="login-register.html" id="login-link" class="header__top-action">Đăng nhập / Đăng ký</a>
         </div>
       </div>
       
- <!--Gắn logo trang web-->
       <nav class="nav container">
         <a href="index.html" class="nav__logo">
           <img
             class="nav__logo-img"
-            src="assets/img/logo.svg"
+            src="assets/img/1.png"
             alt="website logo"
           />
         </a>
         <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu-top">
+            <a href="index.html" class="nav__menu-logo">
+              <img src="./assets/img/logo.svg" alt="">
+            </a>
+            <div class="nav__close" id="nav-close">
+              <i class="fi fi-rs-cross-small"></i>
+            </div>
+          </div>
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="index.html" class="nav__link">Home</a>
+              <a href="index.html" class="nav__link">Trang Chủ</a>
             </li>
             <li class="nav__item">
-              <a href="shop.html" class="nav__link">Shop</a>
+              <a href="shop.html" class="nav__link">Cửa Hàng</a>
             </li>
             <li class="nav__item">
-              <a href="accounts.html" class="nav__link">My Account</a>
+              <a href="accounts.html" class="nav__link">Tài Khoản</a>
             </li>
             <li class="nav__item">
-              <a href="compare.html" class="nav__link">Compare</a>
-            </li>
-            <li class="nav__item">
-              <a href="login-register.html" class="nav__link active-link"
-                >Login</a
-              >
+              <a href="login-register.html" class="nav__link">Đăng nhập</a>
             </li>
           </ul>
           <div class="header__search">
             <input
               type="text"
-              placeholder="Search For Items..."
+              placeholder="Tìm kiếm..."
               class="form__input"
             />
             <button class="search__btn">
@@ -88,20 +85,25 @@
             <img src="assets/img/icon-cart.svg" alt="" />
             <span class="count">3</span>
           </a>
+          <div class="header__action-btn nav__toggle" id="nav-toggle">
+            <img src="./assets//img/menu-burger.svg" alt="">
+          </div>
         </div>
       </nav>
     </header>
-
+    
     <!--=============== MAIN ===============-->
     <main class="main">
       <!--=============== Tạo hướng dẫn điều hướng tại trang chủ ===============-->
       <section class="breadcrumb">
         <ul class="breadcrumb__list flex container">
-          <li><a href="index.html" class="breadcrumb__link">Home</a></li>
+          <li><a href="index.html" class="breadcrumb__link">Trang Chủ</a></li>
           <li><span class="breadcrumb__link">></span></li>
-          <li><span class="breadcrumb__link">Shop</span></li>
+          <li><span class="breadcrumb__link">Cửa Hàng</span></li>
           <li><span class="breadcrumb__link">></span></li>
-          <li><span class="breadcrumb__link">Checkout</span></li>
+          <li><span class="breadcrumb__link">Giỏ Hàng</span></li>
+          <li><span class="breadcrumb__link">></span></li>
+          <li><span class="breadcrumb__link">Thanh Toán</span></li>
         </ul>
       </section>
 
@@ -109,7 +111,7 @@
       <section class="checkout section--lg">
         <div class="checkout__container container grid">
           <div class="checkout__group">
-            <h3 class="section__title">Thông tin thanh toán</h3>
+            <h3 class="section__title">THÔNG TIN GIAO HÀNG</h3>
             <form class="form grid">
               <input type="text" placeholder="Họ Tên" class="form__input" />
               <input type="text" placeholder="Địa chỉ" class="form__input" />
@@ -122,77 +124,102 @@
                 class="form__input textarea"
               ></textarea>
             </form>
+            <div>
+              <div class="cart__coupon">
+                <h3 class="section__title">Mã Giảm Giá</h3>
+                <form action="" class="coupon__form form grid">
+                  <div class="form__group grid">
+                    <input
+                      type="text"
+                      class="form__input"
+                      placeholder="Nhập mã giảm giá"
+                    />
+                    <div class="form__btn">
+                      <button class="btn flex btn--sm">
+                        <i class="fi-rs-label"></i> Áp Dụng
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
           
-            <!--  Thông tin thanh toán chi tiết -->
-              <div class="checkout__group">
-                  <h3 class="section__title">Tổng đơn</h3>
-         <table class="order__table">
-  <thead>
-    <tr>
-      <th style="width: 15%;">Hình ảnh</th>
-      <th style="width: 40%;">Tên sản phẩm</th>
-      <th style="width: 15%;">Số lượng</th>
-      <th style="width: 30%;">Tổng tiền</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <img
-          src="https://scontent.fsgn2-11.fna.fbcdn.net/v/t39.30808-6/467342373_122117435714564247_147268966889359253_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=J7f0WvtNK4QQ7kNvgGO-ONz&_nc_zt=23&_nc_ht=scontent.fsgn2-11.fna&_nc_gid=AIZXw8bjTduZYK-MdwxDdMN&oh=00_AYD6bMmgoU9S1UWttK1CZNrd2KD8o5cLcPwKhOYaJabjJw&oe=675346C0"
-          alt="Bellini Hair Clip"
-          class="order__img"
-        />
-      </td>
-      <td>
-        <h3 class="table__title">Bellini Hair Clip</h3>
-      </td>
-      <td>
-        <p class="table__quantity">1</p>
-      </td>
-      <td>
-        <span class="table__price">45.000 VNĐ</span>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <img
-          src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/463664346_122105504042564247_1312733669050435022_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=KZ4X03vaabkQ7kNvgFcp9Sa&_nc_zt=23&_nc_ht=scontent.fsgn2-6.fna&_nc_gid=AQQJeqMa-ZlNuqxMzJZlgaQ&oh=00_AYBoTB1HbyFHdvBv7XJAUCU9YmZURvHL151p0T3htYjFKQ&oe=6753613F"
-          alt="Pinky Lady Hair Clip"
-          class="order__img"
-        />
-      </td>
-      <td>
-        <h3 class="table__title">Pinky Lady Hair Clip</h3>
-      </td>
-      <td>
-        <p class="table__quantity">1</p>
-      </td>
-      <td>
-        <span class="table__price">45.000 VNĐ</span>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="3"><span class="order__subtitle">Tổng tiền</span></td>
-      <td><span class="table__price">90.000 VNĐ</span></td>
-    </tr>
-    <tr>
-      <td colspan="3"><span class="order__subtitle">Phí vận chuyển</span></td>
-      <td><span class="table__price">35.000 VNĐ</span></td>
-    </tr>
-    <tr>
-      <td colspan="3"><span class="order__subtitle">Thành tiền</span></td>
-      <td><span class="order__grand-total">125.000 VNĐ</span></td>
-    </tr>
-  </tbody>
-</table>
+          <!--  Thông tin thanh toán chi tiết -->
+            <div class="checkout__group">
+              <h3 class="section__title">TỔNG ĐƠN HÀNG</h3>
+              <table class="order__table">
+                <thead>
+                  <tr>
+                    <th style="width: 15%;">Hình ảnh</th>
+                    <th style="width: 40%;">Tên sản phẩm</th>
+                    <th style="width: 15%;">Số lượng</th>
+                    <th style="width: 30%;">Tổng tiền</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <img src="assets\img\xmas_combo.jpg" alt="" class="table__img"/>
+                    </td>
+                    <td>
+                      <h3 class="table__title">Set Urban Chic</h3>
+                    </td>
+                    <td>
+                      <p class="table__quantity">1</p>
+                    </td>
+                    <td>
+                      <span class="table__price">100.000₫</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="assets\img\shirleytemple.jpg" alt="" class="table__img"/>
+                    </td>
+                    <td>
+                      <h3 class="table__title">Shirley Temple Mirror</h3>
+                    </td>
+                    <td>
+                      <p class="table__quantity">1</p>
+                    </td>
+                    <td>
+                      <span class="table__price">65.000₫</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="assets\img\pinklady2.jpg" alt="" class="table__img"/>
+                    </td>
+                    <td>
+                      <h3 class="table__title">Pinky Lady Hair Clip</h3>
+                    </td>
+                    <td>
+                      <p class="table__quantity">2</p>
+                    </td>
+                    <td>
+                      <span class="table__price">90.000₫</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"><span class="order__subtitle">Tổng tiền</span></td>
+                    <td><span class="table__price">255.000₫</span></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"><span class="order__subtitle">Phí vận chuyển</span></td>
+                    <td><span class="table__price">25.000₫</span></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"><span class="order__subtitle">Thành tiền</span></td>
+                    <td><span class="order__grand-total">280.000₫</span></td>
+                  </tr>
+                </tbody>
+              </table>
 
               <!-- Phần chọn phương thức thanh toán -->
           
             <div class="payment__methods">
               
-              <h3 class="checkout__title payment__title">Thanh toán</h3>
+              <h3 class="checkout__title payment__title">Chọn Phương Thức Thanh Toán:</h3>
               <div class="payment__option flex">
                 <input
                   type="radio"
@@ -202,7 +229,7 @@
                   class="payment__input"
                 />
                 <label for="l1" class="payment__label"
-                  >Ngân Hàng</label
+                  >Chuyển khoản ngân hàng</label
                 >
               </div>
               <div class="payment__option flex">
@@ -221,10 +248,10 @@
                   id="l3"
                   class="payment__input"
                 />
-                <label for="l3" class="payment__label">Thanh toán khi nhận hàng</label>
+                <label for="l3" class="payment__label">Thanh toán khi nhận hàng (COD)</label>
               </div>
             </div>
-            <button class="btn btn--md">Đặt hàng</button>
+            <button class="btn btn--md">Đặt Hàng</button>
           </div>
         </div>
       
@@ -341,7 +368,7 @@
         </div>
          <!-- Liên kết tài khoản -->
         <div class="footer__content">
-          <h3 class="footer__title">Secured Payed Gateways</h3>
+          <h3 class="footer__title">Chấp nhận thanh toán</h3>
           <img
             src="./assets/img/payment-method.png"
             alt=""
@@ -350,8 +377,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="copyright">&copy; 2024 Evara. All right reserved</p>
-        <span class="designer">Designer by Crypticalcoder</span>
+        <p class="copyright">&copy; 2024 ChicCharm. All right reserved.</p>
       </div>
     </footer>
 

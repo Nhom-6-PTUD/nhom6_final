@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
     <!--=============== FLATICON ===============-->
     <link
       rel="stylesheet"
@@ -17,9 +18,9 @@
     />
 
     <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <title>Ecommerce Website</title>
+    <title>ChicCharm Official Store</title>
   </head>
   <body>
     <!--=============== HEADER ===============-->
@@ -27,48 +28,48 @@
       <div class="header__top">
         <div class="header__container container">
           <div class="header__contact">
-            <span>(+01) - 2345 - 6789</span>
-            <span>Our location</span>
+            <span id="contact1">Merry Chrismas</span> 
           </div>
-          <p class="header__alert-news">
-            Super Values Deals - Save more coupons
-          </p>
-          <a href="login-register.html" class="header__top-action">
-            Log In / Sign Up
-          </a>
+          <p class="header__alert-news" id="news" style="color: #fa97ca">ƯU ĐÃI SIÊU GIÁ TRỊ - TIẾT KIỆM THÊM VỚI NHIỀU MÃ GIẢM GIÁ</p>
+          <a href="login-register.html" id="login-link" class="header__top-action">Đăng nhập / Đăng ký</a>
         </div>
       </div>
-
+  
       <nav class="nav container">
         <a href="index.html" class="nav__logo">
           <img
             class="nav__logo-img"
-            src="assets/img/logo.svg"
+            src="assets/img/1.png"
             alt="website logo"
           />
         </a>
         <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu-top">
+            <a href="index.html" class="nav__menu-logo">
+              <img src="./assets/img/logo.svg" alt="">
+            </a>
+            <div class="nav__close" id="nav-close">
+              <i class="fi fi-rs-cross-small"></i>
+            </div>
+          </div>
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="index.html" class="nav__link">Home</a>
+              <a href="index.html" class="nav__link">Trang Chủ</a>
             </li>
             <li class="nav__item">
-              <a href="shop.html" class="nav__link">Shop</a>
+              <a href="shop.html" class="nav__link">Cửa Hàng</a>
             </li>
             <li class="nav__item">
-              <a href="accounts.html" class="nav__link">My Account</a>
+              <a href="accounts.html" class="nav__link">Tài Khoản</a>
             </li>
             <li class="nav__item">
-              <a href="compare.html" class="nav__link">Compare</a>
-            </li>
-            <li class="nav__item">
-              <a href="login-register.html" class="nav__link">Login</a>
+              <a href="login-register.html" class="nav__link">Đăng nhập</a>
             </li>
           </ul>
           <div class="header__search">
             <input
               type="text"
-              placeholder="Search For Items..."
+              placeholder="Tìm kiếm..."
               class="form__input"
             />
             <button class="search__btn">
@@ -85,6 +86,9 @@
             <img src="assets/img/icon-cart.svg" alt="" />
             <span class="count">3</span>
           </a>
+          <div class="header__action-btn nav__toggle" id="nav-toggle">
+            <img src="./assets//img/menu-burger.svg" alt="">
+          </div>
         </div>
       </nav>
     </header>
@@ -94,179 +98,134 @@
       <!--=============== BREADCRUMB ===============-->
       <section class="breadcrumb">
         <ul class="breadcrumb__list flex container">
-          <li><a href="index.html" class="breadcrumb__link">Home</a></li>
+          <li><a href="index.html" class="breadcrumb__link">Trang Chủ</a></li>
           <li><span class="breadcrumb__link"></span>></li>
-          <li><span class="breadcrumb__link">Shop</span></li>
+          <li><span class="breadcrumb__link">Cửa Hàng</span></li>
           <li><span class="breadcrumb__link"></span>></li>
-          <li><span class="breadcrumb__link">Cart</span></li>
+          <li><span class="breadcrumb__link">Giỏ Hàng</span></li>
         </ul>
       </section>
+      
+      <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+      
+        .header h1 {
+            margin: 25px 0 10px;
+            font-size: 30px;
+            color: #333;
+        }
+        .header h4 {
+            text-decoration: underline;
+            color: hsla(328, 100%, 57%, 0.712);
+            font-size: 15px;
+        }
+        .header h4:hover {
+            text-decoration: underline;
+            color: hsl(328, 80%, 44%);
+        }
 
-      <!--=============== CART ===============-->
-      <section class="cart section--lg container">
-        <div class="table__container">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Subtotal</th>
-                <th>Rename</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <img
-                    src="./assets//img/product-1-2.jpg"
-                    alt=""
-                    class="table__img"
-                  />
-                </td>
-                <td>
-                  <h3 class="table__title">
-                    J.Crew Mercantile Women's Short-Sleeve
-                  </h3>
-                  <p class="table__description">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </p>
-                </td>
-                <td>
-                  <span class="table__price">$110</span>
-                </td>
-                <td><input type="number" value="3" class="quantity" /></td>
-                <td><span class="subtotal">$220</span></td>
-                <td><i class="fi fi-rs-trash table__trash"></i></td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="./assets//img/product-7-1.jpg"
-                    alt=""
-                    class="table__img"
-                  />
-                </td>
-                <td>
-                  <h3 class="table__title">Amazon Essentials Women's Tank</h3>
-                  <p class="table__description">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </p>
-                </td>
-                <td>
-                  <span class="table__price">$110</span>
-                </td>
-                <td><input type="number" value="3" class="quantity" /></td>
-                <td><span class="subtotal">$220</span></td>
-                <td><i class="fi fi-rs-trash table__trash"></i></td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="./assets//img/product-2-1.jpg"
-                    alt=""
-                    class="table__img"
-                  />
-                </td>
-                <td>
-                  <h3 class="table__title">
-                    Amazon Brand - Daily Ritual Women's Jersey
-                  </h3>
-                  <p class="table__description">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </p>
-                </td>
-                <td>
-                  <span class="table__price">$110</span>
-                </td>
-                <td><input type="number" value="3" class="quantity" /></td>
-                <td><span class="subtotal">$220</span></td>
-                <td><i class="fi fi-rs-trash table__trash"></i></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="cart__actions">
-          <a href="#" class="btn flex btn__md">
-            <i class="fi-rs-shuffle"></i> Update Cart
-          </a>
-          <a href="#" class="btn flex btn__md">
-            <i class="fi-rs-shopping-bag"></i> Continue Shopping
-          </a>
-        </div>
-
-        <div class="divider">
-          <i class="fi fi-rs-fingerprint"></i>
-        </div>
-
-        <div class="cart__group grid">
-          <div>
-            <div class="cart__shippinp">
-              <h3 class="section__title">Calculate Shipping</h3>
-              <form action="" class="form grid">
-                <input
-                  type="text"
-                  class="form__input"
-                  placeholder="State / Country"
-                />
-                <div class="form__group grid">
-                  <input type="text" class="form__input" placeholder="City" />
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="PostCode"
-                  />
-                </div>
-                <div class="form__btn">
-                  <button class="btn flex btn--sm">
-                    <i class="fi-rs-shuffle"></i> Update
-                  </button>
-                </div>
-              </form>
-            </div>
-            <div class="cart__coupon">
-              <h3 class="section__title">Apply Coupon</h3>
-              <form action="" class="coupon__form form grid">
-                <div class="form__group grid">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Enter Your Coupon"
-                  />
-                  <div class="form__btn">
-                    <button class="btn flex btn--sm">
-                      <i class="fi-rs-label"></i> Aplly
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <div class="cart__total">
-            <h3 class="section__title">Cart Totals</h3>
-            <table class="cart__total-table">
-                <tr>
-                  <td><span class="cart__total-title">Cart Subtotal</span></td>
-                  <td><span class="cart__total-price">$240.00</span></td>
-                </tr>
-                <tr>
-                  <td><span class="cart__total-title">Shipping</span></td>
-                  <td><span class="cart__total-price">$10.00</span></td>
-                </tr>
-                <tr>
-                  <td><span class="cart__total-title">Total</span></td>
-                  <td><span class="cart__total-price">$250.00</span></td>
-                </tr>
-            </table>
-            <a href="checkout.html" class="btn flex btn--md">
-              <i class="fi fi-rs-box-alt"></i> Proceed To Checkout
-            </a>
-          </div>
-        </div>
-      </section>
+    </style>
+    <div class="header">
+      <h1>GIỎ HÀNG</h1>
+      <h4 href="/shop.html" title="Continue shopping">Tiếp tục mua sắm</h4>
+    </div>
+    
+    <!--=============== CART ===============-->
+    <section class="cart section--lg container">
+      <div class="image-container">
+        <div class="danhsachsanpham">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Hình ảnh</th>
+              <th>Tên sản phẩm</th>
+              <th>Giá tiền</th>
+              <th>Số lượng</th>
+              <th>Tổng tiền</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img src="assets\img\xmas_combo.jpg" alt="" class="table__img"/>
+              </td>
+              <td>
+                <h3 class="table__title">Set Urban Chic</h3><br>
+                <p class="table__description">
+                  Combo kẹp tóc và gương trái tim cầm tay đính charm tự chọn
+                </p>
+              </td>
+              <td>
+                <span class="table__price">100.000₫</span>
+              </td>
+              <td><input type="number" value="1" class="quantity" />
+                <i class="fi fi-rs-trash table__trash"></i></td>
+              <td><span class="subtotal">100.000₫</span></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="assets\img\shirleytemple.jpg" alt="" class="table__img"/>
+              </td>
+              <td>
+                <h3 class="table__title">Shirley Temple Mirror</h3><br>
+                <p class="table__description">
+                  Gương trái tim cầm tay đính charm tự chọn
+                </p>
+              </td>
+              <td>
+                <span class="table__price">65.000₫</span>
+              </td>
+              <td><input type="number" value="1" class="quantity" />
+                <i class="fi fi-rs-trash table__trash"></i></td>
+              <td><span class="subtotal">65.000₫</span></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="assets\img\pinklady2.jpg" alt="" class="table__img"/>
+              </td>
+              <td>
+                <h3 class="table__title">Pinky Lady Hair Clip</h3><br>
+                <p class="table__description">
+                  Kẹp tóc vân xà cừ màu trắng nhỏ đính charm tự chọn
+                </p>
+              </td>
+              <td>
+                <span class="table__price">45.000₫</span>
+              </td>
+              <td><input type="number" value="2" class="quantity" />
+                <i class="fi fi-rs-trash table__trash"></i></td>
+              <td><span class="subtotal">90.000₫</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+      
+      <div class="cart__actions">
+        <a href="#" class="btn flex btn__md">
+          <i class="fi-rs-shuffle"></i> Cập nhật giỏ hàng</a>
+      </div>
+        
+      <div class="cart__total">
+        <h3 class="section__title">Tổng giá trị đơn hàng</h3>
+        <table class="cart__total-table">
+          <tr>
+            <td><span class="cart__total-title">Tổng giá trị đơn hàng</span></td>
+            <td><span class="cart__total-price">255.000₫</span></td>
+          </tr>
+          <tr>
+            <td><span class="cart__total-title">Total</span></td>
+            <td><span class="cart__total-price">255.000₫</span></td>
+          </tr>
+        </table>
+        <a href="checkout.html" class="btn flex btn--md"><i class="fi fi-rs-box-alt"></i> Thanh toán</a>
+      </div>
+    </section>
 
       <!--=============== NEWSLETTER ===============-->
       <section class="newsletter section">
@@ -277,7 +236,7 @@
               alt=""
               class="newsletter__icon"
             />
-            Sign in to Newsletter
+            Đăng ký nhận thông tin từ ChicCharm
           </h3>
           <p class="newsletter__description">
             ...and receive $25 coupon for first shopping.
@@ -288,7 +247,7 @@
               placeholder="Enter Your Email"
               class="newsletter__input"
             />
-            <button type="submit" class="newsletter__btn">Subscribe</button>
+            <button type="submit" class="newsletter__btn">Đăng ký</button>
           </form>
         </div>
       </section>
@@ -384,7 +343,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="copyright">&copy; 2024 Evara. All right reserved</p>
+        <p class="copyright">&copy; 2024 ChicCharm. All right reserved.</p>
         <span class="designer">Designer by Crypticalcoder</span>
       </div>
     </footer>
