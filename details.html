@@ -19,6 +19,9 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
+    <!-- Jquery -->
+	  <script src="assets\js\jquery-1.8.3.min.js"></script>
+
     <title>ChicCharm Official Store</title>
   </head>
   <body>
@@ -122,9 +125,33 @@
               
               <!-- Hình ảnh chính -->
                 <div class="main-image">
-                  <img src="assets\img\xmas_combo.jpg" alt="Set Urban Chic" id="main-img">
+                  <img src="assets/img/xmas_combo.jpg" data-zoom-image="assets/img/xmas_combo_big.jpg" id="zoom">
                 </div>
           </div>
+
+          <!-- Thêm JavaScript -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const thumbnails = document.querySelectorAll(".thumbnail");
+    const mainImage = document.querySelector("#zoom");
+
+    thumbnails.forEach((thumbnail) => {
+      thumbnail.addEventListener("click", function () {
+        // Lấy URL của ảnh nhỏ
+        const newSrc = this.getAttribute("src");
+        const newZoomImage = newSrc.replace(".jpg", "_big.jpg"); // Giả sử ảnh lớn có hậu tố _big.jpg
+
+        // Cập nhật ảnh chính
+        mainImage.setAttribute("src", newSrc);
+        mainImage.setAttribute("data-zoom-image", newZoomImage);
+
+        // Đổi trạng thái active cho thumbnail
+        document.querySelector(".thumbnail.active")?.classList.remove("active");
+        this.classList.add("active");
+      });
+    });
+  });
+</script>
           
           <!-- Nhóm thứ hai: Thông tin chi tiết sản phẩm -->
             <div class="details__group">
@@ -139,7 +166,7 @@
                   💕 Set Urban Chic bao gồm:<br><br>
                   ○ 1 gương cầm tay Shirley Temple (giá lẻ 65.000đ)<br>
                   ○ 1 Kẹp tóc Bellini (giá lẻ 45.000đ)</ul> 
-                  <ul style="border: 2px solid pink; padding: 10px; margin-top: 10px;  background-color: #ffffff; border-radius: 3px; color: #333; line-height: 1.5; font-weight: bold;">
+                  <ul style="border: 2px solid pink; padding: 10px; margin-top: 10px;  background-color: #ffffff; border-radius: 20px; color: #333; line-height: 1.5; font-weight: bold;">
                     ✨ Đặc biệt, các quý cô sẽ được tự do lựa chọn Charm mình iu thích để gắn lên hai bé điệu này khi rinh về nha!</ul>
                 </p><br><br>
 
@@ -640,5 +667,12 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+
+    <!-- Elevate Zoom JS -->
+	  <script src="assets/js/jquery.elevateZoom-3.0.8.min.js"></script>
+
+	  <script>
+		$("#zoom").elevateZoom();
+	  </script>
   </body>
 </html>
