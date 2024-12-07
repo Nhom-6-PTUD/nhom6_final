@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
     <!--=============== FLATICON ===============-->
     <link
       rel="stylesheet"
@@ -34,7 +33,7 @@
           <a href="login-register.html" id="login-link" class="header__top-action">Đăng nhập / Đăng ký</a>
         </div>
       </div>
-  
+      
       <nav class="nav container">
         <a href="index.html" class="nav__logo">
           <img
@@ -92,7 +91,7 @@
         </div>
       </nav>
     </header>
-
+    
     <!--=============== MAIN ===============-->
     <main class="main">
       <!--=============== BREADCRUMB ===============-->
@@ -105,35 +104,13 @@
           <li><a href="cart.html" class="breadcrumb__link">Giỏ Hàng</a></li>
         </ul>
       </section>
-      
-      <style>
-        body {
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
-      
-        .header h1 {
-            margin: 25px 0 10px;
-            font-size: 30px;
-            color: #333;
-        }
-        .header a {
-            text-decoration: underline;
-            color: hsla(328, 100%, 57%, 0.712);
-            font-size: 15px;
-        }
-        .header a:hover {
-            text-decoration: underline;
-            color: hsl(328, 80%, 44%);
-        }
 
-    </style>
-    <div class="header">
-      <h1>GIỎ HÀNG</h1>
-      <a href="shop.html" title="Continue Shopping">Tiếp tục mua sắm</h4>
-    </div>
+      <div class="cart-page">
+        <div class="header">
+          <h1 class="header-cart">GIỎ HÀNG</h1>
+          <a href="shop.html" class="continue-shopping" title="Continue Shopping">Tiếp tục mua sắm</a>
+        </div>
+      </div>
     
     <!--=============== CART ===============-->
     <section class="cart section--lg container">
@@ -155,7 +132,7 @@
                 <img src="assets\img\xmas_combo.jpg" alt="" class="table__img"/>
               </td>
               <td>
-                <h3 class="table__title">Set Urban Chic</h3><br>
+                <h3 class="table__title"><a href="details.html" class="product-link">Set Urban Chic</a></h3><br>
                 <p class="table__description">
                   Combo kẹp tóc và gương trái tim cầm tay đính charm tự chọn
                 </p>
@@ -163,16 +140,20 @@
               <td>
                 <span class="table__price">100.000₫</span>
               </td>
-              <td><input type="number" value="1" class="quantity" />
-                <i class="fi fi-rs-trash table__trash"></i></td>
-              <td><span class="subtotal">100.000₫</span></td>
+              <td>
+                <input type="number" value="1" class="quantity" />
+                <i class="fi fi-rs-trash table__trash"></i>
+              </td>
+              <td>
+                <span class="subtotal">100.000₫</span>
+              </td>
             </tr>
             <tr>
               <td>
                 <img src="assets\img\shirleytemple.jpg" alt="" class="table__img"/>
               </td>
               <td>
-                <h3 class="table__title">Shirley Temple Mirror</h3><br>
+                <h3 class="table__title"><a href="details.html" class="product-link">Shirley Temple Mirror</a></h3><br>
                 <p class="table__description">
                   Gương trái tim cầm tay đính charm tự chọn
                 </p>
@@ -189,7 +170,7 @@
                 <img src="assets\img\pinklady2.jpg" alt="" class="table__img"/>
               </td>
               <td>
-                <h3 class="table__title">Pinky Lady Hair Clip</h3><br>
+                <h3 class="table__title"><a href="details.html" class="product-link">Pinky Lady Hair Clip</a></h3><br>
                 <p class="table__description">
                   Kẹp tóc vân xà cừ màu trắng nhỏ đính charm tự chọn
                 </p>
@@ -223,7 +204,7 @@
             <td><span class="cart__total-price">255.000₫</span></td>
           </tr>
         </table>
-        <a href="checkout.html" class="btn flex btn--md"><i class="fi fi-rs-box-alt"></i> Thanh toán</a>
+        <a href="checkout.html" class="btn flex btn--md"><i class="fi fi-rs-box-alt"></i> Thanh Toán</a>
       </div>
     </section>
 

@@ -1726,6 +1726,44 @@ body {
 
 /*=============== CART ===============*/
 
+/* Style cho body */
+.cart-page {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Style cho header và heading */
+.header-cart {
+  margin: 25px 0 10px;
+  font-size: 30px;
+  color: #333;
+}
+
+/* Style cho link */
+.continue-shopping {
+  text-decoration: underline;
+  color: hsla(328, 100%, 57%, 0.712);
+  font-size: 15px;
+  transition: color 0.3s ease; /* Tạo hiệu ứng mượt khi thay đổi màu */
+}
+
+/* Style khi hover */
+.continue-shopping:hover {
+  text-decoration: underline;
+  color: hsl(328, 80%, 44%);
+}
+
+.product-link {
+  color: hsla(328, 100%, 57%, 0.712);
+  font-size: 15px;
+  transition: color 0.3s ease; /* Tạo hiệu ứng mượt khi thay đổi màu */
+}
+
+.product-link:hover {
+  color: hsl(328, 82%, 39%);
+}
+
 .table__container {
   overflow-x: auto;
 }
@@ -1887,20 +1925,24 @@ td {
 
 .cart__total {
   border: 1px solid var(--border-color-alt);
-  padding-top: 0;
-  padding-bottom: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 20px; /* Căn chỉnh padding đồng đều */
   border-radius: 0.25rem;
   -webkit-border-radius: 0.25rem;
   -moz-border-radius: 0.25rem;
   -ms-border-radius: 0.25rem;
   -o-border-radius: 0.25rem;
+  text-align: center; /* Căn giữa toàn bộ nội dung bên trong */
+}
+
+.cart__total .btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Đảm bảo nút nằm giữa */
 }
 
 .cart__total-table {
   margin-bottom: 1rem;
-  
 }
 
 .cart__total-table tr td {
@@ -1916,11 +1958,6 @@ td {
 .cart__total-price {
   color: var(--first-color);
   font-weight: var(--weight-700);
-}
-
-.cart__total .btn {
-  display: inline-flex;
-  width: fit-content;
 }
 
 /*=============== CART OTHERS ===============*/
