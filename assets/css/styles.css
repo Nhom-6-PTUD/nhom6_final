@@ -133,7 +133,7 @@ table {
 }
 
 .section--lg {
-  padding-block: 1rem;
+  padding-block: 1.3rem;
 }
 
 .section__title {
@@ -1780,6 +1780,7 @@ body {
 
 .table thead tr th,
 .table tbody tr td {
+  color:hsl(0, 0%, 0%);
   padding: 0.7rem 0.5rem;
   text-align: center;
 }
