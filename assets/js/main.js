@@ -112,3 +112,39 @@ tabs.forEach((tab) => {
     tab.classList.add("active-tab");
   });
 });
+
+/*=============== Số lượt đánh giá ===============*/
+document.addEventListener("DOMContentLoaded", function () {
+  // Lấy số lượt đánh giá từ tab "Đánh Giá"
+  const reviewTab = document.querySelector(".detail__tab[data-target='#reviews']");
+  const reviewCount = reviewTab.textContent.match(/\d+/); // Lấy số đầu tiên trong chuỗi
+
+  // Cập nhật số lượt đánh giá trong phần thông tin sản phẩm
+  const productReviewCount = document.querySelector(".details__rating .review-count");
+  if (reviewCount && productReviewCount) {
+    productReviewCount.textContent = `(${reviewCount[0]} đánh giá)`;
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Lấy liên kết "Số lượt đánh giá"
+  const reviewLink = document.querySelector(".review-count");
+  const reviewsTab = document.querySelector(".detail__tab[data-target='#reviews']");
+  const tabsContainer = document.querySelector(".detail__tabs"); // Phần chứa các tab
+
+  reviewLink.addEventListener("click", function (event) {
+    event.preventDefault(); // Ngăn hành động mặc định (chuyển hướng)
+
+    // Kích hoạt tab "Đánh Giá"
+    document.querySelector(".detail__tab.active-tab")?.classList.remove("active-tab");
+    reviewsTab.classList.add("active-tab");
+
+    // Ẩn nội dung tab khác và hiển thị nội dung "Đánh Giá"
+    document.querySelector(".details__tab-content.active-tab")?.classList.remove("active-tab");
+    document.querySelector("#reviews").classList.add("active-tab");
+
+    // Cuộn đến phần tabsContainer
+    tabsContainer.scrollIntoView({ behavior: "smooth" });
+  });
+});
+

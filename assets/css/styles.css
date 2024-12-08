@@ -1400,6 +1400,40 @@ body {
 }
 
 /*=============== DETAILS ===============*/
+
+/* Đánh giá số sao */
+.rating__star {
+  display: flex;
+  gap: 5px;
+  justify-content: left;
+}
+
+.star {
+  width: 25px;
+  height: 25px;
+  background: gray;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.star:hover,
+.star:hover ~ .star {
+  background: #f39c12; /* Màu vàng khi hover */
+}
+
+/* Mặc định màu chữ đen */
+.review-count {
+  color: black;
+  text-decoration: none; /* Không gạch chân khi không hover */
+}
+
+/* Khi hover, đổi màu chữ thành xanh và thêm gạch chân */
+.review-count:hover {
+  color: #ea86cf;
+  text-decoration: underline;
+}
+
 /* Container tổng thể */
 .product-images {
   display: flex;
