@@ -222,7 +222,7 @@
                 </div>
                 
                 <div class="details__color flex">
-                  <span class="details__letterinput-title">Điền tên custom:</span>
+                  <span class="details__letterinput-title">Điền tên custom (A-Z | 0-9):</span>
                   <ul class="color__list">
                     <input
                     type="text"
@@ -253,21 +253,30 @@
                 <!-- Hành động thêm vào giỏ hàng -->
                   <div class="details__action" style="margin-top: 20px;">
                     <input type="number" class="quantity" value="1" />
-                    <a href="#" class="btn btn--sm">Thêm vào giỏ hàng</a>
-                    <a href="#" class="details__action-btn">
+                    <a href="#" class="btn btn--sm" id="add-to-cart">Thêm vào giỏ hàng</a>
+                    <a href="checkout.html" class="btn btn--sm">Mua ngay</a>
+                    <a href="wishlist.html" class="details__action-btn">
                       <i class="fi fi-rs-heart"></i>
                     </a>
                   </div>
+                  <!-- Hiển thị SKU và tag sản phẩm -->
+                  <ul class="details__meta">
+                    <li class="meta__list flex"><span>SKU:</span>combo01</li>
+                    <li class="meta__list flex">
+                      <span>Tags: Gương, Kẹp, Phụ kiện tóc
+                    </li>
+                    <li class="meta__list flex">
+                      <span>Sẵn hàng: 8
+                    </li>
+                  </ul>
       </section>
  
       <!--========= CÁC MỤC ĐỂ XEM THÊM THÔNG TIN ==========-->
       <section class="details__tab container">
         <!-- Phân chia 2 tab chính là Xem thêm thông tin và Đánh giá -->
         <div class="detail__tabs">
-          <span class="detail__tab active-tab" data-target="#info">
-           Thông Tin Sản Phẩm
-          </span>
-          <span class="detail__tab" data-target="#reviews">Đánh Giá (3)</span>
+          <span class="detail__tab active-tab" data-target="#info" style="font-family: 'Cambria'; font-size: 18px;">Thông Tin Sản Phẩm</span>
+          <span class="detail__tab" data-target="#reviews" style="font-family: 'Cambria'; font-size: 18px;">Đánh Giá (3)</span>
         </div>
         <div class="details__tabs-content">
           <div class="details__tab-content active-tab" content id="info">
@@ -372,31 +381,30 @@
                 </div>
               </div>
             </div>
-            <div class="review__form">
-              <h4 class="review__form-title">Thêm đánh giá</h4>
-              <div class="rate__product">
-                <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
-                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
-                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
-                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
-                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
-              </div>
-               <!-- Form nhập thông tin đánh giá -->
-              <form action="" class="form grid">
-                                <div class="form__group grid">
-                  <input type="text" placeholder="Tên tài khoản" class="form__input">
-                </div>
-                <textarea
-                  class="form__input textarea"
-                  placeholder="Viết đánh giá"
-                ></textarea>
 
-                <div class="form__btn">
-                  <button class="btn">Đăng</button>
+            <div class="review__form">
+                <h4 class="review__form-title" style="font-family: 'Cambria'; font-size: 20px;">Thêm đánh giá</h4>
+                <!-- Đánh giá số sao -->
+                <div class="rating__star__form" style="direction: rtl;">
+                  <span class="star" data-value="5">&#9733;</span>
+                  <span class="star" data-value="4">&#9733;</span>
+                  <span class="star" data-value="3">&#9733;</span>
+                  <span class="star" data-value="2">&#9733;</span>
+                  <span class="star" data-value="1">&#9733;</span>
                 </div>
+                <form action="" class="form grid">
+                  <div class="form__group grid">
+                    <input type="text" placeholder="Tên của bạn" required class="form__input">
+                  </div>
+                  <textarea
+                    require class="form__input textarea"
+                    placeholder="Viết đánh giá của bạn..." 
+                  ></textarea>
+                  <div class="form__btn">
+                    <button class="btn">Đăng</button>
+                  </div>
               </form>
-            </div>
-          </div>
+            </div>          
         </div>
 </section>
 
