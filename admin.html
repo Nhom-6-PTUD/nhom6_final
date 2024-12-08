@@ -134,103 +134,96 @@
           </button>
         </div>
       </nav>
-      <!-- partial -->
-      <div class="container-fluid page-body-wrapper">
-        <!-- partial:partials/_sidebar.html -->
-        <nav class="sidebar sidebar-offcanvas" id="sidebar">
-          <ul class="nav">
-            <li class="nav-item nav-profile">
-              <a href="#" class="nav-link">
-                <div class="nav-profile-image">
-                  <img src="assets/images/faces/face1.jpg" alt="profile">
-                  <span class="login-status online"></span>
-                  <!--change to offline or busy as needed-->
-                </div>
-                <div class="nav-profile-text d-flex flex-column">
-                  <span class="font-weight-bold mb-2">David Grey. H</span>
-                  <span class="text-secondary text-small">Project Manager</span>
-                </div>
-                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">
-                <span class="menu-title">Dashboard</span>
-                <i class="mdi mdi-home menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="menu-title">Basic UI Elements</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pages/icons/mdi.html">
-                <span class="menu-title">Icons</span>
-                <i class="mdi mdi-contacts menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pages/forms/basic_elements.html">
-                <span class="menu-title">Forms</span>
-                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pages/charts/chartjs.html">
-                <span class="menu-title">Charts</span>
-                <i class="mdi mdi-chart-bar menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pages/tables/basic-table.html">
-                <span class="menu-title">Tables</span>
-                <i class="mdi mdi-table-large menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
-                <span class="menu-title">Sample Pages</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-medical-bag menu-icon"></i>
-              </a>
-              <div class="collapse" id="general-pages">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item sidebar-actions">
-              <span class="nav-link">
-                <div class="border-bottom">
-                  <h6 class="font-weight-normal mb-3">Projects</h6>
-                </div>
-                <button class="btn btn-block btn-lg btn-gradient-primary mt-4">+ Add a project</button>
-                <div class="mt-4">
-                  <div class="border-bottom">
-                    <p class="text-secondary">Categories</p>
-                  </div>
-                  <ul class="gradient-bullet-list mt-4">
-                    <li>Free</li>
-                    <li>Pro</li>
-                  </ul>
-                </div>
-              </span>
-            </li>
+    
+ <!-- partial: bao bọc phần nội dung trang admin -->
+<div class="container-fluid page-body-wrapper">
+  
+  <!-- Sidebar: Thanh điều hướng bên trái cho trang quản trị -->
+  <nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+      
+      <!-- Phần thông tin người dùng -->
+      <li class="nav-item nav-profile">
+        <a href="#" class="nav-link">
+          <!-- Ảnh đại diện của người dùng -->
+          <div class="nav-profile-image">
+            <img src="assets/images/faces/face1.jpg" alt="profile">
+            <!-- Trạng thái người dùng (online) -->
+            <span class="login-status online"></span>
+            <!-- Có thể thay đổi thành offline hoặc busy nếu cần thiết -->
+          </div>
+          
+          <!-- Thông tin người dùng -->
+          <div class="nav-profile-text d-flex flex-column">
+            <!-- Tên người dùng -->
+            <span class="font-weight-bold mb-2">Nguyễn Ánh Thanh H</span>
+            <!-- Chức danh của người dùng -->
+            <span class="text-secondary text-small">Quản lý cửa hàng</span>
+          </div>
+          
+          <!-- Biểu tượng trạng thái thành công (có thể là "Verified" hoặc các trạng thái khác) -->
+          <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+        </a>
+      </li>
+
+      <!-- Liên kết đến trang Dashboard (Trang chủ của quản trị viên) -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <span class="menu-title">Tổng quan</span> <!-- Tiêu đề -->
+          <i class="mdi mdi-home menu-icon"></i>
+        </a>
+      </li>
+      <!-- Liên kết đến trang Charts (Biểu đồ) -->
+      <li class="nav-item">
+        <a class="nav-link" href="pages/charts/chartjs.html">
+          <span class="menu-title">Báo cáo</span> <!-- Tiêu đề phần Charts -->
+          <!-- Biểu tượng biểu đồ -->
+          <i class="mdi mdi-chart-bar menu-icon"></i>
+        </a>
+      </li>
+
+      <!-- Liên kết đến trang Tables (Bảng) -->
+      <li class="nav-item">
+        <a class="nav-link" href="pages/tables/basic-table.html">
+          <span class="menu-title">Theo dõi đơn hàng</span> <!-- Tiêu đề phần Tables -->
+          <!-- Biểu tượng bảng dữ liệu -->
+          <i class="mdi mdi-table-large menu-icon"></i>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
+          <span class="menu-title">Quản lý cửa hàng</span> <!-- Tiêu đề phần các trang mẫu -->
+          <!-- Biểu tượng mũi tên để mở rộng menu -->
+          <i class="menu-arrow"></i>
+          <!-- Biểu tượng cho các trang mẫu -->
+          <i class="mdi mdi-medical-bag menu-icon"></i>
+        </a>
+     
+        <div class="collapse" id="general-pages">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Danh mục </a></li> 
+            <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Sản phẩm </a></li> 
+            <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Đơn hàng </a></li> 
+           
           </ul>
-        </nav>
+        </div>
+      </li>
+
+      <!-- Phần quản lý dự án -->
+      <li class="nav-item sidebar-actions">
+        <span class="nav-link">
+          <div class="border-bottom">
+            <h6 class="font-weight-normal mb-3">Projects</h6> <!-- Tiêu đề "Dự án" -->
+          </div>
+          <!-- Nút thêm dự án mới -->
+          <button class="btn btn-block btn-lg btn-gradient-primary mt-4">+ Add a project</button>
+          <div class="mt-4">
+         
+        </span>
+      </li>
+    </ul>
+  </nav>
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
