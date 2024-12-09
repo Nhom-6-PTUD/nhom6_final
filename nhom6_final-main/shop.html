@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FLATICON ===============-->
+    <!-- Liên kết tới thư viện biểu tượng từ Flaticon, cung cấp các biểu tượng sử dụng trong trang web -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <!-- Liên kết tới thư viện Swiper CSS, thư viện giúp tạo ra các slider hoặc carousel cho các phần tử trên trang web -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <!-- Liên kết tới file CSS của dự án để áp dụng các kiểu dáng cho trang web -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <title>Ecommerce Website</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <!-- Phần đầu của trang web, chứa các thông tin liên quan đến thanh điều hướng và các chức năng của trang web -->
+    <header class="header">
+      <!-- Phần trên của header, bao gồm thông tin liên hệ và thông báo khuyến mãi -->
+      <div class="header__top">
+        <div class="header__container container">
+          <!-- Thông tin liên hệ và địa chỉ -->
+          <div class="header__contact">
+            <span>(+01) - 2345 - 6789</span>
+            <span>Our location</span>
+          </div>
+          <!-- Thông báo khuyến mãi -->
+          <p class="header__alert-news">
+            Super Values Deals - Save more coupons
+          </p>
+          <!-- Liên kết tới trang đăng nhập/đăng ký -->
+          <a href="login-register.html" class="header__top-action">
+            Log In / Sign Up
+          </a>
+        </div>
+      </div>
+      <!-- Thanh điều hướng chính -->
+      <nav class="nav container">
+        <!-- Logo của trang web -->
+        <a href="index.html" class="nav__logo">
+          <img
+            class="nav__logo-img"
+            src="assets/img/logo.svg"
+            alt="website logo"
+          />
+        </a>
+        <!-- Menu điều hướng -->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="shop.html" class="nav__link active-link">Shop</a>
+            </li>
+            <li class="nav__item">
+              <a href="accounts.html" class="nav__link">My Account</a>
+            </li>
+            <li class="nav__item">
+              <a href="compare.html" class="nav__link">Compare</a>
+            </li>
+            <li class="nav__item">
+              <a href="login-register.html" class="nav__link">Login</a>
+            </li>
+          </ul>
+
+          <!-- Phần tìm kiếm -->
+          <div class="header__search">
+            <input
+              type="text"
+              placeholder="Search For Items..."
+              class="form__input"
+            />
+            <button class="search__btn">
+              <img src="assets/img/search.png" alt="search icon" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Các biểu tượng người dùng, ví dụ như wishlist và giỏ hàng -->
+        <div class="header__user-actions">
+          <a href="wishlist.html" class="header__action-btn" title="Wishlist">
+            <img src="assets/img/icon-heart.svg" alt="" />
+            <span class="count">3</span>
+          </a>
+          <a href="cart.html" class="header__action-btn" title="Cart">
+            <img src="assets/img/icon-cart.svg" alt="" />
+            <span class="count">3</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <!-- Phần chính của trang web, nơi chứa nội dung chính và các khối thông tin quan trọng -->
+    <!-- Nội dung chính của trang web sẽ được đặt ở đây -->
+    <main class="main">
+      <!--=============== BREADCRUMB ===============-->
+      <!-- Phần Breadcrumb (dấu vết đường dẫn), giúp người dùng biết mình đang ở đâu trên website và có thể quay lại các trang trước đó dễ dàng -->
+      <section class="breadcrumb">
+        <!-- Danh sách breadcrumb với các liên kết điều hướng -->
+        <ul class="breadcrumb__list flex container">
+          <!-- Liên kết tới trang chủ -->
+          <li><a href="index.html" class="breadcrumb__link">Home</a></li>
+           <!-- Biểu tượng phân cách giữa các liên kết breadcrumb -->
+          <li><span class="breadcrumb__link"></span>></li>
+          <!-- Liên kết tới trang Shop -->
+          <li><span class="breadcrumb__link">Shop</span></li>
+        </ul>
+      </section>
+
+      <!--=============== PRODUCTS ===============-->
+      <!-- Phần hiển thị các sản phẩm, bao gồm danh sách sản phẩm, thông tin chi tiết về sản phẩm, và các thao tác liên quan -->
+      <section class="products container section--lg">
+        <!-- Thông báo tổng số sản phẩm tìm được -->
+        <p class="total__products">We found <span>688</span> items for you!</p>
+        <!-- Khối chứa các sản phẩm, sử dụng dạng lưới -->
+        <div class="products__container grid">
+          <!-- Một sản phẩm -->
+          <div class="product__item">
+            <!-- Hình ảnh và các hành động của sản phẩm -->
+            <div class="product__banner">
+              <!-- Liên kết đến trang chi tiết sản phẩm -->
+              <a href="details.html" class="product__images">
+                <!-- Hình ảnh sản phẩm mặc định -->
+                <img
+                  src="assets/img/product-1-1.jpg"
+                  alt=""
+                  class="product__img default"
+                />
+                <!-- Hình ảnh sản phẩm khi hover (di chuột) -->
+                <img
+                  src="assets/img/product-1-2.jpg"
+                  alt=""
+                  class="product__img hover"
+                />
+              </a>
+              <!-- Các hành động như xem nhanh, thêm vào danh sách yêu thích và so sánh -->
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quick View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="action__btn"
+                  aria-label="Add to Wishlist"
+                >
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+              <!-- Nhãn cho sản phẩm -->
+              <div class="product__badge light-pink">Hot</div>
+            </div>
+            <!-- Nội dung sản phẩm: tên, giá, đánh giá, và nút thêm vào giỏ hàng --> 
+            <div class="product__content">
+              <!-- Danh mục sản phẩm -->
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                 <!-- Liên kết đến trang chi tiết sản phẩm -->
+                <h3 class="product__title">Colorful Pattern Shirts</h3>
+              </a>
+              <!-- Đánh giá sản phẩm -->
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <!-- Giá sản phẩm, bao gồm giá mới và giá cũ -->
+              <div class="product__price flex">
+                <span class="new__price">$238.85</span>
+                <span class="old__price">$245.8</span>
+              </div>
+              <!-- Nút thêm sản phẩm vào giỏ hàng -->
+              <a
+                href="#"
+                class="action__btn cart__btn"
+                aria-label="Add To Cart"
+              >
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Một sản phẩm -->
+          <div class="product__item">
+            <!-- Hình ảnh và các hành động của sản phẩm -->
+            <div class="product__banner">
+              <!-- Liên kết đến trang chi tiết sản phẩm -->
+              <a href="details.html" class="product__images">
+                <!-- Hình ảnh sản phẩm mặc định -->
+                <img
+                  src="assets/img/product-2-1.jpg"
+                  alt=""
+                  class="product__img default"
+                />
+                <!-- Hình ảnh sản phẩm khi hover (di chuột) -->
+                <img
+                  src="assets/img/product-2-2.jpg"
+                  alt=""
+                  class="product__img hover"
+                />
+              </a>
+              <!-- Các hành động như xem nhanh, thêm vào danh sách yêu thích và so sánh -->
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quick View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="action__btn"
+                  aria-label="Add to Wishlist"
+                >
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+                <!-- Nhãn cho sản phẩm -->
+              </div>
+              <div class="product__badge light-green">Hot</div>
+            </div>
+            <!-- Nội dung sản phẩm: tên, giá, đánh giá, và nút thêm vào giỏ hàng -->
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Colorful Pattern Shirts</h3>
+              </a>
+              <!-- Đánh giá sản phẩm -->
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <!-- Giá sản phẩm, bao gồm giá mới và giá cũ -->
+              <div class="product__price flex">
+                <span class="new__price">$238.85</span>
+                <span class="old__price">$245.8</span>
+              </div>
+              <a
+                href="#"
+                class="action__btn cart__btn"
+                aria-label="Add To Cart"
+              >
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Một sản phẩm -->
+          <div class="product__item">
+            <!-- Hình ảnh và các hành động của sản phẩm -->
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img
+                  src="assets/img/product-3-1.jpg"
+                  alt=""
+                  class="product__img default"
+                />
+                <img
+                  src="assets/img/product-3-2.jpg"
+                  alt=""
+                  class="product__img hover"
+                />
+              </a>
+              <!-- Các hành động như xem nhanh, thêm vào danh sách yêu thích và so sánh -->
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quick View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="action__btn"
+                  aria-label="Add to Wishlist"
+                >
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+              <!-- Nhãn cho sản phẩm -->
+              <div class="product__badge light-orange">Hot</div>
+            </div>
+            <!-- Nội dung sản phẩm: tên, giá, đánh giá, và nút thêm vào giỏ hàng -->
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Colorful Pattern Shirts</h3>
+              </a>
+              <!-- Đánh giá sản phẩm -->
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <!-- Giá sản phẩm, bao gồm giá mới và giá cũ -->
+              <div class="product__price flex">
+                <span class="new__price">$238.85</span>
+                <span class="old__price">$245.8</span>
+              </div>
+              <a
+                href="#"
+                class="action__btn cart__btn"
+                aria-label="Add To Cart"
+              >
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Một sản phẩm -->
+          <div class="product__item">
+            <!-- Hình ảnh và các hành động của sản phẩm -->
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img
+                  src="assets/img/product-4-1.jpg"
+                  alt=""
+                  class="product__img default"
+                />
+                <img
+                  src="assets/img/product-4-2.jpg"
+                  alt=""
+                  class="product__img hover"
+                />
+              </a>
+              <!-- Các hành động như xem nhanh, thêm vào danh sách yêu thích và so sánh -->
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quick View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="action__btn"
+                  aria-label="Add to Wishlist"
+                >
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+              <!-- Nhãn cho sản phẩm -->
+              <div class="product__badge light-blue">Hot</div>
+            </div>
+            <!-- Nội dung sản phẩm: tên, giá, đánh giá, và nút thêm vào giỏ hàng -->
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Colorful Pattern Shirts</h3>
+              </a>
+              <!-- Đánh giá sản phẩm -->
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <!-- Giá sản phẩm, bao gồm giá mới và giá cũ -->
+              <div class="product__price flex">
+                <span class="new__price">$238.85</span>
+                <span class="old__price">$245.8</span>
+              </div>
+              <a
+                href="#"
+                class="action__btn cart__btn"
+                aria-label="Add To Cart"
+              >
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Một sản phẩm -->
+          <div class="product__item">
+            <!-- Hình ảnh và các hành động của sản phẩm -->
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img
+                  src="assets/img/product-5-1.jpg"
+                  alt=""
+                  class="product__img default"
+                />
+                <img
+                  src="assets/img/product-5-2.jpg"
+                  alt=""
+                  class="product__img hover"
+                />
+              </a>
+              <!-- Các hành động như xem nhanh, thêm vào danh sách yêu thích và so sánh -->
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quick View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="action__btn"
+                  aria-label="Add to Wishlist"
+                >
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+              <!-- Nhãn cho sản phẩm -->
+              <div class="product__badge light-blue">-30%</div>
+            </div>
+            <!-- Nội dung sản phẩm: tên, giá, đánh giá, và nút thêm vào giỏ hàng -->
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Colorful Pattern Shirts</h3>
+              </a>
+              <!-- Đánh giá sản phẩm -->
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <!-- Giá sản phẩm, bao gồm giá mới và giá cũ -->
+              <div class="product__price flex">
+                <span class="new__price">$238.85</span>
+                <span class="old__price">$245.8</span>
+              </div>
+              <a
+                href="#"
+                class="action__btn cart__btn"
+                aria-label="Add To Cart"
+              >
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Một sản phẩm -->
+          <div class="product__item">
+            <!-- Hình ảnh và các hành động của sản phẩm -->
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img
+                  src="assets/img/product-6-1.jpg"
+                  alt=""
+                  class="product__img default"
+                />
+                <img
+                  src="assets/img/product-6-2.jpg"
+                  alt=""
+                  class="product__img hover"
+                />
+              </a>
+              <!-- Các hành động như xem nhanh, thêm vào danh sách yêu thích và so sánh -->
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quick View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="action__btn"
+                  aria-label="Add to Wishlist"
+                >
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+              <!-- Nhãn cho sản phẩm -->
+              <div class="product__badge light-blue">-22%</div>
+            </div>
+            <!-- Nội dung sản phẩm: tên, giá, đánh giá, và nút thêm vào giỏ hàng -->
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Colorful Pattern Shirts</h3>
+              </a>
+              <!-- Đánh giá sản phẩm -->
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <!-- Giá sản phẩm, bao gồm giá mới và giá cũ -->
+              <div class="product__price flex">
+                <span class="new__price">$238.85</span>
+                <span class="old__price">$245.8</span>
+              </div>
+              <a
+                href="#"
+                class="action__btn cart__btn"
+                aria-label="Add To Cart"
+              >
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Một sản phẩm -->
+          <div class="product__item">
+            <!-- Hình ảnh và các hành động của sản phẩm -->
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img
+                  src="assets/img/product-7-1.jpg"
+                  alt=""
+                  class="product__img default"
+                />
+                <img
+                  src="assets/img/product-7-2.jpg"
+                  alt=""
+                  class="product__img hover"
+                />
+              </a>
+              <!-- Các hành động như xem nhanh, thêm vào danh sách yêu thích và so sánh -->
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quick View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="action__btn"
+                  aria-label="Add to Wishlist"
+                >
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+              <!-- Nhãn cho sản phẩm -->
+              <div class="product__badge light-green">-22%</div>
+            </div>
+            <!-- Nội dung sản phẩm: tên, giá, đánh giá, và nút thêm vào giỏ hàng -->
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Colorful Pattern Shirts</h3>
+              </a>
+              <!-- Đánh giá sản phẩm -->
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <!-- Giá sản phẩm, bao gồm giá mới và giá cũ -->
+              <div class="product__price flex">
+                <span class="new__price">$238.85</span>
+                <span class="old__price">$245.8</span>
+              </div>
+              <a
+                href="#"
+                class="action__btn cart__btn"
+                aria-label="Add To Cart"
+              >
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Một sản phẩm -->
+          <div class="product__item">
+            <!-- Hình ảnh và các hành động của sản phẩm -->
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img
+                  src="assets/img/product-8-1.jpg"
+                  alt=""
+                  class="product__img default"
+                />
+                <img
+                  src="assets/img/product-8-2.jpg"
+                  alt=""
+                  class="product__img hover"
+                />
+              </a>
+              <!-- Các hành động như xem nhanh, thêm vào danh sách yêu thích và so sánh -->
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quick View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="action__btn"
+                  aria-label="Add to Wishlist"
+                >
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+            </div>
+            <!-- Nội dung sản phẩm: tên, giá, đánh giá, và nút thêm vào giỏ hàng -->
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Colorful Pattern Shirts</h3>
+              </a>
+              <!-- Đánh giá sản phẩm -->
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <!-- Giá sản phẩm, bao gồm giá mới và giá cũ -->
+              <div class="product__price flex">
+                <span class="new__price">$238.85</span>
+                <span class="old__price">$245.8</span>
+              </div>
+              <a
+                href="#"
+                class="action__btn cart__btn"
+                aria-label="Add To Cart"
+              >
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Một sản phẩm -->
+          <div class="product__item">
+            <!-- Hình ảnh và các hành động của sản phẩm -->
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img
+                  src="assets/img/product-10-1.jpg"
+                  alt=""
+                  class="product__img default"
+                />
+                <img
+                  src="assets/img/product-10-2.jpg"
+                  alt=""
+                  class="product__img hover"
+                />
+              </a>
+              <!-- Các hành động như xem nhanh, thêm vào danh sách yêu thích và so sánh -->
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quick View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="action__btn"
+                  aria-label="Add to Wishlist"
+                >
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+              <!-- Nhãn cho sản phẩm -->
+              <div class="product__badge light-blue">-30%</div>
+            </div>
+            <!-- Nội dung sản phẩm: tên, giá, đánh giá, và nút thêm vào giỏ hàng -->
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Colorful Pattern Shirts</h3>
+              </a>
+              <!-- Đánh giá sản phẩm -->
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <!-- Giá sản phẩm, bao gồm giá mới và giá cũ -->
+              <div class="product__price flex">
+                <span class="new__price">$238.85</span>
+                <span class="old__price">$245.8</span>
+              </div>
+              <a
+                href="#"
+                class="action__btn cart__btn"
+                aria-label="Add To Cart"
+              >
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Một sản phẩm -->
+          <div class="product__item">
+            <!-- Hình ảnh và các hành động của sản phẩm -->
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img
+                  src="assets/img/product-11-1.jpg"
+                  alt=""
+                  class="product__img default"
+                />
+                <img
+                  src="assets/img/product-11-2.jpg"
+                  alt=""
+                  class="product__img hover"
+                />
+              </a>
+              <!-- Các hành động như xem nhanh, thêm vào danh sách yêu thích và so sánh -->
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quick View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="action__btn"
+                  aria-label="Add to Wishlist"
+                >
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+              <!-- Nhãn cho sản phẩm --
+              <div class="product__badge light-blue">-22%</div>
+            </div>
+            <!-- Nội dung sản phẩm: tên, giá, đánh giá, và nút thêm vào giỏ hàng -->
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Colorful Pattern Shirts</h3>
+              </a>
+              <!-- Đánh giá sản phẩm -->
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <!-- Giá sản phẩm, bao gồm giá mới và giá cũ -->
+              <div class="product__price flex">
+                <span class="new__price">$238.85</span>
+                <span class="old__price">$245.8</span>
+              </div>
+              <a
+                href="#"
+                class="action__btn cart__btn"
+                aria-label="Add To Cart"
+              >
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Một sản phẩm -->
+          <div class="product__item">
+            <!-- Hình ảnh và các hành động của sản phẩm -->
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img
+                  src="assets/img/product-4-1.jpg"
+                  alt=""
+                  class="product__img default"
+                />
+                <img
+                  src="assets/img/product-4-2.jpg"
+                  alt=""
+                  class="product__img hover"
+                />
+              </a>
+              <!-- Các hành động như xem nhanh, thêm vào danh sách yêu thích và so sánh -->
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quick View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="action__btn"
+                  aria-label="Add to Wishlist"
+                >
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+              <!-- Nhãn cho sản phẩm -->
+              <div class="product__badge light-green">-22%</div>
+            </div>
+            <!-- Nội dung sản phẩm: tên, giá, đánh giá, và nút thêm vào giỏ hàng -->
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Colorful Pattern Shirts</h3>
+              </a>
+              <!-- Đánh giá sản phẩm -->
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <!-- Giá sản phẩm, bao gồm giá mới và giá cũ -->
+              <div class="product__price flex">
+                <span class="new__price">$238.85</span>
+                <span class="old__price">$245.8</span>
+              </div>
+              <a
+                href="#"
+                class="action__btn cart__btn"
+                aria-label="Add To Cart"
+              >
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Một sản phẩm -->
+          <div class="product__item">
+            <!-- Hình ảnh và các hành động của sản phẩm -->
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img
+                  src="assets/img/product-12-1.jpg"
+                  alt=""
+                  class="product__img default"
+                />
+                <img
+                  src="assets/img/product-12-2.jpg"
+                  alt=""
+                  class="product__img hover"
+                />
+              </a>
+              <!-- Các hành động như xem nhanh, thêm vào danh sách yêu thích và so sánh -->
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Quick View">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="action__btn"
+                  aria-label="Add to Wishlist"
+                >
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+                <a href="#" class="action__btn" aria-label="Compare">
+                  <i class="fi fi-rs-shuffle"></i>
+                </a>
+              </div>
+            </div>
+            <!-- Nội dung sản phẩm: tên, giá, đánh giá, và nút thêm vào giỏ hàng -->
+            <div class="product__content">
+              <span class="product__category">Clothing</span>
+              <a href="details.html">
+                <h3 class="product__title">Colorful Pattern Shirts</h3>
+              </a>
+              <!-- Đánh giá sản phẩm -->
+              <div class="product__rating">
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+                <i class="fi fi-rs-star"></i>
+              </div>
+              <!-- Giá sản phẩm, bao gồm giá mới và giá cũ -->
+              <div class="product__price flex">
+                <span class="new__price">$238.85</span>
+                <span class="old__price">$245.8</span>
+              </div>
+              <a
+                href="#"
+                class="action__btn cart__btn"
+                aria-label="Add To Cart"
+              >
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <ul class="pagination">
+          <!-- Trang hiện tại, đang được chọn, sẽ có lớp 'active' để hiển thị là trang được chọn -->
+          <li><a href="#" class="pagination__link active">01</a></li>
+          <!-- Liên kết tới trang số 2 -->
+          <li><a href="#" class="pagination__link">02</a></li>
+          <!-- Liên kết tới trang số 3 -->
+          <li><a href="#" class="pagination__link">03</a></li>
+          <!-- Liên kết dấu "..." để chỉ ra có thêm nhiều trang nữa -->
+          <li><a href="#" class="pagination__link">...</a></li>
+          <!-- Liên kết tới trang số 16 -->
+          <li><a href="#" class="pagination__link">16</a></li>
+          <!-- Nút chuyển tới trang kế tiếp, với biểu tượng mũi tên đôi để di chuyển tới trang tiếp theo -->
+          <li><a href="#" class="pagination__link icon">
+            <i class="fi-rs-angle-double-small-right"></i>
+          </a></li>
+        </ul>
+      </section>
+
+      <!--=============== NEWSLETTER ===============-->
+      <!-- Phần Newsletter: Cho phép người dùng đăng ký nhận thông tin qua email -->
+      <section class="newsletter section">
+        <div class="newsletter__container container grid">
+          <!-- Tiêu đề phần Newsletter -->
+          <h3 class="newsletter__title flex">
+            <!-- Icon minh họa cho tiêu đề -->
+            <img
+              src="./assets/img/icon-email.svg"
+              alt=""
+              class="newsletter__icon"
+            />
+            Sign in to Newsletter
+          </h3>
+          <!-- Mô tả ngắn gọn nội dung, khuyến khích đăng ký -->
+          <p class="newsletter__description">
+            ...and receive $25 coupon for first shopping.
+          </p>
+          <!-- Form đăng ký email -->
+          <form action="" class="newsletter__form">
+            <!-- Ô nhập email -->
+            <input
+              type="text"
+              placeholder="Enter Your Email"
+              class="newsletter__input"
+            />
+            <!-- Nút gửi form -->
+            <button type="submit" class="newsletter__btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <!-- Phần Footer: Hiển thị thông tin liên hệ, địa chỉ, tài khoản và các cổng thanh toán -->
+    <footer class="footer container">
+      <!-- Khung chứa nội dung footer, sử dụng lưới để chia các cột -->
+      <div class="footer__container grid">
+        <!-- Cột 1: Logo và thông tin liên hệ -->
+        <div class="footer__content">
+          <!-- Logo của website -->
+          <a href="index.html" class="footer__logo">
+            <img src="./assets/img/logo.svg" alt="" class="footer__logo-img" />
+          </a>
+          <!-- Thông tin liên hệ -->
+          <h4 class="footer__subtitle">Contact</h4>
+          <p class="footer__description">
+            <span>Address:</span> 13 Tlemcen Road, Street 32, Beb-Wahren
+          </p>
+          <p class="footer__description">
+            <span>Phone:</span> +01 2222 365 /(+91) 01 2345 6789
+          </p>
+          <p class="footer__description">
+            <span>Hours:</span> 10:00 - 18:00, Mon - Sat
+          </p>
+          <!-- Liên kết mạng xã hội -->
+          <div class="footer__social">
+            <h4 class="footer__subtitle">Follow Me</h4>
+            <div class="footer__links flex">
+              <!-- Icon liên kết tới các trang mạng xã hội -->
+              <a href="#">
+                <img
+                  src="./assets/img/icon-facebook.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-twitter.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-instagram.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-pinterest.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assets/img/icon-youtube.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột 2: Thông tin địa chỉ và điều khoản -->
+        <div class="footer__content">
+          <h3 class="footer__title">Address</h3>
+          <!-- Danh sách các liên kết hỗ trợ và thông tin -->
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">About Us</a></li>
+            <li><a href="#" class="footer__link">Delivery Information</a></li>
+            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+            <li><a href="#" class="footer__link">Terms & Conditions</a></li>
+            <li><a href="#" class="footer__link">Contact Us</a></li>
+            <li><a href="#" class="footer__link">Support Center</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột 3: Thông tin tài khoản -->
+        <div class="footer__content">
+          <h3 class="footer__title">My Account</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Sign In</a></li>
+            <li><a href="#" class="footer__link">View Cart</a></li>
+            <li><a href="#" class="footer__link">My Wishlist</a></li>
+            <li><a href="#" class="footer__link">Track My Order</a></li>
+            <li><a href="#" class="footer__link">Help</a></li>
+            <li><a href="#" class="footer__link">Order</a></li>
+          </ul>
+        </div>
+
+        <!-- Cột 4: Cổng thanh toán bảo mật -->
+        <div class="footer__content">
+          <h3 class="footer__title">Secured Payed Gateways</h3>
+          <img
+            src="./assets/img/payment-method.png"
+            alt=""
+            class="payment__img"
+          />
+        </div>
+      </div>
+
+      <!-- Phần cuối footer: Thông tin bản quyền và người thiết kế -->
+      <div class="footer__bottom">
+        <p class="copyright">&copy; 2024 Evara. All right reserved</p>
+        <span class="designer">Designer by Crypticalcoder</span>
+      </div>
+    </footer>
+
+    <!--=============== SWIPER JS ===============-->
+    <!-- Nhúng thư viện Swiper JS từ CDN của jsDelivr -->
+    <!-- Swiper JS là thư viện JavaScript hỗ trợ tạo slider/carousel với nhiều tính năng như trượt tự động, hiệu ứng chuyển động, và khả năng tùy chỉnh cao -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <!-- Nhúng file main.js -->
+    <!-- Đây là file JavaScript chính, nơi chứa các logic và chức năng được viết riêng cho dự án -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

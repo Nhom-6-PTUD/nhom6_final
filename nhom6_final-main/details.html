@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FLATICON ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>ChicCharm Official Store</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+      <div class="header__top">
+        <div class="header__container container">
+          <div class="header__contact">
+            <span id="contact1">Merry Chrismas</span> 
+          </div>
+          <p class="header__alert-news" id="news" style="color: #fa97ca">ƯU ĐÃI SIÊU GIÁ TRỊ - TIẾT KIỆM THÊM VỚI NHIỀU MÃ GIẢM GIÁ</p>
+          <a href="login-register.html" id="login-link" class="header__top-action">Đăng nhập / Đăng ký</a>
+        </div>
+      </div>
+      
+      <nav class="nav container">
+        <a href="index.html" class="nav__logo">
+          <img
+            class="nav__logo-img"
+            src="assets/img/1.png"
+            alt="website logo"
+          />
+        </a>
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu-top">
+            <a href="index.html" class="nav__menu-logo">
+              <img src="./assets/img/logo.svg" alt="">
+            </a>
+            <div class="nav__close" id="nav-close">
+              <i class="fi fi-rs-cross-small"></i>
+            </div>
+          </div>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Trang Chủ</a>
+            </li>
+            <li class="nav__item">
+              <a href="shop.html" class="nav__link active-link">Cửa Hàng</a>
+            </li>
+            <li class="nav__item">
+              <a href="accounts.html" class="nav__link">Tài Khoản</a>
+            </li>
+            <li class="nav__item">
+              <a href="login-register.html" class="nav__link">Đăng nhập</a>
+            </li>
+          </ul>
+          <div class="header__search">
+            <input
+              type="text"
+              placeholder="Tìm kiếm"
+              class="form__input"
+            />
+            <button class="search__btn">
+              <img src="assets/img/search.png" alt="search icon" />
+            </button>
+          </div>
+        </div>
+        <div class="header__user-actions">
+          <a href="wishlist.html" class="header__action-btn" title="Wishlist">
+            <img src="assets/img/icon-heart.svg" alt="" />
+            <span class="count">3</span>
+          </a>
+          <a href="cart.html" class="header__action-btn" title="Cart">
+            <img src="assets/img/icon-cart.svg" alt="" />
+            <span class="count">3</span>
+          </a>
+          <div class="header__action-btn nav__toggle" id="nav-toggle">
+            <img src="./assets//img/menu-burger.svg" alt="">
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+         <!--=============== Tạo hướng dẫn điều hướng===============-->
+      <section class="breadcrumb">
+        <ul class="breadcrumb__list flex container">
+          <li><a href="index.html" class="breadcrumb__link">Trang chủ</a></li>
+          <li><span class="breadcrumb__link"></span>></li>
+          <li><span class="breadcrumb__link">Sản phẩm</span></li>
+          <li><span class="breadcrumb__link"></span>></li>
+          <li><span class="breadcrumb__link">Set Alcoholicity</span></li>
+        </ul>
+      </section>
+      
+      <!--=============== CHI TIẾT SẢN PHẨM ===============-->
+      <section class="details section--lg">
+        <div class="details__container container grid">
+          <!-- Nhóm đầu tiên: Hình ảnh sản phẩm -->
+          <div class="product-images"> 
+            <!-- Carousel chứa thumbnails -->
+              <div class="thumbnails-carousel">
+                <div class="thumbnails">
+                  <img src="assets\img\xmas_combo.jpg" alt="Set Urban Chic" class="thumbnail active">
+                  <img src="assets\img\shirleytemple.jpg" alt="Gương trái tim Shirley Temple" class="thumbnail">
+                  <img src="assets\img\bellini.jpg" alt="Kẹp tóc Bellini" class="thumbnail">
+                  <img src="assets\img\kol.jpg" alt="KOL" class="thumbnail">
+                </div>
+              </div>
+              
+              <!-- Hình ảnh chính -->
+                <div class="main-image">
+                  <img src="assets\img\xmas_combo.jpg" alt="Set Urban Chic" id="main-img">
+                </div>
+          </div>
+          
+          <!-- Nhóm thứ hai: Thông tin chi tiết sản phẩm -->
+            <div class="details__group">
+              <h3 class="details__title">Set Urban Chic</h3>
+              <!-- Giá sản phẩm bao gồm giá mới, giá cũ và mức giảm giá -->
+                <div class="details__price flex">
+                  <span class="new__price">100.000đ</span>
+                  <span class="old__price">110.000đ</span>
+                  <span class="save__price">10% Off</span>
+                </div>
+                <p class="short__description">
+                  💕 Set Urban Chic bao gồm:<br><br>
+                  ○ 1 gương cầm tay Shirley Temple (giá lẻ 65.000đ)<br>
+                  ○ 1 Kẹp tóc Bellini (giá lẻ 45.000đ)</ul> 
+                  <ul style="border: 2px solid pink; padding: 10px; margin-top: 10px;  background-color: #ffffff; border-radius: 3px; color: #333; line-height: 1.5; font-weight: bold;">
+                    ✨ Đặc biệt, các quý cô sẽ được tự do lựa chọn Charm mình iu thích để gắn lên hai bé điệu này khi rinh về nha!</ul>
+                </p><br><br>
+
+                <ul class="products__list">
+                  <li class="list__item flex">
+                    <i class="fi-rs-crown"></i> Bảo hành keo sản phẩm 1 tháng
+                  </li>
+                  <li class="list__item flex">
+                    <i class="fi-rs-refresh"></i> 1 Đổi 1 cho sản phẩm lỗi
+                  </li>
+                </ul>
+                <div class="details__color flex">
+                  <span class="details__lettercharm-title">Chọn màu charm chữ:</span>
+                  <ul class="color__list">
+                    <li>
+                      <a
+                        href="#"
+                        class="color__link active-link"
+                        style="background-color: #ffb2dbb6"
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="color__link"
+                        style="background-color: hsl(206, 98%, 83%)"
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        class="color__link"
+                        style="background-color: #000000"
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div class="details__color flex">
+                  <span class="details__letterinput-title">Điền tên custom:</span>
+                  <ul class="color__list">
+                    <input
+                    type="text"
+                    placeholder="Tối đa 6 ký tự"
+                    class="form__input"
+                  />
+                  </ul>
+                </div>
+                
+                <div class="details__size flex">
+                  <span class="details__decorcharm-title">Chọn charm hình:</span>
+                  <ul class="size__list">
+                    <li>
+                      <a href="#" class="size__link size-active">Charm nơ</a>
+                    </li>
+                    <li>
+                      <a href="#" class="size__link">Charm bướm</a>
+                    </li>
+                    <li>
+                      <a href="#" class="size__link">Charm vỏ sò</a>
+                    </li>
+                    <li>
+                      <a href="#" class="size__link">Charm sao biển</a>
+                    </li>
+                  </ul>
+                </div>
+                
+                <!-- Hành động thêm vào giỏ hàng -->
+                  <div class="details__action" style="margin-top: 20px;">
+                    <input type="number" class="quantity" value="1" />
+                    <a href="#" class="btn btn--sm">Thêm vào giỏ hàng</a>
+                    <a href="#" class="details__action-btn">
+                      <i class="fi fi-rs-heart"></i>
+                    </a>
+                  </div>
+      </section>
+ 
+      <!--========= CÁC MỤC ĐỂ XEM THÊM THÔNG TIN ==========-->
+      <section class="details__tab container">
+        <!-- Phân chia 2 tab chính là Xem thêm thông tin và Đánh giá -->
+        <div class="detail__tabs">
+          <span class="detail__tab active-tab" data-target="#info">
+           Thông Tin Sản Phẩm
+          </span>
+          <span class="detail__tab" data-target="#reviews">Đánh Giá (3)</span>
+        </div>
+        <div class="details__tabs-content">
+          <div class="details__tab-content active-tab" content id="info">
+            <table class="info__table">
+              <tr>
+                <th>Tên Set</th>
+                <td>Set Urban Chic</td>
+              </tr>
+              <tr>
+                <th>Bao gồm</th>
+                <td>1 gương cầm tay Shirley Temple, 1 kẹp tóc Bellini</td>
+              </tr>
+              <tr>
+                <th>Màu sắc</th>
+                <td>Bạc, trắng</td>
+              </tr>
+              <tr>
+                <th>Charm</th>
+                <td>Charm chữ và hình tự chọn</td>
+              </tr>
+            </table>
+            <ul class="details__tabs-content" style="padding-left: 20px; line-height: 1.8;">
+        <li class="list__item flex">
+          <i class="fi-rs-refresh"></i> Đơn hàng trên 150.000VNĐ sẽ có quà đặc biệt
+        </li>
+        <li class="list__item flex">
+          <i class="fi-rs-credit-card"></i> Ship COD toàn quốc
+        </li>
+      </ul>
+          </div>
+   <!-- Khu vực hiển thị các đánh giá -->
+<div class="details__tab-content" content id="reviews">
+            <div class="reviews__container grid">
+              <div class="review__single">
+                <div>
+                  <img
+                    src="./assets/img/pinklady2.png"
+                    alt=""
+                    class="review__img"
+                  />
+                  <h4 class="review__title">Nguyen Ngoc Nhi</h4>
+                </div>
+                <div class="review__data">
+                  <div class="review__rating">
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                  </div>
+                  <p class="review__description">
+                    Sản phẩm siêu đáng iu luôn áaaa.
+                  </p>
+                  <span class="review__date">November 4, 2024 at 3:12 pm</span>
+                </div>
+              </div>
+              <div class="review__single">
+                <div>
+                  <img
+                    src="https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-6/464075318_122109800858564247_3583233898970406435_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=i-nDUnGQq5IQ7kNvgHkugHr&_nc_zt=23&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=ANd19YGTZRt2JSHSlYInaS1&oh=00_AYAAeiLhrk04MZ2tqaZMkQLLuUSsaUrP_oXIgnlQCgBscQ&oe=674E4718"
+                    alt=""
+                    class="review__img"
+                  />
+                  <h4 class="review__title">Lan Anh</h4>
+                </div>
+        <!--Hiển thị Xếp hạng 5 sao -->
+                <div class="review__data">
+                  <div class="review__rating">
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                  </div>
+                  <p class="review__description">
+                    Siêu cưng luôn í, rất phù hợp với mình.
+                  </p>
+                  <span class="review__date">August 23, 2024 at 19:45 pm</span>
+                </div>
+              </div>
+              <div class="review__single">
+                <div>
+                  <img
+                    src="https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-6/467313041_122117435696564247_2797018643378666511_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=dzHwCTCucoQQ7kNvgFmHEFV&_nc_zt=23&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=A9zDPiE0lSZWywtlb5oNt8g&oh=00_AYDp65S-evLLGrooJyEjiKLPKt7_UT06PfOWwruCEirOnQ&oe=674E5D2A"
+                    alt=""
+                    class="review__img"
+                  />
+                  <h4 class="review__title">Cún iu</h4>
+                </div>
+                <div class="review__data">
+                  <div class="review__rating">
+                     <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                  </div>
+                  <p class="review__description">
+                    Trời ơi chủ sốp siêu nhiệt tình luôn í, 10 điểm nhen.
+                  </p>
+                  <span class="review__date">Octorber 22, 2024 at 10:01 am</span>
+                </div>
+              </div>
+            </div>
+            <div class="review__form">
+              <h4 class="review__form-title">Thêm đánh giá</h4>
+              <div class="rate__product">
+                <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+              </div>
+               <!-- Form nhập thông tin đánh giá -->
+              <form action="" class="form grid">
+                                <div class="form__group grid">
+                  <input type="text" placeholder="Tên tài khoản" class="form__input">
+                </div>
+                <textarea
+                  class="form__input textarea"
+                  placeholder="Viết đánh giá"
+                ></textarea>
+
+                <div class="form__btn">
+                  <button class="btn">Đăng</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+</section>
+
+      <!--=============== DANH MỤC SẢN PHẨM ===============-->
+      <section class="products container section--lg">
+        <!--==========Hiển thị sản phẩm tương tự===============>-->
+        <h3 class="section__title"><span>Sản phẩm tương tự</span>
+        <div class="products__container grid">
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img
+                  src="./assets/img/pinklady2.png"
+                  alt="Pinky Lady"
+                  class="product__img default"
+                />
+                <img
+                  src="./assets/img/bellini.png"
+                  alt=""
+                  class="product__img hover"
+                />
+              </a>
+                <!-- Các hành động của sản phẩm -->
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Xem nhanh">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="action__btn"
+                  aria-label="Thêm vào giỏ hàng"
+                >
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+            
+              </div>
+              <div class="product__badge light-pink">Hot</div>
+            </div>
+             <!-- Nội dung sản phẩm -->
+            <div class="product__content">
+              <span class="product__category"> Hair Clip</span>
+              <a href="details.html">
+                <h3 class="product__title">Bellini Hair Clip</h3>
+              </a>
+                <!-- Hiển thị đánh giá sản phẩm bằng sao -->
+              <div class="product__rating">
+                <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">45.000 VNĐ</span>
+                <span class="old__price">59.000 VNĐ</span>
+              </div>
+                 <!-- Nút thêm vào giỏ hàng -->
+              <a
+                href="#"
+                class="action__btn cart__btn"
+                aria-label="Add To Cart"
+              >
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img
+                  src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t39.30808-6/465609713_122113481606564247_2700525107313335446_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=8eQW7iSWSmkQ7kNvgFuHdQ4&_nc_zt=23&_nc_ht=scontent.fsgn2-5.fna&_nc_gid=AAWvVzXYtBcvnmyHAR1qwiS&oh=00_AYDWyhfFHRQBzHzWOL8vq2Jb-OqjE6XahEOv64_dFmhMdA&oe=6753312D"
+                  alt=""
+                  class="product__img default"
+                />
+              </a>
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Xem nhanh">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="action__btn"
+                  aria-label="Thêm vào giỏ hàng"
+                >
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+                
+              </div>
+               <div class="product__badge light-pink">Hot</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Set Điệu</span>
+              <a href="details.html">
+                <h3 class="product__title">Set Urban Chic</h3>
+              </a>
+              <div class="product__rating">
+               <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">95.000 VNĐ</span>
+                <span class="old__price">115.000 VNĐ</span>
+              </div>
+              <a
+                href="#"
+                class="action__btn cart__btn"
+                aria-label="Add To Cart"
+              >
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img
+                  src="https://scontent.fsgn2-4.fna.fbcdn.net/v/t39.30808-6/466463900_122117435702564247_1050267853336441557_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=tV5Gg5DdLBIQ7kNvgFP_qmq&_nc_zt=23&_nc_ht=scontent.fsgn2-4.fna&_nc_gid=AtYqmUsMjBo-4DhkMzp158b&oh=00_AYAljdRA2SzBD_NuunqLRc7JuZe20CyxHl72L522k9N8Mg&oe=67531385"
+                  alt="Shirley Temple"
+                  class="product__img default"
+                />
+                <img
+                  src="https://scontent.fsgn19-1.fna.fbcdn.net/v/t39.30808-6/467027609_122117435708564247_5778755731714264895_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=V9jx9iGSd7sQ7kNvgEnrmiJ&_nc_zt=23&_nc_ht=scontent.fsgn19-1.fna&_nc_gid=AbF2M-xsFSA_1gvM7rwVPq_&oh=00_AYAgIfd67995GDkbqKwJ-RUArahjPKguzAcaJwOkCiCBkA&oe=674E53E6"
+                  alt=""
+                  class="product__img hover"
+                />
+              </a>
+              <div class="product__actions">
+                <a href="#" class="action__btn" aria-label="Xem nhanh">
+                  <i class="fi fi-rs-eye"></i>
+                </a>
+                <a
+                  href="#"
+                  class="action__btn"
+                  aria-label="Add to Wishlist"
+                >
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+               
+              </div>
+              <div class="product__badge light-pink">Hot</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Món điệu Nàng yêu</span>
+              <a href="details.html">
+                <h3 class="product__title"> Shirley Temple Hand Mirror</h3>
+              </a>
+
+              <div class="product__rating">
+              <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+                    <i class="fi fi-rs-star" style="color: #ffcc00;"></i>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">55.000 VNĐ</span>
+                <span class="old__price">65.000 VNĐ</span>
+              </div>
+              <a
+                href="#"
+                class="action__btn cart__btn"
+                aria-label="Thêm vào giỏ hàng"
+              >
+                <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== Bảng tin điện tử cửa hàng  ===============-->
+      <section class="newsletter section">
+        <div class="newsletter__container container grid">
+          <h3 class="newsletter__title flex">
+            <img
+              src="./assets/img/icon-email.svg"
+              alt=""
+              class="newsletter__icon"
+            />
+            Sign in to Newsletter
+          </h3>
+          <p class="newsletter__description">
+            ...and receive $25 coupon for first shopping.
+          </p>
+          <form action="" class="newsletter__form">
+            <input
+              type="text"
+              placeholder="Enter Your Email"
+              class="newsletter__input"
+            />
+            <button type="submit" class="newsletter__btn">Subscribe</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer container">
+      <div class="footer__container grid">
+        <!-- Phần logo và thông tin liên hệ -->
+        <div class="footer__content">
+          <a href="index.html" class="footer__logo">
+            <img src="./assets/img/logo.svg" alt="" class="footer__logo-img" />
+          </a>
+          <h4 class="footer__subtitle">Contact</h4>
+          <p class="footer__description">
+            <span>Địa chỉ:</span> 279 Nguyễn Tri Phương, Quận 10, TP.HCM
+          </p>
+          <p class="footer__description">
+            <span>SĐT:</span> 0971299846
+          </p>
+          <p class="footer__description">
+            <span>Giờ hoạt động:</span> 9:00 - 22:00, Thứ 2 - Thứ 7
+          </p>
+            <!-- Mạng xã hội -->
+          <div class="footer__social">
+            <h4 class="footer__subtitle">Mạng xã hội</h4>
+            <div class="footer__links flex">
+              <a href="#">
+                <img
+                  src="./assets/img/icon-facebook.svg"
+                  href="https://www.facebook.com/profile.php?id=61566927422642"
+                  alt="Facebook"
+                  class="footer__social-icon"
+                />
+              </a>
+              
+              <a href="#">
+                <img
+                  src="./assets/img/icon-instagram.svg"
+                  href="https://www.instagram.com/chiccharm.official_/"
+                  alt="Instagram"
+                  class="footer__social-icon"
+                />
+              </a>
+          
+            </div>
+          </div>
+        </div>
+          <!-- Liên kết địa chỉ và thông tin liên hệ của cửa hàng -->
+        <div class="footer__content">
+          <h3 class="footer__title">Address</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">About Us</a></li>
+            <li><a href="#" class="footer__link">Delivery Information</a></li>
+            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+            <li><a href="#" class="footer__link">Terms & Conditions</a></li>
+            <li><a href="#" class="footer__link">Contact Us</a></li>
+            <li><a href="#" class="footer__link">Support Center</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">My Account</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Sign In</a></li>
+            <li><a href="#" class="footer__link">View Cart</a></li>
+            <li><a href="#" class="footer__link">My Wishlist</a></li>
+            <li><a href="#" class="footer__link">Track My Order</a></li>
+            <li><a href="#" class="footer__link">Help</a></li>
+            <li><a href="#" class="footer__link">Order</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">Secured Payed Gateways</h3>
+          <img
+            src="./assets/img/payment-method.png"
+            alt=""
+            class="payment__img"
+          />
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="copyright">&copy; 2024 Evara. All right reserved</p>
+        <span class="designer">Designer by Crypticalcoder</span>
+      </div>
+    </footer>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
