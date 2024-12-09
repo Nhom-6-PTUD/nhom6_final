@@ -318,7 +318,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-/*=============== Ngăn cuộn trang khi nhấn nút Thêm vào giỏ hàng ===============*/
+/*=============== Ngăn cuộn trang và hiện thông báo khi nhấn nút Thêm vào giỏ hàng ===============*/
 document.addEventListener("DOMContentLoaded", function () {
   const addToCartButton = document.getElementById("add-to-cart");
 
@@ -327,4 +327,31 @@ document.addEventListener("DOMContentLoaded", function () {
     // Ngừng hành động mặc định (nếu có)
     event.preventDefault();
   });
+});
+
+// Lấy phần tử nút "Thêm vào giỏ hàng" qua ID
+document.getElementById("add-to-cart").addEventListener("click", function (event) {
+  event.preventDefault(); // Ngăn chặn hành động mặc định của thẻ <a>
+
+  // Tạo thông báo
+  const notification = document.createElement("div");
+  notification.textContent = "Đã thêm vào giỏ hàng!";
+  notification.style.position = "fixed";
+  notification.style.bottom = "20px";
+  notification.style.right = "20px";
+  notification.style.backgroundColor = "#ff77c0b6";
+  notification.style.color = "#fff";
+  notification.style.padding = "10px 20px";
+  notification.style.borderRadius = "5px";
+  notification.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+  notification.style.zIndex = "1000";
+  notification.style.fontSize = "14px";
+
+  // Thêm thông báo vào body
+  document.body.appendChild(notification);
+
+  // Tự động xóa thông báo sau 2 giây
+  setTimeout(function () {
+    notification.remove();
+  }, 1500);
 });
