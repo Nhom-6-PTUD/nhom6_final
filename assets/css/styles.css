@@ -1402,18 +1402,40 @@ body {
 
 /*=============== DETAILS ===============*/
 
+.custom-rating {
+  display: flex;
+  gap: 5px;
+  justify-content: left;
+  padding-bottom: 8px;
+}
+
+.custom-star {
+  width: 25px;
+  height: 25px;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background: gray; /* Màu mặc định */
+}
+
+.custom-star.full {
+  background: #f39c12; /* Màu vàng cho sao đầy */
+}
+
+.custom-star.half {
+  background: linear-gradient(to right, #f39c12 50%, gray 50%);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* Ẩn sao hệ thống (nếu có) */
+.fi-rs-star {
+  display: none;
+}
+
 /* Đánh giá số sao */
 .rating__star__form {
   display: flex;
   gap: 5px;
   justify-content: left;
   padding-bottom: 1rem;
-}
-
-.rating__star {
-  display: flex;
-  gap: 5px;
-  justify-content: left;
 }
 
 .star {
@@ -1423,11 +1445,6 @@ body {
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   cursor: pointer;
   transition: background 0.3s ease;
-}
-
-/* Ẩn sao hệ thống (nếu có) */
-.fi-rs-star {
-  display: none;
 }
 
 .star:hover,
