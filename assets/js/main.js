@@ -113,6 +113,54 @@ tabs.forEach((tab) => {
   });
 });
 
+/*=============== Zoom sản phẩm ===============*/
+document.addEventListener("DOMContentLoaded", function () {
+  const thumbnails = document.querySelectorAll(".thumbnail");
+  const mainImage = document.querySelector("#zoom");
+
+  thumbnails.forEach((thumbnail, index) => {
+      thumbnail.addEventListener("click", function () {
+          // Lấy URL của ảnh nhỏ
+          const newSrc = this.getAttribute("src");
+          const newZoomImage = newSrc.replace(".jpg", "_big.jpg"); // Giả sử ảnh lớn có hậu tố _big.jpg
+
+          // Cập nhật ảnh chính
+          mainImage.setAttribute("src", newSrc);
+
+          // Thêm zoom cho ảnh thứ 1,2,3,4
+          if (index === 0 || index === 1 || index === 2 || index === 3) {
+              mainImage.setAttribute("data-zoom-image", newZoomImage);
+              $("#zoom").data("elevateZoom")?.swaptheimage(newSrc, newZoomImage);
+          } else {
+              mainImage.removeAttribute("data-zoom-image");
+              $("#zoom").data("elevateZoom")?.destroy();
+          }
+
+          // Đổi trạng thái active cho thumbnail
+          document.querySelector(".thumbnail.active")?.classList.remove("active");
+          this.classList.add("active");
+      });
+  });
+});
+
+/*=============== Tab Thông tin SP và Đánh giá ===============*/
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".detail__tab");
+  const tabContents = document.querySelectorAll(".details__tab-content");
+
+  tabs.forEach((tab, index) => {
+      tab.addEventListener("click", function () {
+          // Xóa trạng thái active khỏi tất cả các tab
+          document.querySelector(".detail__tab.active-tab")?.classList.remove("active-tab");
+          document.querySelector(".details__tab-content.active-tab")?.classList.remove("active-tab");
+
+          // Thêm trạng thái active cho tab được nhấn
+          this.classList.add("active-tab");
+          tabContents[index].classList.add("active-tab");
+      });
+  });
+});
+
 /*=============== Cập nhật số lượt đánh giá ===============*/
 document.addEventListener("DOMContentLoaded", function () {
   // Lấy số lượt đánh giá từ tab "Đánh Giá"

@@ -104,7 +104,7 @@
           <li><span class="breadcrumb__link"></span>></li>
           <li><a href="shop.html" class="breadcrumb__link">Cửa Hàng</a></li>
           <li><span class="breadcrumb__link"></span>></li>
-          <li><span class="breadcrumb__link">Set Alcoholicity</span></li>
+          <li><span class="breadcrumb__link">Set Urban Chic</span></li>
         </ul>
       </section>
       
@@ -116,10 +116,10 @@
             <!-- Carousel chứa thumbnails -->
               <div class="thumbnails-carousel">
                 <div class="thumbnails">
-                  <img src="assets\img\xmas_combo.jpg" alt="Set Urban Chic" class="thumbnail active">
-                  <img src="assets\img\shirleytemple.jpg" alt="Gương trái tim Shirley Temple" class="thumbnail">
-                  <img src="assets\img\bellini.jpg" alt="Kẹp tóc Bellini" class="thumbnail">
-                  <img src="assets\img\kol.jpg" alt="KOL" class="thumbnail">
+                  <img src="assets/img/xmas_combo.jpg" alt="Set Urban Chic" class="thumbnail active">
+                  <img src="assets/img/shirleytemple.jpg" alt="Gương trái tim Shirley Temple" class="thumbnail">
+                  <img src="assets/img/bellini.jpg" alt="Kẹp tóc Bellini" class="thumbnail">
+                  <img src="assets/img/kol.jpg" alt="KOL" class="thumbnail">
                 </div>
               </div>
               
@@ -129,30 +129,6 @@
                 </div>
           </div>
 
-          <!-- Thêm JavaScript -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const thumbnails = document.querySelectorAll(".thumbnail");
-    const mainImage = document.querySelector("#zoom");
-
-    thumbnails.forEach((thumbnail) => {
-      thumbnail.addEventListener("click", function () {
-        // Lấy URL của ảnh nhỏ
-        const newSrc = this.getAttribute("src");
-        const newZoomImage = newSrc.replace(".jpg", "_big.jpg"); // Giả sử ảnh lớn có hậu tố _big.jpg
-
-        // Cập nhật ảnh chính
-        mainImage.setAttribute("src", newSrc);
-        mainImage.setAttribute("data-zoom-image", newZoomImage);
-
-        // Đổi trạng thái active cho thumbnail
-        document.querySelector(".thumbnail.active")?.classList.remove("active");
-        this.classList.add("active");
-      });
-    });
-  });
-</script>
-          
           <!-- Nhóm thứ hai: Thông tin chi tiết sản phẩm -->
             <div class="details__group">
               <h3 class="details__title" style="font-family: 'Cambria', sans-serif; font-size: 45px;">Set Urban Chic</h3>
@@ -178,11 +154,14 @@
                   </a>  
                 </div>
 
+                <!-- Nhãn "Hiển thị số lượng tồn kho" -->
+                <div class="stock-label shining" style="margin-top: 10px; font-family: 'Cambria'; font-size: 1.2rem; color: white; background-color: rgb(255, 127, 172); border-radius: 15px; padding: 5px 12px; display: inline-block; line-height: 1.2; overflow: hidden;"> Chỉ còn 5 sản phẩm <div class="shine"></div> </div>
+
                 <p class="short__description" style="font-family: 'Cambria'; font-size: 20px; line-height: 2;">
                   💕 Set Urban Chic bao gồm:<br>
                   ○ 1 gương cầm tay Shirley Temple (giá lẻ 65.000đ)<br>
                   ○ 1 kẹp tóc Bellini (giá lẻ 45.000đ)</ul> 
-                  <ul style="border: 2px solid pink; padding: 10px; margin-top: 10px;  background-color: #ffffff; border-radius: 20px; color: #333; line-height: 1.5; font-weight: bold;">
+                  <ul style="font-family: 'Cambria'; font-size: 19px; border: 2px solid pink; padding: 10px; margin-top: 10px;  background-color: #ffffff; border-radius: 20px; color: #333; line-height: 1.5; font-weight: bold; display: inline-block;">
                     ✨ Đặc biệt, các quý cô sẽ được tự do lựa chọn Charm mình iu thích để gắn lên hai bé điệu này khi rinh về nha!</ul>
                 </p><br><br>
 
@@ -268,9 +247,6 @@
                     <li class="meta__list flex">
                       <span>Tags: Gương, Kẹp, Phụ kiện tóc
                     </li>
-                    <li class="meta__list flex">
-                      <span>Sẵn hàng: 8
-                    </li>
                   </ul>
       </section>
  
@@ -278,11 +254,21 @@
       <section class="details__tab container">
         <!-- Phân chia 2 tab chính là Xem thêm thông tin và Đánh giá -->
         <div class="detail__tabs">
-          <span class="detail__tab active-tab" data-target="#info" style="font-family: 'Cambria'; font-size: 18px;">Thông Tin Sản Phẩm</span>
-          <span class="detail__tab" data-target="#reviews" style="font-family: 'Cambria'; font-size: 18px;">Đánh Giá (3)</span>
+          <span class="detail__tab active-tab" data-target="#info" style="font-family: 'Cambria'; font-size: 22px;">Thông Tin Sản Phẩm</span>
+          <span class="detail__tab" data-target="#reviews" style="font-family: 'Cambria'; font-size: 22px;">Đánh Giá (3)</span>
         </div>
         <div class="details__tabs-content" style="font-family: 'Cambria'; font-size: 20px;">
           <div class="details__tab-content active-tab" content id="info">
+
+            <p><strong>Set Urban Chic gồm:</strong><br><br>
+              • 1 gương cầm tay <strong>Shirley Temple</strong> (giá lẻ 65.000đ)<br><br>
+              • 1 kẹp tóc <strong>Bellini</strong> (giá lẻ 45.000đ)<br><br>
+              Các quý cô được tự do lựa chọn Charm mình iu thích nữa nèee!<br><br>
+              
+              ✨ Đặc biệt, Chic còn có quà dành cho các cô nàng sành điệu nữa đó. Chỉ với giá <strong>100.000đ</strong> yêu thương thôi là bạn đã có ngay full Collection.<br><br>
+              
+              Nhanh tay rước em ấy về nhà để luôn đẹp rạng ngời thui nàoo!<br><br></p>
+              
             <table class="info__table">
               <tr>
                 <th style="font-weight: bold; text-align: center;">Tên Set</th>
@@ -325,7 +311,7 @@
                   <p class="review__description">
                     Gương với kẹp khá xinh, có điều mình đợi hàng hơi lâu nên cho sốp 4 sao thui nhen.
                   </p>
-                  <span class="review__date">November 4, 2024 at 3:12 pm</span>
+                  <span class="review__date">01/10/2024 lúc 3:12 PM</span>
                 </div>
               </div>
               <div class="review__single">
@@ -349,7 +335,7 @@
                   <p class="review__description">
                     Combo gương kẹp custom siuu cưng luôn ạ, mình mua tặng bạn mình mà khen miết luôn.
                   </p>
-                  <span class="review__date">August 23, 2024 at 19:45 pm</span>
+                  <span class="review__date">26/11/2024 lúc 10:01 AM</span>
                 </div>
               </div>
               <div class="review__single">
@@ -372,7 +358,7 @@
                   <p class="review__description">
                     Trời ơi chị chủ sốp dễ thương nhiệt tình lắm luôn í, 10 điểm chất lượng nè 💯
                   </p>
-                  <span class="review__date">Octorber 22, 2024 at 10:01 am</span>
+                  <span class="review__date">17/02/2024 lúc 07:45 PM</span>
                 </div>
               </div>
             </div>
@@ -769,5 +755,6 @@
 	  <script>
 		$("#zoom").elevateZoom();
 	  </script>
+  
   </body>
 </html>
