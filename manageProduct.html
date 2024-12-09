@@ -57,6 +57,68 @@
         display: block;
       }
     }
+    .table {
+      width: 100%;
+      margin: 20px 0;
+      border-collapse: collapse;
+    }
+
+    .table th,
+    .table td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .table th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+    }
+
+    .table td {
+      background-color: #fff;
+    }
+
+    .table-striped tbody tr:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+
+    /* Cải thiện hình ảnh trong bảng */
+    .table img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* Cải thiện nút hành động */
+    .table .btn {
+      margin-right: 5px;
+    }
+
+    .table .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .table .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    .table .btn-danger {
+      background-color: #dc3545;
+      border-color: #dc3545;
+    }
+
+    .table .btn-danger:hover {
+      background-color: #c82333;
+      border-color: #c82333;
+    }
+
+    .image-detail {
+      width: 100%;
+    }
   </style>
   <body>
     <div class="container-scroller">
@@ -345,159 +407,66 @@
                 >
                   <i class="mdi mdi-home"></i>
                 </span>
-                Dashboard
+                Quản lý sản phẩm
               </h3>
-              <nav aria-label="breadcrumb">
-                <ul class="breadcrumb">
-                  <li class="breadcrumb-item active" aria-current="page">
-                    <span></span>Overview
-                    <i
-                      class="mdi mdi-alert-circle-outline icon-sm text-primary align-middle"
-                    ></i>
-                  </li>
-                </ul>
-              </nav>
             </div>
-            <div class="row">
-              <div class="col-md-4 stretch-card grid-margin">
-                <div class="card bg-gradient-danger card-img-holder text-white">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-3">Bán trong tuần</h4>
-                    <h2 class="mb-5">$ 15,0000</h2>
-                    <h6 class="card-text">Tăng 60%</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 stretch-card grid-margin">
-                <div class="card bg-gradient-info card-img-holder text-white">
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-3">
-                      Đơn đặt hàng trong tuần
-                    </h4>
-                    <h2 class="mb-5">45,6334</h2>
-                    <h6 class="card-text">Giảm 10%</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 stretch-card grid-margin">
-                <div
-                  class="card bg-gradient-success card-img-holder text-white"
-                >
-                  <div class="card-body">
-                    <h4 class="font-weight-normal mb-3">
-                      Khách truy cập trực tuyến
-                    </h4>
-                    <h2 class="mb-5">95,5741</h2>
-                    <h6 class="card-text">Tăng 5%</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-7 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="clearfix">
-                      <h4 class="card-title float-left">Sản phẩm bán chạy</h4>
-                      <div
-                        id="visit-sale-chart-legend"
-                        class="rounded-legend legend-horizontal legend-top-right float-right"
-                      ></div>
-                    </div>
-                    <canvas id="visit-sale-chart" class="mt-4"></canvas>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-5 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Traffic</h4>
-                    <canvas id="traffic-chart"></canvas>
-                    <div
-                      id="traffic-chart-legend"
-                      class="rounded-legend legend-vertical legend-bottom-left pt-4"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Sản phẩm đang bán</h4>
-                    <div class="table-responsive">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>Hình ảnh</th>
-                            <th>Mô tả</th>
-                            <th>Trạng thái</th>
-                            <th>Ngày</th>
-                            <th>Mã hàng</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <img
-                                src="assets/img/product1.1.png"
-                                class="me-2"
-                                alt="image"
-                              />
-                              Product 1
-                            </td>
-                            <td>Fund is not recieved</td>
-                            <td>
-                              <label class="badge badge-gradient-success"
-                                >DONE</label
-                              >
-                            </td>
-                            <td>Dec 5, 2017</td>
-                            <td>WD-12345</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img
-                                src="assets/img/product1.2.png"
-                                class="me-2"
-                                alt="image"
-                              />
-                              Product 2
-                            </td>
-                            <td>High loading time</td>
-                            <td>
-                              <label class="badge badge-gradient-warning"
-                                >PROGRESS</label
-                              >
-                            </td>
-                            <td>Dec 12, 2017</td>
-                            <td>WD-12346</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <img
-                                src="assets/img/product10.1.png"
-                                class="me-2"
-                                alt="image"
-                              />
-                              Product 3
-                            </td>
-                            <td>Website down for one week</td>
-                            <td>
-                              <label class="badge badge-gradient-info"
-                                >ON HOLD</label
-                              >
-                            </td>
-                            <td>Dec 16, 2017</td>
-                            <td>WD-12347</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+            <div>
+              <button class="btn btn-success" onclick="addProduct()">
+                Thêm sản phẩm
+              </button>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Hành động</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <img
+                        src="https://via.placeholder.com/50"
+                        alt="Product"
+                        onclick="viewImage(this.src)"
+                      />
+                    </td>
+                    <td>Sản phẩm A</td>
+                    <td>100,000</td>
+                    <td>
+                      <button
+                        class="btn btn-primary btn-sm"
+                        onclick="editProduct()"
+                      >
+                        Sửa
+                      </button>
+                      <button class="btn btn-danger btn-sm">Xóa</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img
+                        src="https://via.placeholder.com/50"
+                        alt="Product"
+                        onclick="viewImage(this.src)"
+                      />
+                    </td>
+                    <td>Sản phẩm B</td>
+                    <td>200,000</td>
+                    <td>
+                      <button
+                        class="btn btn-primary btn-sm"
+                        onclick="editProduct()"
+                      >
+                        Sửa
+                      </button>
+                      <button class="btn btn-danger btn-sm">Xóa</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 
@@ -506,6 +475,67 @@
         <!-- main-panel ends -->
       </div>
       <!-- page-body-wrapper ends -->
+    </div>
+
+    <div
+      class="modal fade"
+      id="viewImageModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+            <img
+              id="modalImage"
+              src=""
+              alt="Product"
+              class="img-fluid image-detail"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Thêm/Sửa Sản phẩm</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="productName" class="form-label">Tên sản phẩm</label>
+                <input type="text" class="form-control" id="productName" />
+              </div>
+              <div class="mb-3">
+                <label for="productPrice" class="form-label">Giá</label>
+                <input type="number" class="form-control" id="productPrice" />
+              </div>
+              <div class="mb-3">
+                <label for="productImage" class="form-label">Hình ảnh</label>
+                <input type="file" class="form-control" id="productImage" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Đóng
+            </button>
+            <button type="button" class="btn btn-primary">Lưu</button>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- container-scroller -->
     <!-- plugins:js -->
@@ -523,6 +553,26 @@
     <!-- Custom js for this page -->
     <script src="assets/js/dashboard.js"></script>
     <script src="assets/js/todolist.js"></script>
+    <script>
+      function viewImage(src) {
+        document.getElementById("modalImage").src = src;
+        new bootstrap.Modal(document.getElementById("viewImageModal")).show();
+      }
+
+      function addProduct() {
+        document
+          .getElementById("productModal")
+          .querySelector(".modal-title").textContent = "Thêm Sản phẩm";
+        new bootstrap.Modal(document.getElementById("productModal")).show();
+      }
+
+      function editProduct() {
+        document
+          .getElementById("productModal")
+          .querySelector(".modal-title").textContent = "Sửa Sản phẩm";
+        new bootstrap.Modal(document.getElementById("productModal")).show();
+      }
+    </script>
     <!-- End custom js for this page -->
   </body>
 </html>
