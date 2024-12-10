@@ -16,6 +16,9 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico" />
   </head>
   <style>
+      body {
+      font-family: "Roboto", sans-serif;
+    }
     .navbar .navbar-brand-wrapper .navbar-brand img {
       width: 150px;
       height: 100px !important;
@@ -113,6 +116,50 @@
     .image-detail {
       width: 100%;
     }
+    .info {
+      display: flex;
+      gap: 12px;
+      text-align: center;
+      flex-direction: column;
+    }
+    .info-name {
+      margin-top: 5px;
+    }
+    .btn-create-product{
+      background-color: #ff2499b6;
+      border: 1px solid #ff2499b6;
+    }
+    .btn-edit{
+      background-color: #f50083b6;
+      color: white;
+    }
+    .btn-delete{
+      background-color: #ffa7d6b6;
+      color: white;
+    }
+    .status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+  .status.available {
+  background-color: #28a745;
+}
+
+  .status.hidden {
+  background-color: #ffc107; 
+}
+
+  .status.out-of-stock {
+  background-color: #dc3545; 
+}
+  #productCategory{
+  height: 50px;
+}
   </style>
   <body>
     <div class="container-scroller">
@@ -162,7 +209,7 @@
                   />
                   <span class="availability-status online"></span>
                 </div>
-                <div class="nav-profile-text">
+                <div class="nav-profile-text info-name">
                   <p class="mb-1 text-black">Lê Thảo Linh</p>
                 </div>
               </a>
@@ -335,16 +382,7 @@
                 <h6 class="p-3 mb-0 text-center">Xem thêm</h6>
               </div>
             </li>
-            <li class="nav-item nav-logout d-none d-lg-block">
-              <a class="nav-link" href="#">
-                <i class="mdi mdi-power"></i>
-              </a>
-            </li>
-            <li class="nav-item nav-settings d-none d-lg-block">
-              <a class="nav-link" href="#">
-                <i class="mdi mdi-format-line-spacing"></i>
-              </a>
-            </li>
+           
           </ul>
           <button
             class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
@@ -361,22 +399,18 @@
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <ul class="nav">
             <li class="nav-item nav-profile">
-              <a href="#" class="nav-link">
+              <a href="#" class="nav-link info">
                 <div class="nav-profile-image">
                   <img
                     src="assets/img/phg.JPG"
                     alt="profile"
                   />
-                  <span class="login-status online"></span>
-                  <!--change to offline or busy as needed-->
                 </div>
                 <div class="nav-profile-text d-flex flex-column">
                   <span class="font-weight-bold mb-2">Lê Thảo Linh</span>
                   <span class="text-secondary text-small">Nhân viên bán hàng</span>
                 </div>
-                <i
-                  class="mdi mdi-bookmark-check text-success nav-profile-badge"
-                ></i>
+                
               </a>
             </li>
             <li class="nav-item">
@@ -408,7 +442,7 @@
             </div>
 
             <div>
-              <button class="btn btn-success" onclick="addProduct()">
+              <button class="btn btn-success btn-create-product" onclick="addProduct()">
                 Thêm sản phẩm
               </button>
               <table class="table table-striped">
@@ -416,6 +450,8 @@
                   <tr>
                     <th>Ảnh</th>
                     <th>Tên sản phẩm</th>
+                    <th>Danh mục sản phẩm</th>
+                    <th>Trạng thái</th>
                     <th>Giá</th>
                     <th>Hành động</th>
                   </tr>
@@ -423,174 +459,82 @@
                 <tbody>
                   <tr>
                     <td>
-                      <img
-                        src="assets/img/alcoholicity.jpg"
-                        alt="Product"
-                        onclick="viewImage(this.src)"
-                      />
+                      <img src="assets/img/alcoholicity.jpg" alt="Product" onclick="viewImage(this.src)" />
                     </td>
                     <td>Set Alcoholicity</td>
+                    <td>Set điệu nàng yêu</td>
+                    <td>
+                      <span class="status available">Đang hiển thị</span>
+                    </td>
                     <td>100,000</td>
                     <td>
-                      <button
-                        class="btn btn-primary btn-sm"
-                        onclick="editProduct()"
-                      >
-                        Sửa
-                      </button>
-                      <button class="btn btn-danger btn-sm">Xóa</button>
+                      <button class="btn btn-sm btn-edit" onclick="editProduct()">Sửa</button>
+                      <button class="btn btn-sm btn-delete">Xóa</button>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <img
-                        src="assets/img/bellini.jpg"
-                        alt="Product"
-                        onclick="viewImage(this.src)"
-                      />
+                      <img src="assets/img/bellini.jpg" alt="Product" onclick="viewImage(this.src)" />
                     </td>
                     <td>Kẹp tóc Bellini</td>
+                    <td>Kẹp tóc</td>
+                    <td>
+                      <span class="status hidden">Ẩn</span>
+                    </td>
                     <td>45,000</td>
                     <td>
-                      <button
-                        class="btn btn-primary btn-sm"
-                        onclick="editProduct()"
-                      >
-                        Sửa
-                      </button>
-                      <button class="btn btn-danger btn-sm">Xóa</button>
+                      <button class="btn btn-sm btn-edit" onclick="editProduct()">Sửa</button>
+                      <button class="btn btn-sm btn-delete">Xóa</button>
                     </td>
                   </tr>
-                </tbody>
-                
-              
-                 <tbody>
                   <tr>
                     <td>
-                      <img
-                        src="assets/img/pinklady2.jpg"
-                        alt="Product"
-                        onclick="viewImage(this.src)"
-                      />
+                      <img src="assets/img/pinklady2.jpg" alt="Product" onclick="viewImage(this.src)" />
                     </td>
                     <td>Pink Lady</td>
+                    <td>Set điệu nàng yêu</td>
+                    <td>
+                      <span class="status out-of-stock">Hết hàng</span>
+                    </td>
                     <td>60,000</td>
                     <td>
-                      <button
-                        class="btn btn-primary btn-sm"
-                        onclick="editProduct()"
-                      >
-                        Sửa
-                      </button>
-                      <button class="btn btn-danger btn-sm">Xóa</button>
+                      <button class="btn btn-sm btn-edit" onclick="editProduct()">Sửa</button>
+                      <button class="btn btn-sm btn-delete">Xóa</button>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <img
-                        src="assets/img/shirleytemple.jpg"
-                        alt="Product"
-                        onclick="viewImage(this.src)"
-                      />
+                      <img src="assets/img/shirleytemple.jpg" alt="Product" onclick="viewImage(this.src)" />
                     </td>
                     <td>Shirley Temple</td>
+                    <td>Gương cầm tay</td>
+                    <td>
+                      <span class="status available">Đang hiển thị</span>
+                    </td>
                     <td>45,000</td>
                     <td>
-                      <button
-                        class="btn btn-primary btn-sm"
-                        onclick="editProduct()"
-                      >
-                        Sửa
-                      </button>
-                      <button class="btn btn-danger btn-sm">Xóa</button>
+                      <button class="btn btn-sm btn-edit" onclick="editProduct()">Sửa</button>
+                      <button class="btn btn-sm btn-delete">Xóa</button>
                     </td>
                   </tr>
-                </tbody>
-                 <tbody>
                   <tr>
                     <td>
-                      <img
-                        src="assets/img/product8.1.png"
-                        alt="Product"
-                        onclick="viewImage(this.src)"
-                      />
+                      <img src="assets/img/product8.1.png" alt="Product" onclick="viewImage(this.src)" />
                     </td>
                     <td>Set 4 kẹp tóc Gigi</td>
+                    <td>Set điệu nàng yêu</td>
+                    <td>
+                      <span class="status hidden">Ẩn</span>
+                    </td>
                     <td>65,000</td>
                     <td>
-                      <button
-                        class="btn btn-primary btn-sm"
-                        onclick="editProduct()"
-                      >
-                        Sửa
-                      </button>
-                      <button class="btn btn-danger btn-sm">Xóa</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img
-                        src="assets/img/bellini.jpg"
-                        alt="Product"
-                        onclick="viewImage(this.src)"
-                      />
-                    </td>
-                    <td>Kẹp tóc Bellini</td>
-                    <td>45,000</td>
-                    <td>
-                      <button
-                        class="btn btn-primary btn-sm"
-                        onclick="editProduct()"
-                      >
-                        Sửa
-                      </button>
-                      <button class="btn btn-danger btn-sm">Xóa</button>
-                    </td>
-                  </tr>
-                </tbody>
-                 <tbody>
-                  <tr>
-                    <td>
-                      <img
-                        src="assets/img/product5.1.png"
-                        alt="Product"
-                        onclick="viewImage(this.src)"
-                      />
-                    </td>
-                    <td>Kẹp tóc Reclyn</td>
-                    <td>60,000</td>
-                    <td>
-                      <button
-                        class="btn btn-primary btn-sm"
-                        onclick="editProduct()"
-                      >
-                        Sửa
-                      </button>
-                      <button class="btn btn-danger btn-sm">Xóa</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img
-                        src="assets/img/product6.1.png"
-                        alt="Product"
-                        onclick="viewImage(this.src)"
-                      />
-                    </td>
-                    <td>Kẹp tóc Barli</td>
-                    <td>45,000</td>
-                    <td>
-                      <button
-                        class="btn btn-primary btn-sm"
-                        onclick="editProduct()"
-                      >
-                        Sửa
-                      </button>
-                      <button class="btn btn-danger btn-sm">Xóa</button>
+                      <button class="btn btn-sm btn-edit" onclick="editProduct()">Sửa</button>
+                      <button class="btn btn-sm btn-delete">Xóa</button>
                     </td>
                   </tr>
                 </tbody>
               </table>
+              
             </div>
           </div>
 
@@ -637,6 +581,14 @@
               <div class="mb-3">
                 <label for="productName" class="form-label">Tên sản phẩm</label>
                 <input type="text" class="form-control" id="productName" />
+              </div>
+              <div class="mb-3">
+                <label for="productCategory" class="form-label">Danh mục sản phẩm</label>
+                <select class="form-control" id="productCategory">
+                  <option value="1">Set điệu nàng yêu</option>
+                  <option value="2">Kẹp tóc</option>
+                  <option value="3">Gương cầm tay</option>
+                </select>
               </div>
               <div class="mb-3">
                 <label for="productPrice" class="form-label">Giá</label>
