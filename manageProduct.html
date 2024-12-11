@@ -16,8 +16,8 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico" />
   </head>
   <style>
-      body {
-      font-family: "Roboto", sans-serif;
+   * {
+      font-family: "Times New Roman", Times, serif !important;
     }
     .navbar .navbar-brand-wrapper .navbar-brand img {
       width: 150px;
@@ -160,6 +160,9 @@
   #productCategory{
   height: 50px;
 }
+.fix-message {
+      left: -200px !important;
+    }
   </style>
   <body>
     <div class="container-scroller">
@@ -243,7 +246,7 @@
                 <span class="count-symbol bg-warning"></span>
               </a>
               <div
-                class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list fix-message"
                 aria-labelledby="messageDropdown"
               >
                 <h6 class="p-3 mb-0">Tin nhắn mới</h6>
@@ -322,7 +325,7 @@
                 <span class="count-symbol bg-danger"></span>
               </a>
               <div
-                class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list"
+                class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list fix-message"
                 aria-labelledby="notificationDropdown"
               >
                 <h6 class="p-3 mb-0">Thông báo mới</h6>
