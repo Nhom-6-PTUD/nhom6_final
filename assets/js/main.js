@@ -113,53 +113,37 @@ tabs.forEach((tab) => {
   });
 });
 
-/*=============== Zoom sản phẩm ===============*/
-document.addEventListener("DOMContentLoaded", function () {
-  const thumbnails = document.querySelectorAll(".thumbnail");
-  const mainImage = document.querySelector("#zoom");
 
-  thumbnails.forEach((thumbnail, index) => {
-      thumbnail.addEventListener("click", function () {
-          // Lấy URL của ảnh nhỏ
-          const newSrc = this.getAttribute("src");
-          const newZoomImage = newSrc.replace(".jpg", "_big.jpg"); // Giả sử ảnh lớn có hậu tố _big.jpg
-
-          // Cập nhật ảnh chính
-          mainImage.setAttribute("src", newSrc);
-
-          // Thêm zoom cho ảnh thứ 1,2,3,4
-          if (index === 0 || index === 1 || index === 2 || index === 3) {
-              mainImage.setAttribute("data-zoom-image", newZoomImage);
-              $("#zoom").data("elevateZoom")?.swaptheimage(newSrc, newZoomImage);
-          } else {
-              mainImage.removeAttribute("data-zoom-image");
-              $("#zoom").data("elevateZoom")?.destroy();
-          }
-
-          // Đổi trạng thái active cho thumbnail
-          document.querySelector(".thumbnail.active")?.classList.remove("active");
-          this.classList.add("active");
-      });
-  });
-});
-
-/*=============== Tab Thông tin SP và Đánh giá ===============*/
-document.addEventListener("DOMContentLoaded", function () {
-  const tabs = document.querySelectorAll(".detail__tab");
-  const tabContents = document.querySelectorAll(".details__tab-content");
-
-  tabs.forEach((tab, index) => {
-      tab.addEventListener("click", function () {
-          // Xóa trạng thái active khỏi tất cả các tab
-          document.querySelector(".detail__tab.active-tab")?.classList.remove("active-tab");
-          document.querySelector(".details__tab-content.active-tab")?.classList.remove("active-tab");
-
-          // Thêm trạng thái active cho tab được nhấn
-          this.classList.add("active-tab");
-          tabContents[index].classList.add("active-tab");
-      });
-  });
-});
+/*=============== MẢNG TIN TỨC ===============*/
+      let news = document.getElementById('news');
+  
+      // Mảng các tin tức
+      const newsArray = [
+        "CHỈ CÒN 2 NGÀY DUY NHẤT - NHANH TAY CHỐT ĐƠN",
+        "MIỄN PHÍ VẬN CHUYỂN NỘI THÀNH TP.HCM"
+      ];
+  
+      // Hàm thay đổi tin tức
+      let newsIndex = 0;
+      function changeNews() {
+        // Ẩn tin tức hiện tại với hiệu ứng mờ
+        news.classList.add('hidden');
+  
+        setTimeout(() => {
+          // Thay đổi tin tức sau khi mờ đi
+          news.textContent = newsArray[newsIndex];
+          newsIndex = (newsIndex + 1) % newsArray.length;
+  
+          // Hiện lại tin tức mới với hiệu ứng mờ
+          news.classList.remove('hidden');
+        }, 1000); // Chờ 1 giây (thời gian mờ đi) trước khi thay đổi tin tức
+      }
+  
+      // Khởi động interval để thay đổi tin tức
+      setInterval(() => {
+        changeNews(); // Thay đổi tin tức
+      }, 3000); // Thay đổi mỗi 2 giây
+    
 
 /*=============== Cập nhật số lượt đánh giá ===============*/
 document.addEventListener("DOMContentLoaded", function () {
@@ -285,86 +269,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-/*=============== LƯU LỰA CHỌN MÀU CHARM ===============*/
-document.addEventListener("DOMContentLoaded", function () {
-  const colorLinks = document.querySelectorAll(".color__link");
 
-  // Xóa trạng thái đã lưu khi tải lại trang
-  localStorage.removeItem("selectedColor");
-
-  // Xử lý khi chọn màu
-  colorLinks.forEach((link) => {
-    link.addEventListener("click", function (event) {
-      // Ngăn trang cuộn lên đầu
-      event.preventDefault();
-
-      // Loại bỏ lớp 'active' khỏi tất cả các màu
-      colorLinks.forEach((item) => item.classList.remove("active"));
-
-      // Thêm lớp 'active' vào màu được chọn
-      this.classList.add("active");
-
-      // Lưu màu đã chọn
-      const selectedColor = this.dataset.color || this.style.backgroundColor;
-      localStorage.setItem("selectedColor", selectedColor);
-      console.log("Selected color:", selectedColor);
-    });
-  });
-
-  // Tự động áp dụng màu đã lưu khi tải lại trang (nếu cần giữ trạng thái giữa lần tải lại)
-  const savedColor = localStorage.getItem("selectedColor");
-  if (savedColor) {
-    colorLinks.forEach((link) => {
-      const color = link.dataset.color || link.style.backgroundColor;
-      if (color === savedColor) {
-        link.classList.add("active");
-      }
-    });
-  } else {
-    // Nếu không lưu trạng thái, xóa lớp 'active' khỏi tất cả các màu
-    colorLinks.forEach((item) => item.classList.remove("active"));
-  }
-});
-
-/*=============== LƯU LỰA CHỌN CHARM HÌNH ===============*/
-document.addEventListener("DOMContentLoaded", function () {
-  const sizeLinks = document.querySelectorAll(".size__link");
-
-  // Xóa trạng thái đã lưu khi tải lại trang
-  localStorage.removeItem("selectedCharm");
-
-  // Xử lý khi chọn charm
-  sizeLinks.forEach((link) => {
-    link.addEventListener("click", function (event) {
-      // Ngăn trang cuộn lên đầu
-      event.preventDefault();
-
-      // Loại bỏ lớp 'active' khỏi tất cả các charm
-      sizeLinks.forEach((item) => item.classList.remove("active"));
-
-      // Thêm lớp 'active' vào charm được chọn
-      this.classList.add("active");
-
-      // Lưu charm đã chọn
-      const selectedCharm = this.textContent.trim();
-      localStorage.setItem("selectedCharm", selectedCharm);
-      console.log("Selected charm:", selectedCharm);
-    });
-  });
-
-  // Tự động áp dụng charm đã lưu khi tải lại trang
-  const savedCharm = localStorage.getItem("selectedCharm");
-  if (savedCharm) {
-    sizeLinks.forEach((link) => {
-      if (link.textContent.trim() === savedCharm) {
-        link.classList.add("active");
-      }
-    });
-  } else {
-    // Nếu không lưu trạng thái, xóa lớp 'active' khỏi tất cả các charm
-    sizeLinks.forEach((item) => item.classList.remove("active"));
-  }
-});
 
 /*=============== Ngăn cuộn trang và hiện thông báo khi nhấn nút Thêm vào giỏ hàng ===============*/
 document.addEventListener("DOMContentLoaded", function () {

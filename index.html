@@ -11,6 +11,8 @@
       href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
     />
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <!--=============== SWIPER CSS ===============-->
     <link
       rel="stylesheet"
@@ -20,6 +22,38 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
+    <style>
+     
+      /* Hiệu ứng chuyển động màu chữ */
+/* Hiệu ứng chuyển động gradient và chiếu sáng mạnh */
+.intense-sparkle {
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  background: linear-gradient(90deg, #f3e458, #f0ffa5, #ff93c7, #ff00aa, #ffa0d0);
+  background-size: 300% 300%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text; /* Hỗ trợ WebKit */
+  animation: intenseColor 1.5s linear infinite, sparkleEffect 0.5s ease-in-out infinite;
+  position: relative; /* Để thêm hiệu ứng ánh sáng */
+}
+
+/* Tạo chuyển động gradient nhanh */
+@keyframes intenseColor {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+    </style>
+
+    <link rel="icon" href="assets/img/1.png" type="image/x-icon">
     <title>ChicCharm Official Store</title>
   </head>
   <body>
@@ -30,11 +64,13 @@
           <div class="header__contact">
             <span id="contact1">Merry Chrismas</span> 
           </div>
-          <p class="header__alert-news" id="news" style="color: #fa97ca">ƯU ĐÃI SIÊU GIÁ TRỊ - TIẾT KIỆM THÊM VỚI NHIỀU MÃ GIẢM GIÁ</p>
+          <p class="header__alert-news" id="news" style="color: #ff59a9">ƯU ĐÃI SIÊU GIÁ TRỊ - TIẾT KIỆM THÊM VỚI NHIỀU MÃ GIẢM GIÁ</p>
           <a href="login-register.html" id="login-link" class="header__top-action">Đăng nhập / Đăng ký</a>
         </div>
       </div>
-   
+      
+    
+  
       <nav class="nav container">
         <a href="index.html" class="nav__logo">
           <img
@@ -56,20 +92,27 @@
             <li class="nav__item">
               <a href="index.html" class="nav__link active-link">Trang Chủ</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item dropdown">
               <a href="shop.html" class="nav__link">Cửa Hàng</a>
-            </li>
+              <ul class="dropdown__menu">
+                <li><a href="shop.html">Kẹp vuông</a></li>
+                <li><a href="shop.html">Kẹp nhỏ</a></li>
+                <li><a href="shop.html">Kẹp tròn</a></li>
+                <li><a href="shop.html">Gương</a></li>
+              </ul>
+            </li>            
             <li class="nav__item">
               <a href="accounts.html" class="nav__link">Tài Khoản</a>
             </li>
             <li class="nav__item">
-              <a href="login-register.html" class="nav__link">Đăng nhập</a>
+              <a href="index.html#featured" class="nav__link intense-sparkle">Khuyến mãi</a>
             </li>
           </ul>
+          
           <div class="header__search">
             <input
               type="text"
-              placeholder="Tìm kiếm..."
+              placeholder=""
               class="form__input"
             />
             <button class="search__btn">
@@ -78,139 +121,378 @@
           </div>
         </div>
         <div class="header__user-actions">
+          <a href="login.html" class="header__action-btn" title="Đăng nhập">
+            <img src="assets/img/user.png" alt="" />
+          </a>
           <a href="wishlist.html" class="header__action-btn" title="Wishlist">
             <img src="assets/img/icon-heart.svg" alt="" />
             <span class="count">3</span>
           </a>
-          <a href="cart.html" class="header__action-btn" title="Cart">
+          <a href="cart.html" class="header__action-btn" title="Giỏ hàng">
             <img src="assets/img/icon-cart.svg" alt="" />
             <span class="count">3</span>
           </a>
           <div class="header__action-btn nav__toggle" id="nav-toggle">
-            <img src="./assets//img/menu-burger.svg" alt="">
+            <img src="./assets//img/menu-burger.png" alt="">
           </div>
         </div>
       </nav>
     </header>
 
-  <!--=============== BANNER ===============-->
-    <div class="parallax">
-  </div>
 
+   
   
-    <!--=============== MAIN ===============-->
-    <main class="main">
-      <!--=============== HOME ===============-->
-      <section class="home section--lg">
-        <div class="home__container container grid">
-          <div class="home__content">
-            <span class="home__subtitle">Siêu Sale Dịp Cuối Năm</span>
-            <h1 class="home__title">
-              Cùng Chic Chào Đón <br> <span>Bộ Sưu Tập Mới</span>
-            </h1>
-            <p class="home__description">
-               Giảm giá đến 50% tổng giá trị đơn hàng
-            </p>
-            <a href="shop.html" class="btn">Mua Ngay</a>
+     <!--=============== MAIN ===============-->
+     <main class="main">
+      <!--=============== DISCOUNT BANNER ===============-->
+        <section class="home section">
+          <div class="home__slider">
+              <div class="home__slide active">
+                  <div class="home__container container grid">
+                      <div class="home__content">
+                          <span class="home__subtitle">Sale Dịp Lễ</span>
+                          <h1 class="home__title">
+                              Cùng Chic Chào Đón <br> <span>Ngày Phụ Nữ Việt Nam</span>
+                          </h1>
+                          <p class="home__description">
+                              Giảm giá 10% tổng giá trị đơn hàng
+                          </p>
+                          <a href="shop.html" class="btn">Mua Ngay</a>
+                      </div>
+                      <div class="home__image-container">
+                          <img src="assets/img/20thang10.png" class="home__img" alt="Black Friday Sale" />
+                      </div>
+                  </div>
+              </div>
+      
+              <div class="home__slide">
+                  <div class="home__container container grid">
+                      <div class="home__content">
+                          <span class="home__subtitle">Ưu Đãi Siêu Sale</span>
+                          <h1 class="home__title">
+                              Chào Đón Ngày Đôi <br> <span>Cùng Siêu Sale 12/12</span>
+                          </h1>
+                          <p class="home__description">
+                              Tưng bừng săn deal cùng Chic
+                          </p>
+                          <a href="shop.html" class="btn">Khám Phá Ngay</a>
+                      </div>
+                      <div class="home__image-container">
+                          <img src="assets/img/sieusale.png" class="home__img" alt="Winter Collection" />
+                      </div>
+                  </div>
+              </div>
+      
+              <div class="home__slide">
+                  <div class="home__container container grid">
+                      <div class="home__content">
+                          <span class="home__subtitle">Sale Cuối Năm</span>
+                          <h1 class="home__title">
+                              Ưu Đãi Mùa Lễ Hội <br> <span> Ra Mắt Bộ Sưu Tập Mới</span>
+                          </h1>
+                          <p class="home__description">
+                              Ưu đãi lên đến 30% cho các sản phẩm mùa lễ hội
+                          </p>
+                          <a href="shop.html" class="btn">Sắm Ngay</a>
+                      </div>
+                      <div class="home__image-container">
+                          <img src="assets/img/xmasdeal.png" class="home__img" alt="Tech Collection" />
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="home__navigation">
+                  <div class="home__prev-btn">&lt;</div>
+                  <div class="home__next-btn">&gt;</div>
+              </div>
+              
+              <div class="home__pagination">
+                  <span class="home__pagination-dot active"></span>
+                  <span class="home__pagination-dot"></span>
+                  <span class="home__pagination-dot"></span>
+              </div>
           </div>
-          <img src="assets/img/blackfriday.png" class="home__img" alt="blackfriday" />
-        </div>
-      </section>
+        </section>
+        <!-- Swiper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.1/swiper-bundle.min.js"></script>
+  
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+              const slider = document.querySelector('.home__slider');
+              const slides = document.querySelectorAll('.home__slide');
+              const paginationDots = document.querySelectorAll('.home__pagination-dot');
+              const prevBtn = document.querySelector('.home__prev-btn');
+              const nextBtn = document.querySelector('.home__next-btn');
+              
+              let currentSlide = 0;
+              const totalSlides = slides.length;
+      
+              // Function to show specific slide
+              function showSlide(index) {
+                  // Remove active class from all slides and dots
+                  slides.forEach(slide => slide.classList.remove('active'));
+                  paginationDots.forEach(dot => dot.classList.remove('active'));
+      
+                  // Ensure index wraps around
+                  currentSlide = (index + totalSlides) % totalSlides;
+      
+                  // Add active class to current slide and dot
+                  slides[currentSlide].classList.add('active');
+                  paginationDots[currentSlide].classList.add('active');
+              }
+      
+              // Next slide function
+              function nextSlide() {
+                  showSlide(currentSlide + 1);
+              }
+      
+              // Previous slide function
+              function prevSlide() {
+                  showSlide(currentSlide - 1);
+              }
+      
+              // Event listeners for navigation buttons
+              nextBtn.addEventListener('click', nextSlide);
+              prevBtn.addEventListener('click', prevSlide);
+      
+              // Event listeners for pagination dots
+              paginationDots.forEach((dot, index) => {
+                  dot.addEventListener('click', () => {
+                      showSlide(index);
+                  });
+              });
+      
+              // Optional: Auto slide every 5 seconds
+              setInterval(nextSlide, 5000);
+          });
+      </script>
 
-      <!--=============== CATEGORIES ===============-->
-      <section class="categories container section">
-        <h3 class="section__title"><span>Chic</span> Offers</h3>
-        <div class="categories__container swiper">
-          <div class="swiper-wrapper">
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/martini2.png"
-                alt=""
-                class="category__img"
-              />
-              <!--Thêm khung nội dung phía trước khung ảnh (phần thay đổi)-->             
-              <div class="category__overlay">
-                <div class="category__overlay-title">Martini</div>
-                  <div class="category__overlay-content">
-                   Phản chiếu chính mình yêu thương trọn vẹn
-                </div>
-              </div>                            
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/pinklady2.png"
-                alt=""
-                class="category__img"
-              />
-              <div class="category__overlay">
-                <div class="category__overlay-title">Pink Lady</div>
-                  <div class="category__overlay-content">
-                   Quyến rũ và nổi bật như chính bạn
-                </div>
+       <!--=============== CATEGORIES ===============-->
+      <section id="custom-categories" class="custom-categories-container section">
+        <h3 class="section__title_category"> 
+          <span>DANH MỤC</span> SẢN PHẨM
+        </h3>
+        <p class="section__subtitle_category">
+          Chọn Danh Mục Sản Phẩm <i class="fas fa-ribbon"></i>
+        </p>
+        
+        <div class="custom-categories-grid">
+          <a href="shop.html" class="custom-category-item">
+            <img src="assets/img/kepvuong.png" alt="" class="custom-category-img" />
+            <div class="custom-category-overlay">
+              <div class="custom-category-title">Kẹp Vuông</div>
+              <div class="custom-category-content">
+                Thuần khiết và thanh lịch
               </div>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/alcoholicity.png"
-                alt=""
-                class="category__img"
-              />
-              <div class="category__overlay">
-                <div class="category__overlay-title">Alcoholicity</div>
-                  <div class="category__overlay-content">
-                   Bùng nổ phong cách toả sáng chất riêng
-                </div>
+            </div>
+          </a>
+      
+          <a href="shop.html" class="custom-category-item">
+            <img src="assets/img/keptron.png" alt="" class="custom-category-img" />
+            <div class="custom-category-overlay">
+              <div class="custom-category-title">Kẹp Tròn</div>
+              <div class="custom-category-content">
+                Quyến rũ và nổi bật như chính bạn
               </div>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/shirleytemple.png"
-                alt=""
-                class="category__img"
-              />
-              <div class="category__overlay">
-                <div class="category__overlay-title">Shirley Temple</div>
-                  <div class="category__overlay-content">
-                   Thuần khiết thanh lịch và đầy nữ tính
-                </div>
+            </div>
+          </a>
+      
+          <a href="shop.html" class="custom-category-item">
+            <img src="assets/img/kepnho.png" alt="" class="custom-category-img" />
+            <div class="custom-category-overlay">
+              <div class="custom-category-title">Kẹp Nhỏ</div>
+              <div class="custom-category-content">
+                Bùng nổ phong cách toả sáng chất riêng
               </div>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/bellini.png"
-                alt=""
-                class="category__img"
-              />
-              <div class="category__overlay">
-                <div class="category__overlay-title">Bellini</div>
-                  <div class="category__overlay-content">
-                   Toả sáng lung linh mang đến nhiều ấn tượng
-                </div>
+            </div>
+          </a>
+      
+          <a href="shop.html" class="custom-category-item">
+            <img src="assets/img/guong.png" alt="" class="custom-category-img" />
+            <div class="custom-category-overlay">
+              <div class="custom-category-title">Gương</div>
+              <div class="custom-category-content">
+                Phản chiếu chính mình yêu thương trọn vẹn
               </div>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/urbanchic.png"
-                alt=""
-                class="category__img"
-              />
-              <div class="category__overlay">
-                <div class="category__overlay-title">Urban Chic</div>
-                  <div class="category__overlay-content">
-                   Mạnh mẽ và hiện đại như chính bạn
-                </div>
-              </div>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/category-7.png"
-                alt=""
-                class="category__img"
-              />
-              <h3 class="category__title">Jumpsuit</h3>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
+        <style>
+          .custom-categories-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.section__title_category {
+  margin-left: 60px;
+  font-size: var(--h4-font-size);
+  margin-bottom: 1.5rem;
+  color:#000000;
+}
+
+.section__title_category span {
+  color: var(--first-color);
+}
+
+.section__subtitle_category {
+  margin-left: 60px;
+  font-size: 16px;
+  color: #555; /* Màu chữ của subtitle */
+  margin-bottom: 20px; /* Khoảng cách dưới subtitle */
+  font-style: italic;
+}
+
+
+.custom-categories-grid {
+  padding: 3rem 1.5rem 6rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.custom-category-item {
+  text-align: center;
+  border-radius: 1.25rem;
+  transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
+  cursor: pointer;
+  position: relative;
+  margin: 5px; /* Thêm khoảng cách giữa các khung */
+  width: 300px; /* Đặt chiều rộng cố định cho mỗi khung */
+}
+
+.custom-category-img {
+  margin: 10px 0 5px;
+  border-radius: 0.75rem;
+  -webkit-border-radius: 0.75rem;
+  -moz-border-radius: 0.75rem;
+  -ms-border-radius: 0.75rem;
+  -o-border-radius: 0.75rem;
+  border: 1px solid #000000;
+  width: 250px; /* Chiều rộng tùy chỉnh theo thiết kế */
+  height: 200px; /* Chiều cao tùy chỉnh theo thiết kế */
+  object-fit: cover; /* Giữ ảnh không bị méo, cắt vừa khung */
+  box-sizing: border-box; /* giữ kích thước hộp*/
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-category-item:hover .custom-category-img{
+  transform: translateY(-50%) rotate(-10deg); /* Di chuyển ảnh lên phía trên */
+}
+
+.custom-category-overlay {
+  position: absolute;
+  top: 0rem;
+  left: 5px;
+  width: 270px;
+  height: 250px;
+  background: white; /* Overlay màu đen với độ trong suốt */
+  border: 1px solid #000000;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.25rem;
+  transition: transform 0.3s ease-in-out;
+  color: black;
+}
+
+.custom-category-overlay:hover {
+  transform: translateY(20%) rotate(25deg); /* Di chuyển ảnh lên phía trên */
+  background: #ff6aa7;
+  border: none;
+  color: white;
+}
+
+.custom-category-title {
+  font-size: 1.5rem; /* Điều chỉnh kích thước chữ */
+  font-weight: normal; /* In đậm */
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+
+.custom-category-content {
+  font-size: 1rem; /* Kích thước chữ nội dung */
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  right: 10px;
+}
+
+@media (min-width: 1100){
+  .section__title_category {
+  margin-left: 120px;
+  font-size: var(--h4-font-size);
+  margin-bottom: 1.5rem;
+  color:#000000;
+}
+
+.section__title_category span {
+  color: var(--first-color);
+}
+
+.section__subtitle_category {
+  margin-left: 120px;
+  font-size: 16px;
+  color: #555; /* Màu chữ của subtitle */
+  margin-bottom: 20px; /* Khoảng cách dưới subtitle */
+  font-style: italic;
+}
+}
+
+/* Khi màn hình từ 768px đến 1024px (tablet) */
+@media (max-width: 1024px) and (min-width: 670px) {
+  .custom-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Chia thành 2 cột */
+    gap: 0;                            /* Khoảng cách giữa các khung */
+    justify-items: center;                  /* Căn giữa các khung trong cột */
+    column-gap: 1rem;
+    row-gap: 4rem;
+  }
+
+  .custom-category-item {
+    width: 100%;                            /* Khung chiếm toàn bộ cột */
+    max-width: 270px;                       /* Giới hạn chiều rộng tối đa */
+    margin: 0;                              /* Xóa margin mặc định */
+  }
+
+  .custom-category-overlay {
+    position: absolute;
+    top: 0rem;
+  }
+}
+
+/* Khi màn hình nhỏ hơn 768px (tablet dọc và mobile) */
+@media (min-width: 300px) and (max-width: 670px) {
+  .custom-categories-grid {
+    display: flex;
+    flex-direction: column;                 /* Xếp khung theo chiều dọc */
+    align-items: center;                    /* Căn giữa khung theo chiều ngang */
+    gap: 5rem;                              /* Khoảng cách giữa các khung */
+  }
+
+  .custom-category-item  {
+    width: 100%;                             /* Khung chiếm 90% chiều rộng màn hình */
+    max-width: 800px;                      /* Giới hạn chiều rộng tối đa */
+    margin: 0;                              /* Xóa margin mặc định */
+  }
+
+  .custom-category-overlay {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 90%;
+  }
+  
+  .custom-category-img{
+    max-width: 200px;
+  }
+}
+        </style>
       </section>
 
 
@@ -218,1952 +500,888 @@
       <section class="products container section">
         <div class="tab__btns">
           <span class="tab__btn active-tab" data-target="#featured"
-            >Featured</span
-          >
-          <span class="tab__btn" data-target="#popular">Popular</span>
-          <span class="tab__btn" data-target="#new-added">New Added</span>
+            >Khuyến mãi</span>
+        
+          <span class="tab__btn" data-target="#popular">Bán chạy</span>
+          
         </div>
 
         <div class="tab__items">
           <div class="tab__item active-tab" content id="featured">
             <div class="products__container grid">
+              
               <div class="product__item">
                 <div class="product__banner">
                   <a href="details.html" class="product__images">
                     <img
-                      src="assets/img/product-1-1.jpg"
+                      src="assets/img/product5.1.png"
                       alt=""
                       class="product__img default"
                     />
                     <img
-                      src="assets/img/product-1-2.jpg"
+                      src="assets/img/product5.2.png"
                       alt=""
                       class="product__img hover"
                     />
                   </a>
                   <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
+                    <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                      <i class="fa-solid fa-up-right-from-square"></i>
                     </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
+                    <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
                       <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
-                  <div class="product__badge light-pink">Hot</div>
-                </div>
-                <div class="product__content">
-                  <span class="product__category">Clothing</span>
-                  <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
-                  </a>
-                  <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                  </div>
-                  <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="product__item">
-                <div class="product__banner">
-                  <a href="details.html" class="product__images">
-                    <img
-                      src="assets/img/product-2-1.jpg"
-                      alt=""
-                      class="product__img default"
-                    />
-                    <img
-                      src="assets/img/product-2-2.jpg"
-                      alt=""
-                      class="product__img hover"
-                    />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
-                  <div class="product__badge light-green">Hot</div>
-                </div>
-                <div class="product__content">
-                  <span class="product__category">Clothing</span>
-                  <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
-                  </a>
-                  <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                  </div>
-                  <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="product__item">
-                <div class="product__banner">
-                  <a href="details.html" class="product__images">
-                    <img
-                      src="assets/img/product-3-1.jpg"
-                      alt=""
-                      class="product__img default"
-                    />
-                    <img
-                      src="assets/img/product-3-2.jpg"
-                      alt=""
-                      class="product__img hover"
-                    />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
-                  <div class="product__badge light-orange">Hot</div>
-                </div>
-                <div class="product__content">
-                  <span class="product__category">Clothing</span>
-                  <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
-                  </a>
-                  <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                  </div>
-                  <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="product__item">
-                <div class="product__banner">
-                  <a href="details.html" class="product__images">
-                    <img
-                      src="assets/img/product-4-1.jpg"
-                      alt=""
-                      class="product__img default"
-                    />
-                    <img
-                      src="assets/img/product-4-2.jpg"
-                      alt=""
-                      class="product__img hover"
-                    />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
-                  <div class="product__badge light-blue">Hot</div>
-                </div>
-                <div class="product__content">
-                  <span class="product__category">Clothing</span>
-                  <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
-                  </a>
-                  <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                  </div>
-                  <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="product__item">
-                <div class="product__banner">
-                  <a href="details.html" class="product__images">
-                    <img
-                      src="assets/img/product-5-1.jpg"
-                      alt=""
-                      class="product__img default"
-                    />
-                    <img
-                      src="assets/img/product-5-2.jpg"
-                      alt=""
-                      class="product__img hover"
-                    />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
                     </a>
                   </div>
                   <div class="product__badge light-blue">-30%</div>
                 </div>
                 <div class="product__content">
-                  <span class="product__category">Clothing</span>
+                  <span class="product__category">Kẹp vuông</span>
                   <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
+                    <h3 class="product__title">Kẹp Bí Ẩn Đêm Đen</h3>
                   </a>
                   <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <span> (32)</span>
                   </div>
                   <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
+                    <span class="new__price">98.000 VND</span>
+                    <span class="old__price">140.000 VND</span>
                   </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
+                  <a href="#" 
+                       class="action__btn cart__btn" 
+                       aria-label="Thêm vào Giỏ hàng" 
+                       data-inventory="22">
+                       <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
                 </div>
               </div>
+             
               <div class="product__item">
                 <div class="product__banner">
                   <a href="details.html" class="product__images">
                     <img
-                      src="assets/img/product-6-1.jpg"
+                      src="assets/img/product6.1.png"
                       alt=""
                       class="product__img default"
                     />
                     <img
-                      src="assets/img/product-6-2.jpg"
+                      src="assets/img/product6.2.png"
                       alt=""
                       class="product__img hover"
                     />
                   </a>
                   <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
+                    <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                      <i class="fa-solid fa-up-right-from-square"></i>
                     </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
+                    <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
                       <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
                     </a>
                   </div>
                   <div class="product__badge light-blue">-22%</div>
                 </div>
                 <div class="product__content">
-                  <span class="product__category">Clothing</span>
+                  <span class="product__category">Kẹp vuông</span>
                   <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
+                    <h3 class="product__title">Kẹp Tinh Tú Mơ Màng</h3>
                   </a>
                   <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                    <span> (111)</span>
                   </div>
                   <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
+                    <span class="new__price">109.000 VND</span>
+                    <span class="old__price">140.000 VND</span>
                   </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
+                  <a href="#" 
+                       class="action__btn cart__btn" 
+                       aria-label="Thêm vào Giỏ hàng" 
+                       data-inventory="7">
+                       <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
                 </div>
               </div>
               <div class="product__item">
                 <div class="product__banner">
                   <a href="details.html" class="product__images">
                     <img
-                      src="assets/img/product-7-1.jpg"
+                      src="assets/img/product7.1.png"
                       alt=""
                       class="product__img default"
                     />
                     <img
-                      src="assets/img/product-7-2.jpg"
+                      src="assets/img/product7.2.png"
                       alt=""
                       class="product__img hover"
                     />
                   </a>
                   <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
+                    <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                      <i class="fa-solid fa-up-right-from-square"></i>
                     </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
+                    <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
                       <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
                     </a>
                   </div>
                   <div class="product__badge light-green">-22%</div>
                 </div>
                 <div class="product__content">
-                  <span class="product__category">Clothing</span>
+                  <span class="product__category">Kẹp nhỏ</span>
                   <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
+                    <h3 class="product__title">Kẹp Trái Tim Rực Rỡ</h3>
                   </a>
                   <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-alt"></i>
+                    <span> (171)</span>
                   </div>
                   <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
+                    <span class="new__price">46.800 VND</span>
+                    <span class="old__price">60.000 VND</span>
                   </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
+                  <a href="#" 
+                  class="action__btn cart__btn" 
+                  aria-label="Thêm vào Giỏ hàng" 
+                  data-inventory="29">
+                  <i class="fi fi-rs-shopping-bag-add"></i>
+               </a>
                 </div>
               </div>
               <div class="product__item">
                 <div class="product__banner">
                   <a href="details.html" class="product__images">
                     <img
-                      src="assets/img/product-8-1.jpg"
+                      src="assets/img/product9.1.png"
                       alt=""
                       class="product__img default"
                     />
                     <img
-                      src="assets/img/product-8-2.jpg"
+                      src="assets/img/product9.2.png"
                       alt=""
                       class="product__img hover"
                     />
                   </a>
                   <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
+                    <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                      <i class="fa-solid fa-up-right-from-square"></i>
                     </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
+                    <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
                       <i class="fi fi-rs-heart"></i>
                     </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
                   </div>
+                  <div class="product__badge light-blue">-30%</div>
                 </div>
                 <div class="product__content">
-                  <span class="product__category">Clothing</span>
+                  <span class="product__category">Kẹp nhỏ</span>
                   <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
+                    <h3 class="product__title">Kẹp Ánh Trăng Lấp Lánh</h3>
                   </a>
                   <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <span> (91)</span>
                   </div>
                   <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
+                    <span class="new__price">42.000 VND</span>
+                    <span class="old__price">60.000 VND</span>
                   </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
+                  <a href="#" 
+                       class="action__btn cart__btn" 
+                       aria-label="Thêm vào Giỏ hàng" 
+                       data-inventory="26">
+                       <i class="fi fi-rs-shopping-bag-add"></i>
+                    </a>
                 </div>
               </div>
+
+             <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img
+                  src="assets/img/product10.1.png"
+                  alt=""
+                  class="product__img default"
+                />
+                <img
+                  src="assets/img/product10.2.png"
+                  alt=""
+                  class="product__img hover"
+                />
+              </a>
+              <div class="product__actions">
+                <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                  <i class="fa-solid fa-up-right-from-square"></i>
+                </a>
+                <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+              </div>
+              <div class="product__badge light-blue">-22%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Gương</span>
+              <a href="details.html">
+                <h3 class="product__title">Gương Sa Mạc Vàng</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-alt"></i>
+                <span> (106)</span>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">156.000 VND</span>
+                <span class="old__price">200.000 VND</span>
+              </div>
+              <a href="#" 
+                   class="action__btn cart__btn" 
+                   aria-label="Thêm vào Giỏ hàng" 
+                   data-inventory="5">
+                   <i class="fi fi-rs-shopping-bag-add"></i>
+                </a>
             </div>
           </div>
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img
+                  src="assets/img/product11.1.png"
+                  alt=""
+                  class="product__img default"
+                />
+                <img
+                  src="assets/img/product11.2.png"
+                  alt=""
+                  class="product__img hover"
+                />
+              </a>
+              <div class="product__actions">
+                <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                  <i class="fa-solid fa-up-right-from-square"></i>
+                </a>
+                <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+              </div>
+              <div class="product__badge light-green">-22%</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Gương</span>
+              <a href="details.html">
+                <h3 class="product__title">Gương Lọ Lem</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-alt"></i>
+                <span> (24)</span>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">156.000 VND</span>
+                <span class="old__price">200.000 VND</span>
+              </div>
+              <a href="#" 
+              class="action__btn cart__btn" 
+              aria-label="Thêm vào Giỏ hàng" 
+              data-inventory="1">
+              <i class="fi fi-rs-shopping-bag-add"></i>
+           </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
           <div class="tab__item" content id="popular">
             <div class="products__container grid">
               <div class="product__item">
                 <div class="product__banner">
                   <a href="details.html" class="product__images">
                     <img
-                      src="assets/img/product-9-1.jpg"
+                      src="assets/img/product1.1.png"
                       alt=""
                       class="product__img default"
                     />
                     <img
-                      src="assets/img/product-9-2.jpg"
+                      src="assets/img/product1.2.png"
                       alt=""
                       class="product__img hover"
                     />
                   </a>
                   <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
+                    <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                      <i class="fa-solid fa-up-right-from-square"></i>
                     </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
+                    <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
                       <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
                     </a>
                   </div>
                   <div class="product__badge light-pink">Hot</div>
                 </div>
                 <div class="product__content">
-                  <span class="product__category">Clothing</span>
+                  <span class="product__category">Kẹp vuông</span>
                   <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
+                    <h3 class="product__title">Kẹp Nơ Xanh Mát</h3>
                   </a>
                   <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <span> (99)</span>
                   </div>
                   <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
+                    <span class="new__price">120.000 VND</span>
+                 
                   </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
+                  <a href="#" 
+                  class="action__btn cart__btn" 
+                  aria-label="Thêm vào Giỏ hàng" 
+                  data-inventory="12">
+                  <i class="fi fi-rs-shopping-bag-add"></i>
+               </a>
                 </div>
               </div>
               <div class="product__item">
                 <div class="product__banner">
                   <a href="details.html" class="product__images">
                     <img
-                      src="assets/img/product-2-1.jpg"
+                      src="assets/img/product2.1.png"
                       alt=""
                       class="product__img default"
                     />
                     <img
-                      src="assets/img/product-2-2.jpg"
+                      src="assets/img/product2.2.png"
                       alt=""
                       class="product__img hover"
                     />
                   </a>
                   <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
+                    <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                      <i class="fa-solid fa-up-right-from-square"></i>
                     </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
+                    <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
                       <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
                     </a>
                   </div>
                   <div class="product__badge light-green">Hot</div>
                 </div>
                 <div class="product__content">
-                  <span class="product__category">Clothing</span>
+                  <span class="product__category">Kẹp vuông</span>
                   <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
+                    <h3 class="product__title">Kẹp Hoa Sứ Xinh Xắn</h3>
                   </a>
                   <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <span> (211)</span>
                   </div>
                   <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
+                    <span class="new__price">120.000 VND</span>
+            
                   </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
+                  <a href="#" 
+                  class="action__btn cart__btn" 
+                  aria-label="Thêm vào Giỏ hàng" 
+                  data-inventory="3">
+                  <i class="fi fi-rs-shopping-bag-add"></i>
+               </a>
                 </div>
               </div>
               <div class="product__item">
                 <div class="product__banner">
                   <a href="details.html" class="product__images">
                     <img
-                      src="assets/img/product-10-1.jpg"
+                      src="assets/img/product3.1.png"
                       alt=""
                       class="product__img default"
                     />
                     <img
-                      src="assets/img/product-10-2.jpg"
+                      src="assets/img/product3.2.png"
                       alt=""
                       class="product__img hover"
                     />
                   </a>
                   <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
+                    <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                      <i class="fa-solid fa-up-right-from-square"></i>
                     </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
+                    <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
                       <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
                     </a>
                   </div>
                   <div class="product__badge light-orange">Hot</div>
                 </div>
                 <div class="product__content">
-                  <span class="product__category">Clothing</span>
+                  <span class="product__category">Kẹp vuông</span>
                   <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
+                    <h3 class="product__title">Kẹp Cherry Ngọt Ngào</h3>
                   </a>
                   <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-alt"></i>
+                    <span> (119)</span>
                   </div>
                   <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
+                    <span class="new__price">130.000 VND</span>
+            
                   </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
+                  <a href="#" 
+                  class="action__btn cart__btn" 
+                  aria-label="Thêm vào Giỏ hàng" 
+                  data-inventory="11">
+                  <i class="fi fi-rs-shopping-bag-add"></i>
+               </a>
                 </div>
               </div>
-              <div class="product__item">
-                <div class="product__banner">
-                  <a href="details.html" class="product__images">
-                    <img
-                      src="assets/img/product-4-1.jpg"
-                      alt=""
-                      class="product__img default"
-                    />
-                    <img
-                      src="assets/img/product-4-2.jpg"
-                      alt=""
-                      class="product__img hover"
-                    />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
-                  <div class="product__badge light-blue">Hot</div>
-                </div>
-                <div class="product__content">
-                  <span class="product__category">Clothing</span>
-                  <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
-                  </a>
-                  <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                  </div>
-                  <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="product__item">
-                <div class="product__banner">
-                  <a href="details.html" class="product__images">
-                    <img
-                      src="assets/img/product-5-1.jpg"
-                      alt=""
-                      class="product__img default"
-                    />
-                    <img
-                      src="assets/img/product-5-2.jpg"
-                      alt=""
-                      class="product__img hover"
-                    />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
-                  <div class="product__badge light-blue">-30%</div>
-                </div>
-                <div class="product__content">
-                  <span class="product__category">Clothing</span>
-                  <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
-                  </a>
-                  <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                  </div>
-                  <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="product__item">
-                <div class="product__banner">
-                  <a href="details.html" class="product__images">
-                    <img
-                      src="assets/img/product-11-1.jpg"
-                      alt=""
-                      class="product__img default"
-                    />
-                    <img
-                      src="assets/img/product-11-2.jpg"
-                      alt=""
-                      class="product__img hover"
-                    />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
-                  <div class="product__badge light-blue">-22%</div>
-                </div>
-                <div class="product__content">
-                  <span class="product__category">Clothing</span>
-                  <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
-                  </a>
-                  <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                  </div>
-                  <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="product__item">
-                <div class="product__banner">
-                  <a href="details.html" class="product__images">
-                    <img
-                      src="assets/img/product-7-1.jpg"
-                      alt=""
-                      class="product__img default"
-                    />
-                    <img
-                      src="assets/img/product-7-2.jpg"
-                      alt=""
-                      class="product__img hover"
-                    />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
-                  <div class="product__badge light-green">-22%</div>
-                </div>
-                <div class="product__content">
-                  <span class="product__category">Clothing</span>
-                  <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
-                  </a>
-                  <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                  </div>
-                  <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="product__item">
-                <div class="product__banner">
-                  <a href="details.html" class="product__images">
-                    <img
-                      src="assets/img/product-8-1.jpg"
-                      alt=""
-                      class="product__img default"
-                    />
-                    <img
-                      src="assets/img/product-8-2.jpg"
-                      alt=""
-                      class="product__img hover"
-                    />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="product__content">
-                  <span class="product__category">Clothing</span>
-                  <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
-                  </a>
-                  <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                  </div>
-                  <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tab__item" content id="new-added">
-            <div class="products__container grid">
-              <div class="product__item">
-                <div class="product__banner">
-                  <a href="details.html" class="product__images">
-                    <img
-                      src="assets/img/product-1-1.jpg"
-                      alt=""
-                      class="product__img default"
-                    />
-                    <img
-                      src="assets/img/product-1-2.jpg"
-                      alt=""
-                      class="product__img hover"
-                    />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
-                  <div class="product__badge light-pink">Hot</div>
-                </div>
-                <div class="product__content">
-                  <span class="product__category">Clothing</span>
-                  <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
-                  </a>
-                  <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                  </div>
-                  <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="product__item">
-                <div class="product__banner">
-                  <a href="details.html" class="product__images">
-                    <img
-                      src="assets/img/product-12-1.jpg"
-                      alt=""
-                      class="product__img default"
-                    />
-                    <img
-                      src="assets/img/product-12-2.jpg"
-                      alt=""
-                      class="product__img hover"
-                    />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
-                  <div class="product__badge light-green">Hot</div>
-                </div>
-                <div class="product__content">
-                  <span class="product__category">Clothing</span>
-                  <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
-                  </a>
-                  <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                  </div>
-                  <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="product__item">
-                <div class="product__banner">
-                  <a href="details.html" class="product__images">
-                    <img
-                      src="assets/img/product-13-1.jpg"
-                      alt=""
-                      class="product__img default"
-                    />
-                    <img
-                      src="assets/img/product-13-2.jpg"
-                      alt=""
-                      class="product__img hover"
-                    />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
-                  <div class="product__badge light-orange">Hot</div>
-                </div>
-                <div class="product__content">
-                  <span class="product__category">Clothing</span>
-                  <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
-                  </a>
-                  <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                  </div>
-                  <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="product__item">
-                <div class="product__banner">
-                  <a href="details.html" class="product__images">
-                    <img
-                      src="assets/img/product-4-1.jpg"
-                      alt=""
-                      class="product__img default"
-                    />
-                    <img
-                      src="assets/img/product-4-2.jpg"
-                      alt=""
-                      class="product__img hover"
-                    />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
-                  <div class="product__badge light-blue">Hot</div>
-                </div>
-                <div class="product__content">
-                  <span class="product__category">Clothing</span>
-                  <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
-                  </a>
-                  <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                  </div>
-                  <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="product__item">
-                <div class="product__banner">
-                  <a href="details.html" class="product__images">
-                    <img
-                      src="assets/img/product-10-1.jpg"
-                      alt=""
-                      class="product__img default"
-                    />
-                    <img
-                      src="assets/img/product-10-2.jpg"
-                      alt=""
-                      class="product__img hover"
-                    />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
-                  <div class="product__badge light-blue">-30%</div>
-                </div>
-                <div class="product__content">
-                  <span class="product__category">Clothing</span>
-                  <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
-                  </a>
-                  <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                  </div>
-                  <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="product__item">
-                <div class="product__banner">
-                  <a href="details.html" class="product__images">
-                    <img
-                      src="assets/img/product-6-1.jpg"
-                      alt=""
-                      class="product__img default"
-                    />
-                    <img
-                      src="assets/img/product-6-2.jpg"
-                      alt=""
-                      class="product__img hover"
-                    />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
-                  <div class="product__badge light-blue">-22%</div>
-                </div>
-                <div class="product__content">
-                  <span class="product__category">Clothing</span>
-                  <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
-                  </a>
-                  <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                  </div>
-                  <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="product__item">
-                <div class="product__banner">
-                  <a href="details.html" class="product__images">
-                    <img
-                      src="assets/img/product-9-1.jpg"
-                      alt=""
-                      class="product__img default"
-                    />
-                    <img
-                      src="assets/img/product-9-2.jpg"
-                      alt=""
-                      class="product__img hover"
-                    />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
-                  <div class="product__badge light-green">-22%</div>
-                </div>
-                <div class="product__content">
-                  <span class="product__category">Clothing</span>
-                  <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
-                  </a>
-                  <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                  </div>
-                  <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
-                </div>
-              </div>
-              <div class="product__item">
-                <div class="product__banner">
-                  <a href="details.html" class="product__images">
-                    <img
-                      src="assets/img/product-8-1.jpg"
-                      alt=""
-                      class="product__img default"
-                    />
-                    <img
-                      src="assets/img/product-8-2.jpg"
-                      alt=""
-                      class="product__img hover"
-                    />
-                  </a>
-                  <div class="product__actions">
-                    <a href="#" class="action__btn" aria-label="Quick View">
-                      <i class="fi fi-rs-eye"></i>
-                    </a>
-                    <a
-                      href="#"
-                      class="action__btn"
-                      aria-label="Add to Wishlist"
-                    >
-                      <i class="fi fi-rs-heart"></i>
-                    </a>
-                    <a href="#" class="action__btn" aria-label="Compare">
-                      <i class="fi fi-rs-shuffle"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="product__content">
-                  <span class="product__category">Clothing</span>
-                  <a href="details.html">
-                    <h3 class="product__title">Colorful Pattern Shirts</h3>
-                  </a>
-                  <div class="product__rating">
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                    <i class="fi fi-rs-star"></i>
-                  </div>
-                  <div class="product__price flex">
-                    <span class="new__price">$238.85</span>
-                    <span class="old__price">$245.8</span>
-                  </div>
-                  <a
-                    href="#"
-                    class="action__btn cart__btn"
-                    aria-label="Add To Cart"
-                  >
-                    <i class="fi fi-rs-shopping-bag-add"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
+
 
       <!--=============== DEALS ===============-->
-      <section class="deals section">
-        <div class="deals__container container grid">
-          <div class="deals__item">
-            <div class="deals__group">
-              <h3 class="deals__brand">Deals of the Day</h3>
-              <span class="deals__category">Limited quantities</span>
-            </div>
-            <h4 class="deals__title">Summer Collection New Modern Design</h4>
-            <div class="deals__price flex">
-              <span class="new__price">$139.00</span>
-              <span class="old__price">$160.99</span>
-            </div>
-            <div class="deals__group">
-              <p class="deals__countdown-text">Hurry Up! Offer Ends In:</p>
-              <div class="countdown">
-                <div class="countdown__amount">
-                  <p class="countdown__period">02</p>
-                  <span class="unit">Days</span>
-                </div>
-                <div class="countdown__amount">
-                  <p class="countdown__period">22</p>
-                  <span class="unit">Hours</span>
-                </div>
-                <div class="countdown__amount">
-                  <p class="countdown__period">57</p>
-                  <span class="unit">Mins</span>
-                </div>
-                <div class="countdown__amount">
-                  <p class="countdown__period">28</p>
-                  <span class="unit">Sec</span>
-                </div>
-              </div>
-            </div>
-            <div class="deals__btn">
-              <a href="details.html" class="btn btn--md">Shop Now</a>
-            </div>
+<section class="deals section">
+  <div class="deals__container container grid">
+    <!-- Hình ảnh deal giảm giá -->
+    <div class="deals__item">
+      <img src="assets/img/countdown.png" alt="Deals of the Day - Summer Collection" class="deals__image">
+    </div>
+
+    <!-- Mục countdown giảm giá giảm giá -->
+    <div class="deals__item">
+      <div class="deals__group">
+        <h3 class="deals__brand">SIÊU ƯU ĐÃI DỊP CUỐI NĂM</h3>
+        <span class="deals__category">✨Áp Dụng Cho Tất Cả Sản Phẩm Kẹp Tóc✨</span>
+      </div>
+      <h4 class="deals__title">🚴‍♀️Hãy Đến Với Cửa Hàng ChicCharm Ngay</h4>
+      <div class="deals__price flex">
+        <span class="new__price">99.000 VND</span>
+        <span class="old__price">199.000 VND</span>
+      </div>
+      <div class="deals__group">
+        <p class="deals__countdown-text">⏰Chương trình sẽ kết thúc trong:</p>
+        <div class="countdown">
+          <div class="countdown__amount">
+            <p class="countdown__period" id="days">02</p>
+            <span class="unit">Ngày</span>
           </div>
-          <div class="deals__item">
-            <div class="deals__group">
-              <h3 class="deals__brand">Women Clothing</h3>
-              <span class="deals__category">Shirts & Bag</span>
-            </div>
-            <h4 class="deals__title">Try Something new on vacation</h4>
-            <div class="deals__price flex">
-              <span class="new__price">$178.00</span>
-              <span class="old__price">$256.99</span>
-            </div>
-            <div class="deals__group">
-              <p class="deals__countdown-text">Hurry Up! Offer Ends In:</p>
-              <div class="countdown">
-                <div class="countdown__amount">
-                  <p class="countdown__period">02</p>
-                  <span class="unit">Days</span>
-                </div>
-                <div class="countdown__amount">
-                  <p class="countdown__period">22</p>
-                  <span class="unit">Hours</span>
-                </div>
-                <div class="countdown__amount">
-                  <p class="countdown__period">57</p>
-                  <span class="unit">Mins</span>
-                </div>
-                <div class="countdown__amount">
-                  <p class="countdown__period">28</p>
-                  <span class="unit">Sec</span>
-                </div>
-              </div>
-            </div>
-            <div class="deals__btn">
-              <a href="details.html" class="btn btn--md">Shop Now</a>
-            </div>
+          <div class="countdown__amount">
+            <p class="countdown__period" id="hours">22</p>
+            <span class="unit">Giờ</span>
+          </div>
+          <div class="countdown__amount">
+            <p class="countdown__period" id="minutes">57</p>
+            <span class="unit">Phút</span>
+          </div>
+          <div class="countdown__amount">
+            <p class="countdown__period" id="seconds">28</p>
+            <span class="unit">Giây</span>
           </div>
         </div>
-      </section>
+      </div>
+      <div class="deals__btn">
+        <a href="shop.html" class="btn btn--md">Mua Ngay</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!--=============== GALLERY WITH SWIPER ===============-->
-      <section class="gallery container section">
-        <h3 class="section__title"><span>Gallery</span> Showcase</h3>
-        <div class="gallery__container swiper">
-          <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-              <img src="assets/img/martini2.png" alt="Gallery Image 1" class="gallery__img" />
-            </div>
-            <!-- Slide 2 -->
-            <div class="swiper-slide">
-              <img src="assets/img/pinklady2.png" alt="Gallery Image 2" class="gallery__img" />
-            </div>
-            <!-- Slide 3 -->
-            <div class="swiper-slide">
-              <img src="assets/img/alcoholicity.png" alt="Gallery Image 3" class="gallery__img" />
-            </div>
-          
-            <!-- Slide 4 -->
-            <div class="swiper-slide">
-              <img src="assets/img/Product Release.png" alt="Gallery Image 4" class="gallery__img" />
-            </div>
-          
-            <!-- Slide 5 -->
-            <div class="swiper-slide">
-              <img src="assets/img/shirleytemple.png" alt="Gallery Image 5" class="gallery__img" />
-            </div>
+<script>
+  // Thời gian kết thúc của deal (ví dụ: 2 ngày, 22 giờ, 57 phút, 28 giây từ thời điểm hiện tại)
+  const endDate = new Date().getTime() + 2 * 24 * 60 * 60 * 1000; // 2 ngày từ hiện tại
 
-            <!-- Slide 6 -->
-            <div class="swiper-slide">
-              <img src="assets/img/bellini.png" alt="Gallery Image 6" class="gallery__img" />
-            </div>
-          
-            <!-- Slide 7 -->
-            <div class="swiper-slide">
-              <img src="assets/img/urbanchic.png" alt="Gallery Image 7" class="gallery__img" />
-            </div>
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = endDate - now;
 
-            <!-- Slide 8 -->
-            <div class="swiper-slide">
-              <img src="assets/img/shirleyxmas.png" alt="Gallery Image 8" class="gallery__img" />
-            </div>
+    if (distance <= 0) {
+      clearInterval(countdownInterval); // Dừng đồng hồ đếm ngược khi kết thúc
+      return;
+    }
 
-            <!-- Slide 9 -->
-            <div class="swiper-slide">
-              <img src="assets/img/bellinixmas.png" alt="Gallery Image 9" class="gallery__img" />
-            </div>
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            <!-- Slide 10 -->
-            <div class="swiper-slide">
-              <img src="assets/img/urbanxmas2.png" alt="Gallery Image 10" class="gallery__img" />
-            </div>
+    // Cập nhật giá trị countdown vào các phần tử HTML
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+  }
 
-            <!-- Slide 11 -->
-            <div class="swiper-slide">
-              <img src="assets/img/urbanxmas3.JPG" alt="Gallery Image 11" class="gallery__img" />
-            </div>
-
-            <!-- Slide 12 -->
-            <div class="swiper-slide">
-              <img src="assets/img/urbanxmas.png" alt="Gallery Image 12" class="gallery__img" />
-            </div>
-          </div>
+  // Cập nhật đồng hồ đếm ngược mỗi giây
+  const countdownInterval = setInterval(updateCountdown, 1000);
+</script>
 
 
-          <!-- Navigation buttons -->
-          <div class="swiper-button-prev"><i class="fi fi-rs-angle-left"></i></div>
-          <div class="swiper-button-next"><i class="fi fi-rs-angle-right"></i></div>
-
-          <!-- Pagination -->
-          <div class="swiper-pagination"></div>
-        </div>
-      </section>
-
-      <!--=============== REVIEW =====================-->
-      
-      <section class="comments-gallery container section">
-        <h3 class="section__title"><span>Customer</span> Reviews</h3>
-        <div class="comments__container swiper">
-          <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-              <div class="comment">
-                <div class="comment-image">
-                  <img src="assets/img/urbanxmas.png" alt="Product Image" class="product-img" />
-                </div>
-                <div class="comment-text">
-                  <p><strong>Mỹ Hương:</strong> Sản phẩm dễ thương, phù hợp làm quà tặng bạn bè!</p>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Slide 2 -->
-            <div class="swiper-slide">
-              <div class="comment">
-                <div class="comment-image">
-                  <img src="https://via.placeholder.com/100" alt="Product Image" class="product-img" />
-                </div>
-                <div class="comment-text">
-                  <p><strong>Trần Thị B:</strong> Màu sắc đẹp hơn mong đợi. Sẽ ủng hộ lần sau!</p>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Slide 3 -->
-            <div class="swiper-slide">
-              <div class="comment">
-                <div class="comment-image">
-                  <img src="https://via.placeholder.com/100" alt="Product Image" class="product-img" />
-                </div>
-                <div class="comment-text">
-                  <p><strong>Lê Thị C:</strong> Sản phẩm đúng như mô tả, tôi rất hài lòng!</p>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Slide 4 -->
-            <div class="swiper-slide">
-              <div class="comment">
-                <div class="comment-image">
-                  <img src="https://via.placeholder.com/100" alt="Product Image" class="product-img" />
-                </div>
-                <div class="comment-text">
-                  <p><strong>Phạm Minh D:</strong> Chất lượng tuyệt vời, sẽ mua lại lần sau!</p>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Thêm các slide bình luận khác ở đây... -->
-          </div>
-      
-          <!-- Navigation buttons -->
-          <div class="swiper-button-prev"><i class="fi fi-rs-angle-left"></i></div>
-          <div class="swiper-button-next"><i class="fi fi-rs-angle-right"></i></div>        
-        <!-- Form thêm bình luận -->
-      <form id="comment-form" class="add-comment">
-        <textarea id="new-comment" placeholder="Nhập bình luận của bạn..." required></textarea>
-        <button type="submit">Gửi bình luận</button>
-      </form>
-      </section>
       <!--=============== NEW ARRIVALS ===============-->
       <section class="new__arrivals container section">
-        <h3 class="section__title"><span>New</span> Arrivals</h3>
+        <h3 class="section__title"><span>SẢN PHẨM</span> MỚI</h3>
+      </h3>
+      <p class="section__subtitle">Cùng Chic Đón Giáng Sinh Lung Linh Với Bộ Sưu Tập Mới   <i class="fas fa-tag"></i></p>
         <div class="new__container swiper">
           <div class="swiper-wrapper">
             <div class="product__item swiper-slide">
               <div class="product__banner">
                 <a href="details.html" class="product__images">
                   <img
-                    src="assets/img/product-1-1.jpg"
+                    src="assets/img/product16.1.png"
                     alt=""
                     class="product__img default"
                   />
                   <img
-                    src="assets/img/product-1-2.jpg"
+                    src="assets/img/product16.2.png"
                     alt=""
                     class="product__img hover"
                   />
                 </a>
                 <div class="product__actions">
-                  <a href="#" class="action__btn" aria-label="Quick View">
-                    <i class="fi fi-rs-eye"></i>
+                  <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                    <i class="fa-solid fa-up-right-from-square"></i>
                   </a>
-                  <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
                     <i class="fi fi-rs-heart"></i>
-                  </a>
-                  <a href="#" class="action__btn" aria-label="Compare">
-                    <i class="fi fi-rs-shuffle"></i>
                   </a>
                 </div>
                 <div class="product__badge light-pink">Hot</div>
               </div>
               <div class="product__content">
-                <span class="product__category">Clothing</span>
+                <span class="product__category">Kẹp nhỏ</span>
                 <a href="details.html">
-                  <h3 class="product__title">Colorful Pattern Shirts</h3>
+                  <h3 class="product__title">Kẹp Ngôi Sao Xanh</h3>
                 </a>
                 <div class="product__rating">
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <span> (68)</span>
                 </div>
                 <div class="product__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
+                  <span class="new__price">54.000 VND</span>
                 </div>
-                <a
-                  href="#"
-                  class="action__btn cart__btn"
-                  aria-label="Add To Cart"
-                >
-                  <i class="fi fi-rs-shopping-bag-add"></i>
-                </a>
+                <a href="#" 
+                class="action__btn cart__btn" 
+                aria-label="Thêm vào Giỏ hàng" 
+                data-inventory="11">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+             </a>
               </div>
             </div>
             <div class="product__item swiper-slide">
               <div class="product__banner">
                 <a href="details.html" class="product__images">
                   <img
-                    src="assets/img/product-2-1.jpg"
+                    src="assets/img/product17.1.png"
                     alt=""
                     class="product__img default"
                   />
                   <img
-                    src="assets/img/product-2-2.jpg"
+                    src="assets/img/product17.2.png"
                     alt=""
                     class="product__img hover"
                   />
                 </a>
                 <div class="product__actions">
-                  <a href="#" class="action__btn" aria-label="Quick View">
-                    <i class="fi fi-rs-eye"></i>
+                  <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                    <i class="fa-solid fa-up-right-from-square"></i>
                   </a>
-                  <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
                     <i class="fi fi-rs-heart"></i>
-                  </a>
-                  <a href="#" class="action__btn" aria-label="Compare">
-                    <i class="fi fi-rs-shuffle"></i>
                   </a>
                 </div>
                 <div class="product__badge light-green">Hot</div>
               </div>
               <div class="product__content">
-                <span class="product__category">Clothing</span>
+                <span class="product__category">Kẹp tròn</span>
                 <a href="details.html">
-                  <h3 class="product__title">Colorful Pattern Shirts</h3>
+                  <h3 class="product__title">Kẹp Hoa Mùa Hạ</h3>
                 </a>
                 <div class="product__rating">
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <span> (14)</span>
                 </div>
                 <div class="product__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
+                  <span class="new__price">189.000 VND</span>
+            
                 </div>
-                <a
-                  href="#"
-                  class="action__btn cart__btn"
-                  aria-label="Add To Cart"
-                >
-                  <i class="fi fi-rs-shopping-bag-add"></i>
-                </a>
+                <a href="#" 
+                class="action__btn cart__btn" 
+                aria-label="Thêm vào Giỏ hàng" 
+                data-inventory="11">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+             </a>
               </div>
             </div>
             <div class="product__item swiper-slide">
               <div class="product__banner">
                 <a href="details.html" class="product__images">
                   <img
-                    src="assets/img/product-3-1.jpg"
+                    src="assets/img/product18.1.png"
                     alt=""
                     class="product__img default"
                   />
                   <img
-                    src="assets/img/product-3-2.jpg"
+                    src="assets/img/product18.2.png"
                     alt=""
                     class="product__img hover"
                   />
                 </a>
                 <div class="product__actions">
-                  <a href="#" class="action__btn" aria-label="Quick View">
-                    <i class="fi fi-rs-eye"></i>
+                  <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                    <i class="fa-solid fa-up-right-from-square"></i>
                   </a>
-                  <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
                     <i class="fi fi-rs-heart"></i>
-                  </a>
-                  <a href="#" class="action__btn" aria-label="Compare">
-                    <i class="fi fi-rs-shuffle"></i>
                   </a>
                 </div>
                 <div class="product__badge light-orange">Hot</div>
               </div>
               <div class="product__content">
-                <span class="product__category">Clothing</span>
+                <span class="product__category">Kẹp nhỏ </span>
                 <a href="details.html">
-                  <h3 class="product__title">Colorful Pattern Shirts</h3>
+                  <h3 class="product__title">Kẹp Trái Tim Đại Dương</h3>
                 </a>
                 <div class="product__rating">
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <span> (23)</span>
                 </div>
                 <div class="product__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
+                  <span class="new__price">67.000 VND</span>
+        
                 </div>
-                <a
-                  href="#"
-                  class="action__btn cart__btn"
-                  aria-label="Add To Cart"
-                >
-                  <i class="fi fi-rs-shopping-bag-add"></i>
-                </a>
+                <a href="#" 
+                class="action__btn cart__btn" 
+                aria-label="Thêm vào Giỏ hàng" 
+                data-inventory="7">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+             </a>
               </div>
             </div>
             <div class="product__item swiper-slide">
               <div class="product__banner">
                 <a href="details.html" class="product__images">
                   <img
-                    src="assets/img/product-4-1.jpg"
+                    src="assets/img/product19.1.png"
                     alt=""
                     class="product__img default"
                   />
                   <img
-                    src="assets/img/product-4-2.jpg"
+                    src="assets/img/product19.2.png"
                     alt=""
                     class="product__img hover"
                   />
                 </a>
                 <div class="product__actions">
-                  <a href="#" class="action__btn" aria-label="Quick View">
-                    <i class="fi fi-rs-eye"></i>
+                  <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                    <i class="fa-solid fa-up-right-from-square"></i>
                   </a>
-                  <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
                     <i class="fi fi-rs-heart"></i>
-                  </a>
-                  <a href="#" class="action__btn" aria-label="Compare">
-                    <i class="fi fi-rs-shuffle"></i>
                   </a>
                 </div>
                 <div class="product__badge light-blue">Hot</div>
               </div>
               <div class="product__content">
-                <span class="product__category">Clothing</span>
+                <span class="product__category">Kẹp vuông </span>
                 <a href="details.html">
-                  <h3 class="product__title">Colorful Pattern Shirts</h3>
+                  <h3 class="product__title">Kẹp Thiên Sứ Xanh </h3>
                 </a>
                 <div class="product__rating">
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <span> (10)</span>
                 </div>
                 <div class="product__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
+                  <span class="new__price">129.000 VND</span>
                 </div>
-                <a
-                  href="#"
-                  class="action__btn cart__btn"
-                  aria-label="Add To Cart"
-                >
+                <a href="#" 
+                  class="action__btn cart__btn" 
+                  aria-label="Thêm vào Giỏ hàng" 
+                  data-inventory="9">
                   <i class="fi fi-rs-shopping-bag-add"></i>
-                </a>
+               </a>
               </div>
             </div>
             <div class="product__item swiper-slide">
               <div class="product__banner">
                 <a href="details.html" class="product__images">
                   <img
-                    src="assets/img/product-5-1.jpg"
+                    src="assets/img/product20.1.png"
                     alt=""
                     class="product__img default"
                   />
                   <img
-                    src="assets/img/product-5-2.jpg"
+                    src="assets/img/product20.2.png"
                     alt=""
                     class="product__img hover"
                   />
                 </a>
                 <div class="product__actions">
-                  <a href="#" class="action__btn" aria-label="Quick View">
-                    <i class="fi fi-rs-eye"></i>
+                  <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                    <i class="fa-solid fa-up-right-from-square"></i>
                   </a>
-                  <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
                     <i class="fi fi-rs-heart"></i>
                   </a>
-                  <a href="#" class="action__btn" aria-label="Compare">
-                    <i class="fi fi-rs-shuffle"></i>
-                  </a>
                 </div>
-                <div class="product__badge light-blue">-30%</div>
+                <div class="product__badge light-blue">Hot</div>
               </div>
               <div class="product__content">
-                <span class="product__category">Clothing</span>
+                <span class="product__category">Kẹp vuông</span>
                 <a href="details.html">
-                  <h3 class="product__title">Colorful Pattern Shirts</h3>
+                  <h3 class="product__title">Kẹp Giấc Mơ Hoa</h3>
                 </a>
                 <div class="product__rating">
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <span> (21)</span>
                 </div>
                 <div class="product__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
+                  <span class="new__price">129.000 VND</span>
                 </div>
-                <a
-                  href="#"
-                  class="action__btn cart__btn"
-                  aria-label="Add To Cart"
-                >
-                  <i class="fi fi-rs-shopping-bag-add"></i>
-                </a>
+                <a href="#" 
+                class="action__btn cart__btn" 
+                aria-label="Thêm vào Giỏ hàng" 
+                data-inventory="12">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+             </a>
               </div>
             </div>
             <div class="product__item swiper-slide">
               <div class="product__banner">
                 <a href="details.html" class="product__images">
                   <img
-                    src="assets/img/product-6-1.jpg"
+                    src="assets/img/product21.1.png"
                     alt=""
                     class="product__img default"
                   />
                   <img
-                    src="assets/img/product-6-2.jpg"
+                    src="assets/img/product21.2.png"
                     alt=""
                     class="product__img hover"
                   />
                 </a>
                 <div class="product__actions">
-                  <a href="#" class="action__btn" aria-label="Quick View">
-                    <i class="fi fi-rs-eye"></i>
+                  <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                    <i class="fa-solid fa-up-right-from-square"></i>
                   </a>
-                  <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
                     <i class="fi fi-rs-heart"></i>
                   </a>
-                  <a href="#" class="action__btn" aria-label="Compare">
-                    <i class="fi fi-rs-shuffle"></i>
-                  </a>
                 </div>
-                <div class="product__badge light-blue">-22%</div>
+                <div class="product__badge light-blue">Hot</div>
               </div>
               <div class="product__content">
-                <span class="product__category">Clothing</span>
+                <span class="product__category">Kẹp vuông </span>
                 <a href="details.html">
-                  <h3 class="product__title">Colorful Pattern Shirts</h3>
+                  <h3 class="product__title">Kẹp Ánh Sao Hồng</h3>
                 </a>
                 <div class="product__rating">
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <span> (211)</span>
                 </div>
                 <div class="product__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
+                  <span class="new__price">129.000 VND</span>
                 </div>
-                <a
-                  href="#"
-                  class="action__btn cart__btn"
-                  aria-label="Add To Cart"
-                >
-                  <i class="fi fi-rs-shopping-bag-add"></i>
-                </a>
+                <a href="#" 
+                class="action__btn cart__btn" 
+                aria-label="Thêm vào Giỏ hàng" 
+                data-inventory="11">
+                <i class="fi fi-rs-shopping-bag-add"></i>
+             </a>
               </div>
             </div>
             <div class="product__item swiper-slide">
               <div class="product__banner">
                 <a href="details.html" class="product__images">
                   <img
-                    src="assets/img/product-7-1.jpg"
+                    src="assets/img/product1.1.png"
                     alt=""
                     class="product__img default"
                   />
                   <img
-                    src="assets/img/product-7-2.jpg"
+                    src="assets/img/product1.2.png"
                     alt=""
                     class="product__img hover"
                   />
                 </a>
                 <div class="product__actions">
-                  <a href="#" class="action__btn" aria-label="Quick View">
-                    <i class="fi fi-rs-eye"></i>
+                  <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                    <i class="fa-solid fa-up-right-from-square"></i>
                   </a>
-                  <a href="#" class="action__btn" aria-label="Add to Wishlist">
+                  <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
                     <i class="fi fi-rs-heart"></i>
                   </a>
-                  <a href="#" class="action__btn" aria-label="Compare">
-                    <i class="fi fi-rs-shuffle"></i>
-                  </a>
                 </div>
-                <div class="product__badge light-green">-22%</div>
+                <div class="product__badge light-green">Hot</div>
               </div>
               <div class="product__content">
-                <span class="product__category">Clothing</span>
+                <span class="product__category">Kẹp vuông </span>
                 <a href="details.html">
-                  <h3 class="product__title">Colorful Pattern Shirts</h3>
+                  <h3 class="product__title">Kẹp Nơ Xanh Mát</h3>
                 </a>
                 <div class="product__rating">
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
-                  <i class="fi fi-rs-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <span> (211)</span>
                 </div>
                 <div class="product__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
+                  <span class="new__price">120.000 VND</span>
+               
                 </div>
-                <a
-                  href="#"
-                  class="action__btn cart__btn"
-                  aria-label="Add To Cart"
-                >
+                <a href="#" 
+                  class="action__btn cart__btn" 
+                  aria-label="Thêm vào Giỏ hàng" 
+                  data-inventory="11">
                   <i class="fi fi-rs-shopping-bag-add"></i>
-                </a>
+               </a>
               </div>
             </div>
           </div>
@@ -2176,253 +1394,258 @@
           </div>
         </div>
       </section>
-
-      <!--=============== SHOWCASE ===============-->
-      <section class="showcase section">
-        <div class="showcase__container container grid">
-          <div class="showcase__wrapper">
-            <h3 class="section__title">Hot Releases</h3>
-            <div class="showcase__item">
-              <a href="details.html" class="showcase__img-box">
-                <img
-                  src="./assets/img/showcase-img-1.jpg"
-                  alt=""
-                  class="showcase__img"
-                />
-              </a>
-              <div class="showcase__content">
-                <a href="details.html">
-                  <h4 class="showcase__title">
-                    Floral Print Casual Cotton Dress
-                  </h4>
-                </a>
-                <div class="showcase__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
+    
+       <!--=============== REVIEW =====================-->
+       <section id="customer-reviews" class="comments-gallery container section">
+        <h3 class="section__title"><span>ĐÁNH GIÁ</span> CỦA KHÁCH HÀNG</h3>
+        <p class="section__subtitle">Hãy Xem Các Khách Hàng Nói Gì Về Chic  <i class="fa-solid fa-comment"></i></p>
+        <div class="comments__container swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="comment">
+                <div class="comment-image">
+                  <img src="assets/img/urbanxmas.png" alt="Product Image" class="product-img" />
+                </div>
+                <div class="comment-text">
+                  <pre><strong>Mỹ Hương:</strong> Sản phẩm dễ thương, thuận tiện sử dụng 
+                    rất phù hợp để làm quà tặng bạn bè!</pre>
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="showcase__item">
-              <a href="details.html" class="showcase__img-box">
-                <img
-                  src="./assets/img/showcase-img-2.jpg"
-                  alt=""
-                  class="showcase__img"
-                />
-              </a>
-              <div class="showcase__content">
-                <a href="details.html">
-                  <h4 class="showcase__title">
-                    Ruffled Solid Long Sleeve Blouse
-                  </h4>
-                </a>
-                <div class="showcase__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
+      
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="comment">
+                <div class="comment-image">
+                  <img src="assets/img/bellinixmas.png" alt="Product Image" class="product-img" />
+                </div>
+                <div class="comment-text">
+                  <pre><strong>Yahan:</strong> Shop tư vấn nhiệt tình, giao hàng nhanh
+                    sản phẩm đóng gói rất chỉnh chu</pre>
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="showcase__item">
-              <a href="details.html" class="showcase__img-box">
-                <img
-                  src="./assets/img/showcase-img-3.jpg"
-                  alt=""
-                  class="showcase__img"
-                />
-              </a>
-              <div class="showcase__content">
-                <a href="details.html">
-                  <h4 class="showcase__title">
-                    Multi-Color Print V-neck T-shirt
-                  </h4>
-                </a>
-                <div class="showcase__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
+      
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="comment">
+                <div class="comment-image">
+                  <img src="assets/img/shirleyxmas.png" alt="Product Image" class="product-img" />
+                </div>
+                <div class="comment-text">
+                  <pre><strong>Unnhi:</strong> Sản phẩm thời trang phù hợp với giới trẻ
+                  trang trí rất dễ thương, độc đáo</pre>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
                 </div>
               </div>
             </div>
+      
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="comment">
+                <div class="comment-image">
+                  <img src="assets/img/urbanchic.png" alt="Product Image" class="product-img" />
+                </div>
+                <div class="comment-text">
+                  <pre><strong>Miannas:</strong> Sản phẩm được đóng gói rất kỹ lưỡng
+                  shop có nhiều chương trình giảm giá thú vị</pre>
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Thêm các slide bình luận khác ở đây... -->
           </div>
-          <div class="showcase__wrapper">
-            <h3 class="section__title">Deals & Outlet</h3>
-            <div class="showcase__item">
-              <a href="details.html" class="showcase__img-box">
-                <img
-                  src="./assets/img/showcase-img-4.jpg"
-                  alt=""
-                  class="showcase__img"
-                />
-              </a>
-              <div class="showcase__content">
-                <a href="details.html">
-                  <h4 class="showcase__title">Fish Print Patched T-shirt</h4>
-                </a>
-                <div class="showcase__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
-                </div>
-              </div>
-            </div>
-            <div class="showcase__item">
-              <a href="details.html" class="showcase__img-box">
-                <img
-                  src="./assets/img/showcase-img-5.jpg"
-                  alt=""
-                  class="showcase__img"
-                />
-              </a>
-              <div class="showcase__content">
-                <a href="details.html">
-                  <h4 class="showcase__title">Fintage Floral Print Dress</h4>
-                </a>
-                <div class="showcase__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
-                </div>
-              </div>
-            </div>
-            <div class="showcase__item">
-              <a href="details.html" class="showcase__img-box">
-                <img
-                  src="./assets/img/showcase-img-6.jpg"
-                  alt=""
-                  class="showcase__img"
-                />
-              </a>
-              <div class="showcase__content">
-                <a href="details.html">
-                  <h4 class="showcase__title">
-                    Multi-Color Stripe Circle T-shirt
-                  </h4>
-                </a>
-                <div class="showcase__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="showcase__wrapper">
-            <h3 class="section__title">Top Selling</h3>
-            <div class="showcase__item">
-              <a href="details.html" class="showcase__img-box">
-                <img
-                  src="./assets/img/showcase-img-7.jpg"
-                  alt=""
-                  class="showcase__img"
-                />
-              </a>
-              <div class="showcase__content">
-                <a href="details.html">
-                  <h4 class="showcase__title">
-                    Geometric Printed Long Sleeve Blouse
-                  </h4>
-                </a>
-                <div class="showcase__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
-                </div>
-              </div>
-            </div>
-            <div class="showcase__item">
-              <a href="details.html" class="showcase__img-box">
-                <img
-                  src="./assets/img/showcase-img-8.jpg"
-                  alt=""
-                  class="showcase__img"
-                />
-              </a>
-              <div class="showcase__content">
-                <a href="details.html">
-                  <h4 class="showcase__title">Print Patchwork Maxi Dress</h4>
-                </a>
-                <div class="showcase__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
-                </div>
-              </div>
-            </div>
-            <div class="showcase__item">
-              <a href="details.html" class="showcase__img-box">
-                <img
-                  src="./assets/img/showcase-img-9.jpg"
-                  alt=""
-                  class="showcase__img"
-                />
-              </a>
-              <div class="showcase__content">
-                <a href="details.html">
-                  <h4 class="showcase__title">
-                    Daisy Floral Print Straps Jumpsuit
-                  </h4>
-                </a>
-                <div class="showcase__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="showcase__wrapper">
-            <h3 class="section__title">Trendy</h3>
-            <div class="showcase__item">
-              <a href="details.html" class="showcase__img-box">
-                <img
-                  src="./assets/img/showcase-img-7.jpg"
-                  alt=""
-                  class="showcase__img"
-                />
-              </a>
-              <div class="showcase__content">
-                <a href="details.html">
-                  <h4 class="showcase__title">Floral Print Casual Cotton</h4>
-                </a>
-                <div class="showcase__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
-                </div>
-              </div>
-            </div>
-            <div class="showcase__item">
-              <a href="details.html" class="showcase__img-box">
-                <img
-                  src="./assets/img/showcase-img-8.jpg"
-                  alt=""
-                  class="showcase__img"
-                />
-              </a>
-              <div class="showcase__content">
-                <a href="details.html">
-                  <h4 class="showcase__title">Ruffled Solid Long Sleeve</h4>
-                </a>
-                <div class="showcase__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
-                </div>
-              </div>
-            </div>
-            <div class="showcase__item">
-              <a href="details.html" class="showcase__img-box">
-                <img
-                  src="./assets/img/showcase-img-9.jpg"
-                  alt=""
-                  class="showcase__img"
-                />
-              </a>
-              <div class="showcase__content">
-                <a href="details.html">
-                  <h4 class="showcase__title">Multi-Color Print V-neck</h4>
-                </a>
-                <div class="showcase__price flex">
-                  <span class="new__price">$238.85</span>
-                  <span class="old__price">$245.8</span>
-                </div>
-              </div>
-            </div>
-          </div>
+      
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
+        <!-- Form thêm bình luận -->
+      <form id="comment-form" class="add-comment">
+        <textarea id="new-comment" placeholder="Nhập bình luận của bạn..." required></textarea>
+        <button type="submit">Gửi bình luận</button>
+      </form>
       </section>
 
+      <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.1/swiper-bundle.min.js"></script>
+    
+    <script>
+        // Initialize Swiper
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('.comments__container', {
+                // Optional parameters
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                
+                // Pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                
+                // Responsive breakpoints
+                breakpoints: {
+                    // when window width is >= 320px
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 20
+                    },
+                    // when window width is >= 768px
+                    768: {
+                        slidesPerView: 1,
+                        spaceBetween: 30
+                    },
+                    // when window width is >= 1024px
+                    1024: {
+                        slidesPerView: 1,
+                        spaceBetween: 40
+                    }
+                },
+                
+                // Navigation
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
+
+            // Comment Form Handling
+            const commentForm = document.getElementById('comment-form');
+            const newCommentTextarea = document.getElementById('new-comment');
+
+            commentForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Basic validation
+                if (newCommentTextarea.value.trim() === '') {
+                    alert('Vui lòng nhập bình luận của bạn.');
+                    return;
+                }
+
+                // Here you would typically send the comment to a server
+                // For this example, we'll just show an alert
+                alert('Bình luận của bạn đã được gửi. Cảm ơn!');
+                
+                // Clear the textarea
+                newCommentTextarea.value = '';
+            });
+        });
+    </script>
+
+      <!--=============== Tiêu đề About Us với hiệu ứng ===============-->
+      <section class="categories container section">
+        <h3 class="section__title">
+          <span>THÀNH VIÊN</span> CỦA CHICCHARM 
+        </h3>
+        <p class="section__subtitle">Giới Thiệu Các Thành Viên <i class="fa-solid fa-user-group"></i> </p>
+
+     <!-- Dòng chữ chạy -->
+     <div class="marquee">
+         <marquee behavior="scroll" direction="left"> <i class="fas fa-heart"></i> ChicCharm - Cửa Hàng Phụ Kiện Thời Trang <i class="fas fa-heart"></i> </marquee>
+     </div>
+    
+     <!-- Thông tin các thành viên -->
+     <main class="team-section">
+         <div class="team-member">
+             <div class="member-img">
+                 <img src="https://i.pinimg.com/originals/2d/a7/1e/2da71e356e8fea0c3d69d0010d17eaec.jpg" alt="Avatar of Hương Giang">
+             </div>
+             <h2>Hương Giang</h2>
+             <p class="role">Member</p> <br>
+             <p class="description">Giang is good at dancing.</p>
+             <p><i class="fas fa-envelope"></i> Email: giang@gmail.com</p>
+             <p><i class="fas fa-phone"></i> Phone: (123) 456-7890</p>
+         </div>
+        
+         <div class="team-member">
+             <div class="member-img">
+                 <img src="https://i.pinimg.com/originals/de/7c/0c/de7c0cb504cafc6e144c487ccba6e435.jpg" alt="Avatar of Uyển Nhi">
+             </div>
+             <h2>Uyển Nhi</h2>
+             <p class="role">Member</p> <br>
+             <p class="description">Nhi enjoys taking photos.</p>
+             <p><i class="fas fa-envelope"></i> Email: nhi@gmail.com</p>
+             <p><i class="fas fa-phone"></i> Phone: (234) 567-8901</p>
+         </div>
+        
+         <div class="team-member">
+             <div class="member-img">
+                 <img src="https://i.pinimg.com/originals/a5/37/fb/a537fbc36fb3b862dc4e69dc16991a96.jpg" alt="Avatar of Minh Anh">
+             </div>
+             <h2>Minh Anh</h2>
+             <p class="role">Member</p> <br>
+             <p class="description">Minh Anh has a knack for listening to music.</p>
+             <p><i class="fas fa-envelope"></i> Email: anh@gmail.com</p>
+             <p><i class="fas fa-phone"></i> Phone: (456) 789-0123</p>
+         </div>
+        
+         <div class="team-member">
+             <div class="member-img">
+                 <img src="https://i.pinimg.com/originals/38/cd/b9/38cdb91ef60001d7e8713175a4a557e1.jpg" alt="Avatar of Nam Phương">
+             </div>
+             <h2>Nam Phương</h2>
+             <p class="role">Leader</p> <br>
+             <p class="description">Phuong loves listening to music.</p>
+             <p><i class="fas fa-envelope"></i> Email: phuong@gmail.com</p>
+             <p><i class="fas fa-phone"></i> Phone: (567) 890-1234</p>
+         </div>
+ 
+ 
+         <div class="team-member">
+             <div class="member-img">
+                 <img src="https://i.pinimg.com/originals/e7/29/e6/e729e69636a8a13a12a2267dd5002a17.jpg" alt="Avatar of Gia Hân">
+             </div>
+             <h2>Gia Hân</h2>
+             <p class="role">Member</p> <br>
+             <p class="description">Han is keen on playing game.</p>
+             <p><i class="fas fa-envelope"></i> Email: han@gmail.com</p>
+             <p><i class="fas fa-phone"></i> Phone: (678) 901-2345</p>
+         </div>
+         
+ 
+         <div class="team-member">
+             <div class="member-img">
+                 <img src="https://i.pinimg.com/originals/87/7f/9f/877f9f0fb3d4bf1cf622e7b113fc7e58.jpg" alt="Avatar of Mỹ Hương">
+             </div>
+             <h2>Mỹ Hương</h2>
+             <p class="role">Member</p> <br>
+             <p class="description">Huong enjoys watching film.</p>
+             <p><i class="fas fa-envelope"></i> Email: huong@gmail.com</p>
+             <p><i class="fas fa-phone"></i> Phone: (789) 012-3456</p>
+         </div>
+     </main>
+ </section>
       <!--=============== NEWSLETTER ===============-->
       <section class="newsletter section home__newsletter">
         <div class="newsletter__container container grid">
@@ -2432,18 +1655,18 @@
               alt=""
               class="newsletter__icon"
             />
-            Sign in to Newsletter
+            ĐĂNG KÝ ĐỂ NHẬN TIN
           </h3>
           <p class="newsletter__description">
-            ...and receive $25 coupon for first shopping.
+            ...và nhận 10% giảm giá cho lần mua đầu tiên.
           </p>
           <form action="" class="newsletter__form">
             <input
               type="text"
-              placeholder="Enter Your Email"
+              placeholder="Nhập Email của bạn"
               class="newsletter__input"
             />
-            <button type="submit" class="newsletter__btn">Subscribe</button>
+            <button type="submit" class="newsletter__btn">Đăng ký</button>
           </form>
         </div>
       </section>
@@ -2456,50 +1679,30 @@
           <a href="index.html" class="footer__logo">
             <img src="./assets/img/logo.svg" alt="" class="footer__logo-img" />
           </a>
-          <h4 class="footer__subtitle">Contact</h4>
+          <h4 class="footer__subtitle">Liên hệ</h4>
           <p class="footer__description">
-            <span>Address:</span> 13 Tlemcen Road, Street 32, Beb-Wahren
+            <span>Địa chỉ:</span> 279 Nguyễn Tri Phương, Phường 5, Quận 10
           </p>
           <p class="footer__description">
-            <span>Phone:</span> +01 2222 365 /(+91) 01 2345 6789
+            <span>SĐT:</span> +01 2222 365 /(+91) 01 2345 6789
           </p>
           <p class="footer__description">
-            <span>Hours:</span> 10:00 - 18:00, Mon - Sat
+            <span>Thời gian:</span> 10:00 - 18:00, T2-T7
           </p>
           <div class="footer__social">
-            <h4 class="footer__subtitle">Follow Me</h4>
+            <h4 class="footer__subtitle">Theo dõi chúng tôi</h4>
             <div class="footer__links flex">
-              <a href="#">
+              <a href="https://www.facebook.com/share/1784WE225P/?mibextid=LQQJ4d">
                 <img
                   src="./assets/img/icon-facebook.svg"
                   alt=""
                   class="footer__social-icon"
                 />
               </a>
-              <a href="#">
-                <img
-                  src="./assets/img/icon-twitter.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/chiccharm.official_?igsh=MXJpM3pqZDFvMmlzaw==">
                 <img
                   src="./assets/img/icon-instagram.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
-              </a>
-              <a href="#">
-                <img
-                  src="./assets/img/icon-pinterest.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
-              </a>
-              <a href="#">
-                <img
-                  src="./assets/img/icon-youtube.svg"
                   alt=""
                   class="footer__social-icon"
                 />
@@ -2508,39 +1711,35 @@
           </div>
         </div>
         <div class="footer__content">
-          <h3 class="footer__title">Address</h3>
+          <h3 class="footer__title">Địa chỉ</h3>
           <ul class="footer__links">
-            <li><a href="#" class="footer__link">About Us</a></li>
-            <li><a href="#" class="footer__link">Delivery Information</a></li>
-            <li><a href="#" class="footer__link">Privacy Policy</a></li>
-            <li><a href="#" class="footer__link">Terms & Conditions</a></li>
-            <li><a href="#" class="footer__link">Contact Us</a></li>
-            <li><a href="#" class="footer__link">Support Center</a></li>
+            <li><a href="#" class="footer__link">Về Chúng Tôi</a></li>
+            <li><a href="#" class="footer__link">Chính Sách Vận Chuyển</a></li>
+            <li><a href="#" class="footer__link">Chính Sách Riêng Tư</a></li>
+            <li><a href="#" class="footer__link">Điều Khoản & Điều Kiện</a></li>
+            <li><a href="#" class="footer__link">Liên Hệ</a></li>
+            <li><a href="#" class="footer__link">Trung Tâm Hỗ Trợ</a></li>
           </ul>
         </div>
         <div class="footer__content">
-          <h3 class="footer__title">My Account</h3>
+          <h3 class="footer__title">Tài Khoản</h3>
           <ul class="footer__links">
-            <li><a href="#" class="footer__link">Sign In</a></li>
-            <li><a href="#" class="footer__link">View Cart</a></li>
-            <li><a href="#" class="footer__link">My Wishlist</a></li>
-            <li><a href="#" class="footer__link">Track My Order</a></li>
-            <li><a href="#" class="footer__link">Help</a></li>
-            <li><a href="#" class="footer__link">Order</a></li>
+            <li><a href="login.html" class="footer__link">Đăng Nhập</a></li>
+            <li><a href="cart.html" class="footer__link">Giỏ Hàng</a></li>
+            <li><a href="wishlist.html" class="footer__link">Wishlist</a></li>
+            <li><a href="#" class="footer__link">Đơn Hàng</a></li>
+            <li><a href="#" class="footer__link">Giúp Đỡ</a></li>
+            <li><a href="#" class="footer__link">Đặt Hàng</a></li>
           </ul>
         </div>
         <div class="footer__content">
-          <h3 class="footer__title">Secured Payed Gateways</h3>
+          <h3 class="footer__title">Phương Thức Thanh Toán</h3>
           <img
             src="./assets/img/payment-method.png"
             alt=""
             class="payment__img"
           />
         </div>
-      </div>
-      <div class="footer__bottom">
-        <p class="copyright">&copy; 2024 Evara. All right reserved</p>
-        <span class="designer">Designer by Crypticalcoder</span>
       </div>
     </footer>
 
@@ -2549,6 +1748,22 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+
+    <script>
+      //=========LẮNG NGHE SỰ KIỆN CUỘN TRANG=====//
+window.onscroll = function() {
+  // Lấy thanh menu
+  var nav = document.querySelector('.nav');
+
+  // Kiểm tra vị trí cuộn của trang
+  if (window.scrollY > 1200) { // Khi cuộn xuống 100px
+    nav.classList.add('fixed-menu'); // Thêm lớp cố định cho nav
+  } else {
+    nav.classList.remove('fixed-menu'); // Bỏ lớp cố định khi lên đầu trang
+  }
+};
+
+    </script>
 
     <!--Banner thay đổi thông tin liên tục-->
     <script>
@@ -2581,5 +1796,48 @@
         changeNews(); // Thay đổi tin tức
       }, 3000); // Thay đổi mỗi 2 giây
     </script>
+
+<script>
+//=========TẠO ALERT KHI NHẤN VÀO NÚT THÊM VÀO WISHLIST=====//
+// Đảm bảo mã được chạy sau khi DOM đã tải xong
+document.addEventListener('DOMContentLoaded', function() {
+  // Lấy tất cả các nút "Thêm vào Wishlist"
+  const addToWishlistBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Wishlist"]');
+  
+    addToWishlistBtns.forEach(function(button) {
+      button.addEventListener('click', function(e) {
+        e.preventDefault(); // Ngừng hành động mặc định của liên kết
+
+        // Hiển thị thông báo thành công
+        alert('Đã thêm vào Wishlist thành công!');
+      });
+    });
+  }); 
+</script>
+
+
+<script>
+//=========TẠO ALERT KHI NHẤN VÀO NÚT THÊM VÀO GIỎ HÀNG=====//
+// Chọn tất cả các nút "Thêm vào Giỏ hàng"
+const addToCartBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Giỏ hàng"]');
+
+// Duyệt qua tất cả các nút và thêm sự kiện click
+addToCartBtns.forEach(function(btn) {
+  btn.addEventListener("click", function(event) {
+    event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+
+    // Lấy số lượng review từ thuộc tính data-reviews
+    const reviews = btn.getAttribute("data-reviews") || 0;
+
+    // Lấy số lượng tồn kho từ thuộc tính data-inventory
+    const inventory = btn.getAttribute("data-inventory") || 0;
+
+    // Hiển thị thông báo alert
+    alert(`Đã thêm vào giỏ hàng thành công! 
+Sản phẩm này còn ${inventory} sản phẩm trong kho.`);
+  });
+});
+</script>
+
   </body>
 </html>
