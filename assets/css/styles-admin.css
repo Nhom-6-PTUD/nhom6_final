@@ -14448,3 +14448,8 @@ dl {
   flex-grow: 1; }
 
 /*# sourceMappingURL=style.css.map */
+
+/* Thêm con trỏ vô cho thẻ h6 nha */
+h6 {
+  cursor: pointer;
+}
