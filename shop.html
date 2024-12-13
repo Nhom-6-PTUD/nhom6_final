@@ -21,7 +21,12 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="./assets/css/styles.css" />
 
-      
+    <!--================Chỉnh lại Style Heading=============-->
+    <style>
+      h1, h2, h3, h4, h5, h6, th {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+    </style>  
     <style>
   
   
@@ -462,7 +467,7 @@
 
       <!--=============== PRODUCTS ===============-->
       <section class="products container section--lg">
-        <p class="total__products">Chic tìm thấy <span>12</span> phụ kiện dành cho nàng!</p>
+        <p class="total__products">Chic có <span>12</span> phụ kiện dành cho nàng!</p>
         <div class="products__container grid">
           <div class="product__item">
             <div class="product__banner">
@@ -1363,57 +1368,6 @@ productData.forEach((product) => container.appendChild(product.element));
   
     // Thêm sự kiện cho nút áp dụng
     applyFiltersBtn.addEventListener('click', filterProducts);
-
-
-//====== HIỂN THỊ ĐÚNG SỐ LƯỢNG SẢN PHẨM =====//
-function filterProducts() {
-  const selectedCategory = categoryFilter.value;
-  const selectedColor = colorFilter.value;
-  const selectedPrice = priceFilter.value;
-  const selectedTag = tagFilter.value;
-  const selectedBrand = brandFilter.value;
-  const selectedSort = sortFilter.value;
-
-  let visibleCount = 0; // Đếm số lượng sản phẩm hiển thị
-
-  productData.forEach((product) => {
-    const { element, category, color, price, tag, brand, createdAt } = product;
-
-    // Kiểm tra từng tiêu chí
-    const categoryMatch =
-      selectedCategory === 'all' || selectedCategory === category;
-    const colorMatch = selectedColor === 'all' || selectedColor === color;
-    const priceMatch =
-      selectedPrice === 'all' ||
-      (selectedPrice === 'low-to-high' && price <= 50.000) ||
-      (selectedPrice === 'high-to-low' && price > 50.000);
-    const tagMatch = selectedTag === 'all' || selectedTag === tag;
-    const brandMatch = selectedBrand === 'all' || selectedBrand === brand;
-
-    // Hiển thị hoặc ẩn sản phẩm
-    if (categoryMatch && colorMatch && priceMatch && tagMatch && brandMatch) {
-      element.style.display = 'block';
-      visibleCount++; // Tăng số lượng sản phẩm hiển thị
-    } else {
-      element.style.display = 'none';
-    }
-  });
-
-  // Sắp xếp sản phẩm
-  if (selectedSort === 'newest') {
-    productData.sort((a, b) => b.createdAt - a.createdAt);
-  } else if (selectedSort === 'oldest') {
-    productData.sort((a, b) => a.createdAt - b.createdAt);
-  }
-
-  // Cập nhật thứ tự sản phẩm trong DOM
-  const container = document.querySelector('.products__container');
-  productData.forEach((product) => container.appendChild(product.element));
-
-  // Cập nhật số lượng sản phẩm trong `.total__products`
-  const totalProductsText = document.querySelector('.total__products span');
-  totalProductsText.textContent = visibleCount;
-}
 
 
 //========HIỆN POPUP KHI NHẤN VÀO XEM TRƯỚC========//
