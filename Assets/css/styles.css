@@ -480,7 +480,7 @@ body {
 /* Hiệu ứng hover cho từng danh mục */
 .dropdown__menu li a:hover {
   color: #f4a3df; /* Đổi màu chữ khi hover */
-  transform: scale(1.05); /* Tăng kích thước nhẹ khi hover */
+  transform: scale(1.2); /* Tăng kích thước nhẹ khi hover */
 }
 
 /* Hiển thị menu con khi hover */
@@ -488,6 +488,14 @@ body {
   display: block;
 }
 
+/*Điều chỉnh responsive cho dropdown menu ở màn hình nhỏ*/
+@media (max-width: 1200px)
+{
+  /* Ẩn menu con khi hover */
+  .dropdown:hover .dropdown__menu {
+    display: none;
+  }
+}
 /*=============== DISCOUNT BANNER ===============*/
 .home__slider {
   position: relative;
