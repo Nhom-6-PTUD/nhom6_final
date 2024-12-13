@@ -24,12 +24,7 @@
     
     <!-- Liên kết tới file CSS chính của bạn -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <!--================Chỉnh lại Style Heading=============-->
-    <style>
-      h1, h2, h3, h4, h5, h6, th {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      }
-    </style>
+    
     <style>
    
   /* CSS cho khung chứa dòng chữ và ngôi sao */
@@ -292,8 +287,24 @@
     background-position: 0% 50%;
   }
 }
+
+/* Điều chỉnh responsive design cho nút xem trước và thêm vào wishlist*/
+@media (max-width: 1100px) {
+  .product__actions{
+    display: none; /*Ẩn nút*/
+  }
+  
+}
     </style>
 
+     <!--================Chỉnh lại Style Heading=============-->
+     <style>
+      h1, h2, h3, h4, h5, h6, th {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+    </style>
+
+    <!--================Thêm logo cho trang=============-->
     <link rel="icon" href="assets/img/1.png" type="image/x-icon">
     <title>ChicCharm Official Store</title>
   </head>
@@ -304,17 +315,21 @@
     <header class="header">
       <div class="header__top">
         <div class="header__container container">
+            <!-- Hiển thị thông điệp liên hệ -->
           <div class="header__contact">
             <span id="contact1">Merry Chrismas</span> 
           </div>
+            <!-- Hiển thị thông báo ưu đãi -->
           <p class="header__alert-news" id="news" style="color: #ff97c9">ƯU ĐÃI SIÊU GIÁ TRỊ - TIẾT KIỆM THÊM VỚI NHIỀU MÃ GIẢM GIÁ</p>
+          <!-- Liên kết đăng nhập/đăng ký -->
           <a href="login-register.html" id="login-link" class="header__top-action">Đăng nhập / Đăng ký</a>
         </div>
       </div>
       
     
-  
+  <!-- Thanh điều hướng chính -->
       <nav class="nav container">
+         <!-- Logo của trang web -->
         <a href="index.html" class="nav__logo">
           <img
             class="nav__logo-img"
@@ -322,21 +337,25 @@
             alt="website logo"
           />
         </a>
+        <!-- Menu điều hướng -->
         <div class="nav__menu" id="nav-menu">
           <div class="nav__menu-top">
             <a href="index.html" class="nav__menu-logo">
               <img src="./assets/img/logo.svg" alt="">
             </a>
+            <!-- Nút đóng menu -->
             <div class="nav__close" id="nav-close">
               <i class="fi fi-rs-cross-small"></i>
             </div>
           </div>
+           <!-- Danh sách liên kết trong menu -->
           <ul class="nav__list">
             <li class="nav__item">
               <a href="index.html" class="nav__link">Trang Chủ</a>
             </li>
             <li class="nav__item dropdown">
               <a href="shop.html" class="nav__link active-link">Cửa Hàng</a>
+               <!-- Liên kết đến từng danh mục sản phẩm  với menu thả xuống -->
               <ul class="dropdown__menu">
                 <li><a href="shop.html">Kẹp vuông</a></li>
                 <li><a href="shop.html">Kẹp nhỏ</a></li>
@@ -345,36 +364,43 @@
               </ul>
             </li>
             <li class="nav__item">
-              <a href="accounts.html" class="nav__link">Tài Khoản</a>
+              <a href="accounts.html" class="nav__link">Tài Khoản</a>  <!-- Liên kết đến trang tài khoản -->
             </li>
             <li class="nav__item">
-              <a href="index.html#featured" class="nav__link intense-sparkle">Khuyến mãi</a>
+              <a href="index.html#featured" class="nav__link intense-sparkle">Khuyến mãi</a> <!-- Liên kết đến phần khuyến mãi -->
             </li>
           </ul>
           
+          <!-- Tìm kiếm trong header -->
           <div class="header__search">
             <input
               type="text"
               placeholder=""
               class="form__input"
             />
+
+            <!-- Ô nhập để tìm kiếm -->
             <button class="search__btn">
               <img src="assets/img/search.png" alt="search icon" />
             </button>
           </div>
         </div>
         <div class="header__user-actions">
+          <!-- Nút đăng nhập -->
           <a href="login.html" class="header__action-btn" title="Đăng nhập">
             <img src="assets/img/user.png" alt="" />
           </a>
+          <!-- Nút danh sách yêu thích -->
           <a href="wishlist.html" class="header__action-btn" title="Wishlist">
             <img src="assets/img/icon-heart.svg" alt="" />
-            <span class="count">3</span>
+            <span class="count">3</span> <!-- Số lượng mục trong wishlist -->
           </a>
+          <!-- Nút giỏ hàng -->
           <a href="cart.html" class="header__action-btn" title="Giỏ hàng">
             <img src="assets/img/icon-cart.svg" alt="" />
-            <span class="count">3</span>
+            <span class="count">3</span> <!-- Số lượng sản phẩm trong giỏ hàng -->
           </a>
+          <!-- Nút mở menu dọc -->
           <div class="header__action-btn nav__toggle" id="nav-toggle">
             <img src="./assets//img/menu-burger.png" alt="">
           </div>
@@ -382,7 +408,7 @@
       </nav>
     </header>
 
-
+    <!-- Phần thông báo khuyến mãi vận chuyển -->
     <div class="shipping-promo">
       <span class="star">&#9733;</span>
       <span class="promo-text"> Freeship cho đơn hàng từ 50.000 VND</span>
@@ -470,12 +496,13 @@
       </div>
 
       <!-- Danh sách sản phẩm -->
-      <p class="total__products">Chic tìm thấy <span>3</span> phụ kiện dành cho nàng!</p>
+      <p class="total__products">Chic tìm thấy <span>3</span> phụ kiện dành cho nàng!</p> <!-- Cập nhật số lượng sản phẩm hiển thị -->
       <div class="products__container grid">
-        <!-- Các sản phẩm (ví dụ: sản phẩm 1) -->
-         
+       
+        <!-- Sản phẩm thứ 1 -->  
         <div class="product__item">
           <div class="product__banner">
+            <!-- Hình ảnh sản phẩm (trạng thái mặc định và khi hover) -->
             <a href="details.html" class="product__images">
               <img
                 src="assets/img/product13.1.png"
@@ -488,6 +515,7 @@
                 class="product__img hover"
               />
             </a>
+            <!-- Các nút chức năng cho sản phẩm -->
             <div class="product__actions">
               <a href="#" class="action__btn" aria-label="Xem trước">
                 <i class="fi fi-rs-eye"></i>
@@ -498,6 +526,7 @@
             </div>
             <div class="product__badge light-pink">Hot</div>
           </div>
+           <!-- Phần nội dung sản phẩm -->
           <div class="product__content">
             <span class="product__category">Kẹp tròn</span>
             <a href="details.html">
@@ -514,6 +543,7 @@
             <div class="product__price flex">
               <span class="new__price">90.000 VND</span>
             </div>
+            <!-- Nút thêm vào giỏ hàng -->
             <a href="#" 
               class="action__btn cart__btn" 
               aria-label="Thêm vào Giỏ hàng" 
@@ -524,8 +554,10 @@
               </div>
 
 
+              <!-- Sản phẩm thứ 2 -->
               <div class="product__item">
                 <div class="product__banner">
+                  <!-- Hình ảnh sản phẩm -->
                   <a href="details.html" class="product__images">
                     <img
                       src="assets/img/product14.1.png"
@@ -538,6 +570,7 @@
                       class="product__img hover"
                     />
                   </a>
+                   <!-- Nút chức năng -->
                   <div class="product__actions">
                     <a href="#" class="action__btn" aria-label="Xem trước">
                       <i class="fi fi-rs-eye"></i>
@@ -548,6 +581,7 @@
                   </div>
                   <div class="product__badge light-green">Hot</div>
                 </div>
+                <!-- Phần nội dung sản phẩm -->
                 <div class="product__content">
                   <span class="product__category">Kẹp tròn</span>
                   <a href="details.html">
@@ -564,6 +598,7 @@
                   <div class="product__price flex">
                     <span class="new__price">90.000 VND</span>
                   </div>
+                  <!-- Nút thêm vào giỏ hàng -->
                   <a href="#" 
                   class="action__btn cart__btn" 
                   aria-label="Thêm vào Giỏ hàng" 
@@ -574,9 +609,10 @@
               </div>
 
 
-
+               <!-- Sản phẩm thứ 3 -->
               <div class="product__item">
                 <div class="product__banner">
+                   <!-- Hình ảnh sản phẩm -->
                   <a href="details.html" class="product__images">
                     <img
                       src="assets/img/product15.1.png"
@@ -589,6 +625,7 @@
                       class="product__img hover"
                     />
                   </a>
+                  <!-- Nút chức năng -->
                   <div class="product__actions">
                     <a href="#" class="action__btn" aria-label="Xem trước">
                       <i class="fi fi-rs-eye"></i>
@@ -599,6 +636,7 @@
                   </div>
                   <div class="product__badge light-orange">Hot</div>
                 </div>
+                <!-- Nội dung sản phẩm -->
                 <div class="product__content">
                   <span class="product__category">Kẹp tròn</span>
                   <a href="details.html">
@@ -615,6 +653,7 @@
                   <div class="product__price flex">
                     <span class="new__price">90.000 VND</span>
                   </div>
+                  <!-- Nút thêm vào giỏ hàng -->
                   <a href="#" 
                    class="action__btn cart__btn" 
                    aria-label="Thêm vào Giỏ hàng" 
@@ -624,10 +663,12 @@
           </div>
         </div>
       </div>
+
+      <!-- Thanh phân trang -->
       <ul class="pagination">
-        <li><a href="shop.html" class="pagination__link_icon"> <i class="fi-rs-angle-double-small-left"></i></a></li>
-           <li><a href="shop.html" class="pagination__link">01</a></li>
-           <li><a href="shop2.html" class="pagination__link active">02</a></li>
+        <li><a href="shop.html" class="pagination__link_icon"> <i class="fi-rs-angle-double-small-left"></i></a></li> <!-- Quay lại trang trước -->
+           <li><a href="shop.html" class="pagination__link">01</a></li> <!-- Trang 1 -->
+           <li><a href="shop2.html" class="pagination__link active">02</a></li>  <!-- Trang 2, đang hoạt động -->
            </ul>
     </section>
 
@@ -641,9 +682,11 @@
     </div>
   
 
-     <!--=============== NEWSLETTER ===============-->
+     <!--=============== PHẦN ĐĂNG KÝ NHẬN THƯ ===============-->
      <section class="newsletter section home__newsletter">
+      <!-- Container chính chứa nội dung của phần newsletter -->
       <div class="newsletter__container container grid">
+         <!-- Tiêu đề của phần newsletter -->
         <h3 class="newsletter__title flex">
           <img
             src="./assets/img/icon-email.svg"
@@ -652,24 +695,30 @@
           />
           ĐĂNG KÝ ĐỂ NHẬN TIN
         </h3>
+        <!-- Mô tả ngắn khuyến khích người dùng đăng ký -->
         <p class="newsletter__description">
           ...và nhận 10% giảm giá cho lần mua đầu tiên.
         </p>
+        <!-- Biểu mẫu để người dùng nhập email và nhấn đăng ký -->
         <form action="" class="newsletter__form">
+           <!-- Trường nhập email -->
           <input
             type="text"
             placeholder="Nhập Email của bạn"
             class="newsletter__input"
           />
+          <!-- Nút đăng ký -->
           <button type="submit" class="newsletter__btn">Đăng ký</button>
         </form>
       </div>
     </section>
   </main>
 
-  <!--=============== FOOTER ===============-->
+  <!--=============== PHẦN CHÂN TRANG ===============-->
   <footer class="footer container">
+     <!-- Container chính của phần footer -->
     <div class="footer__container grid">
+      <!-- Phần thông tin liên hệ -->
       <div class="footer__content">
         <a href="index.html" class="footer__logo">
           <img src="./assets/img/logo.svg" alt="" class="footer__logo-img" />
@@ -705,6 +754,8 @@
           </div>
         </div>
       </div>
+
+       <!-- Phần liên kết nhanh -->
       <div class="footer__content">
         <h3 class="footer__title">Địa chỉ</h3>
         <ul class="footer__links">
@@ -716,17 +767,20 @@
           <li><a href="#" class="footer__link">Trung Tâm Hỗ Trợ</a></li>
         </ul>
       </div>
+
+      <!-- Phần thông tin tài khoản của khách hàng -->
       <div class="footer__content">
         <h3 class="footer__title">Tài Khoản</h3>
         <ul class="footer__links">
           <li><a href="login.html" class="footer__link">Đăng Nhập</a></li>
           <li><a href="cart.html" class="footer__link">Giỏ Hàng</a></li>
           <li><a href="wishlist.html" class="footer__link">Wishlist</a></li>
-          <li><a href="#" class="footer__link">Đơn Hàng</a></li>
+          <li><a href="accounts.html" class="footer__link">Đơn Hàng</a></li>
           <li><a href="#" class="footer__link">Giúp Đỡ</a></li>
-          <li><a href="#" class="footer__link">Đặt Hàng</a></li>
+          <li><a href="cart.html" class="footer__link">Đặt Hàng</a></li>
         </ul>
       </div>
+      <!-- Phần phương thức thanh toán -->
       <div class="footer__content">
         <h3 class="footer__title">Phương Thức Thanh Toán</h3>
         <img
@@ -747,7 +801,7 @@ window.onscroll = function() {
   var nav = document.querySelector('.nav');
 
   // Kiểm tra vị trí cuộn của trang
-  if (window.scrollY > 160) { // Khi cuộn xuống 100px
+  if (window.scrollY > 160) { // Khi cuộn xuống 160px
     nav.classList.add('fixed-menu'); // Thêm lớp cố định cho nav
   } else {
     nav.classList.remove('fixed-menu'); // Bỏ lớp cố định khi lên đầu trang
@@ -767,7 +821,8 @@ window.onscroll = function() {
       const tagFilter = document.getElementById('tag');
       const sortFilter = document.getElementById('sort');
       const applyFiltersBtn = document.getElementById('apply-filters');
-    
+     
+      // Tạo các thông tin giả lập cho bộ lọc
       const productData = [
   {
     element: products[0],
@@ -798,7 +853,7 @@ window.onscroll = function() {
   },
 ];
 
-    
+// Lấy giá trị của bộ lọc
 function filterProducts() {
   const selectedCategory = categoryFilter.value;
   const selectedColor = colorFilter.value;
@@ -807,8 +862,17 @@ function filterProducts() {
   const selectedBrand = brandFilter.value; // Lấy giá trị của bộ lọc thương hiệu
   const selectedSort = sortFilter.value;
 
-  productData.forEach((product) => {
+ // Lặp qua từng sản phẩm trong dữ liệu sản phẩm
+ productData.forEach((product) => {
+    // Lấy các thuộc tính cần thiết của sản phẩm từ đối tượng `product`
     const { element, category, color, price, tag, brand, createdAt } = product;
+    // `element`: Thẻ DOM đại diện cho sản phẩm
+    // `category`: Danh mục của sản phẩm
+    // `color`: Màu sắc của sản phẩm
+    // `price`: Giá của sản phẩm
+    // `tag`: Thẻ mô tả sản phẩm (nếu có)
+    // `brand`: Thương hiệu của sản phẩm
+    // `createdAt`: Ngày tạo sản phẩm (dùng cho sắp xếp theo thời gian)
 
     // Kiểm tra từng tiêu chí
     const categoryMatch =
@@ -845,6 +909,63 @@ function filterProducts() {
       applyFiltersBtn.addEventListener('click', filterProducts);
   
 
+  //====== HIỂN THỊ ĐÚNG SỐ LƯỢNG SẢN PHẨM =====//
+
+// Hàm lọc sản phẩm theo các tiêu chí đã chọn
+function filterProducts() {
+  // Lấy giá trị từ các bộ lọc (category, color, price, tag, brand, sort)
+  const selectedCategory = categoryFilter.value;
+  const selectedColor = colorFilter.value;
+  const selectedPrice = priceFilter.value;
+  const selectedTag = tagFilter.value;
+  const selectedBrand = brandFilter.value;
+  const selectedSort = sortFilter.value;
+
+  // Biến dùng để đếm số lượng sản phẩm hiển thị
+  let visibleCount = 0;
+
+  // Duyệt qua từng sản phẩm trong dữ liệu sản phẩm (productData)
+  productData.forEach((product) => {
+    // Destructuring để lấy các thông tin từ đối tượng sản phẩm
+    const { element, category, color, price, tag, brand, createdAt } = product;
+
+    // Kiểm tra các tiêu chí lọc (category, color, price, tag, brand)
+    const categoryMatch =
+      selectedCategory === 'all' || selectedCategory === category; // Kiểm tra category
+    const colorMatch = selectedColor === 'all' || selectedColor === color; // Kiểm tra color
+    const priceMatch =
+      selectedPrice === 'all' ||
+      (selectedPrice === 'low-to-high' && price <= 50.000) || // Kiểm tra price (low-to-high)
+      (selectedPrice === 'high-to-low' && price > 50.000); // Kiểm tra price (high-to-low)
+    const tagMatch = selectedTag === 'all' || selectedTag === tag; // Kiểm tra tag
+    const brandMatch = selectedBrand === 'all' || selectedBrand === brand; // Kiểm tra brand
+
+    // Kiểm tra tất cả các tiêu chí lọc
+    // Nếu tất cả các tiêu chí đều đúng, hiển thị sản phẩm, ngược lại ẩn đi
+    if (categoryMatch && colorMatch && priceMatch && tagMatch && brandMatch) {
+      element.style.display = 'block'; // Hiển thị sản phẩm
+      visibleCount++; // Tăng số lượng sản phẩm hiển thị
+    } else {
+      element.style.display = 'none'; // Ẩn sản phẩm
+    }
+  });
+
+  // Sắp xếp sản phẩm theo thứ tự (mới nhất hoặc cũ nhất) dựa trên ngày tạo (createdAt)
+  if (selectedSort === 'newest') {
+    productData.sort((a, b) => b.createdAt - a.createdAt); // Sắp xếp mới nhất trước
+  } else if (selectedSort === 'oldest') {
+    productData.sort((a, b) => a.createdAt - b.createdAt); // Sắp xếp cũ nhất trước
+  }
+
+  // Cập nhật lại thứ tự của các sản phẩm trong DOM (sắp xếp lại theo thứ tự đã chọn)
+  const container = document.querySelector('.products__container'); // Lấy phần tử chứa sản phẩm
+  productData.forEach((product) => container.appendChild(product.element)); // Thêm lại sản phẩm vào container
+
+  // Cập nhật số lượng sản phẩm hiển thị vào phần tử `.total__products`
+  const totalProductsText = document.querySelector('.total__products span'); // Lấy phần tử hiển thị tổng số sản phẩm
+  totalProductsText.textContent = visibleCount; // Cập nhật số lượng sản phẩm hiển thị
+}
+
 
 
       
@@ -860,8 +981,9 @@ quickViewButtons.forEach((button, index) => {
   button.addEventListener('click', (e) => {
     e.preventDefault();
 
-    // Lấy thông tin sản phẩm từ productData
+    // Lấy sản phẩm hiện tại từ dữ liệu sản phẩm dựa trên chỉ số index được cung cấp
     const product = productData[index];
+    // Cập nhật nội dung của modal 
     modalContent.innerHTML = `
      <h2 style="color:hsla(328, 100%, 57%, 0.712) ;">${product.element.querySelector('.product__title').textContent}</h2>
       <p> <i class="fas fa-money-bill-wave"></i> Giá: ${product.price}.000 VND</p>

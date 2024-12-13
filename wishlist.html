@@ -18,12 +18,7 @@
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <!--================Chỉnh lại Style Heading=============-->
-    <style>
-      h1, h2, h3, h4, h5, h6, th {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      }
-    </style>
+
     <style>
        /* Hiệu ứng chuyển động màu chữ */
 /* Hiệu ứng chuyển động gradient và chiếu sáng mạnh */
@@ -212,21 +207,20 @@
     padding: 8px; /* Giảm khoảng cách trong các ô */
   }
 
-  
 }
 
 .table__title a {
   display: inline-block;
   text-decoration: none;
-  color: black; /* Default text color */
-  padding: 10px 20px; /* Padding for the link */
+  color: black; /* Màu chữ mặc định là đen */
+  padding: 10px 20px; /* Khoảng cách trong của liên kết */
   position: relative;
   overflow: hidden;
-  font-size: 14px; /* Font size */
-  font-weight: bold; /* Optional, makes the text bold */
-  letter-spacing: 1px; /* Spacing between letters */
-  text-transform: uppercase; /* Capitalizes text */
-  transition: color 0.4s ease; /* Smooth text color transition */
+  font-size: 14px; /* Kích thước chữ */
+  font-weight: bold; /* Làm chữ đậm (tùy chọn) */
+  letter-spacing: 1px; /* Khoảng cách giữa các chữ cái */
+  text-transform: uppercase; /* Viết hoa chữ cái */
+  transition: color 0.4s ease; /* Hiệu ứng chuyển màu chữ mượt mà */
 }
 
 .table__title a::before {
@@ -236,131 +230,158 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: rgb(248, 115, 184); /* Gradient background */
-  transition: left 0.6s ease-in-out; /* Smooth background transition */
-  z-index: -1; /* Background behind text */
+  background: rgb(248, 115, 184); /* Màu nền gradient */
+  transition: left 0.6s ease-in-out; /* Hiệu ứng chuyển động nền mượt mà */
+  z-index: -1; /* Đặt nền phía sau chữ */
 }
 
 .table__title a:hover::before {
-  left: 0; /* Move the gradient background from left to right */
+  left: 0; /* Di chuyển nền gradient từ trái sang phải khi hover */
 }
 
 .table__title a:hover {
-  color: white; /* Text color changes to white on hover */
-  transform: scale(1.05); /* Slight scale effect on hover */
+  color: white; /* Màu chữ chuyển sang trắng khi hover */
+  transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
 }
 
 
     </style>
+
+     <!--================Chỉnh lại Style Heading=============-->
+     <style>
+      h1, h2, h3, h4, h5, h6, th {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+    </style>
+
+     <!--================Thêm logo cho trang=============-->
     <link rel="icon" href="assets/img/1.png" type="image/x-icon">
     <title>ChicCharm Official Store</title>
   </head>
   <body>
-   <!--=============== HEADER ===============-->
-   <header class="header">
-    <div class="header__top">
-      <div class="header__container container">
-        <div class="header__contact">
-          <span id="contact1">Merry Chrismas</span> 
-        </div>
-        <p class="header__alert-news" id="news" style="color: #ff97c9">ƯU ĐÃI SIÊU GIÁ TRỊ - TIẾT KIỆM THÊM VỚI NHIỀU MÃ GIẢM GIÁ</p>
-        <a href="login-register.html" id="login-link" class="header__top-action">Đăng nhập / Đăng ký</a>
+ <!--=============== HEADER ===============-->
+ <header class="header">
+  <div class="header__top">
+    <div class="header__container container">
+        <!-- Hiển thị thông điệp liên hệ -->
+      <div class="header__contact">
+        <span id="contact1">Merry Chrismas</span> 
       </div>
+        <!-- Hiển thị thông báo ưu đãi -->
+      <p class="header__alert-news" id="news" style="color: #ff97c9">ƯU ĐÃI SIÊU GIÁ TRỊ - TIẾT KIỆM THÊM VỚI NHIỀU MÃ GIẢM GIÁ</p>
+      <!-- Liên kết đăng nhập/đăng ký -->
+      <a href="login-register.html" id="login-link" class="header__top-action">Đăng nhập / Đăng ký</a>
     </div>
-    
+  </div>
   
 
-    <nav class="nav container">
-      <a href="index.html" class="nav__logo">
-        <img
-          class="nav__logo-img"
-          src="assets/img/1.png"
-          alt="website logo"
+<!-- Thanh điều hướng chính -->
+  <nav class="nav container">
+     <!-- Logo của trang web -->
+    <a href="index.html" class="nav__logo">
+      <img
+        class="nav__logo-img"
+        src="assets/img/1.png"
+        alt="website logo"
+      />
+    </a>
+    <!-- Menu điều hướng -->
+    <div class="nav__menu" id="nav-menu">
+      <div class="nav__menu-top">
+        <a href="index.html" class="nav__menu-logo">
+          <img src="./assets/img/logo.svg" alt="">
+        </a>
+        <!-- Nút đóng menu -->
+        <div class="nav__close" id="nav-close">
+          <i class="fi fi-rs-cross-small"></i>
+        </div>
+      </div>
+       <!-- Danh sách liên kết trong menu -->
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="index.html" class="nav__link">Trang Chủ</a>
+        </li>
+        <li class="nav__item dropdown">
+          <a href="shop.html" class="nav__link">Cửa Hàng</a>
+           <!-- Liên kết đến từng danh mục sản phẩm  với menu thả xuống -->
+          <ul class="dropdown__menu">
+            <li><a href="shop.html">Kẹp vuông</a></li>
+            <li><a href="shop.html">Kẹp nhỏ</a></li>
+            <li><a href="shop.html">Kẹp tròn</a></li>
+            <li><a href="shop.html">Gương</a></li>
+          </ul>
+        </li>
+        <li class="nav__item">
+          <a href="accounts.html" class="nav__link">Tài Khoản</a>  <!-- Liên kết đến trang tài khoản -->
+        </li>
+        <li class="nav__item">
+          <a href="index.html#featured" class="nav__link intense-sparkle">Khuyến mãi</a> <!-- Liên kết đến phần khuyến mãi -->
+        </li>
+      </ul>
+      
+      <!-- Tìm kiếm trong header -->
+      <div class="header__search">
+        <input
+          type="text"
+          placeholder=""
+          class="form__input"
         />
+
+        <!-- Ô nhập để tìm kiếm -->
+        <button class="search__btn">
+          <img src="assets/img/search.png" alt="search icon" />
+        </button>
+      </div>
+    </div>
+    <div class="header__user-actions">
+      <!-- Nút đăng nhập -->
+      <a href="login.html" class="header__action-btn" title="Đăng nhập">
+        <img src="assets/img/user.png" alt="" />
       </a>
-      <div class="nav__menu" id="nav-menu">
-        <div class="nav__menu-top">
-          <a href="index.html" class="nav__menu-logo">
-            <img src="./assets/img/logo.svg" alt="">
-          </a>
-          <div class="nav__close" id="nav-close">
-            <i class="fi fi-rs-cross-small"></i>
-          </div>
-        </div>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="index.html" class="nav__link">Trang Chủ</a>
-          </li>
-          <li class="nav__item dropdown">
-            <a href="shop.html" class="nav__link">Cửa Hàng</a>
-            <ul class="dropdown__menu">
-              <li><a href="shop.html">Kẹp vuông</a></li>
-              <li><a href="shop.html">Kẹp nhỏ</a></li>
-              <li><a href="shop.html">Kẹp tròn</a></li>
-              <li><a href="shop.html">Gương</a></li>
-            </ul>
-          </li>
-          <li class="nav__item">
-            <a href="accounts.html" class="nav__link">Tài Khoản</a>
-          </li>
-          <li class="nav__item">
-            <a href="index.html#featured" class="nav__link intense-sparkle">Khuyến mãi</a>
-          </li>
-        </ul>
-        
-        <div class="header__search">
-          <input
-            type="text"
-            placeholder=""
-            class="form__input"
-          />
-          <button class="search__btn">
-            <img src="assets/img/search.png" alt="search icon" />
-          </button>
-        </div>
+      <!-- Nút danh sách yêu thích -->
+      <a href="wishlist.html" class="header__action-btn" title="Wishlist">
+        <img src="assets/img/icon-heart.svg" alt="" />
+        <span class="count">3</span> <!-- Số lượng mục trong wishlist -->
+      </a>
+      <!-- Nút giỏ hàng -->
+      <a href="cart.html" class="header__action-btn" title="Giỏ hàng">
+        <img src="assets/img/icon-cart.svg" alt="" />
+        <span class="count">3</span> <!-- Số lượng sản phẩm trong giỏ hàng -->
+      </a>
+      <!-- Nút mở menu dọc -->
+      <div class="header__action-btn nav__toggle" id="nav-toggle">
+        <img src="./assets//img/menu-burger.png" alt="">
       </div>
-      <div class="header__user-actions">
-        <a href="login.html" class="header__action-btn" title="Đăng nhập">
-          <img src="assets/img/user.png" alt="" />
-        </a>
-        <a href="wishlist.html" class="header__action-btn" title="Wishlist">
-          <img src="assets/img/icon-heart.svg" alt="" />
-          <span class="count">3</span>
-        </a>
-        <a href="cart.html" class="header__action-btn" title="Giỏ hàng">
-          <img src="assets/img/icon-cart.svg" alt="" />
-          <span class="count">3</span>
-        </a>
-        <div class="header__action-btn nav__toggle" id="nav-toggle">
-          <img src="./assets//img/menu-burger.png" alt="">
-        </div>
-      </div>
-    </nav>
-  </header>
-<!--=============== BANNER KHUYẾN MÃI ===============-->
+    </div>
+  </nav>
+</header>
+
+<!-- Phần thông báo khuyến mãi vận chuyển -->
 <div class="shipping-promo">
   <span class="star">&#9733;</span>
-  <span class="promo-text"> Đăng Ký Thành Viên Để Nhận 10% Giảm Giá Cho Lần Mua Đầu Tiên </span>
+  <span class="promo-text"> Freeship cho đơn hàng từ 50.000 VND</span>
   <span class="star">&#9733;</span>
 </div>
 
 
     <!--=============== MAIN ===============-->
     <main class="main">
-    
+      <!-- Tiêu đề của trang Danh sách Yêu thích -->
       <h1 class="wishlist__header">
         <span class="wishlist__header--pink">Danh Sách</span> 
         <span class="wishlist__header--black">Yêu Thích</span>
       </h1>
-
+    <!-- Liên kết tiếp tục mua sắm, di chuyển đến trang shop -->
       <div class="center-screen">
         <a href="shop.html" class="continue-shopping" title="Continue Shopping">✨Tiếp tục mua sắm✨</a>
       </div>
       
 
       <!--=============== WISHLIST ===============-->
+        <!-- Phần hiển thị danh sách sản phẩm yêu thích -->
       <section class="wishlist section--lg container">
         <div class="table__container">
+        <!-- Bảng hiển thị các sản phẩm trong danh sách yêu thích -->
           <table class="table">
             <thead>
               <tr>
@@ -372,6 +393,7 @@
               </tr>
             </thead>
             <tbody>
+              <!-- Dòng sản phẩm 1 -->
               <tr>
                 <td>
                   <img src="./assets/img/product1.1.png" alt="" class="table__img" />
@@ -395,8 +417,9 @@
                     <i class="fi fi-rs-trash table__trash" onclick="confirmDelete(this)" style="cursor: pointer;"></i>
                   </a>
                 </td>
-                
               </tr>
+
+              <!-- Dòng sản phẩm 2 -->
               <tr>
                 <td>
                   <img src="./assets/img/product11.1.png" alt="" class="table__img" />
@@ -421,6 +444,8 @@
                   </a>
                 </td>
               </tr>
+
+              <!-- Dòng sản phẩm 3 -->
               <tr>
                 <td>
                   <img src="./assets/img/product13.1.png" alt="" class="table__img" />
@@ -450,143 +475,132 @@
         </div>
       </section>
       
-      
+       <!--================== HÀM XÓA KHỎI WISHLIST ===================-->
+       <!-- Hàm xóa sản phẩm khỏi danh sách yêu thích khi người dùng xác nhận -->
       <script>
         function confirmDelete(trashIcon) {
+          // Hiển thị hộp thoại xác nhận xóa
           const confirmDelete = confirm("Bạn có muốn xóa sản phẩm này?");
           if (confirmDelete) {
+          // Nếu người dùng xác nhận, tìm dòng sản phẩm chứa nút xóa và xóa nó
             const tableRow = trashIcon.closest("tr");
-            tableRow.remove();
+            tableRow.remove(); // Xóa dòng sản phẩm khỏi bảng
           }
         }
       </script>
-      
-      <style>
- 
-      </style>
 
       
       
-      <!--=============== NEWSLETTER ===============-->
-      <section class="newsletter section">
-        <div class="newsletter__container container grid">
-          <h3 class="newsletter__title flex">
+      <!--=============== PHẦN ĐĂNG KÝ NHẬN THƯ ===============-->
+  <section class="newsletter section home__newsletter">
+    <!-- Container chính chứa nội dung của phần newsletter -->
+    <div class="newsletter__container container grid">
+       <!-- Tiêu đề của phần newsletter -->
+      <h3 class="newsletter__title flex">
+        <img
+          src="./assets/img/icon-email.svg"
+          alt=""
+          class="newsletter__icon"
+        />
+        ĐĂNG KÝ ĐỂ NHẬN TIN
+      </h3>
+      <!-- Mô tả ngắn khuyến khích người dùng đăng ký -->
+      <p class="newsletter__description">
+        ...và nhận 10% giảm giá cho lần mua đầu tiên.
+      </p>
+      <!-- Biểu mẫu để người dùng nhập email và nhấn đăng ký -->
+      <form action="" class="newsletter__form">
+         <!-- Trường nhập email -->
+        <input
+          type="text"
+          placeholder="Nhập Email của bạn"
+          class="newsletter__input"
+        />
+        <!-- Nút đăng ký -->
+        <button type="submit" class="newsletter__btn">Đăng ký</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!--=============== PHẦN CHÂN TRANG ===============-->
+<footer class="footer container">
+   <!-- Container chính của phần footer -->
+  <div class="footer__container grid">
+    <!-- Phần thông tin liên hệ -->
+    <div class="footer__content">
+      <a href="index.html" class="footer__logo">
+        <img src="./assets/img/logo.svg" alt="" class="footer__logo-img" />
+      </a>
+      <h4 class="footer__subtitle">Liên hệ</h4>
+      <p class="footer__description">
+        <span>Địa chỉ:</span> 279 Nguyễn Tri Phương, Phường 5, Quận 10
+      </p>
+      <p class="footer__description">
+        <span>SĐT:</span> +01 2222 365 /(+91) 01 2345 6789
+      </p>
+      <p class="footer__description">
+        <span>Thời gian:</span> 10:00 - 18:00, T2-T7
+      </p>
+      <div class="footer__social">
+        <h4 class="footer__subtitle">Theo dõi chúng tôi</h4>
+        <div class="footer__links flex">
+          <a href="https://www.facebook.com/share/1784WE225P/?mibextid=LQQJ4d">
             <img
-              src="./assets/img/icon-email.svg"
+              src="./assets/img/icon-facebook.svg"
               alt=""
-              class="newsletter__icon"
+              class="footer__social-icon"
             />
-            Sign in to Newsletter
-          </h3>
-          <p class="newsletter__description">
-            ...and receive $25 coupon for first shopping.
-          </p>
-          <form action="" class="newsletter__form">
-            <input
-              type="text"
-              placeholder="Enter Your Email"
-              class="newsletter__input"
-            />
-            <button type="submit" class="newsletter__btn">Subscribe</button>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <!--=============== FOOTER ===============-->
-    <footer class="footer container">
-      <div class="footer__container grid">
-        <div class="footer__content">
-          <a href="index.html" class="footer__logo">
-            <img src="./assets/img/logo.svg" alt="" class="footer__logo-img" />
           </a>
-          <h4 class="footer__subtitle">Contact</h4>
-          <p class="footer__description">
-            <span>Address:</span> 13 Tlemcen Road, Street 32, Beb-Wahren
-          </p>
-          <p class="footer__description">
-            <span>Phone:</span> +01 2222 365 /(+91) 01 2345 6789
-          </p>
-          <p class="footer__description">
-            <span>Hours:</span> 10:00 - 18:00, Mon - Sat
-          </p>
-          <div class="footer__social">
-            <h4 class="footer__subtitle">Follow Me</h4>
-            <div class="footer__links flex">
-              <a href="#">
-                <img
-                  src="./assets/img/icon-facebook.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
-              </a>
-              <a href="#">
-                <img
-                  src="./assets/img/icon-twitter.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
-              </a>
-              <a href="#">
-                <img
-                  src="./assets/img/icon-instagram.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
-              </a>
-              <a href="#">
-                <img
-                  src="./assets/img/icon-pinterest.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
-              </a>
-              <a href="#">
-                <img
-                  src="./assets/img/icon-youtube.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="footer__content">
-          <h3 class="footer__title">Address</h3>
-          <ul class="footer__links">
-            <li><a href="#" class="footer__link">About Us</a></li>
-            <li><a href="#" class="footer__link">Delivery Information</a></li>
-            <li><a href="#" class="footer__link">Privacy Policy</a></li>
-            <li><a href="#" class="footer__link">Terms & Conditions</a></li>
-            <li><a href="#" class="footer__link">Contact Us</a></li>
-            <li><a href="#" class="footer__link">Support Center</a></li>
-          </ul>
-        </div>
-        <div class="footer__content">
-          <h3 class="footer__title">My Account</h3>
-          <ul class="footer__links">
-            <li><a href="#" class="footer__link">Sign In</a></li>
-            <li><a href="#" class="footer__link">View Cart</a></li>
-            <li><a href="#" class="footer__link">My Wishlist</a></li>
-            <li><a href="#" class="footer__link">Track My Order</a></li>
-            <li><a href="#" class="footer__link">Help</a></li>
-            <li><a href="#" class="footer__link">Order</a></li>
-          </ul>
-        </div>
-        <div class="footer__content">
-          <h3 class="footer__title">Secured Payed Gateways</h3>
-          <img
-            src="./assets/img/payment-method.png"
-            alt=""
-            class="payment__img"
-          />
+          </a>
+          <a href="https://www.instagram.com/chiccharm.official_?igsh=MXJpM3pqZDFvMmlzaw==">
+            <img
+              src="./assets/img/icon-instagram.svg"
+              alt=""
+              class="footer__social-icon"
+            />
+          </a>
         </div>
       </div>
-      <div class="footer__bottom">
-        <p class="copyright">&copy; 2024 Evara. All right reserved</p>
-        <span class="designer">Designer by Crypticalcoder</span>
-      </div>
-    </footer>
+    </div>
+
+     <!-- Phần liên kết nhanh -->
+    <div class="footer__content">
+      <h3 class="footer__title">Địa chỉ</h3>
+      <ul class="footer__links">
+        <li><a href="#" class="footer__link">Về Chúng Tôi</a></li>
+        <li><a href="#" class="footer__link">Chính Sách Vận Chuyển</a></li>
+        <li><a href="#" class="footer__link">Chính Sách Riêng Tư</a></li>
+        <li><a href="#" class="footer__link">Điều Khoản & Điều Kiện</a></li>
+        <li><a href="#" class="footer__link">Liên Hệ</a></li>
+        <li><a href="#" class="footer__link">Trung Tâm Hỗ Trợ</a></li>
+      </ul>
+    </div>
+
+    <!-- Phần thông tin tài khoản của khách hàng -->
+    <div class="footer__content">
+      <h3 class="footer__title">Tài Khoản</h3>
+      <ul class="footer__links">
+        <li><a href="login.html" class="footer__link">Đăng Nhập</a></li>
+        <li><a href="cart.html" class="footer__link">Giỏ Hàng</a></li>
+        <li><a href="wishlist.html" class="footer__link">Wishlist</a></li>
+        <li><a href="accounts.html" class="footer__link">Đơn Hàng</a></li>
+        <li><a href="#" class="footer__link">Giúp Đỡ</a></li>
+        <li><a href="cart.html" class="footer__link">Đặt Hàng</a></li>
+      </ul>
+    </div>
+    <!-- Phần phương thức thanh toán -->
+    <div class="footer__content">
+      <h3 class="footer__title">Phương Thức Thanh Toán</h3>
+      <img
+        src="./assets/img/payment-method.png"
+        alt=""
+        class="payment__img"
+      />
+    </div>
+  </div>
+</footer>
+ 
 
  <!--=============== SWIPER JS ===============-->
  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
