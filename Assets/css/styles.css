@@ -1413,12 +1413,14 @@ body {
 /*=============== DEALS ===============*/
 .deals__container {
   border-radius: 8px;
-  border: 4px solid ; /* Đặt viền ban đầu là trong suốt */
+  border: 4px solid; /* Đặt viền ban đầu là trong suốt */
   border-image: linear-gradient(45deg, #ff0062, #f3a3d3, #b8e2f9, #ff85be, #ff7ac5, #f49fff, #ffafe8); /* Gradient cho viền */
   border-image-slice: 4; /* Cắt viền theo độ dài của viền */
   grid-template-columns: repeat(2, 1fr); /* Giữ cấu trúc lưới */
+  display: grid; /* Đảm bảo sử dụng grid layout */
+  justify-items: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
 }
-
 
 .deals__image {
   width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng */
@@ -1440,9 +1442,6 @@ body {
     0 0 35px rgb(216, 171, 255);  /* Màu tím sáng */
 }
 
-
-
-
 .deals__item:nth-child(1) {
   background-image: url(../img/deals-1.jpg);
 }
@@ -1454,10 +1453,11 @@ body {
 .deals__item {
   padding: 3rem;
   background-size: cover;
-  /* background-position: center; */
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
+  justify-content: center; /* Căn giữa nội dung trong mỗi phần tử */
+  align-items: center; /* Căn giữa nội dung trong mỗi phần tử */
 }
 
 .deals__brand {
@@ -1468,7 +1468,7 @@ body {
 }
 
 .deals__category {
-  margin-top:30px;
+  margin-top: 30px;
   margin-left: 0px;
   font-family: var(--second-font);
   font-size: 20px;
@@ -1480,6 +1480,7 @@ body {
   font-size: var(--large-font-size);
   font-weight: var(--weight-400);
   line-height: 1.3;
+  text-align: center; /* Căn giữa tiêu đề */
 }
 
 .deals__price .new__price,
@@ -1505,7 +1506,7 @@ body {
 
 .countdown {
   margin-top: 10px;
-  margin-left:30px;
+  margin-left: 30px;
   display: flex;
   column-gap: 1.5rem;
 }
@@ -1538,16 +1539,9 @@ body {
   font-weight: var(--weight-600);
   margin-bottom: 0.5rem;
   border-radius: 0.25rem;
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  -ms-border-radius: 0.25rem;
-  -o-border-radius: 0.25rem;
-
-  /* Thêm hiệu ứng lấp lánh */
   animation: sparkling 0.4s infinite alternate;
 }
 
-/* Định nghĩa hiệu ứng sparkling */
 @keyframes sparkling {
   0% {
     box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.8), 0 0 10px 5px rgba(255, 255, 255, 0.4);
@@ -1563,7 +1557,6 @@ body {
   }
 }
 
-
 .unit {
   font-size: var(--small-font-size);
   text-align: center;
@@ -1571,7 +1564,7 @@ body {
 }
 
 .deals__btn .btn {
-  margin-left: 120px;
+  margin-left: 20px; /* Giảm giá trị margin-left để nút qua trái một chút */
   background-color: transparent;
   color: var(--first-color);
   border: 2px solid var(--first-color); /* Thêm viền cho button */
@@ -1586,6 +1579,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Thêm hiệu ứng bóng đổ khi hover */
 }
 
+
 /* Hiệu ứng fade in khi lướt tới */
 @keyframes fadeInEffect {
   0% {
@@ -1597,6 +1591,7 @@ body {
     transform: translateY(0);
   }
 }
+
 
 .deals__container {
   border-radius: 8px;
@@ -1633,6 +1628,59 @@ body {
 }
 
 
+/* Media query để căn giữa các nội dung trên màn hình nhỏ */
+@media (max-width: 1000px) {
+  .deals__container {
+    display: flex; /* Thêm display flex để căn giữa các phần tử */
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    grid-template-columns: 1fr; /* Chuyển lưới về 1 cột */
+    padding: 1rem; /* Thêm một chút padding cho phần tử */
+  }
+
+  .deals__item {
+    padding: 2rem; /* Giảm padding để phù hợp với không gian */
+    display: flex; /* Sử dụng flexbox trong deals item */
+    flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+    justify-content: center; /* Căn giữa các phần tử theo chiều dọc */
+    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+    text-align: center; /* Căn giữa văn bản */
+    width: 100%; /* Đảm bảo width 100% */
+  }
+
+  .deals__brand, .deals__title, .deals__category {
+    margin-left: 0; /* Bỏ margin-left để căn giữa */
+    margin-right: 0; /* Bỏ margin-right */
+    font-size: 1.2rem; /* Giảm kích thước font cho dễ nhìn */
+    width: 100%; /* Đảm bảo width là 100% */
+  }
+
+  .deals__title {
+    max-width: 100%; /* Mở rộng tối đa width của title */
+    font-size: 1.4rem; /* Điều chỉnh font-size cho phù hợp */
+  }
+
+  .deals__category {
+    margin-top: 10px; /* Giảm khoảng cách trên cho category */
+  }
+
+  .deals__price .new__price {
+    margin-left: 0; /* Bỏ margin-left cho new price */
+  }
+
+  .countdown {
+    margin-left: 0; /* Bỏ margin-left cho countdown */
+    justify-content: center; /* Căn giữa countdown */
+    width: 100%; /* Đảm bảo countdown chiếm toàn bộ chiều rộng */
+  }
+
+  .deals__btn .btn {
+    margin-left: 0; /* Bỏ margin-left cho nút */
+    display: block; /* Để nút block để dễ dàng căn giữa */
+    margin: 0 auto; /* Căn giữa nút */
+  }
+}
 
 /*=============== NEW ARRIVALS ===============*/
 .new__arrivals {
