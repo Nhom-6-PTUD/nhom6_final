@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FLATICON ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!--================Chỉnh lại Style Heading=============-->
+    <style>
+      h1, h2, h3, h4, h5, h6, th {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+    </style>
+    <style>
+      /* Hiệu ứng chuyển động màu chữ */
+/* Hiệu ứng chuyển động gradient và chiếu sáng mạnh */
+.intense-sparkle {
+ font-weight: bold;
+ font-size: 16px;
+ text-decoration: none;
+ background: linear-gradient(90deg, #f3e458, #f0ffa5, #ff93c7, #ff00aa, #ffa0d0);
+ background-size: 300% 300%;
+ color: transparent;
+ background-clip: text;
+ -webkit-background-clip: text; /* Hỗ trợ WebKit */
+ animation: intenseColor 1.5s linear infinite, sparkleEffect 0.5s ease-in-out infinite;
+ position: relative; /* Để thêm hiệu ứng ánh sáng */
+}
+
+/* Tạo chuyển động gradient nhanh */
+@keyframes intenseColor {
+ 0% {
+   background-position: 0% 50%;
+ }
+ 50% {
+   background-position: 100% 50%;
+ }
+ 100% {
+   background-position: 0% 50%;
+ }
+}
+
+ /* CSS cho khung chứa dòng chữ và ngôi sao */
+ .shipping-promo {
+     margin-top: 150px;
+     margin-bottom: -80px;
+     display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử */
+     justify-content: center; /* Căn giữa nội dung */
+     align-items: center; /* Căn giữa theo chiều dọc */
+     font-size: 16px; /* Kích thước chữ */
+     background-color: #f5b5d9eb; /* Màu nền */
+     padding: 5px 80px; /* Padding xung quanh */
+     border-style:dashed;
+     border-color:#ff3791;
+   
+   }
+   
+   .promo-text {
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     color: white;
+     font-size:large;
+     margin: 0 8px; /* Khoảng cách giữa ngôi sao và dòng chữ */
+     font-weight:lighter; /* Làm đậm chữ */
+     align-items: center;
+   }
+   
+   .star {
+     color: #ffe601; /* Màu vàng cho ngôi sao */
+     font-size: 50px; /* Kích thước ngôi sao */
+     animation: blink 1.5s infinite; /* Thêm hiệu ứng nhấp nháy */
+     margin-bottom: 4px;
+   }
+   
+   /* Hiệu ứng nhấp nháy cho ngôi sao */
+   @keyframes blink {
+     0%, 100% {
+       opacity: 1;
+     }
+     50% {
+       opacity: 0;
+     }
+   }
+   
+   /* Media Query cho màn hình lớn hơn 1200px */
+   @media screen and (min-width: 1200px) {
+     .shipping-promo {
+       margin-top:100px;
+       padding: 7px 90px; /* Giảm padding */
+     }
+     
+     .promo-text {
+      align-items: center;
+       font-size: 20px; /* Giảm kích thước chữ */
+     }
+     
+     .star {
+       font-size: 30px; /* Giảm kích thước ngôi sao */
+     }
+   }
+
+   @media screen and (max-width: 768px) {
+     .shipping-promo {
+       padding: 5px 20px; /* Giảm padding */
+     }
+     
+     .promo-text {
+      align-items: center;
+       font-size: 14px; /* Giảm kích thước chữ */
+     }
+     
+     .star {
+       font-size: 30px; /* Giảm kích thước ngôi sao */
+     }
+   }
+   
+   /* Media Query cho màn hình nhỏ hơn 480px (ví dụ điện thoại) */
+   @media screen and (max-width: 480px) {
+     .shipping-promo {
+       padding: 5px 10px; /* Giảm thêm padding */
+     }
+   
+     .promo-text {
+      align-items: center;
+       font-size: 8px; /* Giảm kích thước chữ */
+     }
+   
+     .star {
+       font-size: 25px; /* Giảm kích thước ngôi sao */
+     }
+   }
+
+   @media screen and (max-width: 450px) {
+     .shipping-promo {
+      display:none;
+       padding: 5px 10px; /* Giảm thêm padding */
+     }
+   
+     .promo-text {
+      align-items: center;
+       font-size: 8px; /* Giảm kích thước chữ */
+     }
+   
+     .star {
+       font-size: 25px; /* Giảm kích thước ngôi sao */
+     }
+   }
+
+   </style>
+
+   <link rel="icon" href="assets/img/1.png" type="image/x-icon">
+   <title>ChicCharm Official Store</title>
+ </head>
+ <body>
+
+  <!--=============== HEADER ===============-->
+  <header class="header">
+    <div class="header__top">
+      <div class="header__container container">
+        <div class="header__contact">
+          <span id="contact1">Merry Chrismas</span> 
+        </div>
+        <p class="header__alert-news" id="news" style="color: #ff97c9">ƯU ĐÃI SIÊU GIÁ TRỊ - TIẾT KIỆM THÊM VỚI NHIỀU MÃ GIẢM GIÁ</p>
+        <a href="login-register.html" id="login-link" class="header__top-action">Đăng nhập / Đăng ký</a>
+      </div>
+    </div>
+    
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <img
+          class="nav__logo-img"
+          src="assets/img/1.png"
+          alt="website logo"
+        />
+      </a>
+      <div class="nav__menu" id="nav-menu">
+        <div class="nav__menu-top">
+          <a href="index.html" class="nav__menu-logo">
+            <img src="./assets/img/logo.svg" alt="">
+          </a>
+          <div class="nav__close" id="nav-close">
+            <i class="fi fi-rs-cross-small"></i>
+          </div>
+        </div>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Trang Chủ</a>
+          </li>
+          <li class="nav__item dropdown">
+            <a href="shop.html" class="nav__link">Cửa Hàng</a>
+            <ul class="dropdown__menu">
+              <li><a href="shop.html">Kẹp vuông</a></li>
+              <li><a href="shop.html">Kẹp nhỏ</a></li>
+              <li><a href="shop.html">Kẹp tròn</a></li>
+              <li><a href="shop.html">Gương</a></li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="accounts.html" class="nav__link">Tài Khoản</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#featured" class="nav__link intense-sparkle">Khuyến mãi</a>
+          </li>
+        </ul>
+        
+        <div class="header__search">
+          <input
+            type="text"
+            placeholder=""
+            class="form__input"
+          />
+          <button class="search__btn">
+            <img src="assets/img/search.png" alt="search icon" />
+          </button>
+        </div>
+      </div>
+      <div class="header__user-actions">
+        <a href="login.html" class="header__action-btn" title="Đăng nhập">
+          <img src="assets/img/user.png" alt="" />
+        </a>
+        <a href="wishlist.html" class="header__action-btn" title="Wishlist">
+          <img src="assets/img/icon-heart.svg" alt="" />
+          <span class="count">3</span>
+        </a>
+        <a href="cart.html" class="header__action-btn" title="Giỏ hàng">
+          <img src="assets/img/icon-cart.svg" alt="" />
+          <span class="count">3</span>
+        </a>
+        <div class="header__action-btn nav__toggle" id="nav-toggle">
+          <img src="./assets//img/menu-burger.png" alt="">
+        </div>
+      </div>
+    </nav>
+  </header>
+     
+<!--=============== BANNER KHUYẾN MÃI ===============-->
+ <div class="shipping-promo">
+  <span class="star">&#9733;</span>
+  <span class="promo-text"> Nhập Mã XMAS24 Để Nhận Được Ưu Đãi Giảm 10%</span>
+  <span class="star">&#9733;</span>
+</div>
+
+      <!--=============== Giao diện tiến hành đặt hàng ===============-->
+      <section class="checkout section--lg">
+        <div class="checkout__container container grid">
+          <div class="checkout__group">
+            <h3 class="section__title"  style="font-size: 25px; color:hsla(328, 100%, 57%, 0.712); margin-top: 30px;">THÔNG TIN GIAO HÀNG</h3>
+            <form class="form grid">
+              <input type="text" placeholder="Họ Tên *" required class="form__input" 
+       style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 10px; border-radius: 4px; font-size: 16px; width: 100%; box-sizing: border-box;" />
+<input type="text" placeholder="Địa chỉ *" required class="form__input" 
+       style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 10px; border-radius: 4px; font-size: 16px; width: 100%; box-sizing: border-box;" />
+<input type="text" placeholder="Số điện thoại *" required class="form__input" 
+       style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 10px; border-radius: 4px; font-size: 16px; width: 100%; box-sizing: border-box;" />
+<input type="email" placeholder="Email" class="form__input" 
+       style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 10px; border-radius: 4px; font-size: 16px; width: 100%; box-sizing: border-box;" />
+
+              <h3 class="checkout__title">Ghi chú</h3>
+              <textarea
+                name=""
+                placeholder="Ghi chú đơn hàng"
+                class="form__input textarea" style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 10px; border-radius: 4px; font-size: 16px; width: 100%; box-sizing: border-box;"
+              ></textarea>
+              <!-- Tick-box -->
+                <div class="form__group" style="margin-top: 10px;">
+                  <input type="checkbox" id="invoice" name="invoice" class="form__checkbox" style="margin-right: 10px;" />
+                  <label for="invoice" style="font-size: 17px;">Xuất hoá đơn cho đơn hàng</label>
+              </div>
+            </form>
+            <div class="cart__coupon">
+              <h3 class="section__title">Mã Giảm Giá</h3>
+              
+              <!-- Hiển thị ô nhập mã giảm giá -->
+              <div class="coupon__input" style="display: flex; justify-content: center; align-items: center; gap: 10px; padding: 15px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 30px;">
+                  <input
+                      type="text"
+                      id="couponCode"
+                      class="form__input"
+                      style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 10px; border-radius: 4px; font-size: 16px; width: 78%; box-sizing: border-box;"
+                      placeholder="Nhập mã giảm giá"
+                  />
+                  <button type="button" class="btn btn--sm apply-coupon" onclick="applyCoupon()" style="white-space: nowrap;">Áp Dụng</button>
+
+              </div>
+          
+              <!-- Hiển thị 3 voucher với cách ô nhập liệu một khoảng -->
+              <div class="coupon__grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+
+                  <!-- Voucher 1 -->
+                  <div class="coupon__item" style="text-align: center; padding: 15px; border: 1px solid #ccc; border-radius: 4px; ">
+                      <p style="font-size: 13px; color: #333; padding-bottom: 10px; ">Voucher 1 - LAMQUEN</p>
+                      <button class="btn btn--sm apply-coupon" style="white-space: nowrap;" onclick="applyVoucher('LAMQUEN')">Áp Dụng</button>
+                  </div>
+          
+                  <!-- Voucher 2 -->
+                  <div class="coupon__item" style="text-align: center; padding: 15px; border: 1px solid #ccc; border-radius: 4px;">
+                      <p style="font-size: 13px; color: #333; padding-bottom: 10px;">Voucher 2 -<br> GIAM10</p>
+                      <button class="btn btn--sm apply-coupon" style="white-space: nowrap;" onclick="applyVoucher('GIAM10')">Áp Dụng</button>
+                  </div>
+          
+                  <!-- Voucher 3 -->
+                  <div class="coupon__item" style="text-align: center; padding: 15px; border: 1px solid #ccc; border-radius: 4px;">
+                      <p style="font-size: 13px; color: #333; padding-bottom: 10px; ">Voucher 3 - FREESHIP</p>
+                      <button class="btn btn--sm apply-coupon" style="white-space: nowrap;" onclick="applyVoucher('FREESHIP')">Áp Dụng</button>
+                  </div>
+              </div>
+          
+              <!-- Phần thông báo hiển thị kết quả -->
+              <div id="couponResult" style="margin-top: 15px; font-size: 16px; color: green; display: none;">
+                  <!-- Kết quả sẽ được hiển thị ở đây -->
+              </div>
+          </div>
+          
+          <script>
+              // Hàm áp dụng mã giảm giá nhập vào
+              function applyCoupon() {
+                  const couponCode = document.getElementById("couponCode").value.trim();
+                  const resultDiv = document.getElementById("couponResult");
+          
+                  if (couponCode === "") {
+                      resultDiv.style.color = "red";
+                      resultDiv.textContent = "Hãy nhập mã giảm giá!";
+                  } else if (couponCode === "LAMQUEN") {
+                      resultDiv.style.color = "green";
+                      resultDiv.textContent = "Áp dụng mã giảm giá LAMQUEN thành công! Bạn được giảm 20K.";
+                  } else if (couponCode === "GIAM10") {
+                      resultDiv.style.color = "green";
+                      resultDiv.textContent = "Áp dụng mã giảm giá GIAM10 thành công! Bạn được giảm 10%.";
+                  } else if (couponCode === "FREESHIP") {
+                      resultDiv.style.color = "green";
+                      resultDiv.textContent = "Áp dụng mã giảm giá FREESHIP thành công! Bạn được giảm 20K phí vận chuyển.";
+                  } else if (couponCode === "XMAS24") {
+                      resultDiv.style.color = "green";
+                      resultDiv.textContent = "Áp dụng mã giảm giá XMAS24 thành công! Bạn được giảm 10%.";
+                  } else {
+                      resultDiv.style.color = "red";
+                      resultDiv.textContent = "Mã giảm giá này không hợp lệ.";
+                  }
+          
+                  resultDiv.style.display = "block"; // Hiển thị thông báo
+              }
+          
+              // Hàm áp dụng mã giảm giá từ các voucher
+              function applyVoucher(couponCode) {
+                  const resultDiv = document.getElementById("couponResult");
+          
+                  if (couponCode === "") {
+                      resultDiv.style.color = "red";
+                      resultDiv.textContent = "Hãy nhập mã giảm giá!";
+                  } else if (couponCode === "LAMQUEN") {
+                      resultDiv.style.color = "green";
+                      resultDiv.textContent = "Áp dụng mã giảm giá LAMQUEN thành công! Bạn được giảm 20K.";
+                  } else if (couponCode === "GIAM10") {
+                      resultDiv.style.color = "green";
+                      resultDiv.textContent = "Áp dụng mã giảm giá GIAM10 thành công! Bạn được giảm 10%.";
+                  } else if (couponCode === "FREESHIP") {
+                      resultDiv.style.color = "green";
+                      resultDiv.textContent = "Áp dụng mã giảm giá FREESHIP thành công! Bạn được giảm 20K phí vận chuyển.";
+                  } else {
+                      resultDiv.style.color = "red";
+                      resultDiv.textContent = "Mã giảm giá này không tồn tại.";
+                  }
+          
+                  resultDiv.style.display = "block"; // Hiển thị thông báo
+              }
+          </script>
+          
+          
+          </div>
+          
+          <!--  Thông tin thanh toán chi tiết -->
+            <div class="checkout__group">
+              <style>
+                .order__table thead {
+                  background-color: #ff66b3; /* Màu hồng */
+                }
+              
+                .order__table thead th {
+                  color: white !important; /* Màu chữ trắng, dùng !important để đảm bảo áp dụng */
+                  padding: 10px; /* Tạo khoảng cách giữa nội dung và viền */
+                  text-align: left; /* Căn chữ sang trái */
+                }
+                .product-link {
+                  color: #ff69b4; /* Màu hồng rực rỡ mặc định */
+                  text-decoration: none; /* Loại bỏ gạch chân mặc định */
+                  transition: color 0.5s ease; /* Hiệu ứng mượt khi thay đổi màu */
+                }
+                .quantity {
+                  max-width: 60px;
+                  padding-block: 0.5rem;
+                  padding-inline: 1rem 0.5rem;
+                  border-radius: 0.25rem;
+                  -webkit-border-radius: 0.25rem;
+                  -moz-border-radius: 0.25rem;
+                  -ms-border-radius: 0.25rem;
+                  -o-border-radius: 0.25rem;
+                }
+              </style>                            
+              <h3 class="section__title" class="section__title" style="font-size: 20px; margin-top: 5px;">TỔNG ĐƠN HÀNG</h3>
+              <table class="order__table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Hình ảnh</th>
+                    <th style="width: 35%;">Tên sản phẩm</th>
+                    <th style="width: 20%;">Số lượng</th>
+                    <th style="width: 25%;">Tổng tiền</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <img src="assets/img/urbanxmas_square.png" alt="" class="table__img"/>
+                    </td>
+                    <td>
+                      <h3 class="table__title"><a href="details.html" class="product-link">Set Urban Chic</a></h3>
+                    </td>
+                    <td class="quantity-col">
+                      <input type="number" value="1" class="quantity" />
+                      <i class="fi fi-rs-trash table__trash"></i>
+                    </td>
+                    <td>
+                      <span class="table__price">100.000 VND</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="assets/img/shirleytemple_square.png" alt="" class="table__img"/>
+                    </td>
+                    <td>
+                      <h3 class="table__title"><a href="details.html" class="product-link">Shirley Temple Mirror</a></h3>
+                    </td>
+                    <td class="quantity-col">
+                      <input type="number" value="1" class="quantity" />
+                      <i class="fi fi-rs-trash table__trash"></i>
+                    </td>
+                    <td>
+                      <span class="table__price">65.000 VND</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img src="assets/img/bellini_square.png" alt="" class="table__img"/>
+                    </td>
+                    <td>
+                      <h3 class="table__title"><a href="details.html" class="product-link">Pinky Lady Hair Clip</a></h3>
+                    </td>
+                    <td class="quantity-col">
+                      <input type="number" value="1" class="quantity" />
+                      <i class="fi fi-rs-trash table__trash"></i>
+                    </td>
+                    <td>
+                      <span class="table__price">90.000 VND</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"><span class="order__subtitle">Tổng tiền</span></td>
+                    <td><span class="table__price">255.000 VND</span></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"><span class="order__subtitle">Phí vận chuyển</span></td>
+                    <td><span class="table__price">25.000 VND</span></td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"><span class="order__grand-total">Thành tiền</span></td>
+                    <td><span class="order__grand-total" style="font-size: 17px;">280.000 VND</span></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- Phần chọn phương thức thanh toán -->
+            <div class="payment__methods">
+
+              <h3 class="checkout__title payment__title">Chọn Phương Thức Thanh Toán:</h3>
+              <div class="payment__option flex">
+                <input
+                  type="radio"
+                  name="radio"
+                  id="l1"
+                  checked
+                  class="payment__input"
+                />
+                <label for="l1" class="payment__label"
+                  >🏧Chuyển khoản ngân hàng</label
+                >
+              </div>
+              <div class="payment__option flex">
+                <input
+                  type="radio"
+                  name="radio"
+                  id="l2"
+                  class="payment__input"
+                />
+                <label for="l2" class="payment__label">📱Momo</label>
+              </div>
+              <div class="payment__option flex">
+                <input
+                  type="radio"
+                  name="radio"
+                  id="l3"
+                  class="payment__input"
+                />
+                <label for="l3" class="payment__label">🛂Thanh toán khi nhận hàng (COD)</label>
+              </div>
+            </div>
+            <button class="btn btn--md order-button">Đặt Hàng</button>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="products container section--lg">
+        <!--==========Hiển thị sản phẩm mua kèm===============>-->
+        <h3 class="section__title"><span style="font-family: Arial, Helvetica, sans-serif, sans-serif; font-size: 20px; line-height: 2.5">SẢN PHẨM MUA KÈM </span>
+        <p class="section__subtitle">Chic Gợi Ý Các Sản Phẩm Mua Kèm  <i class="fas fa-tag"></i></p>
+        <div class="products__container grid">
+          <div class="product__item">
+            <div class="product__banner">
+              <a href="details.html" class="product__images">
+                <img
+                  src="assets/img/product20.1.png"
+                  alt=""
+                  class="product__img default"
+                />
+                <img
+                  src="assets/img/product13.2.png"
+                  alt=""
+                  class="product__img hover"
+                />
+              </a>
+              <div class="product__actions">
+                <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                  <i class="fa-solid fa-up-right-from-square"></i>
+                <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
+              </div>
+              <div class="product__badge light-pink">Hot</div>
+            </div>
+            <div class="product__content">
+              <span class="product__category">Kẹp vuông</span>
+              <a href="details.html">
+                <h3 class="product__title">Kẹp Giấc Mơ Hoa</h3>
+              </a>
+              <div class="product__rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-alt"></i>
+                <span> (89)</span>
+              </div>
+              <div class="product__price flex">
+                <span class="new__price">129.000 VND</span>
+              </div>
+              <a href="#" 
+                class="action__btn cart__btn" 
+                aria-label="Thêm vào Giỏ hàng" 
+                data-inventory="11">
+              <i class="fi fi-rs-shopping-bag-add"></i>
+              </a>
+                  </div>
+                </div>
+  
+  
+                <div class="product__item">
+                  <div class="product__banner">
+                    <a href="details.html" class="product__images">
+                      <img
+                        src="assets/img/product7.1.png"
+                        alt=""
+                        class="product__img default"
+                      />
+                      <img
+                        src="assets/img/product7.2.png"
+                        alt=""
+                        class="product__img hover"
+                      />
+                    </a>
+                    <div class="product__actions">
+                      <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                      <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
+                        <i class="fi fi-rs-heart"></i>
+                      </a>
+                    </div>
+                    <div class="product__badge light-green">-22%</div>
+                  </div>
+                  <div class="product__content">
+                    <span class="product__category">Kẹp nhỏ</span>
+                    <a href="details.html">
+                      <h3 class="product__title">Kẹp Trái Tim Rực Rỡ</h3>
+                    </a>
+                    <div class="product__rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-half-alt"></i>
+                      <span> (17)</span>
+                    </div>
+                    <div class="product__price flex">
+                      <span class="new__price">46.800 VND</span>
+                      <span class="old__price">60.000 VND</span>
+                    </div>
+                    <a href="#" 
+                    class="action__btn cart__btn" 
+                    aria-label="Thêm vào Giỏ hàng" 
+                    data-inventory="56">
+                    <i class="fi fi-rs-shopping-bag-add"></i>
+                  </a>
+                  </div>
+                </div>
+  
+  
+  
+                <div class="product__item">
+                  <div class="product__banner">
+                    <a href="details.html" class="product__images">
+                      <img
+                        src="assets/img/product18.1.png"
+                        alt=""
+                        class="product__img default"
+                      />
+                      <img
+                        src="assets/img/product18.2.png"
+                        alt=""
+                        class="product__img hover"
+                      />
+                    </a>
+                    <div class="product__actions">
+                      <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                      <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
+                        <i class="fi fi-rs-heart"></i>
+                      </a>
+                    </div>
+                    <div class="product__badge light-orange">Hot</div>
+                  </div>
+                  <div class="product__content">
+                    <span class="product__category">Kẹp tròn</span>
+                    <a href="details.html">
+                      <h3 class="product__title">Kẹp Trái Tim Đại Dương</h3>
+                    </a>
+                    <div class="product__rating">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star-half-alt"></i>
+                      <span> (10)</span>
+                    </div>
+                    <div class="product__price flex">
+                      <span class="new__price">67.000 VND</span>
+                    </div>
+                    <a href="#" 
+                     class="action__btn cart__btn" 
+                     aria-label="Thêm vào Giỏ hàng" 
+                     data-inventory="28">
+                     <i class="fi fi-rs-shopping-bag-add"></i>
+                  </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+       <!--=============== NEWSLETTER ===============-->
+       <section class="newsletter section home__newsletter">
+        <div class="newsletter__container container grid">
+          <h3 class="newsletter__title flex">
+            <img
+              src="./assets/img/icon-email.svg"
+              alt=""
+              class="newsletter__icon"
+            />
+            ĐĂNG KÝ ĐỂ NHẬN TIN
+          </h3>
+          <p class="newsletter__description">
+            ...và nhận 10% giảm giá cho lần mua đầu tiên.
+          </p>
+          <form action="" class="newsletter__form">
+            <input
+              type="text"
+              placeholder="Nhập Email của bạn"
+              class="newsletter__input"
+            />
+            <button type="submit" class="newsletter__btn">Đăng ký</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer container">
+      <div class="footer__container grid">
+        <div class="footer__content">
+          <a href="index.html" class="footer__logo">
+            <img src="./assets/img/logo.svg" alt="" class="footer__logo-img" />
+          </a>
+          <h4 class="footer__subtitle">Liên hệ</h4>
+          <p class="footer__description">
+            <span>Địa chỉ:</span> 279 Nguyễn Tri Phương, Phường 5, Quận 10
+          </p>
+          <p class="footer__description">
+            <span>SĐT:</span> +01 2222 365 /(+91) 01 2345 6789
+          </p>
+          <p class="footer__description">
+            <span>Thời gian:</span> 10:00 - 18:00, T2-T7
+          </p>
+          <div class="footer__social">
+            <h4 class="footer__subtitle">Theo dõi chúng tôi</h4>
+            <div class="footer__links flex">
+              <a href="https://www.facebook.com/share/1784WE225P/?mibextid=LQQJ4d">
+                <img
+                  src="./assets/img/icon-facebook.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+              </a>
+              <a href="https://www.instagram.com/chiccharm.official_?igsh=MXJpM3pqZDFvMmlzaw==">
+                <img
+                  src="./assets/img/icon-instagram.svg"
+                  alt=""
+                  class="footer__social-icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">Địa chỉ</h3>
+          <ul class="footer__links">
+            <li><a href="#" class="footer__link">Về Chúng Tôi</a></li>
+            <li><a href="#" class="footer__link">Chính Sách Vận Chuyển</a></li>
+            <li><a href="#" class="footer__link">Chính Sách Riêng Tư</a></li>
+            <li><a href="#" class="footer__link">Điều Khoản & Điều Kiện</a></li>
+            <li><a href="#" class="footer__link">Liên Hệ</a></li>
+            <li><a href="#" class="footer__link">Trung Tâm Hỗ Trợ</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">Tài Khoản</h3>
+          <ul class="footer__links">
+            <li><a href="login.html" class="footer__link">Đăng Nhập</a></li>
+            <li><a href="cart.html" class="footer__link">Giỏ Hàng</a></li>
+            <li><a href="wishlist.html" class="footer__link">Wishlist</a></li>
+            <li><a href="#" class="footer__link">Đơn Hàng</a></li>
+            <li><a href="#" class="footer__link">Giúp Đỡ</a></li>
+            <li><a href="#" class="footer__link">Đặt Hàng</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <h3 class="footer__title">Phương Thức Thanh Toán</h3>
+          <img
+            src="./assets/img/payment-method.png"
+            alt=""
+            class="payment__img"
+          />
+        </div>
+      </div>
+    </footer>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+
+    <script>
+      //=========LẮNG NGHE SỰ KIỆN CUỘN TRANG=====//
+window.onscroll = function() {
+  // Lấy thanh menu
+  var nav = document.querySelector('.nav');
+
+  // Kiểm tra vị trí cuộn của trang
+  if (window.scrollY > 100) { // Khi cuộn xuống 100px
+    nav.classList.add('fixed-menu'); // Thêm lớp cố định cho nav
+  } else {
+    nav.classList.remove('fixed-menu'); // Bỏ lớp cố định khi lên đầu trang
+  }
+};
+    </script>
+
+   <!--=============== TẠO ALERT KHI ĐẶT HÀNG ===============-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  const orderButton = document.querySelector(".order-button");
+
+  orderButton.addEventListener("click", function () {
+    alert("Đơn hàng của bạn đã được đặt thành công!");
+  });
+});
+    </script>
+
+<script>
+  //=========TẠO ALERT KHI NHẤN VÀO NÚT THÊM VÀO WISHLIST=====//
+  // Đảm bảo mã được chạy sau khi DOM đã tải xong
+  document.addEventListener('DOMContentLoaded', function() {
+  // Lấy tất cả các nút "Thêm vào Wishlist"
+  const addToWishlistBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Wishlist"]');
+  
+  addToWishlistBtns.forEach(function(button) {
+    button.addEventListener('click', function(e) {
+      e.preventDefault(); // Ngừng hành động mặc định của liên kết
+  
+      // Hiển thị thông báo thành công
+      alert('Đã thêm vào Wishlist thành công!');
+    });
+  });
+  }); 
+  </script>
+  
+  <script>
+  //=========TẠO ALERT KHI NHẤN VÀO NÚT THÊM VÀO GIỎ HÀNG=====//
+  // Chọn tất cả các nút "Thêm vào Giỏ hàng"
+  const addToCartBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Giỏ hàng"]');
+  
+  // Duyệt qua tất cả các nút và thêm sự kiện click
+  addToCartBtns.forEach(function(btn) {
+  btn.addEventListener("click", function(event) {
+  event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+  
+  // Lấy số lượng review từ thuộc tính data-reviews
+  const reviews = btn.getAttribute("data-reviews") || 0;
+  
+  // Lấy số lượng tồn kho từ thuộc tính data-inventory
+  const inventory = btn.getAttribute("data-inventory") || 0;
+  
+  // Hiển thị thông báo alert
+  alert(`Đã thêm vào giỏ hàng thành công!
+Sản phẩm này còn ${inventory} sản phẩm trong kho.`);
+  });
+  });
+  </script>
+
+<script>
+  //======== Tạo Alert "Đã xoá sản phẩm"=====//
+  // Chọn tất cả các biểu tượng thùng rác
+const trashIcons = document.querySelectorAll('.fi.fi-rs-trash.table__trash');
+
+// Lặp qua từng biểu tượng và thêm sự kiện click
+trashIcons.forEach((trashIcon) => {
+ trashIcon.addEventListener('click', (event) => {
+   // Hiển thị hộp thoại xác nhận
+   const isConfirmed = confirm("Bạn có chắc muốn xoá sản phẩm không?");
+   
+   if (isConfirmed) {
+     // Nếu người dùng bấm "Xác nhận", xóa dòng chứa sản phẩm
+     alert("Sản phẩm đã được xoá khỏi trang thanh toán.");
+     const row = event.target.closest('tr'); // Tìm dòng cha gần nhất
+     row.remove(); // Xóa dòng khỏi bảng
+   } else {
+     // Nếu người dùng bấm "Huỷ", đóng hộp thoại
+     alert("Hành động đã bị huỷ.");
+   }
+ });
+});
+</script>
+  
+  </body>
+</html>

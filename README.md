@@ -1,4 +1,4 @@
-# Nhóm 6 | Project Cuối Kỳ
-Link Source Code: https://github.com/billalben/evara-ecommerce <br>
+# A-Responsive-Ecommerce-Website-Project
+A Responsive Ecommerce Website Project With HTML CSS JavaScript
 
-Link Public: https://nhom-6-ptud.github.io/nhom6_final/ <br>
+[View Demo](https://billalben.github.io/evara-ecommerce/)
