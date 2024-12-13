@@ -3184,45 +3184,43 @@ td {
 }
 
 
-/*=============== LOGIN & REGISTER ===============*/
+/*=============== ĐĂNG NHẬP VÀ ĐĂNG KÝ ===============*/
 .login-register__container {
-  display: flex;
-  justify-content: center;
+  display: flex;              /* Sử dụng Flexbox để sắp xếp phần login và register */
+  justify-content: center;    /* Căn giữa các phần tử con theo chiều ngang */
 }
-
+/* Định dạng cho phần đăng nhập đăng ký */
 .login,
 .register {
-  border: 1px solid var(--border-color-alt);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
-  width: 50%;
+  border: 1px solid var(--border-color-alt);  
+  padding: 1rem;                              
+  border-radius: 0.5rem;                      /* Bo tròn các góc của khung login */
+  -webkit-border-radius: 0.5rem;              /* Hỗ trợ cho các trình duyệt WebKit (Safari, iOS) */
+  -moz-border-radius: 0.5rem;                 /* Hỗ trợ cho trình duyệt Firefox */
+  -ms-border-radius: 0.5rem;                  /* Hỗ trợ cho trình duyệt Internet Explorer */
+  -o-border-radius: 0.5rem;                   /* Hỗ trợ cho các trình duyệt Opera cũ */
+  width: 50%;                                 /* Chiều rộng chiếm 50% của container */
 }
-
+/* Định dạng tiêu đề cho phần login */
 .login, .register .section__title {
   text-align: center;       /* Căn giữa nội dung */
-  position: relative;
+  position: relative;       /* Đặt vị trí tương đối để có thể dịch chuyển */
   left: 1.5rem;
   display: block;           /* Đảm bảo h3 là một block element để margin auto hoạt động */
 }
-
+/* Định dạng nút bấm trong form */
 .form__btn {
   text-align: center;
 }
-
-
 /* Chỉnh sửa và thêm hiệu ứng cho link đăng ký*/
 .register__link {
   color:#000000;
   font-size: small;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease;  /* Tạo hiệu ứng cho link đăng ký */
   text-align: center;
 }
 .register__link:hover {
-  color:#ff6aa7;
+  color:#ff6aa7;              /* Đổi link thành màu hồng khi hover chuột */
 }
 
 /* Chỉnh cho màn hình từ 1200px trở xuống */
@@ -3282,12 +3280,6 @@ td {
     text-align: center;
   }
 }
-
-
-
-/*=============== CART OTHERS ===============*/
-
-/*=============== WISHLIST ===============*/
 
 /*=============== CHECKOUT ===============*/
 .checkout__container {
@@ -3387,13 +3379,13 @@ td {
 
 
 
-/*=============== ACCOUNTS ===============*/
+/*=============== PHẦN TÀI KHOẢN ===============*/
 .accounts__container {
   margin-top: 70px;
-  grid-template-columns: 4fr 8fr;
+  grid-template-columns: 4fr 8fr;   /*Chỉnh layout grid với 2 cột tỷ lệ 4:8 */
 }
 
-
+/* Phần định dạng các tab điều hướng */
 .account__tabs {
   border: 1px solid var(--border-color-alt);
   border-radius: 0.25rem;
@@ -3402,24 +3394,23 @@ td {
   -ms-border-radius: 0.25rem;
   -o-border-radius: 0.25rem;
 }
-
-
+/* Phần định dạng từng tab điều hướng cụ thể */
 .account__tab {
   padding: 1rem 2rem;
   color: var(--title-color);
   font-size: var(--small-font-size);
-  display: flex;
-  column-gap: 0.625rem;
+  display: flex          /* Hiển thị icon và text trên cùng một hàng */
+  column-gap: 0.625rem;  /* Khoảng cách giữa icon và text */
   cursor: pointer;
-  transition: all 0.3s var(--transition);
-  -webkit-transition: all 0.3s var(--transition);
-  -moz-transition: all 0.3s var(--transition);
-  -ms-transition: all 0.3s var(--transition);
-  -o-transition: all 0.3s var(--transition);
+  transition: all 0.3s var(--transition);  /* Thêm hiệu ứng chuyển đổi */
+  -webkit-transition: all 0.3s var(--transition);  /* Hiệu ứng dành cho các trình duyệt dựa trên WebKit như Chrome, Safari*/
+  -moz-transition: all 0.3s var(--transition);     /* Hiệu ứng dành cho các trình duyệt dựa trên Mozilla Firefox*/
+  -ms-transition: all 0.3s var(--transition);      /* Hiệu ứng dành cho Internet Explorer*/
+  -o-transition: all 0.3s var(--transition);       /* Hiệu ứng dành cho Opera*/
 }
 /* Thêm hiệu ứng khi hover chuột vào tab*/
 .account__tab:hover {
-  background-color: var(--first-color);
+  background-color: var(--first-color);   /* Đổi màu background khi hover chuột*/
   color: var(--body-color);
 }
 /*Hiệu ứng đổi màu tab đang được chọn*/
@@ -3427,109 +3418,97 @@ td {
   background-color: var(--first-color);
   color: var(--body-color);
 }
-
-
+/* Thêm đường kẻ dưới giữa các tab, trừ tab cuối cùng */
 .account__tab:not(:last-child) {
   border-bottom: 1px solid var(--border-color-alt);
 }
-
-
+/* Ẩn nội dung tab không được chọn */
 .tab__content:not(.active-tab) {
   display: none;
 }
-
-
+/* Khung chứa nội dung của mỗi tab */
 .tab__content {
   border: 1px solid var(--border-color-alt);
 }
-
-
+/* Phần tiêu đề trong nội dung của tab */
 .tab__header {
   background-color: var(--container-color);
   border-bottom: 1px solid var(--border-color-alt);
   padding: 1rem;
   font-size: var(--small-font-size);
 }
-
-
+/* Phần thân nội dung của tab */
 .tab__body {
   padding: 1rem;
 }
-
-
+/* Định dạng cho phần tiêu đề của bảng trong tab Đơn hàng */
 .placed__order-table thead tr th {
   color: var(--title-color);
   text-align: left;
 }
-
-
+/* Định dạng cho bảng trong tab Đơn hàng */
 .placed__order-table thead tr th,
 .placed__order-table tbody tr td {
   border: 1px solid var(--border-color-alt);
   padding: 0.5rem;
   font-size: var(--small-font-size);
 }
-
-
+/* Định dạng cho link xem đơn hàng hoặc chỉnh sửa */
 .view__order,
 .edit {
   color: var(--first-color);
 }
 
-
+/* Định dạng cho phần tên */
 .name {
   font-style: normal;
   margin-bottom: 5px;
 }
 
-
+/* Định dạng cho phần địa chỉ */
 .address {
   font-style: normal;
   margin-bottom: 5px;
 }
 
-
+/* Định dạng cho phần SĐT */
 .phone {
   font-style: normal;
   margin-bottom: 5px;
 }
 
-
+/* Định dạng cho phần thành phố */
 .city {
   font-style: normal;
   margin-bottom: 5px;
 }
-
 
 /* Chỉnh màu link đăng xuất*/
  .logout__link {
   color: black;
   transition: all 0.3s var(--transition);
  }
+/* Hiệu ứng khi hover link đăng xuất*/
 .logout__link:hover {
   color: white;
 }
 
-
+/* Định dạng cho hình ảnh trong tab danh sách yêu thích */
 #account-wishlist .table__img {
   width: 100px;
   height: 100px;
 }
 
-
+/* Định dạng cho link trong tab danh sách yêu thích */
 #account-wishlist .link {
-  color:#000000;
+  color: #000000;
   transition: all 0.3s var(--transition);
 }
 
-
+/* Hiệu ứng hover cho link trong tab danh sách yêu thích */
 #account-wishlist .link:hover {
-  color:#ff6aa7;
+  color: #ff6aa7;
 }
-
-
-
-
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 1400px) {
