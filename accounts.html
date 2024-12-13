@@ -31,33 +31,33 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <style>
       /* Hiệu ứng chuyển động màu chữ */
-/* Hiệu ứng chuyển động gradient và chiếu sáng mạnh */
-.intense-sparkle {
-  font-weight: bold;
-  font-size: 16px;
-  text-decoration: none;
-  background: linear-gradient(90deg, #f3e458, #f0ffa5, #ff93c7, #ff00aa, #ffa0d0);
-  background-size: 300% 300%;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text; /* Hỗ trợ WebKit */
-  animation: intenseColor 1.5s linear infinite, sparkleEffect 0.5s ease-in-out infinite;
-  position: relative; /* Để thêm hiệu ứng ánh sáng */
-}
+      /* Hiệu ứng chuyển động gradient và chiếu sáng mạnh */
+      .intense-sparkle {
+        font-weight: bold;
+        font-size: 16px;
+        text-decoration: none;
+        background: linear-gradient(90deg, #f3e458, #f0ffa5, #ff93c7, #ff00aa, #ffa0d0);
+        background-size: 300% 300%;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text; /* Hỗ trợ WebKit */
+        animation: intenseColor 1.5s linear infinite, sparkleEffect 0.5s ease-in-out infinite;
+        position: relative; /* Để thêm hiệu ứng ánh sáng */
+      }
 
 
-/* Tạo chuyển động gradient nhanh */
-@keyframes intenseColor {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+      /* Tạo chuyển động gradient nhanh */
+      @keyframes intenseColor {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
     </style>
     <!--================Chỉnh lại Style Heading=============-->
     <style>
