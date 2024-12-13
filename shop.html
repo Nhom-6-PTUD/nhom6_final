@@ -21,14 +21,8 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="./assets/css/styles.css" />
 
-    <!--================Chỉnh lại Style Heading=============-->
+      
     <style>
-      h1, h2, h3, h4, h5, h6, th {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      }
-    </style>  
-    <style>
-  
   
       /* CSS cho khung chứa dòng chữ và ngôi sao */
    .shipping-promo {
@@ -289,99 +283,131 @@
     background-position: 0% 50%;
   }
 }
+
+/* Điều chỉnh responsive design cho nút xem trước và thêm vào wishlist*/
+@media (max-width: 1100px) {
+  .product__actions{
+    display: none; /*Ẩn nút*/
+  }
+  
+}
     </style>
 
+     <!--================Chỉnh lại Style Heading=============-->
+     <style>
+      h1, h2, h3, h4, h5, h6, th {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+    </style>
+    
+    <!--================Thêm logo cho trang=============-->
     <link rel="icon" href="assets/img/1.png" type="image/x-icon">
     <title>ChicCharm Official Store</title>
   </head>
   <body>
-    <!--=============== HEADER ===============-->
-    <header class="header">
-      <div class="header__top">
-        <div class="header__container container">
-          <div class="header__contact">
-            <span id="contact1">Merry Chrismas</span> 
+      <!--=============== HEADER ===============-->
+      <header class="header">
+        <div class="header__top">
+          <div class="header__container container">
+              <!-- Hiển thị thông điệp liên hệ -->
+            <div class="header__contact">
+              <span id="contact1">Merry Chrismas</span> 
+            </div>
+              <!-- Hiển thị thông báo ưu đãi -->
+            <p class="header__alert-news" id="news" style="color: #ff97c9">ƯU ĐÃI SIÊU GIÁ TRỊ - TIẾT KIỆM THÊM VỚI NHIỀU MÃ GIẢM GIÁ</p>
+            <!-- Liên kết đăng nhập/đăng ký -->
+            <a href="login-register.html" id="login-link" class="header__top-action">Đăng nhập / Đăng ký</a>
           </div>
-          <p class="header__alert-news" id="news" style="color: #ff97c9">ƯU ĐÃI SIÊU GIÁ TRỊ - TIẾT KIỆM THÊM VỚI NHIỀU MÃ GIẢM GIÁ</p>
-          <a href="login-register.html" id="login-link" class="header__top-action">Đăng nhập / Đăng ký</a>
         </div>
-      </div>
+        
       
-    
+    <!-- Thanh điều hướng chính -->
+        <nav class="nav container">
+           <!-- Logo của trang web -->
+          <a href="index.html" class="nav__logo">
+            <img
+              class="nav__logo-img"
+              src="assets/img/1.png"
+              alt="website logo"
+            />
+          </a>
+          <!-- Menu điều hướng -->
+          <div class="nav__menu" id="nav-menu">
+            <div class="nav__menu-top">
+              <a href="index.html" class="nav__menu-logo">
+                <img src="./assets/img/logo.svg" alt="">
+              </a>
+              <!-- Nút đóng menu -->
+              <div class="nav__close" id="nav-close">
+                <i class="fi fi-rs-cross-small"></i>
+              </div>
+            </div>
+             <!-- Danh sách liên kết trong menu -->
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="index.html" class="nav__link">Trang Chủ</a>
+              </li>
+              <li class="nav__item dropdown">
+                <a href="shop.html" class="nav__link active-link">Cửa Hàng</a>
+                 <!-- Liên kết đến từng danh mục sản phẩm  với menu thả xuống -->
+                <ul class="dropdown__menu">
+                  <li><a href="shop.html">Kẹp vuông</a></li>
+                  <li><a href="shop.html">Kẹp nhỏ</a></li>
+                  <li><a href="shop.html">Kẹp tròn</a></li>
+                  <li><a href="shop.html">Gương</a></li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a href="accounts.html" class="nav__link">Tài Khoản</a>  <!-- Liên kết đến trang tài khoản -->
+              </li>
+              <li class="nav__item">
+                <a href="index.html#featured" class="nav__link intense-sparkle">Khuyến mãi</a> <!-- Liên kết đến phần khuyến mãi -->
+              </li>
+            </ul>
+            
+            <!-- Tìm kiếm trong header -->
+            <div class="header__search">
+              <input
+                type="text"
+                placeholder=""
+                class="form__input"
+              />
   
-      <nav class="nav container">
-        <a href="index.html" class="nav__logo">
-          <img
-            class="nav__logo-img"
-            src="assets/img/1.png"
-            alt="website logo"
-          />
-        </a>
-        <div class="nav__menu" id="nav-menu">
-          <div class="nav__menu-top">
-            <a href="index.html" class="nav__menu-logo">
-              <img src="./assets/img/logo.svg" alt="">
-            </a>
-            <div class="nav__close" id="nav-close">
-              <i class="fi fi-rs-cross-small"></i>
+              <!-- Ô nhập để tìm kiếm -->
+              <button class="search__btn">
+                <img src="assets/img/search.png" alt="search icon" />
+              </button>
             </div>
           </div>
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="index.html" class="nav__link">Trang Chủ</a>
-            </li>
-            <li class="nav__item dropdown">
-              <a href="shop.html" class="nav__link active-link">Cửa Hàng</a>
-              <ul class="dropdown__menu">
-                <li><a href="shop.html">Kẹp vuông</a></li>
-                <li><a href="shop.html">Kẹp nhỏ</a></li>
-                <li><a href="shop.html">Kẹp tròn</a></li>
-                <li><a href="shop.html">Gương</a></li>
-              </ul>
-            </li>   
-            <li class="nav__item">
-              <a href="accounts.html" class="nav__link">Tài Khoản</a>
-            </li>
-            <li class="nav__item">
-              <a href="index.html#featured" class="nav__link intense-sparkle">Khuyến mãi</a>
-            </li>
-          </ul>
-          
-          <div class="header__search">
-            <input
-              type="text"
-              placeholder=""
-              class="form__input"
-            />
-            <button class="search__btn">
-              <img src="assets/img/search.png" alt="search icon" />
-            </button>
+          <div class="header__user-actions">
+            <!-- Nút đăng nhập -->
+            <a href="login.html" class="header__action-btn" title="Đăng nhập">
+              <img src="assets/img/user.png" alt="" />
+            </a>
+            <!-- Nút danh sách yêu thích -->
+            <a href="wishlist.html" class="header__action-btn" title="Wishlist">
+              <img src="assets/img/icon-heart.svg" alt="" />
+              <span class="count">3</span> <!-- Số lượng mục trong wishlist -->
+            </a>
+            <!-- Nút giỏ hàng -->
+            <a href="cart.html" class="header__action-btn" title="Giỏ hàng">
+              <img src="assets/img/icon-cart.svg" alt="" />
+              <span class="count">3</span> <!-- Số lượng sản phẩm trong giỏ hàng -->
+            </a>
+            <!-- Nút mở menu dọc -->
+            <div class="header__action-btn nav__toggle" id="nav-toggle">
+              <img src="./assets//img/menu-burger.png" alt="">
+            </div>
           </div>
-        </div>
-        <div class="header__user-actions">
-          <a href="login.html" class="header__action-btn" title="Đăng nhập">
-            <img src="assets/img/user.png" alt="" />
-          </a>
-          <a href="wishlist.html" class="header__action-btn" title="Wishlist">
-            <img src="assets/img/icon-heart.svg" alt="" />
-            <span class="count">3</span>
-          </a>
-          <a href="cart.html" class="header__action-btn" title="Giỏ hàng">
-            <img src="assets/img/icon-cart.svg" alt="" />
-            <span class="count">3</span>
-          </a>
-          <div class="header__action-btn nav__toggle" id="nav-toggle">
-            <img src="./assets//img/menu-burger.png" alt="">
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <div class="shipping-promo">
-      <span class="star">&#9733;</span>
-      <span class="promo-text"> Freeship cho đơn hàng từ 50.000 VND</span>
-      <span class="star">&#9733;</span>
-    </div>
+        </nav>
+      </header>
+  
+      <!-- Phần thông báo khuyến mãi vận chuyển -->
+      <div class="shipping-promo">
+        <span class="star">&#9733;</span>
+        <span class="promo-text"> Freeship cho đơn hàng từ 50.000 VND</span>
+        <span class="star">&#9733;</span>
+      </div>
     
     <!-- Phần thanh lọc sản phẩm -->
     <section class="products container section--lg">
@@ -400,15 +426,15 @@
         </div>
 
         <!-- Lọc theo thương hiệu -->
-<div class="filter-group">
-  <label for="brand">Thương hiệu:</label>
-  <select id="brand">
-    <option value="all">Tất cả</option>
-    <option value="Emijay">Emijay</option>
-    <option value="Flowerknows">FLowerknows</option>
-    <option value="Chunks">Chunks</option>
-  </select>
-</div>
+           <div class="filter-group">
+            <label for="brand">Thương hiệu:</label>
+            <select id="brand">
+            <option value="all">Tất cả</option>
+            <option value="Emijay">Emijay</option>
+            <option value="Flowerknows">FLowerknows</option>
+            <option value="Chunks">Chunks</option>
+           </select>
+           </div>
 
 
         <!-- Lọc theo màu sắc -->
@@ -467,10 +493,12 @@
 
       <!--=============== PRODUCTS ===============-->
       <section class="products container section--lg">
-        <p class="total__products">Chic có <span>12</span> phụ kiện dành cho nàng!</p>
+        <p class="total__products">Chic tìm thấy <span>12</span> phụ kiện dành cho nàng!</p> <!-- Cập nhật số lượng sản phẩm-->
         <div class="products__container grid">
+          <!--Sản phẩm 1-->
           <div class="product__item">
             <div class="product__banner">
+              <!-- Hình ảnh sản phẩm  -->
               <a href="details.html" class="product__images">
                 <img
                   src="assets/img/product1.1.png"
@@ -483,6 +511,7 @@
                   class="product__img hover"
                 />
               </a>
+              <!-- Các nút chức năng cho sản phẩm -->
               <div class="product__actions">
                 <a href="#" class="action__btn" aria-label="Xem trước">
                   <i class="fi fi-rs-eye"></i>
@@ -493,6 +522,7 @@
               </div>
               <div class="product__badge light-pink">Hot</div>
             </div>
+            <!-- Phần nội dung sản phẩm -->
             <div class="product__content">
               <span class="product__category">Kẹp vuông</span>
               <a href="details.html">
@@ -508,8 +538,8 @@
               </div>
               <div class="product__price flex">
                 <span class="new__price">120.000 VND</span>
-             
               </div>
+              <!-- Nút thêm vào giỏ hàng -->
               <a href="#" 
               class="action__btn cart__btn" 
               aria-label="Thêm vào Giỏ hàng" 
@@ -518,7 +548,10 @@
            </a>
             </div>
           </div>
+
+             <!-- Sản phẩm 2 -->
           <div class="product__item">
+             <!-- Hình ảnh sản phẩm-->
             <div class="product__banner">
               <a href="details.html" class="product__images">
                 <img
@@ -532,6 +565,7 @@
                   class="product__img hover"
                 />
               </a>
+              <!-- Các nút chức năng cho sản phẩm -->
               <div class="product__actions">
                 <a href="#" class="action__btn" aria-label="Xem trước">
                   <i class="fi fi-rs-eye"></i>
@@ -542,6 +576,7 @@
               </div>
               <div class="product__badge light-green">Hot</div>
             </div>
+             <!-- Nội dung sản phẩm -->
             <div class="product__content">
               <span class="product__category">Kẹp vuông</span>
               <a href="details.html">
@@ -559,6 +594,7 @@
                 <span class="new__price">120.000 VND</span>
         
               </div>
+              <!-- Nút thêm vào giỏ hàng -->
               <a href="#" 
               class="action__btn cart__btn" 
               aria-label="Thêm vào Giỏ hàng" 
@@ -567,8 +603,11 @@
            </a>
             </div>
           </div>
+
+           <!-- Sản phẩm 3 -->
           <div class="product__item">
             <div class="product__banner">
+              <!-- Hình ảnh sản phẩm -->
               <a href="details.html" class="product__images">
                 <img
                   src="assets/img/product3.1.png"
@@ -581,6 +620,7 @@
                   class="product__img hover"
                 />
               </a>
+              <!-- Nút chức năng -->
               <div class="product__actions">
                 <a href="#" class="action__btn" aria-label="Xem trước">
                   <i class="fi fi-rs-eye"></i>
@@ -591,6 +631,7 @@
               </div>
               <div class="product__badge light-orange">Hot</div>
             </div>
+             <!-- Nội dung sản phẩm -->
             <div class="product__content">
               <span class="product__category">Kẹp vuông</span>
               <a href="details.html">
@@ -608,6 +649,7 @@
                 <span class="new__price">130.000 VND</span>
         
               </div>
+              <!-- Nút thêm vào giỏ hàng -->
               <a href="#" 
               class="action__btn cart__btn" 
               aria-label="Thêm vào Giỏ hàng" 
@@ -616,8 +658,11 @@
            </a>
             </div>
           </div>
+
+          <!-- Sản phẩm 4 -->
           <div class="product__item">
             <div class="product__banner">
+              <!-- Hình ảnh sản phẩm -->
               <a href="details.html" class="product__images">
                 <img
                   src="assets/img/product4.1.png"
@@ -630,6 +675,7 @@
                   class="product__img hover"
                 />
               </a>
+               <!-- Nút chức năng -->
               <div class="product__actions">
                 <a href="#" class="action__btn" aria-label="Xem trước">
                   <i class="fi fi-rs-eye"></i>
@@ -640,6 +686,7 @@
               </div>
               <div class="product__badge light-blue">Hot</div>
             </div>
+              <!-- Nội dung sản phẩm -->
             <div class="product__content">
               <span class="product__category">Kẹp vuông</span>
               <a href="details.html">
@@ -657,6 +704,7 @@
                 <span class="new__price">125.000 VND</span>
 
               </div>
+              <!-- Nút thêm vào giỏ hàng -->
               <a href="#" 
                    class="action__btn cart__btn" 
                    aria-label="Thêm vào Giỏ hàng" 
@@ -665,7 +713,10 @@
                 </a>
             </div>
           </div>
+
+          <!-- Sản phẩm 5 -->
           <div class="product__item">
+            <!-- Hình ảnh sản phẩm -->
             <div class="product__banner">
               <a href="details.html" class="product__images">
                 <img
@@ -679,6 +730,7 @@
                   class="product__img hover"
                 />
               </a>
+              <!-- Nút chức năng -->
               <div class="product__actions">
                 <a href="#" class="action__btn" aria-label="Xem trước">
                   <i class="fi fi-rs-eye"></i>
@@ -689,6 +741,7 @@
               </div>
               <div class="product__badge light-blue">-30%</div>
             </div>
+              <!-- Nội dung sản phẩm -->
             <div class="product__content">
               <span class="product__category">Kẹp vuông</span>
               <a href="details.html">
@@ -706,6 +759,7 @@
                 <span class="new__price">98.000 VND</span>
                 <span class="old__price">140.000 VND</span>
               </div>
+              <!-- Nút thêm vào giỏ hàng -->
               <a href="#" 
                    class="action__btn cart__btn" 
                    aria-label="Thêm vào Giỏ hàng" 
@@ -714,7 +768,10 @@
                 </a>
             </div>
           </div>
+
+          <!-- Sản phẩm 6 -->
           <div class="product__item">
+            <!-- Hình ảnh sản phẩm -->
             <div class="product__banner">
               <a href="details.html" class="product__images">
                 <img
@@ -728,6 +785,7 @@
                   class="product__img hover"
                 />
               </a>
+               <!-- Nút chức năng -->
               <div class="product__actions">
                 <a href="#" class="action__btn" aria-label="Xem trước">
                   <i class="fi fi-rs-eye"></i>
@@ -738,6 +796,7 @@
               </div>
               <div class="product__badge light-blue">-22%</div>
             </div>
+              <!-- Nội dung sản phẩm -->
             <div class="product__content">
               <span class="product__category">Kẹp vuông</span>
               <a href="details.html">
@@ -755,6 +814,7 @@
                 <span class="new__price">109.000 VND</span>
                 <span class="old__price">140.000 VND</span>
               </div>
+              <!-- Nút thêm vào giỏ hàng -->
               <a href="#" 
                    class="action__btn cart__btn" 
                    aria-label="Thêm vào Giỏ hàng" 
@@ -763,7 +823,10 @@
                 </a>
             </div>
           </div>
+
+          <!-- Sản phẩm 7 -->
           <div class="product__item">
+            <!-- Sản phẩm 3 -->
             <div class="product__banner">
               <a href="details.html" class="product__images">
                 <img
@@ -777,6 +840,7 @@
                   class="product__img hover"
                 />
               </a>
+               <!-- Nút chức năng -->
               <div class="product__actions">
                 <a href="#" class="action__btn" aria-label="Xem trước">
                   <i class="fi fi-rs-eye"></i>
@@ -787,6 +851,7 @@
               </div>
               <div class="product__badge light-green">-22%</div>
             </div>
+              <!-- Nội dung sản phẩm -->
             <div class="product__content">
               <span class="product__category">Kẹp nhỏ</span>
               <a href="details.html">
@@ -804,6 +869,7 @@
                 <span class="new__price">46.800 VND</span>
                 <span class="old__price">60.000 VND</span>
               </div>
+              <!-- Nút thêm vào giỏ hàng -->
               <a href="#" 
               class="action__btn cart__btn" 
               aria-label="Thêm vào Giỏ hàng" 
@@ -812,7 +878,10 @@
            </a>
             </div>
           </div>
+
+          <!-- Sản phẩm 8 -->
           <div class="product__item">
+            <!-- Sản phẩm 3 -->
             <div class="product__banner">
               <a href="details.html" class="product__images">
                 <img
@@ -826,6 +895,7 @@
                   class="product__img hover"
                 />
               </a>
+               <!-- Nút chức năng -->
               <div class="product__actions">
                 <a href="#" class="action__btn" aria-label="Xem trước">
                   <i class="fi fi-rs-eye"></i>
@@ -835,6 +905,7 @@
                 </a>
               </div>
             </div>
+              <!-- Nội dung sản phẩm -->
             <div class="product__content">
               <span class="product__category">Kẹp nhỏ</span>
               <a href="details.html">
@@ -852,6 +923,7 @@
                 <span class="new__price">60.000 VND</span>
             
               </div>
+              <!-- Nút thêm vào giỏ hàng -->
               <a href="#" 
                    class="action__btn cart__btn" 
                    aria-label="Thêm vào Giỏ hàng" 
@@ -860,7 +932,10 @@
                 </a>
             </div>
           </div>
+
+          <!-- Sản phẩm 9 -->
           <div class="product__item">
+            <!-- Hình ảnh sản phẩm -->
             <div class="product__banner">
               <a href="details.html" class="product__images">
                 <img
@@ -874,6 +949,7 @@
                   class="product__img hover"
                 />
               </a>
+               <!-- Nút chức năng -->
               <div class="product__actions">
                 <a href="#" class="action__btn" aria-label="Xem trước">
                   <i class="fi fi-rs-eye"></i>
@@ -884,6 +960,7 @@
               </div>
               <div class="product__badge light-blue">-30%</div>
             </div>
+              <!-- Nội dung sản phẩm -->
             <div class="product__content">
               <span class="product__category">Kẹp nhỏ</span>
               <a href="details.html">
@@ -901,6 +978,7 @@
                 <span class="new__price">42.000 VND</span>
                 <span class="old__price">60.000 VND</span>
               </div>
+              <!-- Nút thêm vào giỏ hàng -->
               <a href="#" 
                    class="action__btn cart__btn" 
                    aria-label="Thêm vào Giỏ hàng" 
@@ -909,7 +987,10 @@
                 </a>
             </div>
           </div>
+
+          <!-- Sản phẩm 10 -->
           <div class="product__item">
+            <!-- Hình ảnh sản phẩm -->
             <div class="product__banner">
               <a href="details.html" class="product__images">
                 <img
@@ -923,6 +1004,7 @@
                   class="product__img hover"
                 />
               </a>
+               <!-- Nút chức năng -->
               <div class="product__actions">
                 <a href="#" class="action__btn" aria-label="Xem trước">
                   <i class="fi fi-rs-eye"></i>
@@ -933,6 +1015,7 @@
               </div>
               <div class="product__badge light-blue">-22%</div>
             </div>
+              <!-- Nội dung sản phẩm -->
             <div class="product__content">
               <span class="product__category">Gương</span>
               <a href="details.html">
@@ -950,6 +1033,7 @@
                 <span class="new__price">156.000 VND</span>
                 <span class="old__price">200.000 VND</span>
               </div>
+              <!-- Nút thêm vào giỏ hàng -->
               <a href="#" 
                    class="action__btn cart__btn" 
                    aria-label="Thêm vào Giỏ hàng" 
@@ -958,7 +1042,10 @@
                 </a>
             </div>
           </div>
+
+          <!-- Sản phẩm 11 -->
           <div class="product__item">
+            <!-- Hình ảnh sản phẩm -->
             <div class="product__banner">
               <a href="details.html" class="product__images">
                 <img
@@ -972,6 +1059,7 @@
                   class="product__img hover"
                 />
               </a>
+               <!-- Nút chức năng -->
               <div class="product__actions">
                 <a href="#" class="action__btn" aria-label="Xem trước">
                   <i class="fi fi-rs-eye"></i>
@@ -999,6 +1087,7 @@
                 <span class="new__price">156.000 VND</span>
                 <span class="old__price">200.000 VND</span>
               </div>
+              <!-- Nút thêm vào giỏ hàng -->
               <a href="#" 
               class="action__btn cart__btn" 
               aria-label="Thêm vào Giỏ hàng" 
@@ -1007,7 +1096,10 @@
            </a>
             </div>
           </div>
+
+          <!-- Sản phẩm 12 -->
           <div class="product__item">
+            <!-- Hình ảnh sản phẩm -->
             <div class="product__banner">
               <a href="details.html" class="product__images">
                 <img
@@ -1021,6 +1113,7 @@
                   class="product__img hover"
                 />
               </a>
+               <!-- Nút chức năng -->
               <div class="product__actions">
                 <a href="#" class="action__btn" aria-label="Xem trước">
                   <i class="fi fi-rs-eye"></i>
@@ -1030,6 +1123,7 @@
                 </a>
               </div>
             </div>
+              <!-- Nội dung sản phẩm -->
             <div class="product__content">
               <span class="product__category">Gương</span>
               <a href="details.html">
@@ -1047,6 +1141,7 @@
                 <span class="new__price">200.000 VND</span>
               
               </div>
+              <!-- Nút thêm vào giỏ hàng -->
               <a href="#" 
               class="action__btn cart__btn" 
               aria-label="Thêm vào Giỏ hàng" 
@@ -1056,11 +1151,13 @@
             </div>
           </div>
         </div>
+
+        <!-- Thanh phân trang -->
         <ul class="pagination">
-          <li><a href="shop.html" class="pagination__link active">01</a></li>
-          <li><a href="shop2.html" class="pagination__link">02</a></li>
+          <li><a href="shop.html" class="pagination__link active">01</a></li> <!-- Trang 1, đang hoạt động -->
+          <li><a href="shop2.html" class="pagination__link">02</a></li> <!-- Trang 2 -->
           <li><a href="shop2.html" class="pagination__link icon">
-            <i class="fi-rs-angle-double-small-right"></i>
+            <i class="fi-rs-angle-double-small-right"></i> <!-- Đi đế trang thứ 2 -->
           </a></li>
         </ul>        
       </section>
@@ -1074,102 +1171,116 @@
       </div>
     </div>
 
-       <!--=============== NEWSLETTER ===============-->
-       <section class="newsletter section home__newsletter">
-        <div class="newsletter__container container grid">
-          <h3 class="newsletter__title flex">
-            <img
-              src="./assets/img/icon-email.svg"
-              alt=""
-              class="newsletter__icon"
-            />
-            ĐĂNG KÝ ĐỂ NHẬN TIN
-          </h3>
-          <p class="newsletter__description">
-            ...và nhận 10% giảm giá cho lần mua đầu tiên.
-          </p>
-          <form action="" class="newsletter__form">
-            <input
-              type="text"
-              placeholder="Nhập Email của bạn"
-              class="newsletter__input"
-            />
-            <button type="submit" class="newsletter__btn">Đăng ký</button>
-          </form>
-        </div>
-      </section>
-    </main>
+  <!--=============== PHẦN ĐĂNG KÝ NHẬN THƯ ===============-->
+  <section class="newsletter section home__newsletter">
+    <!-- Container chính chứa nội dung của phần newsletter -->
+    <div class="newsletter__container container grid">
+       <!-- Tiêu đề của phần newsletter -->
+      <h3 class="newsletter__title flex">
+        <img
+          src="./assets/img/icon-email.svg"
+          alt=""
+          class="newsletter__icon"
+        />
+        ĐĂNG KÝ ĐỂ NHẬN TIN
+      </h3>
+      <!-- Mô tả ngắn khuyến khích người dùng đăng ký -->
+      <p class="newsletter__description">
+        ...và nhận 10% giảm giá cho lần mua đầu tiên.
+      </p>
+      <!-- Biểu mẫu để người dùng nhập email và nhấn đăng ký -->
+      <form action="" class="newsletter__form">
+         <!-- Trường nhập email -->
+        <input
+          type="text"
+          placeholder="Nhập Email của bạn"
+          class="newsletter__input"
+        />
+        <!-- Nút đăng ký -->
+        <button type="submit" class="newsletter__btn">Đăng ký</button>
+      </form>
+    </div>
+  </section>
+</main>
 
-    <!--=============== FOOTER ===============-->
-    <footer class="footer container">
-      <div class="footer__container grid">
-        <div class="footer__content">
-          <a href="index.html" class="footer__logo">
-            <img src="./assets/img/logo.svg" alt="" class="footer__logo-img" />
+<!--=============== PHẦN CHÂN TRANG ===============-->
+<footer class="footer container">
+   <!-- Container chính của phần footer -->
+  <div class="footer__container grid">
+    <!-- Phần thông tin liên hệ -->
+    <div class="footer__content">
+      <a href="index.html" class="footer__logo">
+        <img src="./assets/img/logo.svg" alt="" class="footer__logo-img" />
+      </a>
+      <h4 class="footer__subtitle">Liên hệ</h4>
+      <p class="footer__description">
+        <span>Địa chỉ:</span> 279 Nguyễn Tri Phương, Phường 5, Quận 10
+      </p>
+      <p class="footer__description">
+        <span>SĐT:</span> +01 2222 365 /(+91) 01 2345 6789
+      </p>
+      <p class="footer__description">
+        <span>Thời gian:</span> 10:00 - 18:00, T2-T7
+      </p>
+      <div class="footer__social">
+        <h4 class="footer__subtitle">Theo dõi chúng tôi</h4>
+        <div class="footer__links flex">
+          <a href="https://www.facebook.com/share/1784WE225P/?mibextid=LQQJ4d">
+            <img
+              src="./assets/img/icon-facebook.svg"
+              alt=""
+              class="footer__social-icon"
+            />
           </a>
-          <h4 class="footer__subtitle">Liên hệ</h4>
-          <p class="footer__description">
-            <span>Địa chỉ:</span> 279 Nguyễn Tri Phương, Phường 5, Quận 10
-          </p>
-          <p class="footer__description">
-            <span>SĐT:</span> +01 2222 365 /(+91) 01 2345 6789
-          </p>
-          <p class="footer__description">
-            <span>Thời gian:</span> 10:00 - 18:00, T2-T7
-          </p>
-          <div class="footer__social">
-            <h4 class="footer__subtitle">Theo dõi chúng tôi</h4>
-            <div class="footer__links flex">
-              <a href="https://www.facebook.com/share/1784WE225P/?mibextid=LQQJ4d">
-                <img
-                  src="./assets/img/icon-facebook.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
-              </a>
-              </a>
-              <a href="https://www.instagram.com/chiccharm.official_?igsh=MXJpM3pqZDFvMmlzaw==">
-                <img
-                  src="./assets/img/icon-instagram.svg"
-                  alt=""
-                  class="footer__social-icon"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="footer__content">
-          <h3 class="footer__title">Địa chỉ</h3>
-          <ul class="footer__links">
-            <li><a href="#" class="footer__link">Về Chúng Tôi</a></li>
-            <li><a href="#" class="footer__link">Chính Sách Vận Chuyển</a></li>
-            <li><a href="#" class="footer__link">Chính Sách Riêng Tư</a></li>
-            <li><a href="#" class="footer__link">Điều Khoản & Điều Kiện</a></li>
-            <li><a href="#" class="footer__link">Liên Hệ</a></li>
-            <li><a href="#" class="footer__link">Trung Tâm Hỗ Trợ</a></li>
-          </ul>
-        </div>
-        <div class="footer__content">
-          <h3 class="footer__title">Tài Khoản</h3>
-          <ul class="footer__links">
-            <li><a href="login.html" class="footer__link">Đăng Nhập</a></li>
-            <li><a href="cart.html" class="footer__link">Giỏ Hàng</a></li>
-            <li><a href="wishlist.html" class="footer__link">Wishlist</a></li>
-            <li><a href="#" class="footer__link">Đơn Hàng</a></li>
-            <li><a href="#" class="footer__link">Giúp Đỡ</a></li>
-            <li><a href="#" class="footer__link">Đặt Hàng</a></li>
-          </ul>
-        </div>
-        <div class="footer__content">
-          <h3 class="footer__title">Phương Thức Thanh Toán</h3>
-          <img
-            src="./assets/img/payment-method.png"
-            alt=""
-            class="payment__img"
-          />
+          </a>
+          <a href="https://www.instagram.com/chiccharm.official_?igsh=MXJpM3pqZDFvMmlzaw==">
+            <img
+              src="./assets/img/icon-instagram.svg"
+              alt=""
+              class="footer__social-icon"
+            />
+          </a>
         </div>
       </div>
-    </footer>
+    </div>
+
+     <!-- Phần liên kết nhanh -->
+    <div class="footer__content">
+      <h3 class="footer__title">Địa chỉ</h3>
+      <ul class="footer__links">
+        <li><a href="#" class="footer__link">Về Chúng Tôi</a></li>
+        <li><a href="#" class="footer__link">Chính Sách Vận Chuyển</a></li>
+        <li><a href="#" class="footer__link">Chính Sách Riêng Tư</a></li>
+        <li><a href="#" class="footer__link">Điều Khoản & Điều Kiện</a></li>
+        <li><a href="#" class="footer__link">Liên Hệ</a></li>
+        <li><a href="#" class="footer__link">Trung Tâm Hỗ Trợ</a></li>
+      </ul>
+    </div>
+
+    <!-- Phần thông tin tài khoản của khách hàng -->
+    <div class="footer__content">
+      <h3 class="footer__title">Tài Khoản</h3>
+      <ul class="footer__links">
+        <li><a href="login.html" class="footer__link">Đăng Nhập</a></li>
+        <li><a href="cart.html" class="footer__link">Giỏ Hàng</a></li>
+        <li><a href="wishlist.html" class="footer__link">Wishlist</a></li>
+        <li><a href="accounts.html" class="footer__link">Đơn Hàng</a></li>
+        <li><a href="#" class="footer__link">Giúp Đỡ</a></li>
+        <li><a href="cart.html" class="footer__link">Đặt Hàng</a></li>
+      </ul>
+    </div>
+    <!-- Phần phương thức thanh toán -->
+    <div class="footer__content">
+      <h3 class="footer__title">Phương Thức Thanh Toán</h3>
+      <img
+        src="./assets/img/payment-method.png"
+        alt=""
+        class="payment__img"
+      />
+    </div>
+  </div>
+</footer>
+ 
 
     <!--=============== SWIPER JS ===============-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -1204,7 +1315,7 @@ window.onscroll = function() {
     const tagFilter = document.getElementById('tag');
     const sortFilter = document.getElementById('sort');
     const applyFiltersBtn = document.getElementById('apply-filters');
-  
+    // Tạo danh sách sản phẩm lọc giả lập
     const productData = [
 {
   element: products[0],
@@ -1323,13 +1434,13 @@ window.onscroll = function() {
 },
 ];
 
-  
+// Lấy giả trị của các bộ lọc
 function filterProducts() {
 const selectedCategory = categoryFilter.value;
 const selectedColor = colorFilter.value;
 const selectedPrice = priceFilter.value;
 const selectedTag = tagFilter.value;
-const selectedBrand = brandFilter.value; // Lấy giá trị của bộ lọc thương hiệu
+const selectedBrand = brandFilter.value; 
 const selectedSort = sortFilter.value;
 
 productData.forEach((product) => {
@@ -1368,6 +1479,65 @@ productData.forEach((product) => container.appendChild(product.element));
   
     // Thêm sự kiện cho nút áp dụng
     applyFiltersBtn.addEventListener('click', filterProducts);
+
+
+//====== HIỂN THỊ ĐÚNG SỐ LƯỢNG SẢN PHẨM =====//
+
+// Hàm lọc sản phẩm theo các tiêu chí đã chọn
+function filterProducts() {
+  // Lấy giá trị từ các bộ lọc (category, color, price, tag, brand, sort)
+  const selectedCategory = categoryFilter.value;
+  const selectedColor = colorFilter.value;
+  const selectedPrice = priceFilter.value;
+  const selectedTag = tagFilter.value;
+  const selectedBrand = brandFilter.value;
+  const selectedSort = sortFilter.value;
+
+  // Biến dùng để đếm số lượng sản phẩm hiển thị
+  let visibleCount = 0;
+
+  // Duyệt qua từng sản phẩm trong dữ liệu sản phẩm (productData)
+  productData.forEach((product) => {
+    // Destructuring để lấy các thông tin từ đối tượng sản phẩm
+    const { element, category, color, price, tag, brand, createdAt } = product;
+
+    // Kiểm tra các tiêu chí lọc (category, color, price, tag, brand)
+    const categoryMatch =
+      selectedCategory === 'all' || selectedCategory === category; // Kiểm tra category
+    const colorMatch = selectedColor === 'all' || selectedColor === color; // Kiểm tra color
+    const priceMatch =
+      selectedPrice === 'all' ||
+      (selectedPrice === 'low-to-high' && price <= 50.000) || // Kiểm tra price (low-to-high)
+      (selectedPrice === 'high-to-low' && price > 50.000); // Kiểm tra price (high-to-low)
+    const tagMatch = selectedTag === 'all' || selectedTag === tag; // Kiểm tra tag
+    const brandMatch = selectedBrand === 'all' || selectedBrand === brand; // Kiểm tra brand
+
+    // Kiểm tra tất cả các tiêu chí lọc
+    // Nếu tất cả các tiêu chí đều đúng, hiển thị sản phẩm, ngược lại ẩn đi
+    if (categoryMatch && colorMatch && priceMatch && tagMatch && brandMatch) {
+      element.style.display = 'block'; // Hiển thị sản phẩm
+      visibleCount++; // Tăng số lượng sản phẩm hiển thị
+    } else {
+      element.style.display = 'none'; // Ẩn sản phẩm
+    }
+  });
+
+  // Sắp xếp sản phẩm theo thứ tự (mới nhất hoặc cũ nhất) dựa trên ngày tạo (createdAt)
+  if (selectedSort === 'newest') {
+    productData.sort((a, b) => b.createdAt - a.createdAt); // Sắp xếp mới nhất trước
+  } else if (selectedSort === 'oldest') {
+    productData.sort((a, b) => a.createdAt - b.createdAt); // Sắp xếp cũ nhất trước
+  }
+
+  // Cập nhật lại thứ tự của các sản phẩm trong DOM (sắp xếp lại theo thứ tự đã chọn)
+  const container = document.querySelector('.products__container'); // Lấy phần tử chứa sản phẩm
+  productData.forEach((product) => container.appendChild(product.element)); // Thêm lại sản phẩm vào container
+
+  // Cập nhật số lượng sản phẩm hiển thị vào phần tử `.total__products`
+  const totalProductsText = document.querySelector('.total__products span'); // Lấy phần tử hiển thị tổng số sản phẩm
+  totalProductsText.textContent = visibleCount; // Cập nhật số lượng sản phẩm hiển thị
+}
+
 
 
 //========HIỆN POPUP KHI NHẤN VÀO XEM TRƯỚC========//
