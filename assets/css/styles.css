@@ -1103,46 +1103,40 @@ body {
     left: 2rem;
     width: 80%;
   }
+/*Định dạng Swpier*/
 }
-/* Swiper class */
-
-
-.swiper {
-  overflow: initial;
+swiper {
+  overflow: initial; /* Cho phép nội dung tràn ra ngoài vùng hiển thị */
 }
-
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  content: "";
+  content: ""; /* Xóa nội dung mặc định của các nút */
 }
-
 
 .swiper-button-next,
 .swiper-button-prev {
-  top: -1.875rem;
-  background-color: var(--first-color-alt);
-  border: 1px solid var(--border-color);
-  width: 30px;
-  height: 30px;
-  color: var(--first-color);
-  font-size: var(--tiny-font-size);
-  border-radius: 50%;
+  top: -1.875rem; /* Đặt vị trí của nút */
+  background-color: var(--first-color-alt); /* Màu nền nút */
+  border: 1px solid var(--border-color); /* Viền nút */
+  width: 30px; /* Chiều rộng nút */
+  height: 30px; /* Chiều cao nút */
+  color: var(--first-color); /* Màu biểu tượng */
+  font-size: var(--tiny-font-size); /* Kích thước biểu tượng */
+  border-radius: 50%; /* Tạo hình tròn */
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
 
-
 .swiper-button-prev {
-  left: initial;
-  right: 2.5rem;
+  left: initial; /* Xóa vị trí trái mặc định */
+  right: 2.5rem; /* Căn chỉnh nút sang phải */
 }
 
-
 .swiper-button-next {
-  right: 0;
+  right: 0; /* Đặt nút ở vị trí phải */
 }
 
 /*=============== PRODUCTS ===============*/
