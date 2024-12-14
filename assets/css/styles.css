@@ -1685,127 +1685,126 @@ swiper {
 /*============== ĐÁNH GIÁ ===============*/
 
 #customer-reviews .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 1200px;     /* Giới hạn chiều rộng tối đa là 1200px */
+  margin: 0 auto;        /* Căn giữa container */
+  padding: 20px;         /* Thêm padding bên trong */
 }
 
 /* Swiper Styles */
 #customer-reviews .comments__container {
-  overflow: hidden;
-  position: relative;
-  padding: 20px 0;
+  overflow: hidden;      /* Ẩn phần tràn ra ngoài */
+  position: relative;    /* Đặt vị trí tương đối để chứa swiper */
+  padding: 20px 0;       /* Thêm padding trên và dưới */
 }
 
 #customer-reviews .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  display: flex;         /* Dùng flexbox để căn chỉnh */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center;   /* Căn giữa theo chiều dọc */
+  width: 100%;           /* Chiếm toàn bộ chiều rộng */
 }
 
 #customer-reviews .comment {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  display: flex;
-  align-items: center;
-  max-width: 900px;
-  width: 100%;
-  padding: 20px;
-  transition: transform 0.3s ease;
+  background-color: white;             /* Nền màu trắng */
+  border-radius: 10px;                 /* Bo tròn góc */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Đổ bóng nhẹ */
+  display: flex;                       /* Dùng flexbox để xếp nội dung */
+  align-items: center;                 /* Căn giữa theo chiều dọc */
+  max-width: 900px;                    /* Chiều rộng tối đa 900px */
+  width: 100%;                         /* Chiếm toàn bộ chiều rộng có thể */
+  padding: 20px;                       /* Căn chỉnh padding */
+  transition: transform 0.3s ease;     /* Hiệu ứng chuyển đổi */
 }
 
 .comment:hover {
-  transform: scale(1.05);
+  transform: scale(1.05);      /* Phóng to nhẹ khi hover */
 }
 
 .comment-image {
-  flex: 0 0 30%;         /* Chiếm đúng 50% chiều rộng */
-  max-width: 30%;        /* Giới hạn tối đa 50% */
+  flex: 0 0 30%;         /* Chiếm đúng 30% chiều rộng */
+  max-width: 30%;        /* Giới hạn tối đa 30% */
 }
 
 .comment-image img {
-  width: 100%;           /* Ảnh tự co dãn để đầy phần container */
-  height: auto;
-  border-radius: 10px;
+  width: 100%;           /* Ảnh tự co giãn đầy đủ container */
+  height: auto;          /* Chiều cao tự động */
+  border-radius: 10px;   /* Bo tròn góc ảnh */
 }
 
 .comment-text {
-  flex: 0 0 70%;         /* Chiếm đúng 50% chiều rộng */
-  max-width: 70%;        /* Giới hạn tối đa 50% */
-  padding-right: 4rem;    /* Tạo khoảng cách giữa text và ảnh */
-  text-align: right;
+  flex: 0 0 70%;         /* Chiếm đúng 70% chiều rộng */
+  max-width: 70%;        /* Giới hạn tối đa 70% */
+  padding-right: 4rem;   /* Tạo khoảng cách giữa text và ảnh */
+  text-align: right;     /* Căn phải nội dung */
 }
 
 .comment-text pre {
-  white-space: pre-wrap;
-  font-family: Arial, sans-serif;
-  margin-bottom: 10px;
-  font-size:large;
+  white-space: pre-wrap;  /* Xuống dòng tự động khi cần thiết */
+  font-family: Arial, sans-serif; /* Font chữ Arial */
+  margin-bottom: 10px;    /* Khoảng cách dưới */
+  font-size: large;       /* Cỡ chữ lớn */
 }
 
 .stars {
-  color: #ffc107;
-  font-size: 1.2rem;
+  color: #ffc107;         /* Màu vàng cho sao đánh giá */
+  font-size: 1.2rem;      /* Kích thước chữ 1.2rem */
 }
 
 /* Swiper Pagination */
 .swiper-pagination {
-  position: relative;
-  margin-top: 30px;
-  text-align: center;
+  position: relative;     /* Vị trí tương đối */
+  margin-top: 30px;       /* Khoảng cách trên 30px */
+  text-align: center;     /* Căn giữa */
 }
 
 .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #ff6aa7;
-  opacity: 0.4;
-  margin: 0 5px;
+  width: 12px;            /* Độ rộng của bullet */
+  height: 12px;           /* Chiều cao của bullet */
+  background-color: #ff6aa7; /* Màu hồng */
+  opacity: 0.4;           /* Độ mờ 40% */
+  margin: 0 5px;          /* Khoảng cách giữa các bullet */
 }
 
 .swiper-pagination-bullet-active {
-  opacity: 1;
+  opacity: 1;          /* Chỉnh cho phần bullet rõ hơn */
 }
 
 /* Comment Form */
 .add-comment {
-  max-width: 600px;
-  margin: 5px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  max-width: 600px;       /* Giới hạn chiều rộng tối đa 600px */
+  margin: 5px auto;       /* Căn giữa và thêm margin trên dưới 5px */
+  display: flex;          /* Dùng flexbox */
+  flex-direction: column; /* Xếp dọc các phần tử */
+  align-items: flex-start; /* Căn lề trái cho các phần tử */
 }
 
 .add-comment textarea {
-  width: 100%;
-  min-height: 100px;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  resize: vertical;
+  width: 100%;            /* Chiếm toàn bộ chiều rộng container */
+  min-height: 100px;      /* Chiều cao tối thiểu 100px */
+  padding: 10px;          /* Căn chỉnh padding */
+  margin-bottom: 15px;    /* Khoảng cách dưới */
+  border: 1px solid #ddd; /* Viền màu xám nhạt */
+  border-radius: 5px;     /* Bo tròn góc */
+  resize: vertical;       /* Cho phép thay đổi chiều cao dọc */
 }
 
 .add-comment button {
-  display: inline-block;
-  background-color: var(--first-color);
-  border: 2px solid var(--first-color);
-  color: var(--body-color);
-  padding-inline: 1.75rem;
-  /* padding: 0.75rem 1.75rem; */
-  height: 49px;
-  line-height: 43px;
-  font-family: var(--second-font);
-  font-size: var(--small-font-size);
-  font-weight: var(--weight-700);
-  border-radius: 0.25rem;
+ display: inline-block;                      /* Hiển thị dạng inline-block */
+  background-color: var(--first-color);       /* Màu nền lấy từ biến */
+  border: 2px solid var(--first-color);       /* Viền cùng màu với nền */
+  color: var(--body-color);                   /* Màu chữ lấy từ biến */
+  padding-inline: 1.75rem;                    /* Padding ngang */
+  height: 49px;                               /* Chiều cao nút */
+  line-height: 43px;                          /* Dòng chữ căn giữa theo chiều cao */
+  font-family: var(--second-font);            /* Font chữ lấy từ biến */
+  font-size: var(--small-font-size);          /* Cỡ chữ nhỏ */
+  font-weight: var(--weight-700);             /* Độ đậm của chữ */
+  border-radius: 0.25rem;                     /* Bo tròn góc */
   -webkit-border-radius: 0.25rem;
   -moz-border-radius: 0.25rem;
   -ms-border-radius: 0.25rem;
   -o-border-radius: 0.25rem;
-  transition: all 0.4s var(--transition);
+  transition: all 0.4s var(--transition);    /* Hiệu ứng chuyển đổi */
   -webkit-transition: all 0.4s var(--transition);
   -moz-transition: all 0.4s var(--transition);
   -ms-transition: all 0.4s var(--transition);
@@ -1814,8 +1813,8 @@ swiper {
 
 
 .add-comment button:hover {
-  background-color: transparent;
-  color: var(--first-color);
+ background-color: transparent;              /* Làm trong suốt nền khi hover */
+  color: var(--first-color);                  /* Đổi màu chữ khi hover */
 
 }
 
@@ -1899,70 +1898,70 @@ swiper {
 }
 /* Định dạng các box thông tin thành viên */
 .team-section {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  flex-wrap: wrap;
+  display: flex;              /* Sử dụng flexbox để xếp các phần tử theo hàng ngang */
+  justify-content: center;    /* Căn giữa các phần tử theo chiều ngang */
+  gap: 2rem;                  /* Khoảng cách giữa các phần tử là 2rem */
+  padding: 2rem;              /* Padding xung quanh phần section là 2rem */
+  flex-wrap: wrap;            /* Cho phép các phần tử xuống hàng khi không đủ không gian */
 }
 
 
 .team-member {
-  background: #fff;
-  border-radius: 50px;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  padding: 1.5rem;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
-  transition: transform 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+  background: #fff;                       /* Màu nền trắng */
+  border-radius: 50px;                    /* Bo tròn góc với bán kính 50px */
+  -moz-border-radius: 50px;               /* Hỗ trợ cho Firefox */
+  -webkit-border-radius: 50px;            /* Hỗ trợ cho Safari và Chrome */
+  padding: 1.5rem;                        /* Padding bên trong box */
+  width: 250px;                           /* Chiều rộng cố định là 250px */
+  text-align: center;                     /* Căn giữa nội dung theo chiều ngang */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  transition: transform 0.3s, box-shadow 0.3s; /* Hiệu ứng chuyển đổi cho transform và box-shadow */
+  transition: background-color 0.3s ease;     /* Hiệu ứng chuyển màu nền */
+  transition: transform 0.3s ease;            /* Hiệu ứng chuyển động */
 }
 .team-member:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);             /* Di chuyển box lên 10px khi hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);/* Tăng độ đổ bóng khi hover */
   background-color: #fe96c2    ; /* Màu nền xanh nhạt khi hover */
   transform: rotate(5deg); /* Xoay nhẹ 5 độ khi hover */
 }
 
 .member-img {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 1rem;
-  border-radius: 50%;
-  overflow: hidden;
+  width: 120px;                /* Chiều rộng khung ảnh */
+  height: 120px;               /* Chiều cao khung ảnh */
+  margin: 0 auto 1rem;         /* Căn giữa khung ảnh và thêm margin dưới 1rem */
+  border-radius: 50%;          /* Bo tròn hình ảnh thành hình tròn */
+  overflow: hidden;            /* Ẩn phần thừa của ảnh */
 }
 
 .member-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+   width: 100%;                 /* Ảnh tự co giãn đầy khung */
+  height: 100%;                /* Chiều cao đầy khung */
+  object-fit: cover;           /* Cắt ảnh để vừa với khung */
 }
 
 .team-member h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: #2b2929;
-  margin-bottom: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif; /* Font chữ */
+  font-weight: bold;                         /* Chữ đậm */
+  font-size: 1.5rem;                         /* Kích thước chữ 1.5rem */
+  color: #2b2929;                            /* Màu chữ xám đậm */
+  margin-bottom: 0.5rem;                     /* Khoảng cách dưới 0.5rem */
 }
 /* Tăng kích cỡ chữ khi hover */
 .team-member:hover h2 {
-  transform: scale(1.3);
+  transform: scale(1.3);            /* Phóng to chữ khi hover */
 }
 .role {
-  font-size: 1rem;
-  color: #4f4a4a;
-  margin-bottom: 1rem;
-  font-weight: bold;
+  font-size: 1rem;              /* Kích thước chữ 1rem */
+  color: #4f4a4a;               /* Màu chữ xám nhạt */
+  margin-bottom: 1rem;          /* Khoảng cách dưới 1rem */
+  font-weight: bold;            /* Chữ đậm */
 }
 .description {
-  font-size: 0.9rem;
-  color: #666;
-  padding: 0 1rem;
-  line-height: 1.4;
+  font-size: 0.9rem;            /* Kích thước chữ 0.9rem */
+  color: #666;                  /* Màu chữ xám nhạt */
+  padding: 0 1rem;              /* Padding ngang 1rem */
+  line-height: 1.4;             /* Giãn dòng 1.4 */
 }
 
 
@@ -1977,8 +1976,6 @@ swiper {
   color: #ffb5d2; /* Màu cho icon */
   font-size: 0.8em; /* Kích thước icon nhỏ hơn */
 }
-
-
 
 /*=============== ĐĂNG KÝ NHẬN THƯ ===============*/
 /* Cấu hình cho phần newsletter */
