@@ -497,183 +497,188 @@ body {
 
 /*=============== SLIDER GIẢM GIÁ ===============*/
 .home__slider {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 600px;
-  background-color: #fbecf3;
-  z-index: 1;
+  position: relative; /* Giữ cho các phần tử con được định vị tương đối với phần này */
+  overflow: hidden;   /* Ẩn bất kỳ nội dung nào vượt ra ngoài phạm vi slider */
+  width: 100%;        /* Chiếm toàn bộ chiều ngang */
+  height: 600px;      /* Chiều cao cố định cho slider */
+  background-color: #fbecf3; /* Màu nền hồng nhạt cho slider */
+  z-index: 1;         /* Đảm bảo slider nằm dưới các phần tử có z-index lớn hơn */
 }
 .home.section {
-  padding: 25px 0px;
+  padding: 25px 0px;    /* Tạo khoảng cách dọc trên và dưới */
 }
+/* Định dạng cho từng slide trong slider */
 .home__slide {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  width: 100%;
+  display: none;      /* Ẩn slide mặc định */
+  opacity: 0;         /* Ẩn hoàn toàn slide */
+  transition: opacity 0.5s ease-in-out; /* Hiệu ứng chuyển đổi độ mờ mượt mà trong 0.5 giây */
+  width: 100%;        /* Chiếm toàn bộ chiều ngang */
 }
-
+/* Hiển thị slide khi được kích hoạt */
 .home__slide.active {
-  display: block;
-  opacity: 1;
+  display: block;     /* Hiển thị slide */
+  opacity: 1;         /* Làm slide hiện ra hoàn toàn */
 }
 
 .home__container {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  gap: 2rem;
-  text-align: center;
-  position: relative; /* Đảm bảo ảnh nằm dưới nội dung */
+  display: grid;            /* Sử dụng layout dạng grid */
+  grid-template-columns: 1fr; /* Chỉ có 1 cột chiếm toàn bộ không gian */
+  align-items: center;      /* Canh giữa các phần tử theo chiều dọc */
+  gap: 2rem;                /* Khoảng cách giữa các phần tử con */
+  text-align: center;       /* Căn giữa văn bản */
+  position: relative;       /* Giữ vị trí tương đối để các phần tử chồng lên nhau */
 }
-
+/* Định dạng nội dung bên trong mỗi slide */
 .home__content {
-  max-width: 600px;
-  z-index: 3; /* Đảm bảo nội dung nằm trên ảnh */
-  position: relative;
-  display: block;
-  padding: 10rem 5rem;
+  max-width: 600px;         /* Giới hạn chiều rộng tối đa của nội dung */
+  z-index: 3;               /* Đảm bảo nội dung nằm trên ảnh nền */
+  position: relative;       /* Đảm bảo vị trí tương đối */
+  display: block;           
+  padding: 10rem 5rem;      /* Khoảng cách lớn xung quanh nội dung */
 }
 
 .home__subtitle {
-  display: block;
-  color: var(--first-color);
-  margin-bottom: 0.75rem;
-  font-size: 30px;
-  font-weight: var(--font-medium);
+  display: block;           
+  color: var(--first-color); /* Sử dụng màu được định sẵn */
+  margin-bottom: 0.75rem;   /* Khoảng cách phía dưới phụ đề */
+  font-size: 30px;          /* Kích thước chữ */
+  font-weight: var(--font-medium); /* Độ đậm chữ */
 }
 
 .home__title {
-  font-size: 30px;
-  color: var(--title-color);
-  margin-bottom: 2rem; 
+  font-size: 30px;            /* Kích thước chữ */
+  color: var(--title-color);  /* Sử dụng màu được định sẵn */
+  margin-bottom: 2rem;       /* Khoảng cách dưới tiêu đề */
 }
 
 /* Hiệu ứng lấp lánh với linear gradient */
 @keyframes glitterEffect {
+  /* Trạng thái ban đầu của hiệu ứng */
   0% {
     background: linear-gradient(45deg, #ff6aa7, #f7b731, #8e44ad); /* Sử dụng gradient với 3 màu */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; /* Làm cho chữ trong suốt để hiệu ứng gradient hiển thị */
-    text-shadow: 0 0 5px #ff6aa7, 0 0 20px #ff6aa7, 0 0 30px #f7b731;
-    transform: scale(1) rotate(0deg);
+    -webkit-background-clip: text;    /* Hiển thị gradient chỉ trong phần văn bản */
+    background-clip: text;            /* Gradient chỉ áp dụng cho văn bản */
+    color: transparent;               /* Làm cho chữ trong suốt để hiệu ứng gradient hiển thị */
+    text-shadow: 0 0 5px #ff6aa7, 0 0 20px #ff6aa7, 0 0 30px #f7b731;    /* Tạo ánh sáng mờ xung quanh chữ */
+    transform: scale(1) rotate(0deg); /* Giữ kích thước và góc xoay ban đầu */
   }
+  /* Hiệu ứng ở 25% thời gian animation */
   25% {
-    background: linear-gradient(45deg, #8e44ad, #f7b731, #ff6aa7); /* Đổi gradient để tạo hiệu ứng chuyển màu */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 15px #ff6aa7, 0 0 30px #f7b731, 0 0 50px #8e44ad;
-    transform: scale(1.1) rotate(10deg);
+    background: linear-gradient(45deg, #8e44ad, #f7b731, #ff6aa7); /* Đổi màu gradient (tím, vàng, hồng) */
+    -webkit-background-clip: text;    /* Hiển thị gradient chỉ trong phần văn bản */
+    background-clip: text;            /* Gradient chỉ áp dụng cho văn bản */
+    color: transparent;               /* Làm cho chữ trong suốt để hiệu ứng gradient hiển thị */
+    text-shadow: 0 0 15px #ff6aa7, 0 0 30px #f7b731, 0 0 50px #8e44ad; /* Tăng cường ánh sáng mờ xung quanh */
+    transform: scale(1.1) rotate(10deg); /* Phóng to chữ và xoay 10 độ */
   }
+ /* Hiệu ứng ở 50% thời gian animation */
   50% {
-    background: linear-gradient(45deg, #f7b731, #ff6aa7, #8e44ad); /* Lặp lại gradient */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 25px #f7b731, 0 0 50px #8e44ad, 0 0 60px #ff6aa7;
-    transform: scale(1.2) rotate(-10deg);
+    background: linear-gradient(45deg, #f7b731, #ff6aa7, #8e44ad); /* Gradient (vàng, hồng, tím) */
+    -webkit-background-clip: text;    /* Hiển thị gradient chỉ trong phần văn bản */
+    background-clip: text;            /* Gradient chỉ áp dụng cho văn bản */
+    color: transparent;               /* Làm cho chữ trong suốt để hiệu ứng gradient hiển thị */
+    text-shadow: 0 0 25px #f7b731, 0 0 50px #8e44ad, 0 0 60px #ff6aa7; /* Ánh sáng mạnh hơn */
+    transform: scale(1.2) rotate(-10deg); /* Phóng to chữ thêm và xoay -10 độ */
   }
+   /* Hiệu ứng ở 75% thời gian animation */
   75% {
-    background: linear-gradient(45deg, #ff6aa7, #8e44ad, #f7b731); /* Màu gradient thay đổi thêm một lần nữa */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 35px #8e44ad, 0 0 70px #f7b731, 0 0 80px #ff6aa7;
-    transform: scale(1.1) rotate(15deg);
+    background: linear-gradient(45deg, #ff6aa7, #8e44ad, #f7b731); /* Gradient (hồng, tím, vàng) */
+    -webkit-background-clip: text;    /* Hiển thị gradient chỉ trong phần văn bản */
+    background-clip: text;            /* Gradient chỉ áp dụng cho văn bản */
+    color: transparent;               /* Làm cho chữ trong suốt để hiệu ứng gradient hiển thị */
+    text-shadow: 0 0 35px #8e44ad, 0 0 70px #f7b731, 0 0 80px #ff6aa7; /* Hiệu ứng sáng mạnh nhất */
+    transform: scale(1.1) rotate(15deg); /* Phóng to chữ và xoay 15 độ */
   }
+
+  /* Trạng thái kết thúc, quay lại như ban đầu */
   100% {
-    background: linear-gradient(45deg, #ff6aa7, #f7b731, #8e44ad); /* Quay lại trạng thái ban đầu */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 5px #ff6aa7, 0 0 20px #f7b731, 0 0 30px #8e44ad;
-    transform: scale(1) rotate(0deg);
+    background: linear-gradient(45deg, #ff6aa7, #f7b731, #8e44ad); /* Quay lại gradient ban đầu */
+    -webkit-background-clip: text;    /* Hiển thị gradient chỉ trong phần văn bản */
+    background-clip: text;            /* Gradient chỉ áp dụng cho văn bản */
+    color: transparent;               /* Làm cho chữ trong suốt để hiệu ứng gradient hiển thị */
+    text-shadow: 0 0 5px #ff6aa7, 0 0 20px #f7b731, 0 0 30px #8e44ad; /* Ánh sáng mờ nhẹ như lúc đầu */
+    transform: scale(1) rotate(0deg); /* Kích thước và góc xoay trở về trạng thái ban đầu */
   }
 }
 
 /* Áp dụng hiệu ứng lấp lánh với gradient cho span trong title */
 .home__title span {
-  font-size: 40px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  white-space: nowrap;
+  font-size: 40px;                /* Cỡ chữ lớn để làm nổi bật span */
+  font-weight: bold;              /* Chữ đậm để hiệu ứng lấp lánh rõ ràng hơn */
+  letter-spacing: 1px;            /* Tăng khoảng cách giữa các ký tự */
+  white-space: nowrap;            /* Giữ nội dung span trên một dòng, không xuống dòng */
   animation: glitterEffect 2s infinite; /* Chạy liên tục với thời gian 2s */
 }
-
-
 .home__description {
-  margin-bottom: 1.5rem;
-  color: var(--text-color);
+  margin-bottom: 1.5rem;         /* Khoảng cách dưới đoạn mô tả để tạo khoảng trống */
+  color: var(--text-color);      /* Màu chữ theo định dạng có sẵn */
 }
-
 
 /*==== HIỆU ỨNG SLIDE IN KHI MỚI VÀO ====*/
 /* Hiệu ứng lùa vào từ bên trái */
 @keyframes slideInLeft {
   from {
-    transform: translateX(-100%);
-    opacity: 0;
+    transform: translateX(-100%); /* Di chuyển phần tử từ ngoài màn hình bên trái */
+    opacity: 0;                   /* Phần tử trong suốt */
   }
   to {
-    transform: translateX(0);
-    opacity: 1;
+    transform: translateX(0);     /* Đưa phần tử về vị trí gốc */
+    opacity: 1;                   /* Hiển thị phần tử */
   }
 }
 
 /* Hiệu ứng lùa vào từ bên phải */
 @keyframes slideInRight {
   from {
-    transform: translateX(100%);
-    opacity: 0;
+    transform: translateX(100%);  /* Di chuyển phần tử từ ngoài màn hình bên phải */
+    opacity: 0;                   /* Phần tử trong suốt */
   }
   to {
-    transform: translateX(0);
-    opacity: 1;
+    transform: translateX(0);     /* Đưa phần tử về vị trí gốc */
+    opacity: 1;                   /* Hiển thị phần tử */
   }
 }
 /* Hiệu ứng lùa vào từ dưới */
 @keyframes slideInUp {
   from {
-    transform: translateY(100%);
-    opacity: 0;
+    transform: translateY(100%);  /* Di chuyển phần tử từ phía dưới màn hình */
+    opacity: 0;                   /* Phần tử trong suốt */
   }
   to {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translateY(0);     /* Đưa phần tử về vị trí gốc */
+    opacity: 1;                   /* Hiển thị phần tử */
   }
 }
 
 /* Áp dụng hiệu ứng cho từng phần */
+/* Áp dụng hiệu ứng trượt từ trái cho phụ đề */
 .home__subtitle {
-  animation: slideInLeft 1s ease-in-out;
+  animation: slideInLeft 1s ease-in-out;           /* Tạo hiệu ứng trượt trái với easing bằng 1 */
 }
 
+/* Áp dụng hiệu ứng trượt từ phải cho tiêu đề */
 .home__title {
-  animation: slideInRight 1s ease-in-out;
-  animation-delay: 0.2s; /* Chậm hơn một chút */
+  animation: slideInRight 1s ease-in-out;          /* Tạo hiệu ứng trượt phải với easing bằng 1 */
+  animation-delay: 0.2s;                           /* Trễ 0.2 giây để tạo hiệu ứng tuần tự */
 }
 
+/* Áp dụng hiệu ứng trượt từ dưới cho phần mô tả */
 .home__description {
-  animation: slideInUp 1s ease-in-out;
-  animation-delay: 0.4s; /* Chậm hơn nữa */
+  animation: slideInUp 1s ease-in-out;            /* Tạo hiệu ứng trượt từ dưới với easing bằng 1 */
+  animation-delay: 0.4s;                           /* Trễ 0.4 giây để xuất hiện sau tiêu đề */
 }
 
 
-
-
-
+/*Định dạng phần ảnh trong slider*/
 .home__img {
-  width: 600px;
-  height: 600px; /* Đảm bảo giữ tỷ lệ khung hình */
-  position: absolute; /* Đặt ảnh ở lớp dưới */
-  top: 0; /* Đặt ảnh bắt đầu từ vị trí trên cùng */
-  right: 20px; /* Đặt ảnh sát mép phải của phần tử cha */
-  bottom: 0;
-  z-index: 2; /* Đảm bảo ảnh nằm dưới nội dung */
-  transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng khi zoom */
+  width: 600px;                /* Đặt kích thước cố định cho ảnh */
+  height: 600px;               /* Đặt kích thước cố định cho ảnh */
+  position: absolute;          /* Đặt ảnh trong vị trí tuyệt đối so với phần tử cha */
+  top: 0;                      /* Căn ảnh từ đỉnh */
+  right: 20px;                 /* Cách mép phải 20px */
+  bottom: 0;                   /* Căn đáy */
+  z-index: 2;                  /* Đảm bảo ảnh nằm dưới nội dung */
+  transition: transform 0.3s ease-in-out; /* Hiệu ứng chuyển đổi khi zoom */
 }
 
 /* Thêm hiệu ứng zoom khi hover vào ảnh */
@@ -681,59 +686,59 @@ body {
   transform: scale(1.1); /* Tăng kích thước ảnh lên 10% khi hover */
 }
 
-
+/* Phần định dạng nút điều hướng slider */
 .home__navigation {
-  position: absolute;
-  top: 50%;
+  position: absolute;          /* Vị trí tuyệt đối trong phần slider */
+  top: 50%;                    /* Căn giữa chiều dọc */
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
+  display: flex;               /* Sử dụng flexbox để căn chỉnh */
+  justify-content: space-between; /* Đẩy các nút ra hai bên */
+  transform: translateY(-50%); /* Căn giữa dọc */
 }
 
 .home__prev-btn,
 .home__next-btn {
-  background-color: rgba(0,0,0,0.5);
-  color: white;
+ background-color: rgba(0, 0, 0, 0.5); /* Nền đen mờ */
+  color: white;                         /* Màu chữ trắng */
   padding: 10px 15px;
-  cursor: pointer;
-  user-select: none;
-  transition: background-color 0.3s ease;
-  display: none;
+  cursor: pointer;                      /* Con trỏ chuột dạng pointer khi hover */
+  user-select: none;                    /* Ngăn người dùng chọn nội dung */
+  transition: background-color 0.3s ease; /* Hiệu ứng màu nền khi hover */
+  display: none;                        /* Ẩn các nút điều hướng mặc định */
 }
 
 .home__prev-btn:hover,
 .home__next-btn:hover {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.7);    /* Làm nền đen đậm hơn khi hover */
 }
 
 .home__pagination {
   display: flex;
-  flex-direction: column; /* Xếp các dot theo chiều dọc */
-  justify-content: center;
-  align-items: flex-end; /* Căn phải các dot */
-  position: absolute; /* Đặt pagination ở vị trí tuyệt đối */
-  right: 10px; /* Khoảng cách từ bên phải */
-  top: 50%; /* Đặt pagination giữa chiều dọc của ảnh */
-  transform: translateY(-50%); /* Căn giữa dọc */
-  z-index: 2; /* Đảm bảo pagination không bị che khuất bởi nội dung */
+  flex-direction: column;      /* Sắp xếp các dot theo chiều dọc */
+  justify-content: center;     /* Căn giữa dọc */
+  align-items: flex-end;       /* Căn các dot về phía bên phải */
+  position: absolute;          /* Vị trí tuyệt đối trong phần slider */
+  right: 10px;                 /* Cách mép phải 10px */
+  top: 50%;                    /* Căn giữa dọc */
+  transform: translateY(-50%); /* Căn chỉnh giữa theo chiều dọc */
+  z-index: 2;                  /* Đảm bảo pagination nằm trên ảnh */
 }
 
 .home__pagination-dot {
-  width: 14px;
-  height: 14px;
-  background-color: #ff6aa7;
-  opacity: 0.4;
-  border-radius: 50%;
-  margin: 5px 0; /* Khoảng cách giữa các dot */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  width: 14px;                 /* Đặt kích thước cố định cho dot */
+  height: 14px;                /* Đặt kích thước cố định cho dot */
+  background-color: #ff6aa7;   /* Màu dot hồng nhạt */
+  opacity: 0.4;                /* Dot mờ khi không active */
+  border-radius: 50%;          /* Dot hình tròn */
+  margin: 5px 0;               /* Khoảng cách dọc giữa các dot */
+  cursor: pointer;             /* Con trỏ chuột dạng pointer khi hover */
+  transition: background-color 0.3s ease; /* Hiệu ứng màu nền khi hover */
 }
-
+/* Dot active sẽ có độ đậm hơn */
 .home__pagination-dot.active {
-  opacity: 1;
-  width: 14px;
-  height: 14px;
+  opacity: 1;                  /* Chỉnh cho opacity đậm hơn so với khi chưa active */
+  width: 14px;                 /* Đặt kích thước cố định cho dot */
+  height: 14px;                /* Đặt kích thước cố định cho dot */
 }
 
 @media (min-width: 990px) and (max-width: 1120px){
