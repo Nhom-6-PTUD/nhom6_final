@@ -740,160 +740,126 @@ body {
   width: 14px;                 /* Đặt kích thước cố định cho dot */
   height: 14px;                /* Đặt kích thước cố định cho dot */
 }
-
+/*Media Query cho màn hình từ 990px đến 1120px */
 @media (min-width: 990px) and (max-width: 1120px){
-  .home__slider{
-    margin-top: 115px;
+  .home__slider {
+    margin-top: 115px; /* Điều chỉnh khoảng cách phía trên cho slider */
   }
-  .home__content{
-    align-content: left;
-  }
+
   .home__content {
-    max-width: 100%;        /* Nội dung chiếm toàn bộ chiều rộng */
-    padding: 12rem 5rem;     /* Giảm padding để phù hợp với tablet */
+    align-content: left;     /* Căn nội dung về phía trái */
+    max-width: 100%;         /* Nội dung chiếm toàn bộ chiều rộng */
+    padding: 12rem 5rem;     /* Giảm padding để phù hợp với kích thước màn hình */
   }
 
-
-
-
-  .home__subtitle{
-    text-align: left;
+  .home__subtitle {
+    text-align: left;        /* Căn phụ đề về bên trái */
   }
+
   .home__title {
-    text-align: left;  
-    font-size: 20px;
+    text-align: left;        /* Căn tiêu đề về bên trái */
+    font-size: 20px;         /* Giảm kích thước tiêu đề */
   }
-
 
   .home__title span {
-    color: var(--first-color);
-    font-size: 25px;
-    white-space: nowrap; /* Ngăn không cho văn bản xuống dòng */
+    color: var(--first-color); /* Sử dụng màu chính cho phần span */
+    font-size: 25px;           /* Kích thước chữ lớn hơn cho span */
+    white-space: nowrap;       /* Ngăn văn bản xuống dòng */
   }
 
-
-  .home__description{
-    text-align: left;
+  .home__description {
+    text-align: left;        /* Căn mô tả về bên trái */
   }
-
 
   .home__img {
-    display: block;         /* Hiển thị ảnh */
-    width: 500px;
-    height: 500px;
+    display: block;          /* Hiển thị ảnh */
+    width: 500px;            /* Chỉnh kích thước ảnh */
+    height: 500px;           /* Chỉnh kích thước ảnh */
     position: absolute;
     top: 55%;                /* Đặt ảnh từ giữa khung xuống */
-    left: 70%;               /* Căn giữa theo chiều ngang */
-    transform: translate(-50%, -50%); /* Căn giữa hoàn toàn theo cả hai chiều */
+    left: 70%;               /* Căn ảnh lệch về phía bên phải */
+    transform: translate(-50%, -50%); /* Căn giữa ảnh hoàn toàn */
   }
-
-
 }
 
 
 /* Khi màn hình từ 768px đến 1024px (tablet) */
 @media (min-width: 801px) and (max-width: 990px) {
-  .home__slider{
-    margin-top: 120px;
+  home__slider {
+    margin-top: 120px;       /* Điều chỉnh khoảng cách phía trên cho slider */
   }
-  .home__content{
-    align-content: left;
-  }
+
   .home__content {
-    max-width: 100%;        /* Nội dung chiếm toàn bộ chiều rộng */
+    align-content: left;     /* Căn nội dung về phía trái */
+    max-width: 100%;         /* Nội dung chiếm toàn bộ chiều rộng */
     padding: 12rem 5rem;     /* Giảm padding để phù hợp với tablet */
   }
-
-
-
-
-  .home__subtitle{
-    text-align: left;
+ .home__subtitle {
+    text-align: left;        /* Căn phụ đề về bên trái */
   }
+
   .home__title {
-    text-align: left;  
-    font-size: 20px;
+    text-align: left;        /* Căn tiêu đề về bên trái */
+    font-size: 20px;         /* Giảm kích thước tiêu đề */
   }
-
 
   .home__title span {
-    color: var(--first-color);
-    font-size: 20px;
+    color: var(--first-color); /* Màu sắc chính cho chữ span */
+    font-size: 20px;           /* Giảm kích thước chữ trong span */
   }
 
-
-  .home__description{
-    text-align: left;
+  .home__description {
+    text-align: left;        /* Căn mô tả về bên trái */
   }
-
 
   .home__img {
-    display: block;         /* Hiển thị ảnh */
-    width: 500px;
-    height: 500px;
+    display: block;          /* Hiển thị ảnh */
+    width: 500px;            /* Chỉnh kích thước ảnh cố định */
+    height: 500px;           /* Chỉnh kích thước ảnh cố định */
     position: absolute;
     top: 55%;                /* Đặt ảnh từ giữa khung xuống */
-    left: 70%;               /* Căn giữa theo chiều ngang */
-    transform: translate(-50%, -50%); /* Căn giữa hoàn toàn theo cả hai chiều */
+    left: 70%;               /* Ảnh lệch về bên phải */
+    transform: translate(-50%, -50%); /* Căn giữa hoàn toàn */
   }
 }
-
-
 
 
 /* Khi màn hình nhỏ hơn 768px (tablet dọc và mobile lớn) */
 @media (max-width: 800px) {
-  .home__slider{
-    margin-top: 120px;
+   .home__slider {
+    margin-top: 120px;       /* Tăng khoảng cách phía trên cho slider */
   }
+
   .home__content {
-    max-width: 100%;        /* Chiếm toàn bộ chiều rộng */
-    padding: 15rem 2rem;     /* Giảm padding */
-    text-align: center;     /* Căn giữa nội dung */
+    max-width: 100%;         /* Nội dung chiếm toàn bộ chiều rộng */
+    padding: 15rem 2rem;     /* Giảm padding cho tablet dọc và mobile lớn */
+    text-align: center;      /* Căn giữa nội dung */
   }
-
-
-
 
   .home__img {
-    display: none;          /* Ẩn ảnh khi màn hình nhỏ hơn 768px */
+    display: none;           /* Ẩn ảnh để tiết kiệm không gian */
   }
 }
-
-
-
 
 /* Khi màn hình nhỏ hơn 480px (mobile) */
 @media (max-width: 480px) {
   .home__content {
-    padding: 15rem 1rem;     /* Giảm padding hơn nữa cho mobile nhỏ */
-    text-align: center;     /* Căn giữa chữ */
+    padding: 15rem 1rem;     /* Giảm padding hơn nữa cho màn hình nhỏ */
+    text-align: center;      /* Căn giữa chữ */
   }
-
-
-
 
   .home__title {
-    font-size: 24px;        /* Giảm kích thước tiêu đề */
+    font-size: 24px;         /* Giảm kích thước tiêu đề cho mobile */
   }
-
-
-
 
   .home__title span {
-    font-size: 30px;        /* Giảm kích thước chữ trong span */
+    font-size: 30px;         /* Kích thước chữ lớn hơn cho span */
   }
-
-
-
 
   .home__description {
-    font-size: 0.9rem;      /* Giảm kích thước chữ mô tả */
+    font-size: 0.9rem;       /* Giảm kích thước chữ mô tả */
   }
 }
-
-
-
 
 /*=============== BUTTONS ===============*/
 .btn {
