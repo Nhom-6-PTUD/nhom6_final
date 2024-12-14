@@ -1139,23 +1139,23 @@ swiper {
   right: 0; /* Đặt nút ở vị trí phải */
 }
 
-/*=============== PRODUCTS ===============*/
+/*=============== PHẦN TRƯNG BÀY SẢN PHẨM ===============*/
 .tab__btns {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 2rem;
+  display: flex; /* Thiết lập các nút tab theo dạng flex */
+  flex-wrap: wrap; /* Cho phép các nút tab bọc vào dòng mới khi không đủ không gian */
+  gap: 0.75rem; /* Khoảng cách giữa các nút tab */
+  margin-bottom: 2rem; /* Khoảng cách phía dưới của các nút tab */
 }
 
 .tab__btn {
-  background-color: var(--container-color);
-  color: var(--title-color);
-  padding: 1rem 1.25rem 0.875rem;
-  font-family: var(--second-font);
-  font-size: var(--small-font-size);
-  font-weight: var(--weight-600);
-  cursor: pointer;
-  border-radius: 0.25rem;
+  background-color: var(--container-color); /* Màu nền của nút tab */
+  color: var(--title-color); /* Màu chữ của nút tab */
+  padding: 1rem 1.25rem 0.875rem; /* Padding của nút tab */
+  font-family: var(--second-font); /* Font chữ của nút tab */
+  font-size: var(--small-font-size); /* Kích thước chữ của nút tab */
+  font-weight: var(--weight-600); /* Độ đậm của chữ */
+  cursor: pointer; /* Con trỏ chuột khi hover vào nút tab */
+  border-radius: 0.25rem; /* Bo tròn các góc của nút tab */
   -webkit-border-radius: 0.25rem;
   -moz-border-radius: 0.25rem;
   -ms-border-radius: 0.25rem;
@@ -1163,13 +1163,13 @@ swiper {
 }
 
 .products__container {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* Chia sản phẩm thành 4 cột */
 }
 
 .product__item {
-  border: 1px solid var(--border-color);
-  border-radius: 1.5rem;
-  transition: all 0.2s var(--transition);
+  border: 1px solid var(--border-color); /* Viền của sản phẩm */
+  border-radius: 1.5rem; /* Bo tròn các góc của sản phẩm */
+  transition: all 0.2s var(--transition); /* Hiệu ứng chuyển tiếp khi hover */
   -webkit-border-radius: 1.5rem;
   -moz-border-radius: 1.5rem;
   -ms-border-radius: 1.5rem;
@@ -1181,18 +1181,18 @@ swiper {
 }
 
 .product__banner {
-  padding: 0.625rem 0.75rem 0.75rem;
+  padding: 0.625rem 0.75rem 0.75rem; /* Padding cho banner của sản phẩm */
 }
 
 .product__banner,
 .product__images {
-  position: relative;
+  position: relative; /* Đặt vị trí tương đối cho banner và hình ảnh sản phẩm */
 }
 
 .product__images {
-  display: block;
-  overflow: hidden;
-  border-radius: 1.25rem;
+  display: block; /* Chuyển hình ảnh thành block để dễ canh chỉnh */
+  overflow: hidden; /* Ẩn phần hình ảnh vượt quá biên */
+  border-radius: 1.25rem; /* Bo tròn các góc của hình ảnh */
   -webkit-border-radius: 1.25rem;
   -moz-border-radius: 1.25rem;
   -ms-border-radius: 1.25rem;
@@ -1200,8 +1200,8 @@ swiper {
 }
 
 .product__img {
-  vertical-align: middle;
-  transition: all 1.5s var(--transition);
+  vertical-align: middle; /* Căn giữa hình ảnh theo chiều dọc */
+  transition: all 1.5s var(--transition); /* Hiệu ứng chuyển tiếp cho hình ảnh */
   -webkit-transition: all 1.5s var(--transition);
   -moz-transition: all 1.5s var(--transition);
   -ms-transition: all 1.5s var(--transition);
@@ -1209,7 +1209,7 @@ swiper {
 }
 
 .product__item:hover .product__img {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Phóng to hình ảnh khi hover */
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
@@ -1217,19 +1217,19 @@ swiper {
 }
 
 .product__img.hover {
-  position: absolute;
+  position: absolute; /* Đặt hình ảnh ở vị trí tuyệt đối */
   top: 0;
   left: 0;
 }
 
 .product__actions {
-  position: absolute;
+  position: absolute; /* Đặt hành động vào vị trí tuyệt đối */
   top: 50%;
   left: 50%;
-  display: flex;
-  column-gap: 0.5rem;
-  transform: translate(-50%, -50%);
-  transition: all 0.2s var(--transition);
+  display: flex; /* Sử dụng flexbox cho các nút hành động */
+  column-gap: 0.5rem; /* Khoảng cách giữa các nút hành động */
+  transform: translate(-50%, -50%); /* Căn giữa các nút hành động */
+  transition: all 0.2s var(--transition); /* Hiệu ứng chuyển tiếp */
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -1241,16 +1241,16 @@ swiper {
 }
 
 .action__btn {
-  position: relative;
+  position: relative; /* Đặt nút hành động ở vị trí tương đối */
   width: 40px;
   height: 40px;
   line-height: 42px;
-  text-align: center;
-  background-color: var(--first-color-alt);
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
-  font-size: var(--small-font-size);
-  border-radius: 50%;
+  text-align: center; /* Căn giữa văn bản trong nút */
+  background-color: var(--first-color-alt); /* Màu nền của nút hành động */
+  border: 1px solid var(--border-color); /* Viền của nút hành động */
+  color: var(--text-color); /* Màu chữ của nút hành động */
+  font-size: var(--small-font-size); /* Kích thước chữ */
+  border-radius: 50%; /* Bo tròn hình dạng của nút thành hình tròn */
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1259,9 +1259,9 @@ swiper {
 
 .action__btn::before,
 .action__btn::after {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  position: absolute; /* Đặt vị trí tuyệt đối cho các phần tử trước và sau */
+  left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translateX(-50%); /* Căn giữa hoàn hảo */
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -1269,22 +1269,22 @@ swiper {
 }
 
 .action__btn::before {
-  content: "";
+  content: ""; /* Chèn một nội dung trống để tạo mũi tên */
   top: -2px;
-  border: 0.5rem solid transparent;
-  border-top-color: var(--first-color);
+  border: 0.5rem solid transparent; /* Tạo viền trong suốt */
+  border-top-color: var(--first-color); /* Màu của mũi tên */
 }
 
 .action__btn::after {
-  content: attr(aria-label);
+  content: attr(aria-label); /* Hiển thị văn bản từ thuộc tính aria-label */
   bottom: 100%;
-  background-color: var(--first-color);
-  color: var(--body-color);
-  font-size: var(--tiny-font-size);
-  white-space: nowrap;
-  padding-inline: 0.625rem;
-  line-height: 2.58;
-  border-radius: 0.25rem;
+  background-color: var(--first-color); /* Màu nền của phần tử sau */
+  color: var(--body-color); /* Màu chữ */
+  font-size: var(--tiny-font-size); /* Kích thước chữ */
+  white-space: nowrap; /* Ngăn chặn dòng bị xuống hàng */
+  padding-inline: 0.625rem; /* Khoảng cách hai bên */
+  line-height: 2.58; /* Căn chỉnh chiều cao của văn bản */
+  border-radius: 0.25rem; /* Bo tròn các góc */
   -webkit-border-radius: 0.25rem;
   -moz-border-radius: 0.25rem;
   -ms-border-radius: 0.25rem;
@@ -1292,103 +1292,103 @@ swiper {
 }
 
 .product__badge {
-  position: absolute;
+  position: absolute; /* Đặt badge vào vị trí tuyệt đối */
   left: 1.25rem;
   top: 1.25rem;
-  background-color: var(--first-color);
-  color: var(--body-color);
-  padding: 0.25rem 0.625rem;
-  font-size: var(--tiny-font-size);
-  border-radius: 2.5rem;
+  background-color: var(--first-color); /* Màu nền của badge */
+  color: var(--body-color); /* Màu chữ của badge */
+  padding: 0.25rem 0.625rem; /* Padding của badge */
+  font-size: var(--tiny-font-size); /* Kích thước chữ */
+  border-radius: 2.5rem; /* Bo tròn badge */
   -webkit-border-radius: 2.5rem;
   -moz-border-radius: 2.5rem;
   -ms-border-radius: 2.5rem;
   -o-border-radius: 2.5rem;
 }
 
+/* Các badge màu sắc khác nhau */
 .product__badge.light-pink {
-  background-color: hsl(341, 100%, 73%);
+  background-color: hsl(341, 100%, 73%); /* Màu hồng nhạt */
 }
 
 .product__badge.light-green {
-  background-color: hsl(155, 20%, 67%);
+  background-color: hsl(155, 20%, 67%); /* Màu xanh lá nhạt */
 }
 
 .product__badge.light-orange {
-  background-color: hsl(24, 100%, 73%);
+  background-color: hsl(24, 100%, 73%); /* Màu cam nhạt */
 }
 
 .product__badge.light-blue {
-  background-color: hsl(202, 53%, 76%);
+  background-color: hsl(202, 53%, 76%); /* Màu xanh dương nhạt */
 }
 
 .product__content {
-  padding: 0 1.25rem 1.125rem;
-  position: relative;
+  padding: 0 1.25rem 1.125rem; /* Padding cho phần nội dung sản phẩm */
+  position: relative; /* Đặt vị trí tương đối cho phần nội dung */
 }
 
 .product__category {
-  color: var(--text-color-light);
-  font-size: var(--smaller-font-size);
+  color: var(--text-color-light); /* Màu chữ cho danh mục sản phẩm */
+  font-size: var(--smaller-font-size); /* Kích thước chữ nhỏ */
 }
 
 .product__title {
-  font-size: var(--normal-font-size);
-  margin-block: 0.75rem 0.5rem;
+  font-size: var(--normal-font-size); /* Kích thước chữ của tiêu đề sản phẩm */
+  margin-block: 0.75rem 0.5rem; /* Khoảng cách trên và dưới của tiêu đề */
 }
 
 .product__rating {
-  color: hsl(42, 100%, 50%);
-  font-size: var(--smaller-font-size);
-  margin-bottom: 0.75rem;
+  color: hsl(42, 100%, 50%); /* Màu vàng cho đánh giá */
+  font-size: var(--smaller-font-size); /* Kích thước chữ của đánh giá */
+  margin-bottom: 0.75rem; /* Khoảng cách dưới của đánh giá */
 }
 
 .product__price .new__price {
-  font-size: var(--large-font-size);
+  font-size: var(--large-font-size); /* Kích thước chữ của giá mới */
 }
 
 .cart__btn {
-  position: absolute;
+  position: absolute; /* Đặt nút vào vị trí tuyệt đối */
   bottom: 1.6rem;
-  right: 1.25rem;
+  right: 1.25rem; /* Đặt nút ở góc phải dưới */
 }
 
-/* Active Tab */
+/*  Tab hoạt động */
 .tab__btn.active-tab {
-  color: var(--second-color); /* Màu chữ */
-  background-color: var(--first-color); /* Màu nền */
+  color: var(--second-color); /* Màu chữ khi tab được chọn */
+  background-color: var(--first-color); /* Màu nền khi tab được chọn */
 }
 
 /* Ẩn các tab không được kích hoạt */
 .tab__item:not(.active-tab) {
-  display: none;
+  display: none; /* Ẩn tab không được chọn */
 }
 
-
-/* Product Hover */
+/* Hiệu ứng hover sản phẩm */
 .product__img.hover,
 .product__actions,
 .action__btn::before,
 .action__btn::after,
 .product__item:hover .product__img.default {
-  opacity: 0;
+  opacity: 0; /* Ẩn các phần tử khi hover */
 }
 
 .product__item:hover {
-  box-shadow: 0 0 10px hsl(0, 0%, 0%, 0.1);
+  box-shadow: 0 0 10px hsl(0, 0%, 0%, 0.1); /* Hiệu ứng bóng khi hover */
 }
 
 .product__item:hover .product__img.hover,
 .product__item:hover .product__actions,
 .action__btn:hover::before,
 .action__btn:hover::after {
-  opacity: 1;
+  opacity: 1; /* Hiển thị lại khi hover */
 }
 
 .action__btn:hover::before,
 .action__btn:hover::after {
-  transform: translateX(-50%) translateY(-0.5rem);
-  transition: all 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  transform: translateX(-50%) translateY(-0.5rem); /* Di chuyển mũi tên khi hover */
+  transition: all 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24); /* Hiệu ứng chuyển tiếp */
   -webkit-transition: all 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
   -moz-transition: all 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
   -ms-transition: all 0.3s cubic-bezier(0.71, 1.7, 0.77, 1.24);
@@ -1400,10 +1400,11 @@ swiper {
 }
 
 .action__btn:hover {
-  background-color: var(--first-color);
-  border-color: var(--first-color);
-  color: var(--body-color);
+  background-color: var(--first-color); /* Màu nền khi hover */
+  border-color: var(--first-color); /* Màu viền khi hover */
+  color: var(--body-color); /* Màu chữ khi hover */
 }
+
 
 /*=============== DEALS ===============*/
 .deals__container {
