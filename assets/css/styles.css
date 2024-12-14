@@ -1523,18 +1523,17 @@ swiper {
   animation: sparkling 0.4s infinite alternate; /* Áp dụng hiệu ứng sparkling */
 }
 
-/* Hiệu ứng sparkling cho đếm ngược */
 @keyframes sparkling {
   0% {
-    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.8), 0 0 10px 5px rgba(255, 255, 255, 0.4); /* Áp dụng hiệu ứng bóng sáng */
+    box-shadow: 0 0 5px 2px rgba(255, 179, 223, 0.8), 0 0 10px 5px rgba(255, 255, 255, 0.4); /* Áp dụng hiệu ứng bóng sáng */
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 0 0 10px rgba(255, 255, 255, 0.4); /* Áp dụng hiệu ứng sáng cho chữ */
   }
   50% {
-    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.8), 0 0 20px 10px rgba(255, 255, 255, 0.6); /* Hiệu ứng bóng sáng mạnh hơn */
+    box-shadow: 0 0 10px 5px rgba(248, 124, 200, 0.8), 0 0 20px 10px rgba(255, 255, 255, 0.6); /* Hiệu ứng bóng sáng mạnh hơn */
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 0 0 25px rgba(255, 255, 255, 0.6); /* Hiệu ứng sáng mạnh hơn cho chữ */
   }
   100% {
-    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.4), 0 0 10px 5px rgba(255, 255, 255, 0.2); /* Áp dụng hiệu ứng bóng sáng yếu hơn */
+    box-shadow: 0 0 5px 2px rgba(255, 70, 159, 0.73), 0 0 10px 5px rgba(255, 255, 255, 0.2); /* Áp dụng hiệu ứng bóng sáng yếu hơn */
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.3); /* Áp dụng hiệu ứng sáng yếu hơn cho chữ */
   }
 }
