@@ -60,205 +60,200 @@
   }
 }
 
-/*=============== BASE ===============*/
-
+/*=============== CƠ BẢN ===============*/
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Xóa khoảng cách mặc định */
+  padding: 0; /* Xóa padding mặc định */
+  box-sizing: border-box; /* Đảm bảo tính toán kích thước phần tử chính xác */
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Cuộn trang mượt */
 }
 
 input,
 textarea,
 body {
-  color: var(--text-color);
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  font-weight: var(--weight-400);
+  color: var(--text-color); /* Màu chữ mặc định */
+  font-family: var(--body-font); /* Font chữ mặc định */
+  font-size: var(--normal-font-size); /* Kích thước chữ mặc định */
+  font-weight: var(--weight-400); /* Độ dày chữ mặc định */
 }
 
 body {
-  background-color: var(--body-color);
+  background-color: var(--body-color); /* Màu nền trang */
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family:var(--body-font);
+  font-family: var(--body-font); /* Đặt font chữ cho tiêu đề */
 }
 
 ul {
-  list-style: none;
+  list-style: none; /* Xóa kiểu danh sách mặc định */
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none; /* Xóa gạch dưới liên kết */
 }
 
 p {
-  line-height: 1.5rem;
+  line-height: 1.5rem; /* Dãn dòng cho đoạn văn */
 }
 
 img {
-  max-width: 100%;
+  max-width: 100%; /* Đảm bảo hình ảnh không vượt quá khung chứa */
 }
 
 button,
 textarea,
 input {
-  background-color: transparent;
-  border: none;
-  outline: none;
+  background-color: transparent; /* Màu nền trong suốt */
+  border: none; /* Xóa viền */
+  outline: none; /* Xóa đường viền khi chọn */
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
+  width: 100%; /* Bảng chiếm toàn bộ chiều rộng */
+  border-collapse: collapse; /* Gộp đường viền bảng */
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+/*=============== LỚP CSS TÁI SỬ DỤNG ===============*/
 .container {
-  max-width: 1320px;
-  margin-inline: auto;
-  padding-inline: 0.75rem;
+  max-width: 1320px; /* Chiều rộng tối đa */
+  margin-inline: auto; /* Căn giữa ngang */
+  padding-inline: 0.75rem; /* Padding ngang */
 }
 
 .grid {
-  display: grid;
-  gap: 1.5rem;
+  display: grid; /* Bố cục dạng lưới */
+  gap: 1.5rem; /* Khoảng cách giữa các mục */
 }
 
 .section {
-  padding-block: 2rem;
+  padding-block: 2rem; /* Khoảng cách trên dưới cho section */
 }
 
 .section--lg {
-  padding-block: 4rem;
+  padding-block: 4rem; /* Khoảng cách trên dưới lớn hơn */
 }
 
 .section__title {
-  font-size: var(--h4-font-size);
-  margin-bottom: 1.5rem;
+  font-size: var(--h4-font-size); /* Kích thước chữ tiêu đề section */
+  margin-bottom: 1.5rem; /* Khoảng cách dưới */
 }
 
 .section__title span {
-  color: var(--first-color);
+  color: var(--first-color); /* Màu cho phần chữ nổi bật */
 }
 
 .form__input {
-  border: 1px solid var(--border-color-alt);
-  padding-inline: 1rem;
-  height: 45px;
-  font-size: var(--small-font-size);
-  border-radius: 0.25rem;
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  -ms-border-radius: 0.25rem;
-  -o-border-radius: 0.25rem;
+  border: 1px solid var(--border-color-alt); /* Viền input */
+  padding-inline: 1rem; /* Padding ngang */
+  height: 45px; /* Chiều cao input */
+  font-size: var(--small-font-size); /* Kích thước chữ nhỏ */
+  border-radius: 0.25rem; /* Bo góc */
 }
 
 .new__price {
-  color: var(--first-color);
-  font-weight: var(--weight-600);
+  color: var(--first-color); /* Màu giá mới */
+  font-weight: var(--weight-600); /* Độ đậm chữ */
 }
 
 .old__price {
-  color: var(--text-color-light);
-  font-size: var(--small-font-size);
-  text-decoration: line-through;
+  color: var(--text-color-light); /* Màu giá cũ */
+  font-size: var(--small-font-size); /* Kích thước chữ nhỏ */
+  text-decoration: line-through; /* Gạch ngang chữ */
 }
 
 .form {
-  row-gap: 1rem;
+  row-gap: 1rem; /* Khoảng cách giữa các hàng */
 }
 
 .form__group {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr); /* Chia cột dạng lưới */
+  gap: 1rem; /* Khoảng cách giữa các mục */
 }
 
 .textarea {
-  height: 200px;
-  padding-block: 1rem;
-  resize: none;
+  height: 200px; /* Chiều cao textarea */
+  padding-block: 1rem; /* Padding trên dưới */
+  resize: none; /* Không cho thay đổi kích thước */
 }
-
 
 /*=============== HEADER & NAV ===============*/
 
 .header__top {
-  background-color: #ff97c9;
-  padding: 10px 0;
+  background-color: #ff97c9; /* Màu nền phần đầu */
+  padding: 10px 0; /* Khoảng cách trên dưới */
 }
 
 .header__container {
-  display: flex;
+  display: flex; /* Dùng flexbox */
   align-items: center; /* Căn giữa theo chiều dọc */
-  justify-content: center; /* Tạm thời căn giữa tất cả */
+  justify-content: center; /* Căn giữa nội dung */
 }
 
 .header__contact span {
-  display: none;
-  margin-right: 15px;
-  font-size: 16px;
+  display: none; /* Ẩn các mục liên lạc */
+  margin-right: 15px; /* Khoảng cách bên phải */
+  font-size: 16px; /* Kích thước chữ */
 }
 
 .header__alert-news {
-  text-align: center; /* Căn giữa nội dung văn bản */
-  margin: 0 auto; /* Căn giữa trong container */
-  font-size: 18px;
-  font-weight: bold;
-  color: #ff6600;
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
+  text-align: center; /* Căn giữa văn bản */
+  margin: 0 auto; /* Căn giữa trong khung chứa */
+  font-size: 18px; /* Kích thước chữ */
+  font-weight: bold; /* Chữ đậm */
+  color: #ff6600; /* Màu chữ thông báo */
+  opacity: 1; /* Hiển thị đầy đủ */
+  transition: opacity 1s ease-in-out; /* Hiệu ứng chuyển đổi opacity */
 }
 
 .header__top-action {
-  display: none;
-  font-size: 16px;
-  color: #007bff;
-  text-decoration: none;
+  display: none; /* Ẩn hành động */
+  font-size: 16px; /* Kích thước chữ */
+  color: #007bff; /* Màu chữ */
+  text-decoration: none; /* Không gạch dưới */
 }
 
 .hidden {
-  opacity: 0;
+  opacity: 0; /* Ẩn nội dung bằng cách giảm opacity */
 }
 
-/* Điều chỉnh phần thông báo ở phía trên cùng */
+/* Điều chỉnh hiển thị phần thông báo đầu */
 .header__top {
-  margin-bottom: 50px;
-    align-items: center;
-    justify-content: space-between;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 1.4rem 7%;
-    z-index: 100;
-    background-color: var(--first-color-alt);
-    padding-block: 0.1rem;
+  margin-bottom: 50px; /* Khoảng cách dưới */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: space-between; /* Căn đều hai bên */
+  top: 0; /* Gắn phía trên */
+  left: 0; /* Gắn bên trái */
+  right: 0; /* Gắn bên phải */
+  padding: 1.4rem 7%; /* Padding */
+  z-index: 100; /* Đặt lớp trên cùng */
+  background-color: var(--first-color-alt); /* Màu nền thay thế */
+  padding-block: 0.1rem; /* Padding trên dưới nhỏ */
 }
 
 .header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; /* Dùng flexbox */
+  justify-content: space-between; /* Căn đều hai bên */
+  align-items: center; /* Căn giữa theo chiều dọc */
 }
 
 .header__contact span:first-child {
-  margin-right: 2rem;
+  margin-right: 2rem; /* Khoảng cách bên phải phần tử đầu */
 }
 
 .header__contact span,
 .header__alert-news,
 .header__alert-top-action {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: var(--small-font-size);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Font chữ cho header */
+  font-size: var(--small-font-size); /* Kích thước chữ nhỏ */
 }
+
 
 /* Định dạng chính cho chữ trong .header__alert-news */
 .header__alert-news {
