@@ -1,188 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== FLATICON ===============-->
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== SWIPER CSS ===============-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+  <!--=============== FLATICON ===============-->
+  <!-- Thêm Font Awesome từ CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <!--================Chỉnh lại Style Heading=============-->
-    <style>
-      h1, h2, h3, h4, h5, h6, th {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  <link rel="stylesheet"
+    href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css" />
+
+  <!--=============== SWIPER CSS ===============-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!--================ Chỉnh lại Style Heading =============-->
+  <style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    th {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+  </style>
+
+  <style>
+    /* Phần hiệu ứng chuyển động và màu sắc mạnh */
+    .intense-sparkle {
+      font-weight: bold;
+      /* Chữ in đậm */
+      font-size: 16px;
+      /* Kích thước chữ */
+      text-decoration: none;
+      /* Bỏ gạch chân */
+      background: linear-gradient(90deg, #f3e458, #f0ffa5, #ff93c7, #ff00aa, #ffa0d0);
+      /* Gradient nhiều màu */
+      background-size: 300% 300%;
+      /* Kích thước gradient lớn hơn vùng chữ */
+      color: transparent;
+      /* Chữ trong suốt */
+      background-clip: text;
+      -webkit-background-clip: text;
+      /* Nền gradient cho text */
+      animation: intenseColor 1.5s linear infinite, sparkleEffect 0.5s ease-in-out infinite;
+      /* Hiệu ứng động */
+      position: relative;
+      /* Cho phép thêm ánh sáng */
+    }
+
+    /* Animation chuyển động gradient từ trái qua phải */
+    @keyframes intenseColor {
+      0% {
+        background-position: 0% 50%;
       }
-    </style>
-    <style>
-      /* Hiệu ứng chuyển động màu chữ */
-/* Hiệu ứng chuyển động gradient và chiếu sáng mạnh */
-.intense-sparkle {
- font-weight: bold;
- font-size: 16px;
- text-decoration: none;
- background: linear-gradient(90deg, #f3e458, #f0ffa5, #ff93c7, #ff00aa, #ffa0d0);
- background-size: 300% 300%;
- color: transparent;
- background-clip: text;
- -webkit-background-clip: text; /* Hỗ trợ WebKit */
- animation: intenseColor 1.5s linear infinite, sparkleEffect 0.5s ease-in-out infinite;
- position: relative; /* Để thêm hiệu ứng ánh sáng */
-}
 
-/* Tạo chuyển động gradient nhanh */
-@keyframes intenseColor {
- 0% {
-   background-position: 0% 50%;
- }
- 50% {
-   background-position: 100% 50%;
- }
- 100% {
-   background-position: 0% 50%;
- }
-}
+      /* Gradient bắt đầu bên trái */
+      50% {
+        background-position: 100% 50%;
+      }
 
- /* CSS cho khung chứa dòng chữ và ngôi sao */
- .shipping-promo {
-     margin-top: 150px;
-     display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử */
-     justify-content: center; /* Căn giữa nội dung */
-     align-items: center; /* Căn giữa theo chiều dọc */
-     font-size: 16px; /* Kích thước chữ */
-     background-color: #f5b5d9eb; /* Màu nền */
-     padding: 5px 80px; /* Padding xung quanh */
-     border-style:dashed;
-     border-color:#ff3791;
-   
-   }
-   
-   .promo-text {
-     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-     color: white;
-     font-size:large;
-     margin: 0 8px; /* Khoảng cách giữa ngôi sao và dòng chữ */
-     font-weight:lighter; /* Làm đậm chữ */
-     align-items: center;
-   }
-   
-   .star {
-     color: #ffe601; /* Màu vàng cho ngôi sao */
-     font-size: 50px; /* Kích thước ngôi sao */
-     animation: blink 1.5s infinite; /* Thêm hiệu ứng nhấp nháy */
-     margin-bottom: 4px;
-   }
-   
-   /* Hiệu ứng nhấp nháy cho ngôi sao */
-   @keyframes blink {
-     0%, 100% {
-       opacity: 1;
-     }
-     50% {
-       opacity: 0;
-     }
-   }
-   
-   /* Media Query cho màn hình lớn hơn 1200px */
-   @media screen and (min-width: 1200px) {
-     .shipping-promo {
-       margin-top:100px;
-       padding: 6px 90px; /* Giảm padding */
-     }
-     
-     .promo-text {
+      /* Gradient di chuyển sang phải */
+      100% {
+        background-position: 0% 50%;
+      }
+
+      /* Quay về ban đầu */
+    }
+
+    /* Phần container cho dòng chữ khuyến mãi */
+    .shipping-promo {
+      margin-top: 150px;
+      /* Khoảng cách trên */
+      display: flex;
+      justify-content: center;
       align-items: center;
-       font-size: 20px; /* Giảm kích thước chữ */
-     }
-     
-     .star {
-       font-size: 30px; /* Giảm kích thước ngôi sao */
-     }
-   }
+      /* Căn giữa ngang dọc */
+      font-size: 16px;
+      background-color: #f5b5d9eb;
+      /* Nền hồng nhạt */
+      padding: 5px 80px;
+      /* Khoảng cách xung quanh */
+      border-style: dashed;
+      border-color: #ff3791;
+      /* Viền hồng đậm */
+    }
 
-   @media screen and (max-width: 768px) {
-     .shipping-promo {
-       padding: 5px 20px; /* Giảm padding */
-     }
-     
-     .promo-text {
+    /* Dòng chữ khuyến mãi */
+    .promo-text {
+      font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+      /* Font chữ */
+      color: white;
+      font-size: large;
+      /* Màu và kích thước chữ */
+      margin: 0 8px;
+      /* Khoảng cách ngang */
+      font-weight: lighter;
       align-items: center;
-       font-size: 14px; /* Giảm kích thước chữ */
-     }
-     
-     .star {
-       font-size: 30px; /* Giảm kích thước ngôi sao */
-     }
-   }
-   
-   /* Media Query cho màn hình nhỏ hơn 480px (ví dụ điện thoại) */
-   @media screen and (max-width: 480px) {
-     .shipping-promo {
-       padding: 5px 10px; /* Giảm thêm padding */
-     }
-   
-     .promo-text {
-      align-items: center;
-       font-size: 8px; /* Giảm kích thước chữ */
-     }
-   
-     .star {
-       font-size: 25px; /* Giảm kích thước ngôi sao */
-     }
-   }
-   </style>
+      /* Làm chữ mảnh */
+    }
 
-   <link rel="icon" href="assets/img/1.png" type="image/x-icon">
-   <title>ChicCharm Official Store</title>
- </head>
- <body>
+    /* Ngôi sao trang trí */
+    .star {
+      color: #ffe601;
+      /* Màu vàng */
+      font-size: 50px;
+      /* Kích thước ngôi sao */
+      animation: blink 1.5s infinite;
+      /* Nhấp nháy */
+      margin-bottom: 4px;
+      /* Khoảng cách dưới */
+    }
+
+    /* Animation nhấp nháy */
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      /* Đầy đủ hiển thị */
+      50% {
+        opacity: 0;
+      }
+
+      /* Tạm ẩn */
+    }
+
+    /* Màn hình lớn >= 1200px */
+    @media screen and (min-width: 1200px) {
+      .shipping-promo {
+        margin-top: 100px;
+        padding: 6px 90px;
+        /* Giảm padding */
+      }
+
+      .promo-text {
+        font-size: 20px;
+        /* Chữ nhỏ hơn */
+      }
+
+      .star {
+        font-size: 30px;
+        /* Ngôi sao nhỏ hơn */
+      }
+    }
+
+    /* Màn hình vừa từ 480px đến 768px */
+    @media screen and (max-width: 768px) {
+      .shipping-promo {
+        padding: 5px 20px;
+        /* Giảm padding */
+      }
+
+      .promo-text {
+        font-size: 14px;
+        /* Chữ nhỏ lại */
+      }
+
+      .star {
+        font-size: 30px;
+        /* Kích thước ngôi sao */
+      }
+    }
+
+    /* Màn hình nhỏ < 480px */
+    @media screen and (max-width: 480px) {
+      .shipping-promo {
+        padding: 5px 10px;
+        /* Giảm padding tối thiểu */
+      }
+
+      .promo-text {
+        font-size: 8px;
+        /* Chữ cực nhỏ */
+      }
+
+      .star {
+        font-size: 25px;
+        /* Kích thước ngôi sao nhỏ */
+      }
+    }
+  </style>
+
+  <!-- Logo nhỏ hiển thị trên tab -->
+  <link rel="icon" href="assets/img/1.png" type="image/x-icon">
+
+  <!-- Tên tab -->
+  <title>ChicCharm Official Store</title>
+</head>
+
+<body>
 
   <!--=============== HEADER ===============-->
   <header class="header">
     <div class="header__top">
+      <!-- Khung khuyến mãi header đầu trang -->
       <div class="header__container container">
         <div class="header__contact">
-          <span id="contact1">Merry Chrismas</span> 
+          <span id="contact1">Merry Chrismas</span>
         </div>
-        <p class="header__alert-news" id="news" style="color: #ff97c9">ƯU ĐÃI SIÊU GIÁ TRỊ - TIẾT KIỆM THÊM VỚI NHIỀU MÃ GIẢM GIÁ</p>
+        <!-- Hiển thị thông báo ưu đãi -->
+        <p class="header__alert-news" id="news" style="color: #ff97c9">ƯU ĐÃI SIÊU GIÁ TRỊ - TIẾT KIỆM THÊM VỚI NHIỀU MÃ
+          GIẢM GIÁ</p>
+        <!-- Liên kết đăng nhập/ đăng ký -->
         <a href="login-register.html" id="login-link" class="header__top-action">Đăng nhập / Đăng ký</a>
       </div>
     </div>
-    
+
+    <!-- Thanh điều hướng chính -->
     <nav class="nav container">
+      <!-- Logo trang web -->
       <a href="index.html" class="nav__logo">
-        <img
-          class="nav__logo-img"
-          src="assets/img/1.png"
-          alt="website logo"
-        />
+        <img class="nav__logo-img" src="assets/img/1.png" alt="website logo" />
       </a>
-       <!-- Menu điều hướng -->
-        <div class="nav__menu" id="nav-menu">
-          <div class="nav__menu-top">
-            <a href="index.html" class="nav__menu-logo">
-              <img src="assets/img/1.png" alt="">
-            </a>
+      <!-- Menu điều hướng -->
+      <div class="nav__menu" id="nav-menu">
+        <div class="nav__menu-top">
+          <a href="index.html" class="nav__menu-logo">
+            <img src="assets/img/1.png" alt="">
+          </a>
+          <!-- Nút đóng menu -->
           <div class="nav__close" id="nav-close">
             <i class="fi fi-rs-cross-small"></i>
           </div>
         </div>
+        <!-- Danh sách liên kết trong menu -->
         <ul class="nav__list">
           <li class="nav__item">
+            <!-- Liên kết đến trang chủ -->
             <a href="index.html" class="nav__link">Trang Chủ</a>
           </li>
           <li class="nav__item dropdown">
+            <!-- Liên kết đến trang cửa hàng -->
             <a href="shop.html" class="nav__link">Cửa Hàng</a>
+            <!-- Liên kết đến từng danh mục sản phẩm  với menu thả xuống -->
             <ul class="dropdown__menu">
               <li><a href="shop.html">Kẹp vuông</a></li>
               <li><a href="shop.html">Kẹp nhỏ</a></li>
@@ -191,679 +250,894 @@
             </ul>
           </li>
           <li class="nav__item">
+            <!-- Liên kết đến trang tài khoản -->
             <a href="accounts.html" class="nav__link">Tài Khoản</a>
           </li>
           <li class="nav__item">
+            <!-- Liên kết đến phần khuyến mãi -->
             <a href="index.html#featured" class="nav__link intense-sparkle">Khuyến mãi</a>
           </li>
         </ul>
-        
+
+        <!-- Tìm kiếm trong header -->
         <div class="header__search">
-          <input
-            type="text"
-            placeholder=""
-            class="form__input"
-          />
+          <input type="text" placeholder="" class="form__input" />
+          <!-- Ô nhập để tìm kiếm -->
           <button class="search__btn">
             <img src="assets/img/search.png" alt="search icon" />
           </button>
         </div>
       </div>
       <div class="header__user-actions">
+        <!-- Nút đăng nhập -->
         <a href="login.html" class="header__action-btn" title="Đăng nhập">
           <img src="assets/img/user.png" alt="" />
         </a>
+        <!-- Nút danh sách yêu thích -->
         <a href="wishlist.html" class="header__action-btn" title="Wishlist">
           <img src="assets/img/icon-heart.svg" alt="" />
+          <!-- Số lượng mục trong wishlist -->
           <span class="count">3</span>
         </a>
+        <!-- Nút giỏ hàng -->
         <a href="cart.html" class="header__action-btn" title="Giỏ hàng">
           <img src="assets/img/icon-cart.svg" alt="" />
           <span class="count">3</span>
         </a>
+        <!-- Nút mở menu dọc -->
         <div class="header__action-btn nav__toggle" id="nav-toggle">
           <img src="./assets//img/menu-burger.png" alt="">
         </div>
       </div>
     </nav>
   </header>
-     
-<!--=============== BANNER KHUYẾN MÃI ===============-->
- <div class="shipping-promo">
-  <span class="star">&#9733;</span>
-  <span class="promo-text"> Đăng Ký Thành Viên Để Nhận 10% Giảm Giá Cho Lần Mua Đầu Tiên </span>
-  <span class="star">&#9733;</span>
-</div>
 
-    <!--=============== TIÊU ĐỀ GIỎ HÀNG ===============-->
-      <div class="cart-page">
-        <div class="header">
-          <h1 class="header-cart" style="font-size: 35px; text-align: center; color:hsla(328, 100%, 57%, 0.712); margin-top: 50px; margin-bottom: 30px;">GIỎ HÀNG</h1>
-          <a href="shop.html" class="continue-shopping" title="Continue Shopping" >✨Tiếp tục mua sắm✨</a>
-        </div>
-      </div>
-    
-    <!--=============== CART ===============-->
-    <section class="cart section--lg container">
-        <style>
-          .section--lg {
-            padding-block: 2.5rem;
-          }
-          
-          body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-          }
-      
-          .table-container {
-            width: 100%;
-            overflow-x: auto;
-            margin: 20px auto;
-            padding: 10px;
-            box-sizing: border-box;
-          }
-      
-          table {
-            width: 100%;
-            max-width: 1200px;
-            border-collapse: collapse;
-            margin: 0 auto;
-            background-color: #fff;
-          }
-      
-          th, td {
-            text-align: center;
-            padding: 15px;
-          }
-
-          th {
-            font-size: 20px;
-            background-color: #f982bd; /* Màu hồng đậm */
-            color: white;
-          }
-
-          th.img-col, td.img-col {
-            width: 20%; /* Cột hình ảnh */
-          }
-      
-          th.name-col, td.name-col {
-            width: 40%; /* Cột tên sản phẩm */
-          }
-      
-          th.price-col, td.price-col {
-            width: 20%; /* Cột giá tiền */
-          }
-      
-          th.quantity-col, td.quantity-col {
-            width: 20%; /* Cột số lượng */
-          }
-
-          tr {
-            border: 2px solid pink;
-          }
-
-          .table__description,
-          .table__price,
-          .quantity {
-            font-size: 15px;
-          }
-
-          @media screen and (min-width: 1025px) {
-            th, td {
-              padding: 15px;
-              font-size: 20x;
-            }
-          }
-      
-          @media screen and (max-width: 1024px) {
-            th, td {
-              padding: 12px;
-              font-size: 16px;
-            }
-          }
-      
-          @media screen and (max-width: 768px) {
-            th, td {
-              padding: 8px;
-              font-size: 14px;
-            }
-          }
-      
-          @media screen and (max-width: 480px) {
-            th, td {
-              padding: 5px;
-              font-size: 12px;
-            }
-          }
-
-          .product-link {
-            color: #ff69b4; /* Màu hồng rực rỡ mặc định */
-            text-decoration: none; /* Loại bỏ gạch chân mặc định */
-            transition: color 0.5s ease; /* Hiệu ứng mượt khi thay đổi màu */
-          }
-
-          .table__title {
-            font-size: 17px;
-            line-height: 1.5;
-            color: #ff69b4;
-            display: inline-block;
-            padding: 0.375rem 0.75rem;
-            position: relative;
-            font-weight: bolder;
-            overflow: hidden; /* Giới hạn hiệu ứng trong phạm vi */
-            z-index: 1; /* Đảm bảo nội dung không bị che */
-            transition: color 0.5s ease;
-          }
-
-          .table__title::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            background-color: #ff69b4; /* Màu nền hồng đậm */
-            z-index: -1; /* Đưa lớp phủ xuống dưới nội dung */
-            transition: width 0.5s ease; /* Hiệu ứng fill từ trái sang phải */
-          }
-
-          .table__title:hover::before {
-            width: 100%; /* Fill đầy ô khi hover */
-          }
-
-          .table__title:hover a {
-            color: white !important; /* Đổi màu chữ thành trắng khi hover */
-          }
-
-          .table__title:hover {
-             color: white; /* Chữ đổi thành màu trắng khi hover */
-          }
-
-          .cart__columns {
-            display: flex; /* Để tạo 2 cột song song */
-            justify-content: center; /* Căn đều khoảng cách giữa các cột */
-            gap: 50px; /* Khoảng cách giữa 2 cột */
-          }
-
-        .cart__shipping, .cart__total-info {
-            width: 50%;
-        }
-
-        .cart__shipping {
-            padding: 25px;
-            background-image: url('assets/img/product15.3.png'); /* Thêm hình ảnh nền */
-            background-size: cover; /* Đảm bảo hình ảnh phủ kín toàn bộ cột */
-            background-position: center; /* Canh giữa hình ảnh */
-            background-repeat: no-repeat; /* Không lặp lại hình ảnh */
-            color: white; /* Chữ trắng để dễ nhìn khi có nền tối */
-            border-radius: 8px; /* Viền bo tròn cho cột */
-        }
-
-        .cart__shipping-description, 
-        .cart__shipping-note {
-            color: white;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .cart__shipping-form {
-            background-color: rgba(0, 0, 0, 0.5); /* Thêm lớp phủ mờ phía trên nền để dễ đọc chữ */
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .cart__shipping-description {
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .form-group {
-            margin-top: 5px;
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-
-        .cart__shipping-select, .cart__shipping-input {
-            width: 100%;
-            padding: 10px;
-            font-size: 14px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        .cart__shipping-form input[type="text"], .cart__shipping-form input[type="number"] {
-            background-color: white;
-            color: black;
-            border: 1px solid #ccc;
-            padding: 8px;
-            width: 100%;
-            border-radius: 4px;
-        }
-
-        .cart__shipping-btn {
-            background-color: #ff69b4;
-            color: white;
-            padding: 12px;
-            font-size: 16px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .cart__shipping-btn:hover {
-            background-color: #ff3b8b;
-        }
-
-        .cart__shipping-note {
-            font-size: 12px;
-            margin-top: 15px;
-        }
-
-        .cart__total-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .cart__total-table td {
-            padding: 8px;
-        }
-
-        .cart__total-price {
-            font-size: 16px;
-            color: #333;
-        }
-
-        .cart__total-title {
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .checkout-btn {
-            background-color: #ff97c9;
-            color: white;
-            padding: 12px 24px;
-            font-size: 16px;
-            text-align: center;
-            display: inline-block;
-            border-radius: 4px;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-
-        .cart__shipping__total {
-            padding: 25px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            background-image: url('assets/img/product20.3.png'); /* Thêm hình ảnh nền */
-            background-size: cover; /* Làm cho ảnh phủ kín toàn bộ khung */
-            background-position: center; /* Căn giữa ảnh */
-            background-repeat: no-repeat; /* Không lặp lại hình ảnh */
-            color: white; /* Chữ trắng để dễ nhìn khi có nền tối */
-            border-radius: 8px; /* Viền bo tròn cho cột */
-            text-align: center;
-            width: 50%;
-            max-width: 600px;
-            margin: 0 auto;
-        } 
-        </style>
-      
-        <div class="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th class="img-col">Hình ảnh</th>
-                <th class="name-col">Tên sản phẩm</th>
-                <th class="price-col">Giá tiền</th>
-                <th class="quantity-col">Số lượng</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="img-col"><img src="assets/img/urbanxmas_square.png" alt="" class="table__img" /></td>
-                <td class="name-col">
-                  <h3 class="table__title"><a href="details.html" class="product-link">Set Urban Chic</a></h3><br>
-                  <p class="table__description">Combo kẹp tóc và gương trái tim cầm tay đính charm tự chọn</p>
-                </td>
-                <td class="price-col"><span class="table__price">100.000 VND</span></td>
-                <td class="quantity-col">
-                  <input type="number" value="1" class="quantity" />
-                  <i class="fi fi-rs-trash table__trash"></i>
-                </td>
-              </tr>
-              <tr>
-                <td class="img-col"><img src="assets/img/shirleytemple_square.png" alt="" class="table__img" /></td>
-                <td class="name-col">
-                  <h3 class="table__title"><a href="details.html" class="product-link">Shirley Temple Mirror</a></h3><br>
-                  <p class="table__description">Gương trái tim cầm tay đính charm tự chọn</p>
-                </td>
-                <td class="price-col"><span class="table__price">65.000 VND</span></td>
-                <td class="quantity-col">
-                  <input type="number" value="1" class="quantity" />
-                  <i class="fi fi-rs-trash table__trash"></i>
-                </td>
-              </tr>
-              <tr>
-                <td class="img-col"><img src="assets/img/bellini_square.png" alt="" class="table__img" /></td>
-                <td class="name-col">
-                  <h3 class="table__title"><a href="details.html" class="product-link">Pinky Lady Hair Clip</a></h3><br>
-                  <p class="table__description">Kẹp tóc vân xà cừ màu trắng nhỏ đính charm tự chọn</p>
-                </td>
-                <td class="price-col"><span class="table__price">45.000 VND</span></td>
-                <td class="quantity-col">
-                  <input type="number" value="1" class="quantity" />
-                  <i class="fi fi-rs-trash table__trash"></i>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        
-        <div class="cart__actions">
-            <a href="#" class="btn flex btn__md update-cart">
-                <i class="fi-rs-shuffle"></i> Cập nhật giỏ hàng
-            </a>
-        </div>
-    </section>
-
-    <section>
-      <div class="cart__total">
-        <div class="cart__columns responsive-layout">
-          <!-- Cột bên trái -->
-          <div class="cart__shipping">
-            <h3 class="section__title">PHÍ VẬN CHUYỂN & THUẾ</h3>
-            <p class="cart__shipping-description">Nhập Địa Chỉ Của Bạn Để Xem Phí Vận Chuyển Dự Kiến</p>
-            <form class="cart__shipping-form">
-              <div class="form-group">
-                <label for="country">TỈNH/THÀNH PHỐ *</label>
-                <select id="country" class="cart__shipping-select">
-                  <option value="vn">TP. Hồ Chí Minh</option>
-                  <option value="us">Hà Nội</option>
-                  <option value="jp">Đà Nẵng</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="city">QUẬN/HUYỆN *</label>
-                <select id="city" class="cart__shipping-select">
-                  <option value="hanoi">Quận 1</option>
-                  <option value="hcm">Quận 3</option>
-                  <option value="danang">Quận 5</option>
-                  <option value="danang">Quận 10</option>
-                  <option value="danang">Quận Tân Bình</option>
-                  <option value="danang">Quận Bình Thạnh</option>
-                  <option value="danang">Quận Tân Phú</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="zip">MÃ ZIP/MÃ BƯU ĐIỆN *</label>
-                <input type="text" id="zip" class="cart__shipping-input"/>
-              </div>
-              <a href="#" class="btn flex btn--md">
-                <i class="fi fi-rs-box-alt"></i> TÍNH TOÁN PHÍ VẬN CHUYỂN
-              </a>
-            </form>
-            <p class="cart__shipping-note">
-              <strong>Lưu Ý:</strong> Đây chỉ là chi phí dự kiến. Để biết chính xác cước phí giao hàng, hãy chuyển đến bước Thanh Toán.
-            </p>
-          </div>
-          <!-- Cột bên phải -->
-          <div class="cart__shipping__total">
-            <h3 class="section__title">TỔNG GIÁ TRỊ ĐƠN HÀNG</h3>
-            <table class="cart__total-table">
-              <tr>
-                <td><span class="cart__total-title">TỔNG TIỀN HÀNG</span></td>
-                <td><span class="cart__total-price">210.000đ</span></td>
-              </tr>
-              <tr>
-                <td><span class="cart__total-title">THUẾ</span></td>
-                <td><span class="cart__total-price">0đ</span></td>
-              </tr>
-              <tr>
-                <td><span class="cart__total-title">PHÍ VẬN CHUYỂN</span></td>
-                <td><span class="cart__total-price">25.000đ</span></td>
-              </tr>
-              <tr>
-                <td><span class="cart__total-title">TỔNG PHẢI TRẢ</span></td>
-                <td><span class="cart__total-price">235.000đ</span></td>
-              </tr>
-            </table>
-            <a href="checkout.html" class="btn flex btn--md">
-              <i class="fi fi-rs-box-alt"></i> THANH TOÁN
-            </a>
-          </div>
-        </div>
-      </div>
-      <style>
-        /* Tổng thể */
-.cart__columns {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px; /* Khoảng cách giữa hai cột */
-}
-
-/* Định dạng từng cột */
-.cart__shipping,
-.cart__shipping__total {
-  flex: 1; /* Đảm bảo các cột có cùng kích thước */
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff; /* Màu nền cột */
-  border-radius: 8px;
-}
-
-.cart__total-table {
-  width: 100%;
-  border-collapse: collapse;
-   background-color: transparent; /* Bảng có nền trong suốt */
-}
-
-.cart__total-table td {
-padding: 8px 0;
-font-size: 16px;
-}
-
-.cart__total-title {
-font-weight: bold;
- color: white;
- }
-
-
- .cart__total-price {
-color: #fea9cb;
-font-weight: bold;
-}
-/* Media Queries cho màn hình nhỏ */
-@media (max-width: 768px) {
-  .cart__columns {
-    flex-direction: column; /* Sắp xếp dọc */
-    align-items: center; /* Căn giữa các cột */
-    gap: 15px;
-  }
-
-  .cart__shipping,
-  .cart__shipping__total {
-    width: 90%; /* Giảm kích thước các ô */
-    padding: 15px; /* Giảm khoảng cách trong khung */
-  }
-
-  .section__title {
-    font-size: 1.0rem; /* Giảm kích thước tiêu đề */
-  }
-
-  .cart__shipping-description,
-  .cart__shipping-note {
-    font-size: 0.5rem; /* Giảm kích thước chữ thêm */
-  }
-
-  .btn {
-    font-size: 0.5rem; /* Nhỏ hơn nữa cho nút */
-    padding: 6px 12px;
-  }
-}
-
-      </style>
-    </section>
-    
- <!--=============== NEWSLETTER ===============-->
- <section class="newsletter section home__newsletter">
-  <div class="newsletter__container container grid">
-    <h3 class="newsletter__title flex">
-      <img
-        src="./assets/img/icon-email.svg"
-        alt=""
-        class="newsletter__icon"
-      />
-      ĐĂNG KÝ ĐỂ NHẬN TIN
-    </h3>
-    <p class="newsletter__description">
-      ...và nhận 10% giảm giá cho lần mua đầu tiên.
-    </p>
-    <form action="" class="newsletter__form">
-      <input
-        type="text"
-        placeholder="Nhập Email của bạn"
-        class="newsletter__input"
-      />
-      <button type="submit" class="newsletter__btn">Đăng ký</button>
-    </form>
+  <!--=============== BANNER KHUYẾN MÃI ===============-->
+  <div class="shipping-promo">
+    <!-- Phần banner khuyến mãi chứa thông báo giảm giá -->
+    <span class="star">&#9733;</span>
+    <span class="promo-text"> Đăng Ký Thành Viên Để Nhận 10% Giảm Giá Cho Lần Mua Đầu Tiên </span>
+    <span class="star">&#9733;</span>
   </div>
-</section>
-</main>
 
-<!--=============== FOOTER ===============-->
-<footer class="footer container">
-<div class="footer__container grid">
-  <div class="footer__content">
-    <a href="index.html" class="footer__logo">
-      <img src="./assets/img/logo.svg" alt="" class="footer__logo-img" />
-    </a>
-    <h4 class="footer__subtitle">Liên hệ</h4>
-    <p class="footer__description">
-      <span>Địa chỉ:</span> 279 Nguyễn Tri Phương, Phường 5, Quận 10
-    </p>
-    <p class="footer__description">
-      <span>SĐT:</span> +01 2222 365 /(+91) 01 2345 6789
-    </p>
-    <p class="footer__description">
-      <span>Thời gian:</span> 10:00 - 18:00, T2-T7
-    </p>
-    <div class="footer__social">
-      <h4 class="footer__subtitle">Theo dõi chúng tôi</h4>
-      <div class="footer__links flex">
-        <a href="https://www.facebook.com/share/1784WE225P/?mibextid=LQQJ4d">
-          <img
-            src="./assets/img/icon-facebook.svg"
-            alt=""
-            class="footer__social-icon"
-          />
-        </a>
-        </a>
-        <a href="https://www.instagram.com/chiccharm.official_?igsh=MXJpM3pqZDFvMmlzaw==">
-          <img
-            src="./assets/img/icon-instagram.svg"
-            alt=""
-            class="footer__social-icon"
-          />
-        </a>
-      </div>
+  <!--=============== TIÊU ĐỀ GIỎ HÀNG ===============-->
+  <div class="cart-page">
+    <!-- Phần tiêu đề chính của trang giỏ hàng -->
+    <div class="header">
+      <!-- Tiêu đề "GIỎ HÀNG" với kiểu chữ nổi bật -->
+      <h1 class="header-cart"
+        style="font-size: 35px; text-align: center; color:hsla(328, 100%, 57%, 0.712); margin-top: 50px; margin-bottom: 30px;">
+        GIỎ HÀNG</h1>
+      <!-- Đường dẫn trở về trang mua sắm -->
+      <a href="shop.html" class="continue-shopping" title="Continue Shopping">✨Tiếp tục mua sắm✨</a>
     </div>
   </div>
-  <div class="footer__content">
-    <h3 class="footer__title">Địa chỉ</h3>
-    <ul class="footer__links">
-      <li><a href="#" class="footer__link">Về Chúng Tôi</a></li>
-      <li><a href="#" class="footer__link">Chính Sách Vận Chuyển</a></li>
-      <li><a href="#" class="footer__link">Chính Sách Riêng Tư</a></li>
-      <li><a href="#" class="footer__link">Điều Khoản & Điều Kiện</a></li>
-      <li><a href="#" class="footer__link">Liên Hệ</a></li>
-      <li><a href="#" class="footer__link">Trung Tâm Hỗ Trợ</a></li>
-    </ul>
-  </div>
-  <div class="footer__content">
-    <h3 class="footer__title">Tài Khoản</h3>
-    <ul class="footer__links">
-      <li><a href="login.html" class="footer__link">Đăng Nhập</a></li>
-      <li><a href="cart.html" class="footer__link">Giỏ Hàng</a></li>
-      <li><a href="wishlist.html" class="footer__link">Wishlist</a></li>
-      <li><a href="#" class="footer__link">Đơn Hàng</a></li>
-      <li><a href="#" class="footer__link">Giúp Đỡ</a></li>
-      <li><a href="#" class="footer__link">Đặt Hàng</a></li>
-    </ul>
-  </div>
-  <div class="footer__content">
-    <h3 class="footer__title">Phương Thức Thanh Toán</h3>
-    <img
-      src="./assets/img/payment-method.png"
-      alt=""
-      class="payment__img"
-    />
-  </div>
-</div>
-</footer>
 
-    <!--=============== SWIPER JS ===============-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!--=============== CART ===============-->
+  <section class="cart section--lg container">
+    <style>
+      /* Thêm khoảng đệm trên và dưới cho phần tử có class .section--lg */
+      .section--lg {
+        padding-block: 2.5rem;
+      }
 
-    <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
+      /* Cấu hình font chữ mặc định cho toàn bộ trang Giỏ hàng */
+      body {
+        font-family: Arial, sans-serif;
+        /* Chọn font Arial làm font mặc định */
+        margin: 0;
+        /* Loại bỏ khoảng cách bên ngoài của phần tử body */
+        padding: 0;
+        /* Loại bỏ khoảng cách bên trong của phần tử body */
+      }
 
-    <script>
-      //=========LẮNG NGHE SỰ KIỆN CUỘN TRANG=====//
-window.onscroll = function() {
-  // Lấy thanh menu
-  var nav = document.querySelector('.nav');
+      /* Cấu hình cho phần tử chứa bảng */
+      .table-container {
+        width: 100%;
+        /* Chiếm hết chiều rộng của phần tử chứa */
+        overflow-x: auto;
+        /* Nếu bảng rộng hơn, sẽ có thanh cuộn ngang */
+        margin: 20px auto;
+        /* Căn giữa và thêm khoảng cách 20px ở trên và dưới */
+        padding: 10px;
+        /* Thêm padding 10px cho phần tử */
+        box-sizing: border-box;
+        /* Đảm bảo padding không làm tăng kích thước phần tử */
+      }
 
-  // Kiểm tra vị trí cuộn của trang
-  if (window.scrollY > 100) { // Khi cuộn xuống 100px
-    nav.classList.add('fixed-menu'); // Thêm lớp cố định cho nav
-  } else {
-    nav.classList.remove('fixed-menu'); // Bỏ lớp cố định khi lên đầu trang
-  }
-};
-    </script>
+      /* Cấu hình bảng */
+      table {
+        width: 100%;
+        /* Bảng chiếm toàn bộ chiều rộng của phần tử chứa */
+        max-width: 1200px;
+        /* Bảng không rộng quá 1200px */
+        border-collapse: collapse;
+        /* Loại bỏ khoảng cách giữa các đường biên */
+        margin: 0 auto;
+        /* Căn giữa bảng */
+        background-color: #fff;
+        /* Đặt màu nền của bảng là màu trắng */
+      }
 
-<script>
+      /* Cấu hình cho các th (thẻ tiêu đề của bảng) và td (thẻ dữ liệu của bảng) */
+      th,
+      td {
+        text-align: center;
+        /* Căn giữa nội dung trong th và td */
+        padding: 15px;
+        /* Thêm khoảng đệm 15px cho th và td */
+      }
+
+      /* Cấu hình cho th (tiêu đề bảng) */
+      th {
+        font-size: 20px;
+        /* Đặt kích thước font chữ là 20px */
+        background-color: #f982bd;
+        /* Màu nền là hồng đậm */
+        color: white;
+        /* Màu chữ là trắng */
+      }
+
+      /* Cấu hình cho các cột hình ảnh */
+      th.img-col,
+      td.img-col {
+        width: 20%;
+        /* Đặt chiều rộng của cột hình ảnh là 20% */
+      }
+
+      /* Cấu hình cho các cột tên sản phẩm */
+      th.name-col,
+      td.name-col {
+        width: 40%;
+        /* Đặt chiều rộng của cột tên sản phẩm là 40% */
+      }
+
+      /* Cấu hình cho các cột giá tiền */
+      th.price-col,
+      td.price-col {
+        width: 20%;
+        /* Đặt chiều rộng của cột giá tiền là 20% */
+      }
+
+      /* Cấu hình cho các cột số lượng */
+      th.quantity-col,
+      td.quantity-col {
+        width: 20%;
+        /* Đặt chiều rộng của cột số lượng là 20% */
+      }
+
+      /* Cấu hình đường biên của các hàng trong bảng */
+      tr {
+        border: 2px solid pink;
+        /* Đặt đường viền của hàng là 2px và màu hồng */
+      }
+
+      /* Cấu hình cho các mô tả, giá, và số lượng */
+      .table__description,
+      .table__price,
+      .quantity {
+        font-size: 15px;
+        /* Đặt kích thước font chữ là 15px */
+      }
+
+      /* Media query cho màn hình có độ rộng từ 1025px trở lên */
+      @media screen and (min-width: 1025px) {
+
+        th,
+        td {
+          padding: 15px;
+          /* Thêm padding 15px cho th và td */
+          font-size: 20px;
+          /* Đặt kích thước font chữ là 20px */
+        }
+      }
+
+      /* Media query cho màn hình có độ rộng từ 1024px trở xuống */
+      @media screen and (max-width: 1024px) {
+
+        th,
+        td {
+          padding: 12px;
+          /* Thêm padding 12px cho th và td */
+          font-size: 16px;
+          /* Đặt kích thước font chữ là 16px */
+        }
+      }
+
+      /* Media query cho màn hình có độ rộng từ 768px trở xuống */
+      @media screen and (max-width: 768px) {
+
+        th,
+        td {
+          padding: 8px;
+          /* Thêm padding 8px cho th và td */
+          font-size: 14px;
+          /* Đặt kích thước font chữ là 14px */
+        }
+      }
+
+      /* Media query cho màn hình có độ rộng từ 480px trở xuống */
+      @media screen and (max-width: 480px) {
+
+        th,
+        td {
+          padding: 5px;
+          /* Thêm padding 5px cho th và td */
+          font-size: 12px;
+          /* Đặt kích thước font chữ là 12px */
+        }
+      }
+
+      /* Cấu hình cho liên kết sản phẩm */
+      .product-link {
+        color: #ff69b4;
+        /* Màu chữ mặc định là màu hồng rực rỡ */
+        text-decoration: none;
+        /* Loại bỏ gạch chân mặc định */
+        transition: color 0.5s ease;
+        /* Hiệu ứng mượt khi thay đổi màu chữ */
+      }
+
+      /* Cấu hình cho tiêu đề bảng */
+      .table__title {
+        font-size: 17px;
+        /* Đặt kích thước font chữ là 17px */
+        line-height: 1.5;
+        /* Đặt chiều cao dòng là 1.5 */
+        color: #ff69b4;
+        /* Màu chữ là màu hồng */
+        display: inline-block;
+        /* Hiển thị dưới dạng inline-block */
+        padding: 0.375rem 0.75rem;
+        /* Thêm padding cho tiêu đề */
+        position: relative;
+        /* Đặt vị trí của phần tử là relative */
+        font-weight: bolder;
+        /* Đặt font chữ đậm */
+        overflow: hidden;
+        /* Ẩn phần nội dung tràn ra ngoài */
+        z-index: 1;
+        /* Đảm bảo nội dung không bị che khuất */
+        transition: color 0.5s ease;
+        /* Hiệu ứng mượt khi thay đổi màu chữ */
+      }
+
+      /* Hiệu ứng hover cho tiêu đề bảng */
+      .table__title::before {
+        content: '';
+        /* Tạo một phần tử trước khi tiêu đề */
+        position: absolute;
+        /* Đặt vị trí của phần tử là absolute */
+        top: 0;
+        left: 0;
+        width: 0%;
+        /* Đặt chiều rộng là 0% ban đầu */
+        height: 100%;
+        /* Chiều cao bằng 100% */
+        background-color: #ff69b4;
+        /* Màu nền là màu hồng */
+        z-index: -1;
+        /* Đảm bảo phần tử này không che khuất nội dung */
+        transition: width 0.5s ease;
+        /* Hiệu ứng mở rộng từ trái sang phải */
+      }
+
+      /* Khi hover, phần tử trước sẽ mở rộng đầy đủ */
+      .table__title:hover::before {
+        width: 100%;
+        /* Mở rộng chiều rộng đến 100% khi hover */
+      }
+
+      /* Khi hover, thay đổi màu chữ của liên kết thành màu trắng */
+      .table__title:hover a {
+        color: white !important;
+        /* Đảm bảo màu chữ trắng khi hover */
+      }
+
+      /* Khi hover, thay đổi màu chữ của tiêu đề thành màu trắng */
+      .table__title:hover {
+        color: white;
+        /* Đổi màu chữ thành trắng khi hover */
+      }
+
+      /* Cấu hình cho các cột trong giỏ hàng */
+      .cart__columns {
+        display: flex;
+        /* Sử dụng flexbox để tạo các cột song song */
+        justify-content: center;
+        /* Căn giữa các cột */
+        gap: 50px;
+        /* Khoảng cách giữa các cột */
+      }
+
+      /* Cấu hình cho các phần tử giỏ hàng (vận chuyển, tổng tiền) */
+      .cart__shipping,
+      .cart__total-info {
+        width: 50%;
+        /* Mỗi phần tử chiếm 50% chiều rộng */
+      }
+
+      /* Cấu hình cho phần vận chuyển */
+      .cart__shipping {
+        padding: 25px;
+        /* Thêm padding 25px */
+        background-image: url('assets/img/product15.3.png');
+        /* Thêm hình ảnh nền */
+        background-size: cover;
+        /* Làm cho hình ảnh phủ kín toàn bộ */
+        background-position: center;
+        /* Canh giữa hình ảnh */
+        background-repeat: no-repeat;
+        /* Không lặp lại hình ảnh */
+        color: white;
+        /* Màu chữ trắng */
+        border-radius: 8px;
+        /* Bo góc cho phần tử */
+      }
+
+      /* Cấu hình cho mô tả và ghi chú vận chuyển */
+      .cart__shipping-description,
+      .cart__shipping-note {
+        color: white;
+        /* Màu chữ trắng */
+        font-size: 14px;
+        /* Kích thước font chữ là 14px */
+        margin-bottom: 20px;
+        /* Thêm khoảng cách dưới */
+      }
+
+      /* Cấu hình cho biểu mẫu vận chuyển */
+      .cart__shipping-form {
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Lớp phủ mờ phía trên nền */
+        padding: 15px;
+        /* Thêm padding cho form */
+        border-radius: 8px;
+        /* Bo góc form */
+        margin-bottom: 20px;
+        /* Khoảng cách dưới form */
+      }
+
+      /* Cấu hình cho nhãn form */
+      .form-group label {
+        display: block;
+        /* Hiển thị nhãn dưới dạng block */
+        font-weight: bold;
+        /* Làm đậm chữ */
+        font-size: 14px;
+        /* Kích thước font chữ là 14px */
+        margin-bottom: 5px;
+        /* Khoảng cách dưới nhãn */
+      }
+
+      /* Cấu hình cho các trường chọn và nhập trong form */
+      .cart__shipping-select,
+      .cart__shipping-input {
+        width: 100%;
+        /* Chiếm hết chiều rộng */
+        padding: 10px;
+        /* Thêm padding 10px */
+        font-size: 14px;
+        /* Kích thước font chữ là 14px */
+        border: 1px solid #ddd;
+        /* Đặt đường viền mờ */
+        border-radius: 4px;
+        /* Bo góc */
+      }
+
+      /* Cấu hình cho nút vận chuyển */
+      .cart__shipping-btn {
+        background-color: #ff69b4;
+        /* Màu nền là hồng */
+        color: white;
+        /* Màu chữ trắng */
+        padding: 12px;
+        /* Thêm padding */
+        font-size: 16px;
+        /* Kích thước font chữ là 16px */
+        border: none;
+        /* Không có đường viền */
+        border-radius: 4px;
+        /* Bo góc cho nút */
+        cursor: pointer;
+        /* Hiển thị con trỏ tay khi di chuột lên nút */
+      }
+
+      /* Cấu hình cho hiệu ứng hover của nút vận chuyển */
+      .cart__shipping-btn:hover {
+        background-color: #ff3b8b;
+        /* Đổi màu nền khi hover */
+      }
+
+      /* Cấu hình cho ghi chú vận chuyển */
+      .cart__shipping-note {
+        font-size: 12px;
+        /* Kích thước font chữ là 12px */
+        margin-top: 15px;
+        /* Khoảng cách trên */
+      }
+
+      /* Cấu hình cho bảng tổng hợp trong giỏ hàng */
+      .cart__total-table {
+        width: 100%;
+        /* Chiếm toàn bộ chiều rộng */
+        border-collapse: collapse;
+        /* Xóa khoảng cách giữa các ô */
+      }
+
+      /* Cấu hình cho các ô trong bảng tổng hợp */
+      .cart__total-table td {
+        padding: 10px;
+        /* Thêm padding 10px cho ô */
+        font-size: 14px;
+        /* Kích thước font chữ là 14px */
+      }
+
+      /* Cấu hình cho ô tổng giá trị */
+      .cart__total-value {
+        font-weight: bold;
+        /* Làm đậm chữ */
+        font-size: 18px;
+        /* Kích thước font chữ là 18px */
+      }
+
+      /* Cấu hình cho ô tổng cộng */
+      .cart__total-summary {
+        font-weight: bold;
+        /* Làm đậm chữ */
+        font-size: 16px;
+        /* Kích thước font chữ là 16px */
+        color: #ff69b4;
+        /* Màu chữ hồng */
+      }
+    </style>
+
+    <!-- Phần tử div chứa bảng sản phẩm -->
+    <div class="table-container">
+      <!-- Tạo bảng với thông tin sản phẩm trong giỏ hàng -->
+      <table>
+        <!-- Đầu bảng, chứa các tiêu đề của các cột -->
+        <thead>
+          <tr>
+            <!-- Tiêu đề cột Hình ảnh -->
+            <th class="img-col">Hình ảnh</th>
+            <!-- Tiêu đề cột Tên sản phẩm -->
+            <th class="name-col">Tên sản phẩm</th>
+            <!-- Tiêu đề cột Giá tiền -->
+            <th class="price-col">Giá tiền</th>
+            <!-- Tiêu đề cột Số lượng -->
+            <th class="quantity-col">Số lượng</th>
+          </tr>
+        </thead>
+        <!-- Phần thân bảng, chứa các dòng sản phẩm trong giỏ hàng -->
+        <tbody>
+          <!-- Dòng sản phẩm đầu tiên -->
+          <tr>
+            <!-- Cột Hình ảnh, chứa hình ảnh sản phẩm -->
+            <td class="img-col">
+              <img src="assets/img/urbanxmas_square.png" alt="" class="table__img" />
+            </td>
+            <!-- Cột Tên sản phẩm, chứa tên và mô tả sản phẩm -->
+            <td class="name-col">
+              <h3 class="table__title">
+                <!-- Liên kết đến trang chi tiết sản phẩm -->
+                <a href="details.html" class="product-link">Set Urban Chic</a>
+              </h3><br>
+              <!-- Mô tả sản phẩm -->
+              <p class="table__description">Combo kẹp tóc và gương trái tim cầm tay đính charm tự chọn</p>
+            </td>
+            <!-- Cột Giá tiền, chứa giá sản phẩm -->
+            <td class="price-col"><span class="table__price">100.000 VND</span></td>
+            <!-- Cột Số lượng, chứa trường nhập số lượng và biểu tượng xóa sản phẩm -->
+            <td class="quantity-col">
+              <!-- Trường nhập số lượng sản phẩm -->
+              <input type="number" value="1" class="quantity" />
+              <!-- Biểu tượng thùng rác để xóa sản phẩm khỏi giỏ hàng -->
+              <i class="fi fi-rs-trash table__trash"></i>
+            </td>
+          </tr>
+          <!-- Dòng sản phẩm thứ hai -->
+          <tr>
+            <!-- Cột Hình ảnh, chứa hình ảnh sản phẩm -->
+            <td class="img-col">
+              <img src="assets/img/shirleytemple_square.png" alt="" class="table__img" />
+            </td>
+            <!-- Cột Tên sản phẩm, chứa tên và mô tả sản phẩm -->
+            <td class="name-col">
+              <h3 class="table__title">
+                <!-- Liên kết đến trang chi tiết sản phẩm -->
+                <a href="details.html" class="product-link">Shirley Temple Mirror</a>
+              </h3><br>
+              <!-- Mô tả sản phẩm -->
+              <p class="table__description">Gương trái tim cầm tay đính charm tự chọn</p>
+            </td>
+            <!-- Cột Giá tiền, chứa giá sản phẩm -->
+            <td class="price-col"><span class="table__price">65.000 VND</span></td>
+            <!-- Cột Số lượng, chứa trường nhập số lượng và biểu tượng xóa sản phẩm -->
+            <td class="quantity-col">
+              <!-- Trường nhập số lượng sản phẩm -->
+              <input type="number" value="1" class="quantity" />
+              <!-- Biểu tượng thùng rác để xóa sản phẩm khỏi giỏ hàng -->
+              <i class="fi fi-rs-trash table__trash"></i>
+            </td>
+          </tr>
+          <!-- Dòng sản phẩm thứ ba -->
+          <tr>
+            <!-- Cột Hình ảnh, chứa hình ảnh sản phẩm -->
+            <td class="img-col">
+              <img src="assets/img/bellini_square.png" alt="" class="table__img" />
+            </td>
+            <!-- Cột Tên sản phẩm, chứa tên và mô tả sản phẩm -->
+            <td class="name-col">
+              <h3 class="table__title">
+                <!-- Liên kết đến trang chi tiết sản phẩm -->
+                <a href="details.html" class="product-link">Pinky Lady Hair Clip</a>
+              </h3><br>
+              <!-- Mô tả sản phẩm -->
+              <p class="table__description">Kẹp tóc vân xà cừ màu trắng nhỏ đính charm tự chọn</p>
+            </td>
+            <!-- Cột Giá tiền, chứa giá sản phẩm -->
+            <td class="price-col"><span class="table__price">45.000 VND</span></td>
+            <!-- Cột Số lượng, chứa trường nhập số lượng và biểu tượng xóa sản phẩm -->
+            <td class="quantity-col">
+              <!-- Trường nhập số lượng sản phẩm -->
+              <input type="number" value="1" class="quantity" />
+              <!-- Biểu tượng thùng rác để xóa sản phẩm khỏi giỏ hàng -->
+              <i class="fi fi-rs-trash table__trash"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Phần tử div chứa nút hành động giỏ hàng -->
+    <div class="cart__actions">
+      <!-- Nút cập nhật giỏ hàng -->
+      <a href="#" class="btn flex btn__md update-cart">
+        <!-- Biểu tượng làm mới -->
+        <i class="fi-rs-shuffle"></i> Cập nhật giỏ hàng
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <!-- Phần tổng hợp giỏ hàng và tính toán phí vận chuyển -->
+    <div class="cart__total">
+      <!-- Cột bên trái chứa thông tin về phí vận chuyển và thuế -->
+      <div class="cart__columns responsive-layout">
+        <div class="cart__shipping">
+          <!-- Tiêu đề phần Phí vận chuyển & Thuế -->
+          <h3 class="section__title">PHÍ VẬN CHUYỂN & THUẾ</h3>
+          <!-- Mô tả yêu cầu nhập địa chỉ để tính toán phí vận chuyển -->
+          <p class="cart__shipping-description">Nhập Địa Chỉ Của Bạn Để Xem Phí Vận Chuyển Dự Kiến</p>
+
+          <!-- Form nhập địa chỉ và tính toán phí vận chuyển -->
+          <form class="cart__shipping-form">
+            <!-- Nhóm trường nhập cho Tỉnh/Thành phố -->
+            <div class="form-group">
+              <label for="country">TỈNH/THÀNH PHỐ *</label>
+              <!-- Dropdown chọn Tỉnh/Thành phố -->
+              <select id="country" class="cart__shipping-select">
+                <option value="vn">TP. Hồ Chí Minh</option>
+                <option value="us">Hà Nội</option>
+                <option value="jp">Đà Nẵng</option>
+              </select>
+            </div>
+
+            <!-- Nhóm trường nhập cho Quận/Huyện -->
+            <div class="form-group">
+              <label for="city">QUẬN/HUYỆN *</label>
+              <!-- Dropdown chọn Quận/Huyện -->
+              <select id="city" class="cart__shipping-select">
+                <option value="hanoi">Quận 1</option>
+                <option value="hcm">Quận 3</option>
+                <option value="danang">Quận 5</option>
+                <option value="danang">Quận 10</option>
+                <option value="danang">Quận Tân Bình</option>
+                <option value="danang">Quận Bình Thạnh</option>
+                <option value="danang">Quận Tân Phú</option>
+              </select>
+            </div>
+
+            <!-- Nhóm trường nhập cho Mã ZIP/Bưu điện -->
+            <div class="form-group">
+              <label for="zip">MÃ ZIP/MÃ BƯU ĐIỆN *</label>
+              <!-- Input để nhập mã ZIP/bưu điện -->
+              <input type="text" id="zip" class="cart__shipping-input" />
+            </div>
+
+            <!-- Nút tính toán phí vận chuyển -->
+            <a href="#" class="btn flex btn--md">
+              <i class="fi fi-rs-box-alt"></i> TÍNH TOÁN PHÍ VẬN CHUYỂN
+            </a>
+          </form>
+
+          <!-- Lưu ý về phí vận chuyển chỉ mang tính dự kiến -->
+          <p class="cart__shipping-note">
+            <strong>Lưu Ý:</strong> Đây chỉ là chi phí dự kiến. Để biết chính xác cước phí giao hàng, hãy chuyển đến
+            bước Thanh Toán.
+          </p>
+        </div>
+
+        <!-- Cột bên phải chứa thông tin tổng giá trị đơn hàng -->
+        <div class="cart__shipping__total">
+          <!-- Tiêu đề phần Tổng giá trị đơn hàng -->
+          <h3 class="section__title">TỔNG GIÁ TRỊ ĐƠN HÀNG</h3>
+
+          <!-- Bảng hiển thị tổng giá trị đơn hàng -->
+          <table class="cart__total-table">
+            <!-- Dòng hiển thị tổng tiền hàng -->
+            <tr>
+              <td><span class="cart__total-title">TỔNG TIỀN HÀNG</span></td>
+              <td><span class="cart__total-price">210.000đ</span></td>
+            </tr>
+            <!-- Dòng hiển thị thuế -->
+            <tr>
+              <td><span class="cart__total-title">THUẾ</span></td>
+              <td><span class="cart__total-price">0đ</span></td>
+            </tr>
+            <!-- Dòng hiển thị phí vận chuyển -->
+            <tr>
+              <td><span class="cart__total-title">PHÍ VẬN CHUYỂN</span></td>
+              <td><span class="cart__total-price">25.000đ</span></td>
+            </tr>
+            <!-- Dòng hiển thị tổng phải trả -->
+            <tr>
+              <td><span class="cart__total-title">TỔNG PHẢI TRẢ</span></td>
+              <td><span class="cart__total-price">235.000đ</span></td>
+            </tr>
+          </table>
+
+          <!-- Nút chuyển đến bước thanh toán -->
+          <a href="checkout.html" class="btn flex btn--md">
+            <i class="fi fi-rs-box-alt"></i> THANH TOÁN
+          </a>
+        </div>
+      </div>
+    </div>
+    <style>
+      /* Tổng thể */
+      .cart__columns {
+        display: flex;
+        /* Sử dụng Flexbox để sắp xếp các phần tử trong container theo dạng hàng ngang */
+        justify-content: space-between;
+        /* Phân bổ không gian đều giữa các cột */
+        gap: 20px;
+        /* Khoảng cách giữa các cột */
+      }
+
+      /* Định dạng từng cột */
+      .cart__shipping,
+      .cart__shipping__total {
+        flex: 1;
+        /* Cả hai cột có cùng kích thước */
+        padding: 20px;
+        /* Thêm khoảng cách bên trong cột */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Tạo bóng cho các cột để làm nổi bật */
+        background-color: #ffffff;
+        /* Màu nền của cột là trắng */
+        border-radius: 8px;
+        /* Bo góc cột để mềm mại */
+      }
+
+      .cart__total-table {
+        width: 100%;
+        /* Đảm bảo bảng chiếm toàn bộ chiều rộng của container */
+        border-collapse: collapse;
+        /* Hợp nhất các đường viền của bảng */
+        background-color: transparent;
+        /* Làm bảng có nền trong suốt */
+      }
+
+      .cart__total-table td {
+        padding: 8px 0;
+        /* Thêm khoảng cách cho các ô trong bảng */
+        font-size: 16px;
+        /* Đặt kích thước chữ cho các ô trong bảng */
+      }
+
+      .cart__total-title {
+        font-weight: bold;
+        /* Định dạng chữ đậm cho tiêu đề của bảng */
+        color: white;
+        /* Màu chữ trắng */
+      }
+
+      .cart__total-price {
+        color: #fea9cb;
+        /* Màu chữ của giá trị là màu hồng nhạt */
+        font-weight: bold;
+        /* Định dạng chữ đậm cho giá trị tiền */
+      }
+
+      /* Media Queries cho màn hình nhỏ */
+      @media (max-width: 768px) {
+        .cart__columns {
+          flex-direction: column;
+          /* Chuyển các cột thành dạng dọc khi màn hình nhỏ */
+          align-items: center;
+          /* Căn giữa các cột trong trường hợp sắp xếp dọc */
+          gap: 15px;
+          /* Giảm khoảng cách giữa các cột khi sắp xếp dọc */
+        }
+
+        .cart__shipping,
+        .cart__shipping__total {
+          width: 90%;
+          /* Giảm chiều rộng của các cột xuống 90% để phù hợp với màn hình nhỏ */
+          padding: 15px;
+          /* Giảm khoảng cách bên trong các cột */
+        }
+
+        .section__title {
+          font-size: 1.0rem;
+          /* Giảm kích thước font của tiêu đề xuống */
+        }
+
+        .cart__shipping-description,
+        .cart__shipping-note {
+          font-size: 0.5rem;
+          /* Giảm kích thước chữ của phần mô tả và lưu ý */
+        }
+
+        .btn {
+          font-size: 0.5rem;
+          /* Giảm kích thước font của nút */
+          padding: 6px 12px;
+          /* Giảm kích thước padding của nút */
+        }
+      }
+    </style>
+  </section>
+
+  <!--=============== PHẦN ĐĂNG KÝ NHẬN THƯ ===============-->
+  <section class="newsletter section home__newsletter">
+    <!-- Container chính chứa nội dung của phần newsletter -->
+    <div class="newsletter__container container grid">
+      <!-- Tiêu đề của phần newsletter -->
+      <h3 class="newsletter__title flex">
+        <img src="./assets/img/icon-email.svg" alt="" class="newsletter__icon" />
+        ĐĂNG KÝ ĐỂ NHẬN TIN
+      </h3>
+      <!-- Mô tả ngắn khuyến khích người dùng đăng ký -->
+      <p class="newsletter__description">
+        ...và nhận 10% giảm giá cho lần mua đầu tiên.
+      </p>
+      <!-- Biểu mẫu để người dùng nhập email và nhấn đăng ký -->
+      <form action="" class="newsletter__form">
+        <!-- Hộp nhập liệu để nhập email -->
+        <input type="text" placeholder="Nhập Email của bạn" class="newsletter__input" />
+        <!-- Nút đăng ký -->
+        <button type="submit" class="newsletter__btn">Đăng ký</button>
+      </form>
+    </div>
+  </section>
+  </main>
+
+  <!--=============== FOOTER ===============-->
+  <footer class="footer container">
+    <!-- Container chính của phần footer -->
+    <div class="footer__container grid">
+      <!-- Phần thông tin liên hệ -->
+      <div class="footer__content">
+        <a href="index.html" class="footer__logo">
+          <img src="./assets/img/logo.svg" alt="" class="footer__logo-img" />
+        </a>
+        <h4 class="footer__subtitle">Liên hệ</h4>
+        <p class="footer__description">
+          <span>Địa chỉ:</span> 279 Nguyễn Tri Phương, Phường 5, Quận 10
+        </p>
+        <p class="footer__description">
+          <span>SĐT:</span> +01 2222 365 /(+91) 01 2345 6789
+        </p>
+        <p class="footer__description">
+          <span>Thời gian:</span> 10:00 - 18:00, T2-T7
+        </p>
+        <div class="footer__social">
+          <h4 class="footer__subtitle">Theo dõi chúng tôi</h4>
+          <div class="footer__links flex">
+            <a href="https://www.facebook.com/share/1784WE225P/?mibextid=LQQJ4d">
+              <img src="./assets/img/icon-facebook.svg" alt="" class="footer__social-icon" />
+            </a>
+            </a>
+            <a href="https://www.instagram.com/chiccharm.official_?igsh=MXJpM3pqZDFvMmlzaw==">
+              <img src="./assets/img/icon-instagram.svg" alt="" class="footer__social-icon" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phần liên kết nhanh -->
+      <div class="footer__content">
+        <h3 class="footer__title">Địa chỉ</h3>
+        <ul class="footer__links">
+          <li><a href="#" class="footer__link">Về Chúng Tôi</a></li>
+          <li><a href="#" class="footer__link">Chính Sách Vận Chuyển</a></li>
+          <li><a href="#" class="footer__link">Chính Sách Riêng Tư</a></li>
+          <li><a href="#" class="footer__link">Điều Khoản & Điều Kiện</a></li>
+          <li><a href="#" class="footer__link">Liên Hệ</a></li>
+          <li><a href="#" class="footer__link">Trung Tâm Hỗ Trợ</a></li>
+        </ul>
+      </div>
+
+      <!-- Phần thông tin tài khoản của khách hàng -->
+      <div class="footer__content">
+        <h3 class="footer__title">Tài Khoản</h3>
+        <ul class="footer__links">
+          <li><a href="login.html" class="footer__link">Đăng Nhập</a></li>
+          <li><a href="cart.html" class="footer__link">Giỏ Hàng</a></li>
+          <li><a href="wishlist.html" class="footer__link">Wishlist</a></li>
+          <li><a href="accounts.html" class="footer__link">Đơn Hàng</a></li>
+          <li><a href="#" class="footer__link">Giúp Đỡ</a></li>
+          <li><a href="cart.html" class="footer__link">Đặt Hàng</a></li>
+        </ul>
+      </div>
+      <!-- Phần phương thức thanh toán -->
+      <div class="footer__content">
+        <h3 class="footer__title">Phương Thức Thanh Toán</h3>
+        <img src="./assets/img/payment-method.png" alt="" class="payment__img" />
+      </div>
+    </div>
+  </footer>
+
+  <!--=============== SWIPER JS ===============-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    //=========LẮNG NGHE SỰ KIỆN CUỘN TRANG=====//
+    window.onscroll = function () {
+      // Lấy thanh menu
+      var nav = document.querySelector('.nav');
+
+      // Kiểm tra vị trí cuộn của trang
+      if (window.scrollY > 100) { // Khi cuộn xuống >100px
+        nav.classList.add('fixed-menu'); // Thêm lớp 'fixed-menu' để giữ menu cố định trên đầu trang
+      } else {
+        nav.classList.remove('fixed-menu'); // Xóa lớp 'fixed-menu' khi quay lại đầu trang
+      }
+    };
+  </script>
+
+  <script>
     //======== Tạo Alert "Giỏ hàng của bạn đã được cập nhật"=====//
- document.addEventListener("DOMContentLoaded", function () {
-    const updateCartButton = document.querySelector(".update-cart");
+    document.addEventListener("DOMContentLoaded", function () {
+      const updateCartButton = document.querySelector(".update-cart");
 
-    updateCartButton.addEventListener("click", function (event) {
+      updateCartButton.addEventListener("click", function (event) {
         event.preventDefault(); // Ngăn hành động mặc định khi nhấp vào thẻ <a>
         alert("Giỏ hàng của bạn đã được cập nhật!");
+      });
     });
-});
-</script>
+  </script>
 
-<script>
-   //======== Tạo Alert "Đã xoá sản phẩm"=====//
-   // Chọn tất cả các biểu tượng thùng rác
-const trashIcons = document.querySelectorAll('.fi.fi-rs-trash.table__trash');
+  <script>
+    //======== Tạo Alert "Đã xoá sản phẩm"=====//
+    // Chọn tất cả các biểu tượng thùng rác
+    const trashIcons = document.querySelectorAll('.fi.fi-rs-trash.table__trash');
 
-// Lặp qua từng biểu tượng và thêm sự kiện click
-trashIcons.forEach((trashIcon) => {
-  trashIcon.addEventListener('click', (event) => {
-    // Hiển thị hộp thoại xác nhận
-    const isConfirmed = confirm("Bạn có chắc muốn xoá sản phẩm không?");
-    
-    if (isConfirmed) {
-      // Nếu người dùng bấm "Xác nhận", xóa dòng chứa sản phẩm
-      alert("Sản phẩm đã được xoá khỏi giỏ hàng.");
-      const row = event.target.closest('tr'); // Tìm dòng cha gần nhất
-      row.remove(); // Xóa dòng khỏi bảng
-    } else {
-      // Nếu người dùng bấm "Huỷ", đóng hộp thoại
-      alert("Hành động đã bị huỷ.");
-    }
-  });
-});
-</script>
+    // Lặp qua từng biểu tượng và thêm sự kiện click
+    trashIcons.forEach((trashIcon) => {
+      trashIcon.addEventListener('click', (event) => {
+        // Hiển thị hộp thoại xác nhận
+        const isConfirmed = confirm("Bạn có chắc muốn xoá sản phẩm không?");
 
-  </body>
+        if (isConfirmed) {
+          // Nếu người dùng bấm "Xác nhận", xóa dòng chứa sản phẩm
+          alert("Sản phẩm đã được xoá khỏi giỏ hàng.");
+          const row = event.target.closest('tr'); // Tìm dòng cha gần nhất
+          row.remove(); // Xóa dòng khỏi bảng
+        } else {
+          // Nếu người dùng bấm "Huỷ", đóng hộp thoại
+          alert("Hành động đã bị huỷ.");
+        }
+      });
+    });
+  </script>
+
+</body>
+
 </html>
