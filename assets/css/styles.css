@@ -913,12 +913,12 @@ body {
   position: relative;
 }
 
-.section__title {
+#custom-categories .section__title {
   text-align: left;
   margin-left: 4rem;
 }
 
-.section__subtitle {
+#custom-categories .section__subtitle {
   text-align: left;
   margin-left: 4.5rem;
 }
