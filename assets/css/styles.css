@@ -1,59 +1,62 @@
-/*=============== GOOGLE FONTS ===============*/
+/*=============== FONT GOOGLE ===============*/
+/* Nhập font chữ từ Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/*=============== VARIABLES CSS ===============*/
+/*=============== BIẾN CSS ===============*/
 :root {
+  /*========== Kích thước header ==========*/
   --header-height: 4rem;
 
-  /*========== Colors ==========*/
-  --first-color: hsla(328, 100%, 57%, 0.712);
-  --first-color-alt: hsl(324, 91%, 96%);
-  --second-color: hsl(330, 86%, 3%);
-  --title-color: hsl(345, 100%, 5%);
-  --text-color: hsl(0, 100%, 1%);
-  --text-color-light: hsl(60, 1%, 56%);
-  --body-color: hsl(0, 0%, 100%);
-  --container-color: hsl(0, 0%, 93%);
-  --border-color: hsl(0, 0%, 0%);
-  --border-color-alt: hsl(113, 15%, 90%);
+  /*========== Màu sắc ==========*/
+  --first-color: hsla(328, 100%, 57%, 0.712); /* Màu chính với độ trong suốt */
+  --first-color-alt: hsl(324, 91%, 96%); /* Màu chính phiên bản sáng hơn */
+  --second-color: hsl(330, 86%, 3%); /* Màu phụ */
+  --title-color: hsl(345, 100%, 5%); /* Màu tiêu đề */
+  --text-color: hsl(0, 100%, 1%); /* Màu chữ chính */
+  --text-color-light: hsl(60, 1%, 56%); /* Màu chữ nhạt hơn */
+  --body-color: hsl(0, 0%, 100%); /* Màu nền chính */
+  --container-color: hsl(0, 0%, 93%); /* Màu nền container */
+  --border-color: hsl(0, 0%, 0%); /* Màu viền */
+  --border-color-alt: hsl(113, 15%, 90%); /* Màu viền thay thế */
 
-  /*========== Font and typography ==========*/
-  --body-font: 'Roboto', sans-serif;
-  --second-font: 'Roboto', sans-serif;
-  --big-font-size: 3.5rem;
-  --h1-font-size: 2.75rem;
-  --h2-font-size: 2rem;
-  --h3-font-size: 1.75rem;
-  --h4-font-size: 1.375rem;
-  --large-font-size: 1.125rem;
-  --normal-font-size: 1rem;
-  --small-font-size: 0.875rem;
-  --smaller-font-size: 0.75rem;
-  --tiny-font-size: 0.6875rem;
+  /*========== Font chữ và kiểu chữ ==========*/
+  --body-font: 'Roboto', sans-serif; /* Font chữ chính */
+  --second-font: 'Roboto', sans-serif; /* Font chữ phụ */
+  --big-font-size: 3.5rem; /* Kích thước chữ lớn nhất */
+  --h1-font-size: 2.75rem; /* Kích thước tiêu đề H1 */
+  --h2-font-size: 2rem; /* Kích thước tiêu đề H2 */
+  --h3-font-size: 1.75rem; /* Kích thước tiêu đề H3 */
+  --h4-font-size: 1.375rem; /* Kích thước tiêu đề H4 */
+  --large-font-size: 1.125rem; /* Kích thước chữ lớn */
+  --normal-font-size: 1rem; /* Kích thước chữ thường */
+  --small-font-size: 0.875rem; /* Kích thước chữ nhỏ */
+  --smaller-font-size: 0.75rem; /* Kích thước chữ nhỏ hơn */
+  --tiny-font-size: 0.6875rem; /* Kích thước chữ rất nhỏ */
 
-  /*========== Font weight ==========*/
-  --weight-400: 400;
-  --weight-500: 500;
-  --weight-600: 600;
-  --weight-700: 700;
+  /*========== Độ dày chữ ==========*/
+  --weight-400: 400; /* Độ dày chữ bình thường */
+  --weight-500: 500; /* Độ dày chữ trung bình */
+  --weight-600: 600; /* Độ dày chữ đậm nhẹ */
+  --weight-700: 700; /* Độ dày chữ đậm */
 
-  /*========== Transition ==========*/
-  --transition: cubic-bezier(0, 0, 0.05, 1);
+  /*========== Hiệu ứng chuyển đổi ==========*/
+  --transition: cubic-bezier(0, 0, 0.05, 1); /* Đường cong chuyển đổi */
 }
 
-/* Responsive typography */
+/* Typography phản hồi trên thiết bị nhỏ hơn */
 @media screen and (max-width: 1200px) {
   :root {
-    --big-font-size: 2.25rem;
-    --h1-font-size: 2rem;
-    --h2-font-size: 1.375rem;
-    --h3-font-size: 1.25rem;
-    --h4-font-size: 1.125rem;
-    --large-font-size: 1rem;
-    --normal-font-size: 0.9375rem;
-    --small-font-size: 0.8125rem;
-    --smaller-font-size: 0.6875rem;
-    --tiny-font-size: 0.625rem;
+    /* Giảm kích thước chữ trên thiết bị nhỏ */
+    --big-font-size: 2.25rem; /* Kích thước chữ lớn nhất */
+    --h1-font-size: 2rem; /* Kích thước tiêu đề H1 */
+    --h2-font-size: 1.375rem; /* Kích thước tiêu đề H2 */
+    --h3-font-size: 1.25rem; /* Kích thước tiêu đề H3 */
+    --h4-font-size: 1.125rem; /* Kích thước tiêu đề H4 */
+    --large-font-size: 1rem; /* Kích thước chữ lớn */
+    --normal-font-size: 0.9375rem; /* Kích thước chữ thường */
+    --small-font-size: 0.8125rem; /* Kích thước chữ nhỏ */
+    --smaller-font-size: 0.6875rem; /* Kích thước chữ nhỏ hơn */
+    --tiny-font-size: 0.625rem; /* Kích thước chữ rất nhỏ */
   }
 }
 
