@@ -861,99 +861,101 @@ body {
   }
 }
 
-/*=============== BUTTONS ===============*/
+/*=============== NÚT BẤM ===============*/
 .btn {
-  display: inline-block;
-  background-color: var(--first-color);
-  border: 2px solid var(--first-color);
-  color: var(--body-color);
-  padding-inline: 1.75rem;
-  /* padding: 0.75rem 1.75rem; */
-  height: 49px;
-  line-height: 43px;
-  font-family: var(--second-font);
-  font-size: var(--small-font-size);
-  font-weight: var(--weight-700);
-  border-radius: 0.25rem;
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  -ms-border-radius: 0.25rem;
-  -o-border-radius: 0.25rem;
-  transition: all 0.4s var(--transition);
-  -webkit-transition: all 0.4s var(--transition);
-  -moz-transition: all 0.4s var(--transition);
-  -ms-transition: all 0.4s var(--transition);
-  -o-transition: all 0.4s var(--transition);
+   display: inline-block; /* Hiển thị như một khối nội tuyến */
+  background-color: var(--first-color); /* Màu nền từ biến CSS */
+  border: 2px solid var(--first-color); /* Viền màu từ biến CSS */
+  color: var(--body-color); /* Màu chữ từ biến CSS */
+  padding-inline: 1.75rem; /* Padding theo chiều ngang */
+  height: 49px; /* Chiều cao của nút */
+  line-height: 43px; /* Chiều cao dòng giúp căn giữa chữ theo chiều dọc */
+  font-family: var(--second-font); /* Font chữ từ biến CSS */
+  font-size: var(--small-font-size); /* Cỡ chữ từ biến CSS */
+  font-weight: var(--weight-700); /* Độ đậm của chữ từ biến CSS */
+  border-radius: 0.25rem; /* Bo tròn góc viền */
+  -webkit-border-radius: 0.25rem; /* Hỗ trợ cho trình duyệt Webkit */
+  -moz-border-radius: 0.25rem; /* Hỗ trợ cho trình duyệt Mozilla */
+  -ms-border-radius: 0.25rem; /* Hỗ trợ cho trình duyệt IE */
+  -o-border-radius: 0.25rem; /* Hỗ trợ cho trình duyệt Opera */
+  transition: all 0.4s var(--transition); /* Hiệu ứng chuyển động */
+  -webkit-transition: all 0.4s var(--transition); /* Hỗ trợ cho trình duyệt Webkit */
+  -moz-transition: all 0.4s var(--transition); /* Hỗ trợ cho trình duyệt Mozilla */
+  -ms-transition: all 0.4s var(--transition); /* Hỗ trợ cho trình duyệt IE */
+  -o-transition: all 0.4s var(--transition); /* Hỗ trợ cho trình duyệt Opera */
 }
 
 .btn:hover {
-  background-color: transparent;
-  color: var(--first-color);
+  background-color: transparent; /* Nền trong suốt khi hover */
+  color: var(--first-color); /* Đổi màu chữ khi hover */
 }
 
+/* Các nút có kích thước trung bình và nhỏ */
 .btn--md,
 .btn--sm {
-  font-family: var(--body-font);
+  font-family: var(--body-font); /* Font chữ từ biến CSS */
 }
 
+/* Nút kích thước trung bình */
 .btn--md {
-  height: 45px;
-  line-height: 40px;
+  height: 45px; /* Chiều cao của nút */
+  line-height: 40px; /* Căn giữa nội dung theo chiều dọc */
 }
 
+/* Nút kích thước nhỏ */
 .btn--sm {
-  height: 40px;
-  line-height: 35px;
+  height: 40px; /* Chiều cao của nút */
+  line-height: 35px; /* Căn giữa nội dung theo chiều dọc */
 }
 
 /*=============== DANH MỤC SẢN PHẨM ===============*/
 
 .custom-categories-container {
-  overflow: hidden;
-  position: relative;
+  overflow: hidden;       /* Ẩn nội dung vượt ra ngoài container */
+  position: relative;     /* Thiết lập vị trí tương đối */
 }
 
 #custom-categories .section__title {
-  text-align: left;
-  margin-left: 25rem;
+  text-align: left;     /* Căn trái tiêu đề */
+  margin-left: 25rem;   /* Cách lề trái 25rem */
 }
 
 #custom-categories .section__subtitle {
-  text-align: left;
-  margin-left: 25.5rem;
+  text-align: left;      /* Căn trái tiêu đề */
+  margin-left: 25.5rem;  /* Cách lề trái 25.5rem */
 }
 
 .custom-categories-grid {
-  padding: 3rem 1.5rem 6rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  padding: 3rem 1.5rem 6rem;   /* Padding trên, ngang và dưới */
+  display: flex;               /* Sử dụng flexbox */
+  justify-content: center;     /* Căn giữa các mục */
+  flex-wrap: wrap;             /* Xuống dòng khi không đủ chỗ */
   
 }
 
 .custom-category-item {
-  text-align: center;
-  border-radius: 1.25rem;
-  transition: transform 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
-  cursor: pointer;
-  position: relative;
-  margin: 5px; /* Thêm khoảng cách giữa các khung */
-  width: 300px; /* Đặt chiều rộng cố định cho mỗi khung */
+  text-align: center;     /* Căn giữa nội dung */
+  border-radius: 1.25rem; /* Bo tròn góc */
+  transition: transform 0.3s ease-in-out; /* Hiệu ứng chuyển động */
+  cursor: pointer;       /* Con trỏ chuột pointer khi hover */
+  position: relative;    /* Vị trí tương đối */
+  margin: 5px;           /* Khoảng cách giữa các mục */
+  width: 300px;          /* Chiều rộng cố định */
 }
 
 .custom-category-img {
-  margin: 10px 0 5px;
-  border-radius: 0.75rem;
+  margin: 10px 0 5px; /* Margin trên, dưới */
+  border-radius: 0.75rem; /* Bo tròn góc ảnh */
   -webkit-border-radius: 0.75rem;
   -moz-border-radius: 0.75rem;
   -ms-border-radius: 0.75rem;
   -o-border-radius: 0.75rem;
-  border: 1px solid #000000;
+  border: 1px solid #000000;    /* Viền đen */
   width: 250px; /* Chiều rộng tùy chỉnh theo thiết kế */
   height: 200px; /* Chiều cao tùy chỉnh theo thiết kế */
   object-fit: cover; /* Giữ ảnh không bị méo, cắt vừa khung */
   box-sizing: border-box; /* giữ kích thước hộp*/
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;  /*Hiệu ứng khi hover*/
 }
 
 .custom-category-item:hover .custom-category-img{
@@ -961,52 +963,52 @@ body {
 }
 
 .custom-category-overlay {
-  position: absolute;
-  top: 0rem;
-  left: 5px;
-  width: 270px;
-  height: 250px;
-  background: #fbecf3; /* Overlay màu đen với độ trong suốt */
-  border: 1px solid #000000;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1.25rem;
-  transition: transform 0.3s ease-in-out;
-  color: rgb(0, 0, 0);
+  position: absolute;       /* Vị trí tuyệt đối */
+  top: 0rem;                /* Cách đỉnh 0 */
+  left: 5px;                /* Cách lề trái 5px */
+  width: 270px;             /* Chiều rộng overlay */
+  height: 250px;            /* Chiều cao overlay */
+  background: #fbecf3;     /* Màu nền */
+  border: 1px solid #000000;   /* Viền đen */
+  z-index: 2;                 /* Đè lên các phần khác */
+  display: flex;              /* Sử dụng flexbox để căn giữa */
+  align-items: center;       /* Căn giữa theo chiều dọc */
+  justify-content: center;   /* Căn giữa theo chiều ngang */
+  border-radius: 1.25rem;    /* Bo tròn góc */
+  transition: transform 0.3s ease-in-out; /* Hiệu ứng khi hover */
+  color: rgb(0, 0, 0); /* Màu chữ đen */
 }
 
 .custom-category-overlay:hover {
   transform: translateY(20%) rotate(25deg); /* Di chuyển ảnh lên phía trên */
-  background: #ffffff;
-  border: 1px solid #000000;
-  color: rgb(0, 0, 0);
+  background: #ffffff; /* Nền trắng */
+  border: 1px solid #000000; /* Viền đen */
+  color: rgb(0, 0, 0); /* Màu chữ đen */
 }
 
 .custom-category-title {
   font-size: 1.5rem; /* Điều chỉnh kích thước chữ */
   font-weight: normal; /* In đậm */
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bolder;
-  position: absolute;
-  text-align: center;
-  top: 5rem;
+  font-weight: bolder; /* Độ đậm của chữ */
+  position: absolute; /* Vị trí tuyệt đối */
+  text-align: center; /* Căn giữa chữ */
+  top: 5rem; /* Cách đỉnh 5rem */
 }
 
 .custom-category-content {
   font-size: 1rem; /* Kích thước chữ nội dung */
-  position: absolute;
-  text-align: center;
-  bottom: 6rem;
+  position: absolute; /* Vị trí tuyệt đối */
+  text-align: center; /* Căn giữa chữ */
+  bottom: 6rem; /* Cách đáy 6rem */
 }
 
 /* Khi màn hình từ 1024px đến 1288px (desktop nhỏ) */
 @media (max-width: 1288px) and (min-width: 1024px) {
   .custom-categories-grid {
-    display: grid;
+    display: grid;                          /* Sử dụng grid layout */
     grid-template-columns: repeat(4, 1fr);  /* Chia thành 4 cột */
-    gap: 0rem;                            /* Khoảng cách giữa các khung */
+    gap: 0rem;                              /* Khoảng cách giữa các khung */
     justify-items: center;                  /* Căn giữa các khung trong cột */
   }
 
@@ -1017,26 +1019,26 @@ body {
   }
 
   .custom-category-overlay {
-    position: absolute;
-    top: 0rem;
-    left: 0rem;
-    width: 250px;
-    height: 220px;                             /* Điều chỉnh kích thước overlay */
+    position: absolute;                          /* Vị trí tuyệt đối để trùng khớp với ảnh */
+    top: 0rem;                                   /* Đặt overlay sát đỉnh */
+    left: 0rem;                                  /* Đặt overlay sát bên trái */
+    width: 250px;                                /* Đặt chiều rộng overlay */
+    height: 220px;                               /* Đặt chiều cao overlay */
   }
 
   .custom-category-content {
-    bottom: 4rem;
+    bottom: 4rem;                        /* Điều chỉnh vị trí bên dưới nội dung */
   }
 }
 /* Khi màn hình từ 768px đến 1024px (tablet) */
 @media (max-width: 1024px) and (min-width: 768px) {
   .custom-categories-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);  /* Chia thành 2 cột */
-    gap: 0;                            /* Khoảng cách giữa các khung */
-    justify-items: center;                  /* Căn giữa các khung trong cột */
-    column-gap: 1rem;
-    row-gap: 4rem;
+    display: grid;                               /* Sử dụng grid layout */
+    grid-template-columns: repeat(2, 1fr);       /* Chia thành 2 cột bằng nhau */
+    gap: 0;                                      /* Không có khoảng cách giữa các khung */
+    justify-items: center;                       /* Căn giữa các mục trong mỗi cột */
+    column-gap: 1rem;                            /* Khoảng cách giữa các cột */
+    row-gap: 4rem;                               /* Khoảng cách giữa các hàng */
   }
 
   .custom-category-item {
@@ -1046,8 +1048,8 @@ body {
   }
 
   .custom-category-overlay {
-    position: absolute;
-    top: 0rem;
+    position: absolute;                          /* Vị trí tuyệt đối để trùng khớp với ảnh */
+    top: 0rem;                                   /* Đặt overlay sát đỉnh */
   }
 }
 
@@ -1067,12 +1069,12 @@ body {
   }
 
   .custom-category-overlay {
-    position: absolute;
-    top: 0rem;
-    left: 2rem;
-    width: 80%;
+    position: absolute;                          /* Vị trí tuyệt đối để trùng khớp với ảnh */
+    top: 0rem;                                   /* Đặt overlay sát đỉnh */
+    left: 2rem;                                  /* Đặt overlay cách lề trái 2rem */
+    width: 80%;                                  /* Overlay chiếm 80% chiều rộng của khung */
   }
-/*Định dạng Swpier*/
+/*Định dạng Swiper*/
 }
 swiper {
   overflow: initial; /* Cho phép nội dung tràn ra ngoài vùng hiển thị */
