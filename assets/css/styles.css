@@ -362,25 +362,25 @@ table {
 
 
 .nav__logo-img {
-  width: 120px;
+  width: 120px; /* Đặt chiều rộng logo */
 }
 
 .nav__menu {
-  width:auto;
-  flex-grow: 1;
-  margin-left: 2.5rem;
+  width:auto; /* Menu điều chỉnh kích thước tự động */
+  flex-grow: 1; /* Mở rộng menu để chiếm không gian còn lại */
+  margin-left: 2.5rem; /* Khoảng cách từ logo đến menu */
 }
 
 .nav__list {
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  column-gap: 2.5rem;
-  margin-right: auto;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Font chữ cho danh sách */
+  column-gap: 2.5rem; /* Khoảng cách giữa các mục */
+  margin-right: auto; /* Đẩy menu về bên trái */
 }
 
 .nav__link {
-  color: var(--title-color);
-  font-weight: var(--weight-700);
-  transform: all 0.3s var(--transition);
+  color: var(--title-color); /* Màu sắc liên kết */
+  font-weight: var(--weight-700); /* Độ dày font */
+  transform: all 0.3s var(--transition); /* Hiệu ứng chuyển đổi */
   -webkit-transform: all 0.3s var(--transition);
   -moz-transform: all 0.3s var(--transition);
   -ms-transform: all 0.3s var(--transition);
@@ -388,46 +388,46 @@ table {
 }
 
 .header__search {
-  width: 320px;
-  position: relative;
+  width: 320px; /* Chiều rộng ô tìm kiếm */
+  position: relative; /* Định vị tương đối */
 }
 
 .header__search .form__input {
-  width: 90%;
+  width: 90%; /* Chiều rộng ô nhập tìm kiếm */
 }
 
 .search__btn {
-  position: absolute;
-  top: 24%;
-  right: 2.5rem;
-  cursor: pointer;
-  border-radius: 40px;
+  position: absolute; /* Định vị tuyệt đối so với phần tử cha */
+  top: 24%; /* Vị trí từ trên xuống */
+  right: 2.5rem; /* Vị trí từ phải sang */
+  cursor: pointer; /* Con trỏ chuột dạng tay khi hover */
+  border-radius: 40px; /* Độ bo góc của nút */
 }
 
 .header__user-actions {
-  column-gap: 1.4rem;
+  column-gap: 1.4rem; /* Khoảng cách giữa các hành động */
 }
 
 .header__action-btn {
-  position: relative;
+  position: relative; /* Định vị tương đối */
 }
 
 .header__action-btn img {
-  width: 20px;
+  width: 20px; /* Kích thước ảnh hành động */
 }
 
 .header__action-btn span.count {
-  position: absolute;
-  top: -0.625rem;
-  right: -0.625rem;
-  background-color: var(--first-color);
-  color: var(--body-color);
-  height: 18px;
-  width: 18px;
-  text-align: center;
-  font-size: var(--tiny-font-size);
-  line-height: 18px;
-  border-radius: 50%;
+  position: absolute; /* Định vị tuyệt đối */
+  top: -0.625rem; /* Vị trí từ trên xuống */
+  right: -0.625rem; /* Vị trí từ phải sang */
+  background-color: var(--first-color); /* Màu nền của số đếm */
+  color: var(--body-color); /* Màu chữ */
+  height: 18px; /* Chiều cao vòng tròn số */
+  width: 18px; /* Chiều rộng vòng tròn số */
+  text-align: center; /* Căn giữa nội dung chữ */
+  font-size: var(--tiny-font-size); /* Kích thước chữ nhỏ */
+  line-height: 18px; /* Căn chỉnh chữ theo chiều cao */
+  border-radius: 50%; /* Tạo hình tròn */
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -436,45 +436,45 @@ table {
 
 .nav__menu-top,
 .nav__toggle {
-  display: none;
+  display: none; /* Ẩn menu toggle */
 }
 
 /* Active link */
 .active-link,
 .nav__link:hover {
-  color: var(--first-color);
+  color: var(--first-color); /* Đổi màu khi hover hoặc liên kết đang hoạt động */
 }
-
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+  margin: 0; /* Xóa khoảng cách mặc định */
+  font-family: Arial, sans-serif; /* Font chữ mặc định */
 }
+
 /* Ẩn menu con theo mặc định */
 .dropdown__menu {
-  display: none;
-  position: absolute;
-  list-style: none;
-  padding: 20px;
-  margin: 0;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none; /* Ẩn menu con */
+  position: absolute; /* Định vị tuyệt đối */
+  list-style: none; /* Xóa ký hiệu danh sách */
+  padding: 20px; /* Khoảng cách bên trong */
+  margin: 0; /* Xóa khoảng cách ngoài */
+  background-color: #fff; /* Màu nền trắng */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng */
 }
 
 .dropdown {
-  position: relative;
+  position: relative; /* Định vị tương đối */
 }
 
 .dropdown__menu li {
-  padding: 10px 20px;
+  padding: 10px 20px; /* Khoảng cách mỗi mục */
 }
 
 .dropdown__menu li a {
-  text-decoration: none;
-  color: #333;
-  display: inline-block;
-  white-space: nowrap; /* Ngăn việc tự động xuống dòng nếu nội dung quá dài */
-  transition: all 0.3s ease; /* Hiệu ứng mượt mà khi hover */
+  text-decoration: none; /* Xóa gạch chân */
+  color: #333; /* Màu chữ */
+  display: inline-block; /* Hiển thị theo dòng */
+  white-space: nowrap; /* Ngăn tự động xuống dòng */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển đổi */
 }
 
 /* Hiệu ứng hover cho từng danh mục */
@@ -485,7 +485,7 @@ body {
 
 /* Hiển thị menu con khi hover */
 .dropdown:hover .dropdown__menu {
-  display: block;
+  display: block; /* Hiển thị menu con */
 }
 
 /*Điều chỉnh responsive cho dropdown menu ở màn hình nhỏ*/
@@ -493,9 +493,10 @@ body {
 {
   /* Ẩn menu con khi hover */
   .dropdown:hover .dropdown__menu {
-    display: none;
+    display: none; /* Ẩn menu con */
   }
 }
+
 /*=============== DISCOUNT BANNER ===============*/
 .home__slider {
   position: relative;
