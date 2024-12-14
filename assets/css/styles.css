@@ -3508,8 +3508,8 @@ td {
 #account-wishlist .link:hover {
   color: #ff6aa7;
 }
-/*=============== BREAKPOINTS ===============*/
-/* For large devices */
+/*=============== ĐIỀU CHỈNH RESPONSIVE DESIGN ===============*/
+/* Màn hình lớn */
 @media screen and (max-width: 1400px) {
   .container {
     max-width: 1140px;
@@ -3630,7 +3630,7 @@ td {
     right: -25%;
     top: 12%;
   }
-
+/*Nút swiper*/
   .swiper-button-next,
   .swiper-button-prev {
     top: -28px;
