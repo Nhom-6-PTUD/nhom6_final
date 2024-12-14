@@ -2169,53 +2169,60 @@ swiper {
 
 
 /*=============== SHOP ===============*/
+/* Cấu hình cho tổng số sản phẩm */
 .total__products {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem; /* Thêm khoảng cách dưới cho phần tổng số sản phẩm */
 }
 
+/* Cấu hình cho phần span trong tổng số sản phẩm */
 .total__products span {
-  color: var(--first-color);
-  font-weight: var(--weight-600);
+  color: var(--first-color); /* Đặt màu chữ cho span */
+  font-weight: var(--weight-600); /* Đặt độ đậm cho chữ */
 }
 
+/* Cấu hình cho phần phân trang */
 .pagination {
-  display: flex;
-  justify-content: center;
-  column-gap: 0.625rem;
-  margin-top: 2.75rem;
+  display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử con */
+  justify-content: center; /* Căn giữa các phần tử con */
+  column-gap: 0.625rem; /* Thêm khoảng cách giữa các liên kết phân trang */
+  margin-top: 2.75rem; /* Thêm khoảng cách phía trên cho phân trang */
 }
 
+/* Cấu hình cho mỗi liên kết phân trang */
 .pagination__link {
-  display: inline-block;
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
-  text-align: center;
-  color: var(--text-color);
-  font-size: var(--small-font-size);
-  font-weight: var(--weight-700);
-  border-radius: 0.25rem;
-  transition: all 0.15s var(--transition);
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  -ms-border-radius: 0.25rem;
-  -o-border-radius: 0.25rem;
-  -webkit-transition: all 0.15s var(--transition);
-  -moz-transition: all 0.15s var(--transition);
-  -ms-transition: all 0.15s var(--transition);
-  -o-transition: all 0.15s var(--transition);
+  display: inline-block; /* Hiển thị các liên kết dưới dạng khối nội tuyến */
+  width: 34px; /* Đặt chiều rộng cho mỗi liên kết */
+  height: 34px; /* Đặt chiều cao cho mỗi liên kết */
+  line-height: 34px; /* Đặt chiều cao dòng bằng với chiều cao của liên kết để căn giữa chữ */
+  text-align: center; /* Căn giữa nội dung trong mỗi liên kết */
+  color: var(--text-color); /* Đặt màu chữ cho liên kết */
+  font-size: var(--small-font-size); /* Đặt kích thước font nhỏ */
+  font-weight: var(--weight-700); /* Đặt độ đậm cho chữ */
+  border-radius: 0.25rem; /* Bo góc cho liên kết */
+  transition: all 0.15s var(--transition); /* Thêm hiệu ứng chuyển động khi hover */
+  -webkit-border-radius: 0.25rem; /* Bo góc cho các trình duyệt Webkit */
+  -moz-border-radius: 0.25rem; /* Bo góc cho các trình duyệt Firefox */
+  -ms-border-radius: 0.25rem; /* Bo góc cho các trình duyệt Microsoft */
+  -o-border-radius: 0.25rem; /* Bo góc cho các trình duyệt Opera */
+  -webkit-transition: all 0.15s var(--transition); /* Thêm hiệu ứng cho các trình duyệt Webkit */
+  -moz-transition: all 0.15s var(--transition); /* Thêm hiệu ứng cho các trình duyệt Firefox */
+  -ms-transition: all 0.15s var(--transition); /* Thêm hiệu ứng cho các trình duyệt Microsoft */
+  -o-transition: all 0.15s var(--transition); /* Thêm hiệu ứng cho các trình duyệt Opera */
 }
 
+/* Cấu hình cho liên kết phân trang khi được chọn hoặc hover */
 .pagination__link.active,
 .pagination__link:hover {
-  background-color: var(--first-color);
-  color: var(--body-color);
+  background-color: var(--first-color); /* Thay đổi màu nền khi hover hoặc khi đang active */
+  color: var(--body-color); /* Thay đổi màu chữ khi hover hoặc khi đang active */
 }
 
+/* Cấu hình cho liên kết phân trang có icon */
 .pagination__link.icon {
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%; /* Bo góc trên phải thành tròn cho liên kết có icon */
+  border-bottom-right-radius: 50%; /* Bo góc dưới phải thành tròn cho liên kết có icon */
 }
+
 /*=============== DETAILS ===============*/
 /* Hiệu ứng chạy sáng cho nhãn */
 @keyframes shine {
