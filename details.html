@@ -98,10 +98,12 @@
 
     /* Hiệu ứng nhấp nháy cho ngôi sao */
     @keyframes blink {
+
       0%,
       100% {
         opacity: 1;
       }
+
       50% {
         opacity: 0;
       }
@@ -178,10 +180,10 @@
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
   </style>
-  
+
   <!-- Logo nhỏ hiển thị trên tab -->
   <link rel="icon" href="assets/img/1.png" type="image/x-icon">
-  
+
   <!-- Tên tab -->
   <title>ChicCharm Official Store</title>
 </head>
@@ -210,11 +212,11 @@
         <img class="nav__logo-img" src="assets/img/1.png" alt="website logo" />
       </a>
       <!-- Menu điều hướng -->
-        <div class="nav__menu" id="nav-menu">
-          <div class="nav__menu-top">
-            <a href="index.html" class="nav__menu-logo">
-              <img src="assets/img/1.png" alt="">
-            </a>
+      <div class="nav__menu" id="nav-menu">
+        <div class="nav__menu-top">
+          <a href="index.html" class="nav__menu-logo">
+            <img src="assets/img/1.png" alt="">
+          </a>
           <!-- Nút đóng menu -->
           <div class="nav__close" id="nav-close">
             <i class="fi fi-rs-cross-small"></i>
@@ -354,8 +356,8 @@
             💕 Set Urban Chic bao gồm:<br>
             ○ 1 gương cầm tay Shirley Temple (giá lẻ 65.000đ)<br>
             ○ 1 kẹp tóc Bellini (giá lẻ 45.000đ)</ul>
-          <!-- Tạo bảng banner làm nổi bật thông tin "sản phẩm cho phép custom" -->
-            <ul
+            <!-- Tạo bảng banner làm nổi bật thông tin "sản phẩm cho phép custom" -->
+          <ul
             style="border: 2px solid pink; padding: 10px; margin-top: 10px;  background-color: #ffffff; border-radius: 20px; color: #333; line-height: 1.5; font-weight: bold">
             ✨ Đặc biệt, các quý cô sẽ được tự do lựa chọn Charm mình iu thích để gắn lên hai bé điệu này khi rinh về
             nha!</ul>
@@ -460,9 +462,11 @@
     <!-- Phân chia 2 tab chính là Xem thêm thông tin sản phẩm và Đánh giá -->
     <div class="detail__tabs">
       <span class="detail__tab active-tab" data-target="#info"
-        style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;">Thông Tin Sản Phẩm</span>
+        style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;">Thông Tin Sản
+        Phẩm</span>
       <span class="detail__tab" data-target="#reviews"
-        style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;">Đánh Giá (3)</span>
+        style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 18px;">Đánh Giá
+        (3)</span>
     </div>
 
     <!-- Tab 1: Hiển thị thông tin chi tiết của sản phẩm -->
@@ -477,7 +481,7 @@
           ✨ Đặc biệt, Chic còn có quà dành cho các cô nàng sành điệu nữa đó. Chỉ với giá <strong>100.000đ</strong> yêu
           thương thôi là bạn đã có ngay full Collection.<br><br>
           Nhanh tay rước em ấy về nhà để luôn đẹp rạng ngời thui nàoo!<br><br></p>
-          <!-- Bảng thông tin chi tiết sản phẩm -->
+        <!-- Bảng thông tin chi tiết sản phẩm -->
         <table class="info__table">
           <tr>
             <!-- Tên cột 1 -->
@@ -510,8 +514,8 @@
               <img
                 src="https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/324665810_745929800208942_7707437334223649097_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeHbbWkDELt6-lplinxgZyz5eUDkg588b095QOSDnzxvT315MNlLFgTWFaxoNo4pYUCf2nW3Rjsaq5BGQbiUZa-e&_nc_ohc=8UZnc_YYTjsQ7kNvgEgkj8i&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=AcZxNARSn2la7vsxX6wfuhW&oh=00_AYAGjI3gaNxaOzw12bWcQjmRZ1NNE9-SifpfKWzNt_FtGg&oe=675C5C42"
                 alt="" class="review__img" />
-                <!-- Tên của khách hàng thứ nhất -->
-                <h4 class="review__title" style="text-align: center;">Nam Phương</h4>
+              <!-- Tên của khách hàng thứ nhất -->
+              <h4 class="review__title" style="text-align: center;">Nam Phương</h4>
             </div>
             <!-- Số sao đánh giá của khách hàng thứ nhất -->
             <div class="review__data">
@@ -575,21 +579,29 @@
           </div>
         </div>
 
+        <!-- Form để người dùng thêm đánh giá -->
         <div class="review__form">
+          <!-- Tiêu đề của form đánh giá -->
           <h4 class="review__form-title" style="font-family: 'Cambria'; font-size: 20px;">Thêm đánh giá</h4>
-          <!-- Đánh giá số sao -->
+          <!-- Biểu mẫu đánh giá sao -->
           <div class="rating__star__form" style="direction: rtl;">
+            <!-- Biểu tượng ngôi sao, mỗi span đại diện một sao, từ 1 đến 5 -->
             <span class="star" data-value="5">&#9733;</span>
             <span class="star" data-value="4">&#9733;</span>
             <span class="star" data-value="3">&#9733;</span>
             <span class="star" data-value="2">&#9733;</span>
             <span class="star" data-value="1">&#9733;</span>
           </div>
+          <!-- Form nhập thông tin đánh giá -->
           <form action="" class="form grid">
+            <!-- Nhóm nhập tên người dùng -->
             <div class="form__group grid">
+              <!-- Ô input để nhập tên, bắt buộc phải có tên -->
               <input type="text" placeholder="Tên của bạn" required class="form__input">
             </div>
+            <!-- Textarea để viết chi tiết đánh giá, bắt buộc nhập -->
             <textarea require class="form__input textarea" placeholder="Viết đánh giá của bạn..."></textarea>
+            <!-- Nút gửi đánh giá -->
             <div class="form__btn">
               <button class="btn">Đăng</button>
             </div>
@@ -598,52 +610,73 @@
       </div>
   </section>
 
-  <!--=============== DANH MỤC SẢN PHẨM ===============-->
+  <!--========== Hiển thị sản phẩm gợi ý ===============>-->
   <section class="products container section--lg">
-    <!--==========Hiển thị sản phẩm mua kèm===============>-->
-    <h3 class="section__title"><span
-        style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 20px; line-height: 2.5">SẢN
-        PHẨM MUA KÈM </span>
-      <p class="section__subtitle" style="margin-left: 0; text-align: left;">Chic gợi ý các sản phẩm mua kèm <i
-          class="fas fa-tag"></i></p>
+    <!-- Tiêu đề của danh mục sản phẩm -->
+    <h3 class="section__title">
+      <span style="font-family:Cambria, serif; font-size: 20px; line-height: 2.5">SẢN PHẨM MUA KÈM</span>
+      <!-- Mô tả phụ giải thích thêm -->
+      <p class="section__subtitle" style="margin-left: 0; text-align: left;">
+        Chic gợi ý các sản phẩm mua kèm <i class="fas fa-tag"></i>
+      </p>
+
+      <!-- Danh sách sản phẩm được bố trí theo grid -->
       <div class="products__container grid">
+        <!-- Hiển thị sản phẩm mua kèm 1 -->
         <div class="product__item">
+          <!-- Phần hình ảnh sản phẩm -->
           <div class="product__banner">
+            <!-- Link tới trang chi tiết sản phẩm -->
             <a href="details.html" class="product__images">
+              <!-- Hình ảnh mặc định -->
               <img src="assets/img/product13.1.png" alt="" class="product__img default" />
+              <!-- Hình ảnh khi hover -->
               <img src="assets/img/product13.2.png" alt="" class="product__img hover" />
             </a>
+            <!-- Các nút chức năng liên quan đến sản phẩm -->
             <div class="product__actions">
               <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
+                <!-- Icon dẫn tới cửa hàng -->
                 <i class="fa-solid fa-up-right-from-square"></i>
-                <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
-                  <i class="fi fi-rs-heart"></i>
-                </a>
+              </a>
+              <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
+                <!-- Icon wishlist -->
+                <i class="fi fi-rs-heart"></i>
+              </a>
             </div>
+            <!-- Thẻ nổi bật (badge) thể hiện tình trạng sản phẩm -->
             <div class="product__badge light-pink">Hot</div>
           </div>
+          <!-- Phần nội dung thông tin sản phẩm -->
           <div class="product__content">
+            <!-- Thể loại sản phẩm -->
             <span class="product__category">Kẹp tròn</span>
+            <!-- Tiêu đề và tên sản phẩm -->
             <a href="details.html">
               <h3 class="product__title">Kẹp Hoa Yêu Thương</h3>
             </a>
+            <!-- Đánh giá sản phẩm bằng ngôi sao -->
             <div class="product__rating">
               <i class="fa fa-star"></i>
               <i class="fa fa-star"></i>
               <i class="fa fa-star"></i>
               <i class="fa fa-star"></i>
               <i class="fa fa-star-half-alt"></i>
+              <!-- Số lượng đánh giá (ví dụ: 89 đánh giá) -->
               <span> (89)</span>
             </div>
+            <!-- Giá sản phẩm -->
             <div class="product__price flex">
               <span class="new__price">90.000 VND</span>
             </div>
+            <!-- Nút thêm vào giỏ hàng -->
             <a href="#" class="action__btn cart__btn" aria-label="Thêm vào Giỏ hàng" data-inventory="11">
               <i class="fi fi-rs-shopping-bag-add"></i>
             </a>
           </div>
         </div>
 
+        <!-- Hiển thị sản phẩm mua kèm 2 -->
         <div class="product__item">
           <div class="product__banner">
             <a href="details.html" class="product__images">
@@ -681,6 +714,7 @@
           </div>
         </div>
 
+        <!-- Hiển thị sản phẩm mua kèm 3 -->
         <div class="product__item">
           <div class="product__banner">
             <a href="details.html" class="product__images">
@@ -719,52 +753,78 @@
         </div>
       </div>
 
-      <!--==========Hiển thị sản phẩm gợi ý===============>-->
-      <h3 class="section__title"><span
-          style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 20px; line-height: 2.5">SẢN
-          PHẨM GỢI Ý </span>
-        <p class="section__subtitle" style="margin-left: 0; text-align: left;">Chic Nghĩ Bạn Cũng Thích <i
-            class="fas fa-tag"></i></p>
+      <!--========== Hiển thị sản phẩm gợi ý ===============>-->
+      <h3 class="section__title">
+        <!-- Tiêu đề chính của phần "SẢN PHẨM GỢI Ý" -->
+        <span
+          style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 20px; line-height: 2.5">
+          SẢN PHẨM GỢI Ý
+        </span>
+        <!-- Mô tả phụ thêm cho phần gợi ý -->
+        <p class="section__subtitle" style="margin-left: 0; text-align: left;">
+          Chic Nghĩ Bạn Cũng Thích
+          <i class="fas fa-tag"></i>
+        </p>
+
+        <!-- Grid chứa toàn bộ danh sách sản phẩm gợi ý -->
         <div class="products__container grid">
-          <!--==========Sản phẩm gợi ý 1===============>-->
+
+          <!--========== Sản phẩm gợi ý 1 ===============>-->
           <div class="product__item">
+            <!-- Phần banner chứa hình ảnh sản phẩm và các tùy chọn -->
             <div class="product__banner">
+              <!-- Link chuyển hướng tới trang chi tiết sản phẩm -->
               <a href="details.html" class="product__images">
+                <!-- Hình ảnh mặc định của sản phẩm -->
                 <img src="assets/img/product20.1.png" alt="" class="product__img default" />
+                <!-- Hình ảnh thay đổi khi hover chuột -->
                 <img src="assets/img/product13.2.png" alt="" class="product__img hover" />
               </a>
+              <!-- Các nút chức năng cho sản phẩm -->
               <div class="product__actions">
+                <!-- Nút chuyển hướng tới cửa hàng -->
                 <a href="shop.html" class="action__btn" aria-label="Cửa hàng">
                   <i class="fa-solid fa-up-right-from-square"></i>
-                  <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
-                    <i class="fi fi-rs-heart"></i>
-                  </a>
+                </a>
+                <!-- Nút thêm sản phẩm vào danh sách yêu thích -->
+                <a href="#" class="action__btn" aria-label="Thêm vào Wishlist" id="addToWishlist">
+                  <i class="fi fi-rs-heart"></i>
+                </a>
               </div>
+              <!-- Phần nhãn sản phẩm "Hot" hiển thị nổi bật -->
               <div class="product__badge light-pink">Hot</div>
             </div>
+
+            <!-- Phần nội dung hiển thị thông tin chi tiết sản phẩm -->
             <div class="product__content">
+              <!-- Danh mục của sản phẩm -->
               <span class="product__category">Kẹp vuông</span>
+              <!-- Tên sản phẩm -->
               <a href="details.html">
                 <h3 class="product__title">Kẹp Giấc Mơ Hoa</h3>
               </a>
+              <!-- Phần đánh giá sản phẩm bằng các ngôi sao -->
               <div class="product__rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-half-alt"></i>
+                <!-- Tổng số lượng đánh giá sản phẩm -->
                 <span> (89)</span>
               </div>
+              <!-- Giá sản phẩm -->
               <div class="product__price flex">
                 <span class="new__price">129.000 VND</span>
               </div>
+              <!-- Nút thêm sản phẩm vào giỏ hàng -->
               <a href="#" class="action__btn cart__btn" aria-label="Thêm vào Giỏ hàng" data-inventory="11">
                 <i class="fi fi-rs-shopping-bag-add"></i>
               </a>
             </div>
           </div>
 
-          <!--==========Sản phẩm gợi ý 2===============>-->
+          <!--========== Sản phẩm gợi ý 2 ===============>-->
           <div class="product__item">
             <div class="product__banner">
               <a href="details.html" class="product__images">
@@ -803,7 +863,7 @@
             </div>
           </div>
 
-          <!--==========Sản phẩm gợi ý 3===============>-->
+          <!--========== Sản phẩm gợi ý 3 ===============>-->
           <div class="product__item">
             <div class="product__banner">
               <a href="details.html" class="product__images">
@@ -843,18 +903,24 @@
         </div>
   </section>
 
-  <!--=============== NEWSLETTER ===============-->
+  <!--=============== PHẦN ĐĂNG KÝ NHẬN THƯ ===============-->
   <section class="newsletter section home__newsletter">
+    <!-- Container chính chứa nội dung của phần newsletter -->
     <div class="newsletter__container container grid">
+      <!-- Tiêu đề của phần newsletter -->
       <h3 class="newsletter__title flex">
         <img src="./assets/img/icon-email.svg" alt="" class="newsletter__icon" />
         ĐĂNG KÝ ĐỂ NHẬN TIN
       </h3>
+      <!-- Mô tả ngắn khuyến khích người dùng đăng ký -->
       <p class="newsletter__description">
         ...và nhận 10% giảm giá cho lần mua đầu tiên.
       </p>
+      <!-- Biểu mẫu để người dùng nhập email và nhấn đăng ký -->
       <form action="" class="newsletter__form">
+        <!-- Hộp nhập liệu để nhập email -->
         <input type="text" placeholder="Nhập Email của bạn" class="newsletter__input" />
+        <!-- Nút đăng ký -->
         <button type="submit" class="newsletter__btn">Đăng ký</button>
       </form>
     </div>
@@ -863,7 +929,9 @@
 
   <!--=============== FOOTER ===============-->
   <footer class="footer container">
+    <!-- Container chính của phần footer -->
     <div class="footer__container grid">
+      <!-- Phần thông tin liên hệ -->
       <div class="footer__content">
         <a href="index.html" class="footer__logo">
           <img src="./assets/img/logo.svg" alt="" class="footer__logo-img" />
@@ -891,6 +959,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Phần liên kết nhanh -->
       <div class="footer__content">
         <h3 class="footer__title">Địa chỉ</h3>
         <ul class="footer__links">
@@ -902,17 +972,20 @@
           <li><a href="#" class="footer__link">Trung Tâm Hỗ Trợ</a></li>
         </ul>
       </div>
+
+      <!-- Phần thông tin tài khoản của khách hàng -->
       <div class="footer__content">
         <h3 class="footer__title">Tài Khoản</h3>
         <ul class="footer__links">
           <li><a href="login.html" class="footer__link">Đăng Nhập</a></li>
           <li><a href="cart.html" class="footer__link">Giỏ Hàng</a></li>
           <li><a href="wishlist.html" class="footer__link">Wishlist</a></li>
-          <li><a href="#" class="footer__link">Đơn Hàng</a></li>
+          <li><a href="accounts.html" class="footer__link">Đơn Hàng</a></li>
           <li><a href="#" class="footer__link">Giúp Đỡ</a></li>
-          <li><a href="#" class="footer__link">Đặt Hàng</a></li>
+          <li><a href="cart.html" class="footer__link">Đặt Hàng</a></li>
         </ul>
       </div>
+      <!-- Phần phương thức thanh toán -->
       <div class="footer__content">
         <h3 class="footer__title">Phương Thức Thanh Toán</h3>
         <img src="./assets/img/payment-method.png" alt="" class="payment__img" />
@@ -930,6 +1003,7 @@
   <script src="assets/js/jquery.elevateZoom-3.0.8.min.js"></script>
 
   <script>
+    // Áp dụng tính năng phóng to cho phần tử có id="zoom" bằng Elevate Zoom
     $("#zoom").elevateZoom();
   </script>
 
@@ -940,10 +1014,10 @@
       var nav = document.querySelector('.nav');
 
       // Kiểm tra vị trí cuộn của trang
-      if (window.scrollY > 300) { // Khi cuộn xuống 100px
-        nav.classList.add('fixed-menu'); // Thêm lớp cố định cho nav
+      if (window.scrollY > 300) { // Khi cuộn xuống >300px
+        nav.classList.add('fixed-menu'); // Thêm lớp 'fixed-menu' để giữ menu cố định trên đầu trang
       } else {
-        nav.classList.remove('fixed-menu'); // Bỏ lớp cố định khi lên đầu trang
+        nav.classList.remove('fixed-menu'); // Xóa lớp 'fixed-menu' khi quay lại đầu trang
       }
     };
   </script>
@@ -951,117 +1025,119 @@
   <script>
     /*=============== ZOOM SẢN PHẨM ===============*/
     document.addEventListener("DOMContentLoaded", function () {
-      const thumbnails = document.querySelectorAll(".thumbnail");
-      const mainImage = document.querySelector("#zoom");
+      const thumbnails = document.querySelectorAll(".thumbnail"); // Danh sách ảnh nhỏ
+      const mainImage = document.querySelector("#zoom"); // Ảnh chính cần phóng to
 
+      // Lặp qua tất cả thumbnail
       thumbnails.forEach((thumbnail, index) => {
         thumbnail.addEventListener("click", function () {
           // Lấy URL của ảnh nhỏ
           const newSrc = this.getAttribute("src");
-          const newZoomImage = newSrc.replace(".jpg", "_big.jpg"); // Giả sử ảnh lớn có hậu tố _big.jpg
+          const newZoomImage = newSrc.replace(".jpg", "_big.jpg"); // Chuyển sang ảnh lớn (_big.jpg)
 
           // Cập nhật ảnh chính
           mainImage.setAttribute("src", newSrc);
 
-          // Thêm zoom cho ảnh thứ 1,2,3,4
+          // Thêm tính năng zoom cho các thumbnail thứ 1,2,3,4
           if (index === 0 || index === 1 || index === 2 || index === 3) {
-            mainImage.setAttribute("data-zoom-image", newZoomImage);
-            $("#zoom").data("elevateZoom")?.swaptheimage(newSrc, newZoomImage);
+            mainImage.setAttribute("data-zoom-image", newZoomImage); // Cập nhật ảnh lớn cho zoom
+            $("#zoom").data("elevateZoom")?.swaptheimage(newSrc, newZoomImage); // Kích hoạt zoom
           } else {
+            // Loại bỏ zoom nếu không nằm trong 4 ảnh đầu
             mainImage.removeAttribute("data-zoom-image");
-            $("#zoom").data("elevateZoom")?.destroy();
+            $("#zoom").data("elevateZoom")?.destroy(); // Hủy chức năng zoom
           }
 
-          // Đổi trạng thái active cho thumbnail
-          document.querySelector(".thumbnail.active")?.classList.remove("active");
-          this.classList.add("active");
+          // Đổi trạng thái "active" cho thumbnail đang chọn
+          document.querySelector(".thumbnail.active")?.classList.remove("active"); // Xóa "active" cũ
+          this.classList.add("active"); // Thêm trạng thái "active" cho ảnh nhỏ được chọn
         });
       });
     });
   </script>
 
-  <!-- Thêm JavaScript -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const thumbnails = document.querySelectorAll(".thumbnail");
-      const mainImage = document.querySelector("#zoom");
+      const thumbnails = document.querySelectorAll(".thumbnail"); // Lấy danh sách tất cả các ảnh nhỏ (thumbnail)
+      const mainImage = document.querySelector("#zoom"); // Lấy ảnh chính có ID là "zoom"
 
       thumbnails.forEach((thumbnail) => {
         thumbnail.addEventListener("click", function () {
-          // Lấy URL của ảnh nhỏ
+          // Lấy URL của ảnh nhỏ khi nhấn vào
           const newSrc = this.getAttribute("src");
-          const newZoomImage = newSrc.replace(".jpg", "_big.jpg"); // Giả sử ảnh lớn có hậu tố _big.jpg
+          const newZoomImage = newSrc.replace(".jpg", "_big.jpg"); // Giả sử ảnh lớn có hậu tố "_big.jpg"
 
-          // Cập nhật ảnh chính
-          mainImage.setAttribute("src", newSrc);
-          mainImage.setAttribute("data-zoom-image", newZoomImage);
+          // Cập nhật ảnh chính và thêm zoom cho ảnh
+          mainImage.setAttribute("src", newSrc); // Cập nhật đường dẫn của ảnh chính
+          mainImage.setAttribute("data-zoom-image", newZoomImage); // Cập nhật đường dẫn zoom của ảnh chính
 
-          // Đổi trạng thái active cho thumbnail
-          document.querySelector(".thumbnail.active")?.classList.remove("active");
-          this.classList.add("active");
+          // Đổi trạng thái "active" cho thumbnail
+          document.querySelector(".thumbnail.active")?.classList.remove("active"); // Xóa lớp "active" ở thumbnail hiện tại
+          this.classList.add("active"); // Thêm lớp "active" cho thumbnail được nhấn
         });
       });
     });
+
   </script>
 
   <script>
     /*=============== TAB THÔNG TIN SẢN PHẨM VÀ ĐÁNH GIÁ ===============*/
     document.addEventListener("DOMContentLoaded", function () {
-      const tabs = document.querySelectorAll(".detail__tab");
-      const tabContents = document.querySelectorAll(".details__tab-content");
+      const tabs = document.querySelectorAll(".detail__tab"); // Lấy danh sách các tab (thông tin, đánh giá,...)
+      const tabContents = document.querySelectorAll(".details__tab-content"); // Lấy nội dung tương ứng của từng tab
 
       tabs.forEach((tab, index) => {
         tab.addEventListener("click", function () {
-          // Xóa trạng thái active khỏi tất cả các tab
+          // Xóa trạng thái "active-tab" khỏi tất cả tab và nội dung
           document.querySelector(".detail__tab.active-tab")?.classList.remove("active-tab");
           document.querySelector(".details__tab-content.active-tab")?.classList.remove("active-tab");
 
-          // Thêm trạng thái active cho tab được nhấn
-          this.classList.add("active-tab");
-          tabContents[index].classList.add("active-tab");
+          // Thêm trạng thái "active-tab" cho tab được click
+          this.classList.add("active-tab"); // Tab đang chọn sẽ được làm nổi bật
+          tabContents[index].classList.add("active-tab"); // Hiển thị nội dung tương ứng với tab
         });
       });
     });
+
   </script>
 
   <script>
     /*=============== CẬP NHẬT SỐ LƯỢT ĐÁNH GIÁ ===============*/
     document.addEventListener("DOMContentLoaded", function () {
-      // Lấy số lượt đánh giá từ tab "Đánh Giá"
-      const reviewTab = document.querySelector(".detail__tab[data-target='#reviews']");
-      const reviewCount = reviewTab.textContent.match(/\d+/); // Lấy số đầu tiên trong chuỗi
+      const reviewTab = document.querySelector(".detail__tab[data-target='#reviews']"); // Lấy tab "Đánh Giá"
+      const reviewCount = reviewTab.textContent.match(/\d+/); // Lấy số đầu tiên trong chuỗi (số lượt đánh giá)
 
-      // Cập nhật số lượt đánh giá trong phần thông tin sản phẩm
-      const productReviewCount = document.querySelector(".details__rating .review-count");
+      const productReviewCount = document.querySelector(".details__rating .review-count"); // Lấy phần hiển thị số đánh giá
       if (reviewCount && productReviewCount) {
-        productReviewCount.textContent = `(${reviewCount[0]} đánh giá)`;
+        productReviewCount.textContent = `(${reviewCount[0]} đánh giá)`; // Cập nhật số lượt đánh giá
       }
     });
+
   </script>
 
   <script>
-    /*=============== Khi nhấp vào số lượng đánh giá sẽ tự động cuộn đến tab đánh giá ===============*/
+    /*=============== Cuộn tự động đến tab đánh giá khi click vào số lượt đánh giá ===============*/
     document.addEventListener("DOMContentLoaded", function () {
-      // Lấy liên kết "Số lượt đánh giá"
-      const reviewLink = document.querySelector(".review-count");
-      const reviewsTab = document.querySelector(".detail__tab[data-target='#reviews']");
+      const reviewLink = document.querySelector(".review-count"); // Lấy phần hiển thị "số lượt đánh giá"
+      const reviewsTab = document.querySelector(".detail__tab[data-target='#reviews']"); // Lấy tab "Đánh Giá"
       const tabsContainer = document.querySelector(".detail__tabs"); // Phần chứa các tab
 
       reviewLink.addEventListener("click", function (event) {
-        event.preventDefault(); // Ngăn hành động mặc định (chuyển hướng)
+        event.preventDefault(); // Ngăn hành động mặc định của liên kết
 
         // Kích hoạt tab "Đánh Giá"
-        document.querySelector(".detail__tab.active-tab")?.classList.remove("active-tab");
-        reviewsTab.classList.add("active-tab");
+        document.querySelector(".detail__tab.active-tab")?.classList.remove("active-tab"); // Xóa trạng thái active-tab hiện tại
+        reviewsTab.classList.add("active-tab"); // Kích hoạt tab "Đánh Giá"
 
-        // Ẩn nội dung tab khác và hiển thị nội dung "Đánh Giá"
+        // Ẩn nội dung tab khác và hiển thị tab "Đánh Giá"
         document.querySelector(".details__tab-content.active-tab")?.classList.remove("active-tab");
         document.querySelector("#reviews").classList.add("active-tab");
 
-        // Cuộn đến phần tabsContainer
+        // Cuộn mượt đến phần tabsContainer
         tabsContainer.scrollIntoView({ behavior: "smooth" });
       });
     });
+
   </script>
 
   <script>
@@ -1092,65 +1168,65 @@
   <script>
     /*=============== Thêm đánh giá sản phẩm ===============*/
     document.addEventListener("DOMContentLoaded", function () {
-      const stars = document.querySelectorAll(".rating__star__form .star");  // Tất cả các ngôi sao
-      const reviewForm = document.querySelector(".review__form form");
-      let ratingValue = 0;  // Lưu trữ số sao người dùng chọn
+      const stars = document.querySelectorAll(".rating__star__form .star"); // Lấy tất cả ngôi sao để đánh giá
+      const reviewForm = document.querySelector(".review__form form"); // Lấy form đánh giá
+      let ratingValue = 0; // Biến lưu giá trị số sao người dùng chọn (ban đầu là 0)
 
       // Xử lý khi người dùng nhấp vào ngôi sao
       stars.forEach(star => {
         star.addEventListener("click", function () {
-          ratingValue = parseInt(this.getAttribute("data-value"));
-          highlightStars(ratingValue);  // Làm sáng các sao đã chọn
+          ratingValue = parseInt(this.getAttribute("data-value")); // Lấy giá trị sao (data-value)
+          highlightStars(ratingValue); // Làm sáng các ngôi sao đã chọn
         });
       });
 
-      // Xử lý khi người dùng hover vào sao (chỉ để thay đổi màu sắc sao)
+      // Xử lý hover vào sao để làm sáng sao (chỉ hiệu ứng giao diện)
       stars.forEach(star => {
         star.addEventListener("mouseover", function () {
           const hoverValue = parseInt(this.getAttribute("data-value"));
-          highlightStars(hoverValue);  // Làm sáng sao khi hover
+          highlightStars(hoverValue); // Làm sáng tạm các sao khi hover
         });
 
         star.addEventListener("mouseout", function () {
-          highlightStars(ratingValue);  // Giữ nguyên màu sắc sao đã chọn khi không hover
+          highlightStars(ratingValue); // Quay lại số sao người dùng đã chọn khi dừng hover
         });
       });
 
-      // Hàm để làm sáng các sao
+      // Hàm để làm sáng ngôi sao
       function highlightStars(rating) {
         stars.forEach(star => {
           const starValue = parseInt(star.getAttribute("data-value"));
           if (starValue <= rating) {
-            star.style.color = "#ffcc00";  // Màu vàng khi chọn
+            star.style.color = "#ffcc00"; // Sao được chọn có màu vàng
           } else {
-            star.style.color = "#ccc";  // Màu xám khi chưa chọn
+            star.style.color = "#ccc"; // Sao chưa chọn có màu xám
           }
         });
       }
 
-      // Xử lý khi gửi form
+      // Xử lý gửi form
       reviewForm.addEventListener("submit", function (event) {
-        event.preventDefault();  // Ngăn gửi form (để kiểm tra thông tin)
+        event.preventDefault(); // Ngăn gửi form để kiểm tra dữ liệu
 
-        const username = reviewForm.querySelector("input[type='text']").value;
-        const reviewText = reviewForm.querySelector("textarea").value;
+        const username = reviewForm.querySelector("input[type='text']").value; // Lấy tên người dùng
+        const reviewText = reviewForm.querySelector("textarea").value; // Lấy nội dung đánh giá
 
-        // Kiểm tra xem người dùng đã chọn sao chưa
+        // Kiểm tra người dùng có chọn số sao chưa
         if (ratingValue === 0) {
           alert("Bạn vui lòng chọn số sao!");
           return;
         }
 
-        // Kiểm tra xem các trường còn lại có hợp lệ không
+        // Kiểm tra các trường thông tin
         if (!username || !reviewText) {
           alert("Bạn vui lòng điền đầy đủ thông tin!");
           return;
         }
 
-        // Reset form sau khi gửi
+        // Reset form và trạng thái sau khi gửi
         reviewForm.reset();
-        ratingValue = 0;  // Reset ratingValue khi gửi đánh giá
-        highlightStars(0);  // Reset các sao về màu xám
+        ratingValue = 0; // Reset giá trị sao về 0
+        highlightStars(0); // Reset màu các ngôi sao về mặc định
         alert("Cảm ơn bạn đã đánh giá!");
       });
     });
@@ -1159,31 +1235,30 @@
   <script>
     /*=============== LƯU LỰA CHỌN MÀU CHARM ===============*/
     document.addEventListener("DOMContentLoaded", function () {
-      const colorLinks = document.querySelectorAll(".color__link");
+      const colorLinks = document.querySelectorAll(".color__link"); // Lấy danh sách các màu charm
 
       // Xóa trạng thái đã lưu khi tải lại trang
       localStorage.removeItem("selectedColor");
 
-      // Xử lý khi chọn màu
+      // Xử lý khi người dùng chọn màu
       colorLinks.forEach((link) => {
         link.addEventListener("click", function (event) {
-          // Ngăn trang cuộn lên đầu
-          event.preventDefault();
+          event.preventDefault(); // Ngăn trang tự cuộn lên đầu
 
           // Loại bỏ lớp 'active' khỏi tất cả các màu
           colorLinks.forEach((item) => item.classList.remove("active"));
 
-          // Thêm lớp 'active' vào màu được chọn
+          // Thêm lớp 'active' cho màu được chọn
           this.classList.add("active");
 
-          // Lưu màu đã chọn
+          // Lưu màu được chọn vào localStorage
           const selectedColor = this.dataset.color || this.style.backgroundColor;
-          localStorage.setItem("selectedColor", selectedColor);
+          localStorage.setItem("selectedColor", selectedColor); // Lưu trữ màu vào localStorage
           console.log("Selected color:", selectedColor);
         });
       });
 
-      // Tự động áp dụng màu đã lưu khi tải lại trang (nếu cần giữ trạng thái giữa lần tải lại)
+      // Áp dụng màu đã lưu khi tải lại trang (nếu có)
       const savedColor = localStorage.getItem("selectedColor");
       if (savedColor) {
         colorLinks.forEach((link) => {
@@ -1193,16 +1268,17 @@
           }
         });
       } else {
-        // Nếu không lưu trạng thái, xóa lớp 'active' khỏi tất cả các màu
+        // Xóa lớp 'active' nếu không có màu được lưu
         colorLinks.forEach((item) => item.classList.remove("active"));
       }
     });
+
   </script>
 
   <script>
     /*=============== LƯU LỰA CHỌN CHARM HÌNH ===============*/
     document.addEventListener("DOMContentLoaded", function () {
-      const sizeLinks = document.querySelectorAll(".size__link");
+      const sizeLinks = document.querySelectorAll(".size__link"); // Lấy danh sách các charm hình
 
       // Xóa trạng thái đã lưu khi tải lại trang
       localStorage.removeItem("selectedCharm");
@@ -1210,8 +1286,7 @@
       // Xử lý khi chọn charm
       sizeLinks.forEach((link) => {
         link.addEventListener("click", function (event) {
-          // Ngăn trang cuộn lên đầu
-          event.preventDefault();
+          event.preventDefault(); // Ngăn trang tự cuộn lên đầu
 
           // Loại bỏ lớp 'active' khỏi tất cả các charm
           sizeLinks.forEach((item) => item.classList.remove("active"));
@@ -1219,14 +1294,14 @@
           // Thêm lớp 'active' vào charm được chọn
           this.classList.add("active");
 
-          // Lưu charm đã chọn
+          // Lưu charm đã chọn vào localStorage
           const selectedCharm = this.textContent.trim();
-          localStorage.setItem("selectedCharm", selectedCharm);
+          localStorage.setItem("selectedCharm", selectedCharm); // Lưu giá trị charm
           console.log("Selected charm:", selectedCharm);
         });
       });
 
-      // Tự động áp dụng charm đã lưu khi tải lại trang
+      // Áp dụng charm đã lưu khi tải lại trang
       const savedCharm = localStorage.getItem("selectedCharm");
       if (savedCharm) {
         sizeLinks.forEach((link) => {
@@ -1235,33 +1310,41 @@
           }
         });
       } else {
-        // Nếu không lưu trạng thái, xóa lớp 'active' khỏi tất cả các charm
+        // Xóa lớp 'active' nếu không có charm được lưu
         sizeLinks.forEach((item) => item.classList.remove("active"));
       }
     });
+
   </script>
 
   <script>
     /*=============== Ngăn cuộn trang và tạo Alert khi nhấn nút THÊM VÀO GIỎ HÀNG ===============*/
     document.addEventListener("DOMContentLoaded", function () {
-      const addToCartButton = document.getElementById("add-to-cart");
+      // Đảm bảo mã JavaScript chỉ chạy sau khi toàn bộ DOM được tải
 
-      // Ngăn trang cuộn lên đầu khi nhấn nút "Thêm vào giỏ hàng"
+      const addToCartButton = document.getElementById("add-to-cart");
+      // Lấy phần tử nút "Thêm vào giỏ hàng" qua ID
+
       addToCartButton.addEventListener("click", function (event) {
-        // Ngừng hành động mặc định (nếu có)
+        // Bắt sự kiện khi người dùng nhấn vào nút "Thêm vào giỏ hàng"
         event.preventDefault();
+        // Ngăn hành động mặc định (chẳng hạn, không để nút tự tải lại trang)
       });
     });
   </script>
 
   <script>
-    // Lấy phần tử nút "Thêm vào giỏ hàng" qua ID
+    /*=============== Tạo thông báo khi nhấn nút THÊM VÀO WISHLIST ===============*/
     document.getElementById("add-to-wishlist").addEventListener("click", function (event) {
-      event.preventDefault(); // Ngăn chặn hành động mặc định của thẻ <a>
+      event.preventDefault();
+      // Ngăn hành động mặc định của nút (thường là chuyển hướng)
 
-      // Tạo thông báo
       const notification = document.createElement("div");
+      // Tạo một phần tử <div> để làm thông báo
       notification.textContent = "Đã thêm vào Wishlist!";
+      // Thêm nội dung thông báo
+
+      // Định dạng style cho thông báo
       notification.style.position = "fixed";
       notification.style.bottom = "20px";
       notification.style.right = "20px";
@@ -1273,23 +1356,255 @@
       notification.style.zIndex = "1000";
       notification.style.fontSize = "14px";
 
-      // Thêm thông báo vào body
       document.body.appendChild(notification);
+      // Thêm thông báo vào body để hiển thị cho người dùng
 
-      // Tự động xóa thông báo sau 2 giây
       setTimeout(function () {
         notification.remove();
+        // Xóa thông báo sau 1.5 giây
       }, 1500);
     });
   </script>
 
   <script>
-    //=========TẠO ALERT KHI NHẤN VÀO NÚT THÊM VÀO WISHLIST=====//
-    // Lấy phần tử nút "Thêm vào Wishlist" qua ID
+    /*=============== Tạo thông báo khi nhấn nút THÊM VÀO GIỎ HÀNG ===============*/
     document.getElementById("add-to-cart").addEventListener("click", function (event) {
-      event.preventDefault(); // Ngăn chặn hành động mặc định của thẻ <a>
+      event.preventDefault();
+      // Ngăn hành động mặc định của nút "Thêm vào giỏ hàng"
 
-      // Tạo thông báo
+      const notification = document.createElement("div");
+      notification.textContent = "Đã thêm vào giỏ hàng!";
+      // Thông báo khi nhấn "Thêm vào giỏ hàng"
+
+      // Thêm style thông báo
+      notification.style.position = "fixed";
+      notification.style.bottom = "20px";
+      notification.style.right = "20px";
+      notification.style.backgroundColor = "#ff77c0b6";
+      notification.style.color = "#fff";
+      notification.style.padding = "10px 20px";
+      notification.style.borderRadius = "5px";
+      notification.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+      notification.style.zIndex = "1000";
+      notification.style.fontSize = "14px";
+
+      document.body.appendChild(notification);
+      // Thêm thông báo vào body
+
+      setTimeout(function () {
+        notification.remove();
+        // Tự động xóa thông báo sau 1.5 giây
+      }, 1500);
+    });
+  </script>
+
+  <script>
+    /*=============== Xử lý sự kiện nhấn THÊM VÀO WISHLIST/GIỎ HÀNG với nhiều nút ===============*/
+    document.addEventListener("DOMContentLoaded", function () {
+      const addToWishlistBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Wishlist"]');
+      // Lấy tất cả các nút có aria-label "Thêm vào Wishlist"
+
+      addToWishlistBtns.forEach(function (button) {
+        button.addEventListener("click", function (e) {
+          e.preventDefault();
+          // Ngăn hành động mặc định của nút
+          alert("Đã thêm vào Wishlist thành công!");
+          // Hiển thị thông báo qua `alert`
+        });
+      });
+    });
+
+    const addToCartBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Giỏ hàng"]');
+    // Chọn tất cả các nút có aria-label "Thêm vào Giỏ hàng"
+
+    addToCartBtns.forEach(function (btn) {
+      btn.addEventListener("click", function (event) {
+        event.preventDefault();
+        // Ngăn hành động mặc định
+
+        const reviews = btn.getAttribute("data-reviews") || 0;
+        // Lấy số lượt đánh giá từ thuộc tính data-reviews (nếu có)
+
+        const inventory = btn.getAttribute("data-inventory") || 0;
+        // Lấy số lượng tồn kho từ thuộc tính data-inventory (nếu có)
+
+        alert(`Đã thêm vào giỏ hàng thành công! 
+      Sản phẩm này còn ${inventory} sản phẩm trong kho.`);
+        // Hiển thị thông báo số lượng tồn kho qua `alert`
+      });
+    });
+  </script>
+
+  <script>
+    /*=============== Cập nhật số lượt đánh giá từ tab đánh giá ===============*/
+    document.addEventListener("DOMContentLoaded", function () {
+      const reviewTab = document.querySelector(".detail__tab[data-target='#reviews']");
+      // Lấy tab "Đánh giá" qua data-target
+
+      const reviewCount = reviewTab.textContent.match(/\d+/);
+      // Tìm số lượt đánh giá trong nội dung tab bằng Regular Expression
+
+      const productReviewCount = document.querySelector(".details__rating .review-count");
+      // Lấy phần tử chứa số lượt đánh giá của sản phẩm
+
+      if (reviewCount && productReviewCount) {
+        productReviewCount.textContent = `(${reviewCount[0]} đánh giá)`;
+        // Cập nhật số lượt đánh giá vào giao diện sản phẩm
+      }
+    });
+  </script>
+
+  <script>
+    /*=============== Khi nhấn vào số lượt đánh giá, tự động cuộn đến tab đánh giá ===============*/
+    document.addEventListener("DOMContentLoaded", function () {
+      const reviewLink = document.querySelector(".review-count");
+      // Lấy phần tử số lượt đánh giá
+
+      const reviewsTab = document.querySelector(".detail__tab[data-target='#reviews']");
+      // Lấy tab "Đánh Giá" qua data-target
+
+      const tabsContainer = document.querySelector(".detail__tabs");
+      // Lấy phần tử chứa toàn bộ các tab
+
+      reviewLink.addEventListener("click", function (event) {
+        event.preventDefault();
+        // Ngăn hành động mặc định khi nhấp vào liên kết
+
+        document.querySelector(".detail__tab.active-tab")?.classList.remove("active-tab");
+        // Xóa trạng thái active của tab hiện tại
+
+        reviewsTab.classList.add("active-tab");
+        // Thêm trạng thái active vào tab "Đánh giá"
+
+        document.querySelector(".details__tab-content.active-tab")?.classList.remove("active-tab");
+        // Ẩn nội dung tab đang active
+
+        document.querySelector("#reviews").classList.add("active-tab");
+        // Hiển thị nội dung của tab "Đánh giá"
+
+        tabsContainer.scrollIntoView({ behavior: "smooth" });
+        // Cuộn đến vùng tab với hiệu ứng mượt
+      });
+    });
+  </script>
+
+  <script>
+    /*=============== Khi nhấp vào sao đánh giá sẽ tự động cuộn đến mục thêm đánh giá ===============*/
+    document.addEventListener("DOMContentLoaded", function () {
+      const ratingStars = document.querySelectorAll(".details__rating .star");
+      // Lấy danh sách các ngôi sao trong phần "Đánh Giá"
+
+      const reviewsTab = document.querySelector(".detail__tab[data-target='#reviews']");
+      // Lấy tab "Đánh Giá" bằng data-target
+
+      const reviewForm = document.querySelector(".review__form");
+      // Lấy phần form đánh giá
+
+      ratingStars.forEach((star) => {
+        star.addEventListener("click", function () {
+          // Khi nhấp vào từng ngôi sao:
+
+          document.querySelector(".detail__tab.active-tab")?.classList.remove("active-tab");
+          reviewsTab.classList.add("active-tab");
+          // Kích hoạt tab "Đánh Giá"
+
+          document.querySelector(".details__tab-content.active-tab")?.classList.remove("active-tab");
+          document.querySelector("#reviews").classList.add("active-tab");
+          // Ẩn các nội dung tab khác và hiển thị tab "Đánh Giá"
+
+          reviewForm.scrollIntoView({ behavior: "smooth" });
+          // Cuộn mượt đến vị trí của form "Thêm đánh giá"
+        });
+      });
+    });
+  </script>
+
+  <script>
+    /*=============== Thêm đánh giá sản phẩm ===============*/
+    document.addEventListener("DOMContentLoaded", function () {
+      const stars = document.querySelectorAll(".rating__star__form .star");
+      // Lấy tất cả các ngôi sao trong form đánh giá
+
+      const reviewForm = document.querySelector(".review__form form");
+      // Lấy form đánh giá
+
+      let ratingValue = 0; // Lưu trữ số sao mà người dùng chọn
+
+      stars.forEach(star => {
+        star.addEventListener("click", function () {
+          ratingValue = parseInt(this.getAttribute("data-value"));
+          // Ghi nhận giá trị số sao mà người dùng chọn
+          highlightStars(ratingValue);
+          // Làm sáng các ngôi sao theo số sao được chọn
+        });
+      });
+
+      stars.forEach(star => {
+        star.addEventListener("mouseover", function () {
+          const hoverValue = parseInt(this.getAttribute("data-value"));
+          highlightStars(hoverValue);
+          // Làm sáng sao khi người dùng di chuột qua
+        });
+
+        star.addEventListener("mouseout", function () {
+          highlightStars(ratingValue);
+          // Khi chuột rời khỏi sao, giữ màu sáng cho sao đã chọn
+        });
+      });
+
+      function highlightStars(rating) {
+        stars.forEach(star => {
+          const starValue = parseInt(star.getAttribute("data-value"));
+          star.style.color = starValue <= rating ? "#ffcc00" : "#ccc";
+          // Sao sáng màu vàng (#ffcc00) nếu <= rating, ngược lại màu xám (#ccc)
+        });
+      }
+
+      reviewForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        // Ngăn hành động gửi form mặc định
+
+        const username = reviewForm.querySelector("input[type='text']").value;
+        const reviewText = reviewForm.querySelector("textarea").value;
+        // Lấy thông tin từ trường nhập tên và nội dung đánh giá
+
+        if (ratingValue === 0) {
+          alert("Bạn vui lòng chọn số sao!");
+          return;
+        }
+
+        if (!username || !reviewText) {
+          alert("Bạn vui lòng điền đầy đủ thông tin!");
+          return;
+        }
+
+        reviewForm.reset();
+        ratingValue = 0;
+        highlightStars(0);
+        // Reset lại form, số sao và màu sắc sao sau khi gửi
+
+        alert("Cảm ơn bạn đã đánh giá!");
+        // Thông báo khi người dùng đánh giá thành công
+      });
+    });
+  </script>
+
+  <script>
+    /*=============== Ngăn cuộn trang và hiện thông báo khi nhấn nút Thêm vào giỏ hàng ===============*/
+    document.addEventListener("DOMContentLoaded", function () {
+      const addToCartButton = document.getElementById("add-to-cart");
+      // Lấy nút "Thêm vào giỏ hàng" thông qua ID
+
+      addToCartButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        // Ngăn hành động mặc định khi nhấp nút
+      });
+    });
+
+    document.getElementById("add-to-cart").addEventListener("click", function (event) {
+      event.preventDefault();
+      // Ngăn hành động mặc định khi nhấn nút
+
       const notification = document.createElement("div");
       notification.textContent = "Đã thêm vào giỏ hàng!";
       notification.style.position = "fixed";
@@ -1302,183 +1617,17 @@
       notification.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
       notification.style.zIndex = "1000";
       notification.style.fontSize = "14px";
+      // Tạo thông báo với kiểu dáng được định nghĩa sẵn
 
-      // Thêm thông báo vào body
       document.body.appendChild(notification);
+      // Thêm thông báo vào trang
 
-      // Tự động xóa thông báo sau 2 giây
       setTimeout(function () {
         notification.remove();
+        // Tự động xóa thông báo sau 1,5 giây
       }, 1500);
     });
   </script>
-
-  <script>
-    //=========TẠO ALERT KHI NHẤN VÀO NÚT THÊM VÀO WISHLIST=====//
-    // Đảm bảo mã được chạy sau khi DOM đã tải xong
-    document.addEventListener('DOMContentLoaded', function () {
-      // Lấy tất cả các nút "Thêm vào Wishlist"
-      const addToWishlistBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Wishlist"]');
-
-      addToWishlistBtns.forEach(function (button) {
-        button.addEventListener('click', function (e) {
-          e.preventDefault(); // Ngừng hành động mặc định của liên kết
-
-          // Hiển thị thông báo thành công
-          alert('Đã thêm vào Wishlist thành công!');
-        });
-      });
-    });
-
-    //=========TẠO ALERT KHI NHẤN VÀO NÚT THÊM VÀO GIỎ HÀNG=====//
-    // Chọn tất cả các nút "Thêm vào Giỏ hàng"
-    const addToCartBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Giỏ hàng"]');
-
-    // Duyệt qua tất cả các nút và thêm sự kiện click
-    addToCartBtns.forEach(function (btn) {
-      btn.addEventListener("click", function (event) {
-        event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
-
-        // Lấy số lượng review từ thuộc tính data-reviews
-        const reviews = btn.getAttribute("data-reviews") || 0;
-
-        // Lấy số lượng tồn kho từ thuộc tính data-inventory
-        const inventory = btn.getAttribute("data-inventory") || 0;
-
-        // Hiển thị thông báo alert
-        alert(`Đã thêm vào giỏ hàng thành công! 
-Sản phẩm này còn ${inventory} sản phẩm trong kho.`);
-      });
-    });
-  </script>
-
-  /*=============== Cập nhật số lượt đánh giá ===============*/
-  document.addEventListener("DOMContentLoaded", function () {
-  // Lấy số lượt đánh giá từ tab "Đánh Giá"
-  const reviewTab = document.querySelector(".detail__tab[data-target='#reviews']");
-  const reviewCount = reviewTab.textContent.match(/\d+/); // Lấy số đầu tiên trong chuỗi
-
-  // Cập nhật số lượt đánh giá trong phần thông tin sản phẩm
-  const productReviewCount = document.querySelector(".details__rating .review-count");
-  if (reviewCount && productReviewCount) {
-  productReviewCount.textContent = `(${reviewCount[0]} đánh giá)`;
-  }
-  });
-
-  /*=============== Khi nhấp vào số lượng đánh giá sẽ tự động cuộn đến tab đánh giá ===============*/
-  document.addEventListener("DOMContentLoaded", function () {
-  // Lấy liên kết "Số lượt đánh giá"
-  const reviewLink = document.querySelector(".review-count");
-  const reviewsTab = document.querySelector(".detail__tab[data-target='#reviews']");
-  const tabsContainer = document.querySelector(".detail__tabs"); // Phần chứa các tab
-
-  reviewLink.addEventListener("click", function (event) {
-  event.preventDefault(); // Ngăn hành động mặc định (chuyển hướng)
-
-  // Kích hoạt tab "Đánh Giá"
-  document.querySelector(".detail__tab.active-tab")?.classList.remove("active-tab");
-  reviewsTab.classList.add("active-tab");
-
-  // Ẩn nội dung tab khác và hiển thị nội dung "Đánh Giá"
-  document.querySelector(".details__tab-content.active-tab")?.classList.remove("active-tab");
-  document.querySelector("#reviews").classList.add("active-tab");
-
-  // Cuộn đến phần tabsContainer
-  tabsContainer.scrollIntoView({ behavior: "smooth" });
-  });
-  });
-
-  /*=============== Khi nhấp vào sao đánh giá sẽ tự động cuộn đến mục thêm đánh giá ===============*/
-  document.addEventListener("DOMContentLoaded", function () {
-  // Lấy danh sách ngôi sao
-  const ratingStars = document.querySelectorAll(".details__rating .star");
-  const reviewsTab = document.querySelector(".detail__tab[data-target='#reviews']");
-  const reviewForm = document.querySelector(".review__form");
-
-  ratingStars.forEach((star) => {
-  star.addEventListener("click", function () {
-  // Kích hoạt tab "Đánh Giá"
-  document.querySelector(".detail__tab.active-tab")?.classList.remove("active-tab");
-  reviewsTab.classList.add("active-tab");
-
-  // Ẩn nội dung tab khác và hiển thị tab "Đánh Giá"
-  document.querySelector(".details__tab-content.active-tab")?.classList.remove("active-tab");
-  document.querySelector("#reviews").classList.add("active-tab");
-
-  // Cuộn mượt đến phần "Thêm đánh giá"
-  reviewForm.scrollIntoView({ behavior: "smooth" });
-  });
-  });
-  });
-
-  /*=============== Thêm đánh giá sản phẩm ===============*/
-  document.addEventListener("DOMContentLoaded", function () {
-  const stars = document.querySelectorAll(".rating__star__form .star"); // Tất cả các ngôi sao
-  const reviewForm = document.querySelector(".review__form form");
-  let ratingValue = 0; // Lưu trữ số sao người dùng chọn
-
-  // Xử lý khi người dùng nhấp vào ngôi sao
-  stars.forEach(star => {
-  star.addEventListener("click", function () {
-  ratingValue = parseInt(this.getAttribute("data-value"));
-  highlightStars(ratingValue); // Làm sáng các sao đã chọn
-  });
-  });
-
-  // Xử lý khi người dùng hover vào sao (chỉ để thay đổi màu sắc sao)
-  stars.forEach(star => {
-  star.addEventListener("mouseover", function () {
-  const hoverValue = parseInt(this.getAttribute("data-value"));
-  highlightStars(hoverValue); // Làm sáng sao khi hover
-  });
-
-  star.addEventListener("mouseout", function () {
-  highlightStars(ratingValue); // Giữ nguyên màu sắc sao đã chọn khi không hover
-  });
-  });
-
-  // Hàm để làm sáng các sao
-  function highlightStars(rating) {
-  stars.forEach(star => {
-  const starValue = parseInt(star.getAttribute("data-value"));
-  if (starValue <= rating) { star.style.color="#ffcc00" ; // Màu vàng khi chọn } else { star.style.color="#ccc" ; // Màu
-    xám khi chưa chọn } }); } // Xử lý khi gửi form reviewForm.addEventListener("submit", function (event) {
-    event.preventDefault(); // Ngăn gửi form (để kiểm tra thông tin) const
-    username=reviewForm.querySelector("input[type='text' ]").value; const
-    reviewText=reviewForm.querySelector("textarea").value; // Kiểm tra xem người dùng đã chọn sao chưa if
-    (ratingValue===0) { alert("Bạn vui lòng chọn số sao!"); return; } // Kiểm tra xem các trường còn lại có hợp lệ không
-    if (!username || !reviewText) { alert("Bạn vui lòng điền đầy đủ thông tin!"); return; } // Reset form sau khi gửi
-    reviewForm.reset(); ratingValue=0; // Reset ratingValue khi gửi đánh giá highlightStars(0); // Reset các sao về màu
-    xám alert("Cảm ơn bạn đã đánh giá!"); }); }); /*===============Ngăn cuộn trang và hiện thông báo khi nhấn nút Thêm
-    vào giỏ hàng===============*/ document.addEventListener("DOMContentLoaded", function () { const
-    addToCartButton=document.getElementById("add-to-cart"); // Ngăn trang cuộn lên đầu khi nhấn nút "Thêm vào giỏ hàng"
-    addToCartButton.addEventListener("click", function (event) { // Ngừng hành động mặc định (nếu có)
-    event.preventDefault(); }); }); // Lấy phần tử nút "Thêm vào giỏ hàng" qua ID
-    document.getElementById("add-to-cart").addEventListener("click", function (event) { event.preventDefault(); // Ngăn
-    chặn hành động mặc định của thẻ <a>
-
-    // Tạo thông báo
-    const notification = document.createElement("div");
-    notification.textContent = "Đã thêm vào giỏ hàng!";
-    notification.style.position = "fixed";
-    notification.style.bottom = "20px";
-    notification.style.right = "20px";
-    notification.style.backgroundColor = "#ff77c0b6";
-    notification.style.color = "#fff";
-    notification.style.padding = "10px 20px";
-    notification.style.borderRadius = "5px";
-    notification.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
-    notification.style.zIndex = "1000";
-    notification.style.fontSize = "14px";
-
-    // Thêm thông báo vào body
-    document.body.appendChild(notification);
-
-    // Tự động xóa thông báo sau 2 giây
-    setTimeout(function () {
-    notification.remove();
-    }, 1500);
-    });
 
 </body>
 
