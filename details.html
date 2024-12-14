@@ -1025,7 +1025,7 @@
       var nav = document.querySelector('.nav');
 
       // Kiểm tra vị trí cuộn của trang
-      if (window.scrollY > 300) { // Khi cuộn xuống >300px
+      if (window.scrollY > 100) { // Khi cuộn xuống >100px
         nav.classList.add('fixed-menu'); // Thêm lớp 'fixed-menu' để giữ menu cố định trên đầu trang
       } else {
         nav.classList.remove('fixed-menu'); // Xóa lớp 'fixed-menu' khi quay lại đầu trang
@@ -1065,30 +1065,6 @@
         });
       });
     });
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const thumbnails = document.querySelectorAll(".thumbnail"); // Lấy danh sách tất cả các ảnh nhỏ (thumbnail)
-      const mainImage = document.querySelector("#zoom"); // Lấy ảnh chính có ID là "zoom"
-
-      thumbnails.forEach((thumbnail) => {
-        thumbnail.addEventListener("click", function () {
-          // Lấy URL của ảnh nhỏ khi nhấn vào
-          const newSrc = this.getAttribute("src");
-          const newZoomImage = newSrc.replace(".jpg", "_big.jpg"); // Giả sử ảnh lớn có hậu tố "_big.jpg"
-
-          // Cập nhật ảnh chính và thêm zoom cho ảnh
-          mainImage.setAttribute("src", newSrc); // Cập nhật đường dẫn của ảnh chính
-          mainImage.setAttribute("data-zoom-image", newZoomImage); // Cập nhật đường dẫn zoom của ảnh chính
-
-          // Đổi trạng thái "active" cho thumbnail
-          document.querySelector(".thumbnail.active")?.classList.remove("active"); // Xóa lớp "active" ở thumbnail hiện tại
-          this.classList.add("active"); // Thêm lớp "active" cho thumbnail được nhấn
-        });
-      });
-    });
-
   </script>
 
   <script>
