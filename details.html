@@ -22,81 +22,91 @@
   <script src="assets\js\jquery-1.8.3.min.js"></script>
 
   <style>
-    /* Hiệu ứng chuyển động màu chữ */
-    /* Hiệu ứng chuyển động gradient và chiếu sáng mạnh */
+    /* Phần hiệu ứng chuyển động và màu sắc mạnh */
     .intense-sparkle {
       font-weight: bold;
+      /* Chữ in đậm */
       font-size: 16px;
+      /* Kích thước chữ */
       text-decoration: none;
+      /* Bỏ gạch chân */
       background: linear-gradient(90deg, #f3e458, #f0ffa5, #ff93c7, #ff00aa, #ffa0d0);
+      /* Gradient nhiều màu */
       background-size: 300% 300%;
+      /* Kích thước gradient lớn hơn vùng chữ */
       color: transparent;
+      /* Chữ trong suốt */
       background-clip: text;
       -webkit-background-clip: text;
-      /* Hỗ trợ WebKit */
+      /* Nền gradient cho text */
       animation: intenseColor 1.5s linear infinite, sparkleEffect 0.5s ease-in-out infinite;
+      /* Hiệu ứng động */
       position: relative;
-      /* Để thêm hiệu ứng ánh sáng */
+      /* Cho phép thêm ánh sáng */
     }
 
-    /* Hiệu ứng chuyển động gradient nhanh */
+    /* Animation chuyển động gradient từ trái qua phải */
     @keyframes intenseColor {
       0% {
         background-position: 0% 50%;
       }
 
+      /* Gradient bắt đầu bên trái */
       50% {
         background-position: 100% 50%;
       }
 
+      /* Gradient di chuyển sang phải */
       100% {
         background-position: 0% 50%;
       }
+
+      /* Quay về ban đầu */
     }
 
-    /* Ô chứa dòng chữ khuyến mãi và ngôi sao*/
+    /* Phần container cho dòng chữ khuyến mãi */
     .shipping-promo {
       margin-top: 150px;
+      /* Khoảng cách trên */
       display: flex;
-      /* Sử dụng flexbox để căn chỉnh các phần tử */
       justify-content: center;
-      /* Căn giữa nội dung */
       align-items: center;
-      /* Căn giữa theo chiều dọc */
+      /* Căn giữa ngang dọc */
       font-size: 16px;
-      /* Kích thước chữ */
       background-color: #f5b5d9eb;
-      /* Màu nền */
+      /* Nền hồng nhạt */
       padding: 5px 80px;
-      /* Padding xung quanh */
+      /* Khoảng cách xung quanh */
       border-style: dashed;
       border-color: #ff3791;
+      /* Viền hồng đậm */
     }
 
     /* Dòng chữ khuyến mãi */
     .promo-text {
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+      /* Font chữ */
       color: white;
       font-size: large;
       margin: 0 8px;
-      /* Khoảng cách giữa ngôi sao và dòng chữ */
+      /* Khoảng cách ngang */
       font-weight: lighter;
-      /* Làm đậm chữ */
       align-items: center;
+      /* Làm chữ mảnh */
     }
 
-    /* Ngôi sao */
+    /* Ngôi sao trang trí */
     .star {
       color: #ffe601;
-      /* Màu vàng cho ngôi sao */
+      /* Màu vàng */
       font-size: 50px;
-      /* Kích thước ngôi sao */
       animation: blink 1.5s infinite;
-      /* Thêm hiệu ứng nhấp nháy */
+      /* Nhấp nháy */
       margin-bottom: 4px;
+      /* Khoảng cách dưới */
     }
 
-    /* Hiệu ứng nhấp nháy cho ngôi sao */
+    /* Animation nhấp nháy */
     @keyframes blink {
 
       0%,
@@ -104,12 +114,15 @@
         opacity: 1;
       }
 
+      /* Đầy đủ hiển thị */
       50% {
         opacity: 0;
       }
+
+      /* Tạm ẩn */
     }
 
-    /* Media Query cho màn hình từ 1200px */
+    /* Màn hình lớn >= 1200px */
     @media screen and (min-width: 1200px) {
       .shipping-promo {
         margin-top: 100px;
@@ -118,18 +131,17 @@
       }
 
       .promo-text {
-        align-items: center;
         font-size: 20px;
-        /* Giảm kích thước chữ */
+        /* Chữ nhỏ hơn */
       }
 
       .star {
         font-size: 30px;
-        /* Giảm kích thước ngôi sao */
+        /* Ngôi sao nhỏ hơn */
       }
     }
 
-    /* Media Query cho màn hình từ 480px - 768px */
+    /* Màn hình vừa từ 480px đến 768px */
     @media screen and (max-width: 768px) {
       .shipping-promo {
         padding: 5px 20px;
@@ -137,33 +149,31 @@
       }
 
       .promo-text {
-        align-items: center;
         font-size: 14px;
-        /* Giảm kích thước chữ */
+        /* Chữ nhỏ lại */
       }
 
       .star {
         font-size: 30px;
-        /* Giảm kích thước ngôi sao */
+        /* Kích thước ngôi sao */
       }
     }
 
-    /* Media Query cho màn hình nhỏ hơn 480px (ví dụ điện thoại) */
+    /* Màn hình nhỏ < 480px */
     @media screen and (max-width: 480px) {
       .shipping-promo {
         padding: 5px 10px;
-        /* Giảm thêm padding */
+        /* Giảm padding tối thiểu */
       }
 
       .promo-text {
-        align-items: center;
         font-size: 8px;
-        /* Giảm kích thước chữ */
+        /* Chữ cực nhỏ */
       }
 
       .star {
         font-size: 25px;
-        /* Giảm kích thước ngôi sao */
+        /* Kích thước ngôi sao nhỏ */
       }
     }
   </style>
@@ -284,6 +294,7 @@
 
   <!--=============== BANNER KHUYẾN MÃI ===============-->
   <div class="shipping-promo">
+    <!-- Phần banner khuyến mãi chứa thông báo giảm giá -->
     <span class="star">&#9733;</span>
     <span class="promo-text"> Cùng Chic Đón Giáng Sinh Lung Linh </span>
     <span class="star">&#9733;</span>
@@ -617,7 +628,7 @@
       <span style="font-family:Cambria, serif; font-size: 20px; line-height: 2.5">SẢN PHẨM MUA KÈM</span>
       <!-- Mô tả phụ giải thích thêm -->
       <p class="section__subtitle" style="margin-left: 0; text-align: left;">
-        Chic gợi ý các sản phẩm mua kèm <i class="fas fa-tag"></i>
+        Chic Gợi Ý Các Sản Phẩm Mua Kèm <i class="fas fa-tag"></i>
       </p>
 
       <!-- Danh sách sản phẩm được bố trí theo grid -->
