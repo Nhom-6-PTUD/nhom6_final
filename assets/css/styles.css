@@ -3137,7 +3137,7 @@ td {
   padding: 1rem 2rem;
   color: var(--title-color);
   font-size: var(--small-font-size);
-  display: flex          /* Hiển thị icon và text trên cùng một hàng */
+  display: flex;          /* Hiển thị icon và text trên cùng một hàng */
   column-gap: 0.625rem;  /* Khoảng cách giữa icon và text */
   cursor: pointer;
   transition: all 0.3s var(--transition);  /* Thêm hiệu ứng chuyển đổi */
