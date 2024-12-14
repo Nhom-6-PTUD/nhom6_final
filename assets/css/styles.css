@@ -183,7 +183,7 @@ table {
   resize: none; /* Không cho thay đổi kích thước */
 }
 
-/*=============== HEADER & NAV ===============*/
+/*=============== PHẦN ĐẦU TRANG VÀ THANH ĐIỀU HƯỚNG ===============*/
 
 .header__top {
   background-color: #ff97c9; /* Màu nền phần đầu */
@@ -495,7 +495,7 @@ body {
   }
 }
 
-/*=============== DISCOUNT BANNER ===============*/
+/*=============== SLIDER GIẢM GIÁ ===============*/
 .home__slider {
   position: relative;
   overflow: hidden;
@@ -935,7 +935,7 @@ body {
   line-height: 35px;
 }
 
-/*=============== CATEGORIES ===============*/
+/*=============== DANH MỤC SẢN PHẨM ===============*/
 
 .custom-categories-container {
   overflow: hidden;
@@ -1692,7 +1692,7 @@ swiper {
   }
 }
 
-/*=============== NEW ARRIVALS ===============*/
+/*=============== SẢN PHẨM MỚI ===============*/
 .new__arrivals {
   overflow: hidden;
 }
@@ -1709,7 +1709,7 @@ swiper {
   margin-top: 30px; /* Khoảng cách giữa subtitle và sản phẩm */
 }
 
-/*============== REVIEW ===============*/
+/*============== ĐÁNH GIÁ ===============*/
 
 #customer-reviews .container {
   max-width: 1200px;
