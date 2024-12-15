@@ -1618,20 +1618,34 @@ window.onclick = function(event) {
 
 <script>
   //=========TẠO ALERT KHI NHẤN VÀO NÚT THÊM VÀO WISHLIST=====//
-  // Đảm bảo mã được chạy sau khi DOM đã tải xong
   document.addEventListener('DOMContentLoaded', function() {
-    // Lấy tất cả các nút "Thêm vào Wishlist"
-    const addToWishlistBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Wishlist"]');
-    
-      addToWishlistBtns.forEach(function(button) {
-        button.addEventListener('click', function(e) {
-          e.preventDefault(); // Ngừng hành động mặc định của liên kết
+  // Lấy tất cả các nút "Thêm vào Wishlist"
+  const addToWishlistBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Wishlist"]');
   
-          // Hiển thị thông báo thành công
-          alert('Đã thêm vào Wishlist thành công!');
-        });
-      });
-    }); 
+  addToWishlistBtns.forEach(function(button) {
+    button.addEventListener('click', function(e) {
+      e.preventDefault(); // Ngừng hành động mặc định của liên kết
+
+      // Tạo phần tử thông báo
+      const successMessage = document.createElement('div');
+      successMessage.textContent = 'Đã thêm vào Wishlist thành công!';
+      successMessage.classList.add('success-message'); // Thêm lớp CSS cho hiệu ứng
+
+      // Thêm thông báo vào body
+      document.body.appendChild(successMessage);
+
+      // Hiển thị thông báo với hiệu ứng
+      setTimeout(function() {
+        successMessage.classList.add('show');
+      }, 50); // Hiển thị với hiệu ứng sau khi tạo phần tử
+
+      // Tự động ẩn sau 3 giây
+      setTimeout(function() {
+        successMessage.classList.remove('show'); // Ẩn thông báo với hiệu ứng
+      }, 2000); // Ẩn sau 3 giây
+    });
+  });
+});
   </script>
   
   
