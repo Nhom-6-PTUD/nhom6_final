@@ -624,29 +624,60 @@ window.onscroll = function() {
     </script>
 
     <script>
-    // Chọn tất cả các nút "Thêm vào giỏ hàng"
-const addToCartButtons = document.querySelectorAll('.btn.btn--sm');
+   //======= HIỆN THÔNG BÁO KHI THÊM VÀO GIỎ HÀNG =====//
+    document.addEventListener('DOMContentLoaded', function() {
+  // Chọn tất cả các nút "Thêm vào giỏ hàng"
+  const addToCartButtons = document.querySelectorAll('.btn.btn--sm');
 
-// Duyệt qua từng nút và gắn sự kiện click
-addToCartButtons.forEach(function(button) {
-  button.addEventListener('click', function(event) {
-    event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+  addToCartButtons.forEach(function(button) {
+    button.addEventListener('click', function(event) {
+      event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
 
-    // Lấy số lượng tồn kho từ thuộc tính data-inventory
-    let inventory = parseInt(button.getAttribute('data-inventory'), 10);
+      // Lấy số lượng tồn kho từ thuộc tính data-inventory
+      let inventory = parseInt(button.getAttribute('data-inventory'), 10);
 
-    // Kiểm tra tồn kho
-    if (inventory > 0) {
-      inventory--; // Giảm số lượng tồn kho
-      button.setAttribute('data-inventory', inventory); // Cập nhật tồn kho
+      // Tạo phần tử thông báo
+      const successMessage = document.createElement('div');
 
-      // Hiển thị thông báo alert
-      alert(`Thêm vào giỏ hàng thành công! 
-Còn lại ${inventory} sản phẩm trong kho.`);
-    } else {
-      // Thông báo hết hàng
-      alert('Sản phẩm này đã hết hàng!');
-    }
+      if (inventory > 0) {
+        inventory--; // Giảm số lượng tồn kho
+        button.setAttribute('data-inventory', inventory); // Cập nhật tồn kho
+
+        // Thêm nội dung thông báo
+        successMessage.innerHTML = `Đã thêm vào giỏ hàng thành công!<br>Còn lại ${inventory} sản phẩm trong kho.`;
+        successMessage.classList.add('success-message'); // Thêm lớp CSS cho hiệu ứng
+
+        // Thêm thông báo vào body
+        document.body.appendChild(successMessage);
+
+        // Hiển thị thông báo với hiệu ứng
+        setTimeout(function() {
+          successMessage.classList.add('show');
+        }, 50); // Hiển thị với hiệu ứng sau khi tạo phần tử
+
+        // Tự động ẩn sau 3 giây
+        setTimeout(function() {
+          successMessage.classList.remove('show'); // Ẩn thông báo với hiệu ứng
+        }, 2000); // Ẩn sau 3 giây
+      } else {
+        // Thông báo hết hàng
+        successMessage.innerHTML = 'Sản phẩm này đã hết hàng!';
+        successMessage.classList.add('error-message'); // Thêm lớp CSS cho thông báo lỗi
+
+        // Thêm thông báo vào body
+        document.body.appendChild(successMessage);
+
+        // Hiển thị thông báo với hiệu ứng
+        setTimeout(function() {
+          successMessage.classList.add('show');
+        }, 50); // Hiển thị với hiệu ứng sau khi tạo phần tử
+
+        // Tự động ẩn sau 3 giây
+        setTimeout(function() {
+          successMessage.classList.remove('show'); // Ẩn thông báo với hiệu ứng
+        }, 2000); // Ẩn sau 3 giây
+      }
+    });
   });
 });
 
