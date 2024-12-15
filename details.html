@@ -1089,70 +1089,6 @@
   </script>
 
   <script>
-    /*=============== CẬP NHẬT SỐ LƯỢT ĐÁNH GIÁ ===============*/
-    document.addEventListener("DOMContentLoaded", function () {
-      const reviewTab = document.querySelector(".detail__tab[data-target='#reviews']"); // Lấy tab "Đánh Giá"
-      const reviewCount = reviewTab.textContent.match(/\d+/); // Lấy số đầu tiên trong chuỗi (số lượt đánh giá)
-
-      const productReviewCount = document.querySelector(".details__rating .review-count"); // Lấy phần hiển thị số đánh giá
-      if (reviewCount && productReviewCount) {
-        productReviewCount.textContent = `(${reviewCount[0]} đánh giá)`; // Cập nhật số lượt đánh giá
-      }
-    });
-
-  </script>
-
-  <script>
-    /*=============== Cuộn tự động đến tab đánh giá khi click vào số lượt đánh giá ===============*/
-    document.addEventListener("DOMContentLoaded", function () {
-      const reviewLink = document.querySelector(".review-count"); // Lấy phần hiển thị "số lượt đánh giá"
-      const reviewsTab = document.querySelector(".detail__tab[data-target='#reviews']"); // Lấy tab "Đánh Giá"
-      const tabsContainer = document.querySelector(".detail__tabs"); // Phần chứa các tab
-
-      reviewLink.addEventListener("click", function (event) {
-        event.preventDefault(); // Ngăn hành động mặc định của liên kết
-
-        // Kích hoạt tab "Đánh Giá"
-        document.querySelector(".detail__tab.active-tab")?.classList.remove("active-tab"); // Xóa trạng thái active-tab hiện tại
-        reviewsTab.classList.add("active-tab"); // Kích hoạt tab "Đánh Giá"
-
-        // Ẩn nội dung tab khác và hiển thị tab "Đánh Giá"
-        document.querySelector(".details__tab-content.active-tab")?.classList.remove("active-tab");
-        document.querySelector("#reviews").classList.add("active-tab");
-
-        // Cuộn mượt đến phần tabsContainer
-        tabsContainer.scrollIntoView({ behavior: "smooth" });
-      });
-    });
-
-  </script>
-
-  <script>
-    /*=============== Khi nhấp vào sao đánh giá sẽ tự động cuộn đến mục thêm đánh giá ===============*/
-    document.addEventListener("DOMContentLoaded", function () {
-      // Lấy danh sách ngôi sao
-      const ratingStars = document.querySelectorAll(".details__rating .star");
-      const reviewsTab = document.querySelector(".detail__tab[data-target='#reviews']");
-      const reviewForm = document.querySelector(".review__form");
-
-      ratingStars.forEach((star) => {
-        star.addEventListener("click", function () {
-          // Kích hoạt tab "Đánh Giá"
-          document.querySelector(".detail__tab.active-tab")?.classList.remove("active-tab");
-          reviewsTab.classList.add("active-tab");
-
-          // Ẩn nội dung tab khác và hiển thị tab "Đánh Giá"
-          document.querySelector(".details__tab-content.active-tab")?.classList.remove("active-tab");
-          document.querySelector("#reviews").classList.add("active-tab");
-
-          // Cuộn mượt đến phần "Thêm đánh giá"
-          reviewForm.scrollIntoView({ behavior: "smooth" });
-        });
-      });
-    });
-  </script>
-
-  <script>
     /*=============== Thêm đánh giá sản phẩm ===============*/
     document.addEventListener("DOMContentLoaded", function () {
       const stars = document.querySelectorAll(".rating__star__form .star"); // Lấy tất cả ngôi sao để đánh giá
@@ -1434,37 +1370,6 @@
 
         tabsContainer.scrollIntoView({ behavior: "smooth" });
         // Cuộn đến vùng tab với hiệu ứng mượt
-      });
-    });
-  </script>
-
-  <script>
-    /*=============== Khi nhấp vào sao đánh giá sẽ tự động cuộn đến mục thêm đánh giá ===============*/
-    document.addEventListener("DOMContentLoaded", function () {
-      const ratingStars = document.querySelectorAll(".details__rating .star");
-      // Lấy danh sách các ngôi sao trong phần "Đánh Giá"
-
-      const reviewsTab = document.querySelector(".detail__tab[data-target='#reviews']");
-      // Lấy tab "Đánh Giá" bằng data-target
-
-      const reviewForm = document.querySelector(".review__form");
-      // Lấy phần form đánh giá
-
-      ratingStars.forEach((star) => {
-        star.addEventListener("click", function () {
-          // Khi nhấp vào từng ngôi sao:
-
-          document.querySelector(".detail__tab.active-tab")?.classList.remove("active-tab");
-          reviewsTab.classList.add("active-tab");
-          // Kích hoạt tab "Đánh Giá"
-
-          document.querySelector(".details__tab-content.active-tab")?.classList.remove("active-tab");
-          document.querySelector("#reviews").classList.add("active-tab");
-          // Ẩn các nội dung tab khác và hiển thị tab "Đánh Giá"
-
-          reviewForm.scrollIntoView({ behavior: "smooth" });
-          // Cuộn mượt đến vị trí của form "Thêm đánh giá"
-        });
       });
     });
   </script>
