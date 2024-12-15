@@ -1305,7 +1305,7 @@
   </script>
 
   <script>
-    /*=============== Ngăn cuộn trang và tạo Alert khi nhấn nút THÊM VÀO GIỎ HÀNG ===============*/
+    /*=============== Ngăn cuộn trang khi nhấn nút THÊM VÀO GIỎ HÀNG ===============*/
     document.addEventListener("DOMContentLoaded", function () {
       // Đảm bảo mã JavaScript chỉ chạy sau khi toàn bộ DOM được tải
 
@@ -1383,73 +1383,6 @@
         // Tự động xóa thông báo sau 1.5 giây
       }, 1500);
     });
-  </script>
-
-  <script>
-    /*=============== Xử lý sự kiện nhấn THÊM VÀO WISHLIST/GIỎ HÀNG với nhiều nút ===============*/
- document.addEventListener('DOMContentLoaded', function() {
-  // Lấy tất cả các nút "Thêm vào Wishlist"
-  const addToWishlistBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Wishlist"]');
-  
-  addToWishlistBtns.forEach(function(button) {
-    button.addEventListener('click', function(e) {
-      e.preventDefault(); // Ngừng hành động mặc định của liên kết
-
-      // Tạo phần tử thông báo
-      const successMessage = document.createElement('div');
-      successMessage.textContent = 'Đã thêm vào Wishlist thành công!';
-      successMessage.classList.add('success-message'); // Thêm lớp CSS cho hiệu ứng
-
-      // Thêm thông báo vào body
-      document.body.appendChild(successMessage);
-
-      // Hiển thị thông báo với hiệu ứng
-      setTimeout(function() {
-        successMessage.classList.add('show');
-      }, 50); // Hiển thị với hiệu ứng sau khi tạo phần tử
-
-      // Tự động ẩn sau 3 giây
-      setTimeout(function() {
-        successMessage.classList.remove('show'); // Ẩn thông báo với hiệu ứng
-      }, 2000); // Ẩn sau 3 giây
-    });
-  });
-});
-
-  
-  //=========TẠO ALERT KHI NHẤN VÀO NÚT THÊM VÀO GIỎ HÀNG=====//
-document.addEventListener('DOMContentLoaded', function() {
-  // Chọn tất cả các nút "Thêm vào Giỏ hàng"
-  const addToCartBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Giỏ hàng"]');
-
-  addToCartBtns.forEach(function(btn) {
-    btn.addEventListener("click", function(event) {
-      event.preventDefault(); // Ngừng hành động mặc định của liên kết
-
-      // Lấy số lượng tồn kho từ thuộc tính data-inventory
-      const inventory = btn.getAttribute("data-inventory") || 0;
-
-      // Tạo phần tử thông báo
-      const successMessage = document.createElement('div');
-      successMessage.innerHTML = `Đã thêm vào giỏ hàng thành công!<br>Còn lại ${inventory} sản phẩm trong kho.`;
-      
-      successMessage.classList.add('success-message'); // Thêm lớp CSS cho hiệu ứng
-
-      // Thêm thông báo vào body
-      document.body.appendChild(successMessage);
-
-      // Hiển thị thông báo với hiệu ứng
-      setTimeout(function() {
-        successMessage.classList.add('show');
-      }, 50); // Hiển thị với hiệu ứng sau khi tạo phần tử
-
-      // Tự động ẩn sau 3 giây
-      setTimeout(function() {
-        successMessage.classList.remove('show'); // Ẩn thông báo với hiệu ứng
-      }, 2000); // Ẩn sau 3 giây
-    });
-  });
-});
   </script>
 
   <script>
@@ -1533,116 +1466,6 @@ document.addEventListener('DOMContentLoaded', function() {
           // Cuộn mượt đến vị trí của form "Thêm đánh giá"
         });
       });
-    });
-  </script>
-
-  <script>
-    /*=============== Thêm đánh giá sản phẩm ===============*/
-    document.addEventListener("DOMContentLoaded", function () {
-      const stars = document.querySelectorAll(".rating__star__form .star");
-      // Lấy tất cả các ngôi sao trong form đánh giá
-
-      const reviewForm = document.querySelector(".review__form form");
-      // Lấy form đánh giá
-
-      let ratingValue = 0; // Lưu trữ số sao mà người dùng chọn
-
-      stars.forEach(star => {
-        star.addEventListener("click", function () {
-          ratingValue = parseInt(this.getAttribute("data-value"));
-          // Ghi nhận giá trị số sao mà người dùng chọn
-          highlightStars(ratingValue);
-          // Làm sáng các ngôi sao theo số sao được chọn
-        });
-      });
-
-      stars.forEach(star => {
-        star.addEventListener("mouseover", function () {
-          const hoverValue = parseInt(this.getAttribute("data-value"));
-          highlightStars(hoverValue);
-          // Làm sáng sao khi người dùng di chuột qua
-        });
-
-        star.addEventListener("mouseout", function () {
-          highlightStars(ratingValue);
-          // Khi chuột rời khỏi sao, giữ màu sáng cho sao đã chọn
-        });
-      });
-
-      function highlightStars(rating) {
-        stars.forEach(star => {
-          const starValue = parseInt(star.getAttribute("data-value"));
-          star.style.color = starValue <= rating ? "#ffcc00" : "#ccc";
-          // Sao sáng màu vàng (#ffcc00) nếu <= rating, ngược lại màu xám (#ccc)
-        });
-      }
-
-      reviewForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        // Ngăn hành động gửi form mặc định
-
-        const username = reviewForm.querySelector("input[type='text']").value;
-        const reviewText = reviewForm.querySelector("textarea").value;
-        // Lấy thông tin từ trường nhập tên và nội dung đánh giá
-
-        if (ratingValue === 0) {
-          alert("Bạn vui lòng chọn số sao!");
-          return;
-        }
-
-        if (!username || !reviewText) {
-          alert("Bạn vui lòng điền đầy đủ thông tin!");
-          return;
-        }
-
-        reviewForm.reset();
-        ratingValue = 0;
-        highlightStars(0);
-        // Reset lại form, số sao và màu sắc sao sau khi gửi
-
-        alert("Cảm ơn bạn đã đánh giá!");
-        // Thông báo khi người dùng đánh giá thành công
-      });
-    });
-  </script>
-
-  <script>
-    /*=============== Ngăn cuộn trang và hiện thông báo khi nhấn nút Thêm vào giỏ hàng ===============*/
-    document.addEventListener("DOMContentLoaded", function () {
-      const addToCartButton = document.getElementById("add-to-cart");
-      // Lấy nút "Thêm vào giỏ hàng" thông qua ID
-
-      addToCartButton.addEventListener("click", function (event) {
-        event.preventDefault();
-        // Ngăn hành động mặc định khi nhấp nút
-      });
-    });
-
-    document.getElementById("add-to-cart").addEventListener("click", function (event) {
-      event.preventDefault();
-      // Ngăn hành động mặc định khi nhấn nút
-
-      const notification = document.createElement("div");
-      notification.textContent = "Đã thêm vào giỏ hàng!";
-      notification.style.position = "fixed";
-      notification.style.bottom = "20px";
-      notification.style.right = "20px";
-      notification.style.backgroundColor = "#ff77c0b6";
-      notification.style.color = "#fff";
-      notification.style.padding = "10px 20px";
-      notification.style.borderRadius = "5px";
-      notification.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
-      notification.style.zIndex = "1000";
-      notification.style.fontSize = "14px";
-      // Tạo thông báo với kiểu dáng được định nghĩa sẵn
-
-      document.body.appendChild(notification);
-      // Thêm thông báo vào trang
-
-      setTimeout(function () {
-        notification.remove();
-        // Tự động xóa thông báo sau 1,5 giây
-      }, 1500);
     });
   </script>
 
