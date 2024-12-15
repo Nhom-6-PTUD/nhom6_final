@@ -716,6 +716,88 @@ window.onscroll = function() {
   });
 });
 </script>
+<!--================== HÀM XÓA KHỎI WISHLIST ===================-->
+       <!-- Hàm xóa sản phẩm khỏi danh sách yêu thích khi người dùng xác nhận -->
+       <script>
+       // Hàm xóa sản phẩm khỏi danh sách yêu thích khi người dùng xác nhận
+function confirmDelete(trashIcon) {
+  // Tạo phần tử thông báo yêu cầu xác nhận
+  const confirmMessage = document.createElement('div');
+  confirmMessage.innerHTML = `Bạn có muốn xóa sản phẩm này? <button class="confirm-delete-btn">Có</button> <button class="cancel-delete-btn">Không</button>`;
+  confirmMessage.classList.add('custom-alert-message'); // Thêm lớp CSS mới cho thông báo
 
+  // Thêm thông báo vào body
+  document.body.appendChild(confirmMessage);
+
+  // Ngừng cuộn trang khi hiển thị thông báo
+  document.body.style.overflow = 'hidden';
+
+  // Ngừng sự kiện cuộn (scroll) khi thông báo hiển thị
+  window.addEventListener('scroll', preventScroll, { passive: false });
+
+  // Hiển thị thông báo với hiệu ứng
+  setTimeout(function() {
+    confirmMessage.classList.add('show');
+  }, 50); // Hiển thị với hiệu ứng sau khi tạo phần tử
+
+  // Lấy nút "Có" và "Không"
+  const confirmBtn = confirmMessage.querySelector('.confirm-delete-btn');
+  const cancelBtn = confirmMessage.querySelector('.cancel-delete-btn');
+
+  // Khi người dùng nhấn "Có", xóa sản phẩm
+  confirmBtn.addEventListener('click', function() {
+    // Tìm dòng sản phẩm chứa nút xóa và xóa nó
+    const tableRow = trashIcon.closest("tr");
+    tableRow.remove(); // Xóa dòng sản phẩm khỏi bảng
+
+    // Hiển thị thông báo thành công
+    const successMessage = document.createElement('div');
+    successMessage.textContent = 'Sản phẩm đã được xóa khỏi danh sách yêu thích!';
+    successMessage.classList.add('custom-alert-message'); // Thêm lớp CSS mới cho thông báo
+
+    // Thêm thông báo vào body
+    document.body.appendChild(successMessage);
+
+    // Hiển thị thông báo với hiệu ứng
+    setTimeout(function() {
+      successMessage.classList.add('show');
+    }, 50); // Hiển thị với hiệu ứng sau khi tạo phần tử
+
+    // Tự động ẩn sau 3 giây
+    setTimeout(function() {
+      successMessage.classList.remove('show'); // Ẩn thông báo với hiệu ứng
+    }, 2000); // Ẩn sau 2 giây
+
+    // Ẩn thông báo xác nhận
+    confirmMessage.classList.remove('show');
+    setTimeout(function() {
+      confirmMessage.remove(); // Xóa thông báo khỏi DOM sau khi ẩn
+    }, 300); // Ẩn sau 300ms để hiệu ứng mượt mà
+
+    // Khôi phục cuộn trang sau khi thông báo ẩn
+    document.body.style.overflow = 'auto';
+    window.removeEventListener('scroll', preventScroll); // Xóa sự kiện cuộn sau khi ẩn thông báo
+  });
+
+  // Khi người dùng nhấn "Không", ẩn thông báo
+  cancelBtn.addEventListener('click', function() {
+    confirmMessage.classList.remove('show');
+    setTimeout(function() {
+      confirmMessage.remove(); // Xóa thông báo khỏi DOM sau khi ẩn
+    }, 300); // Ẩn sau 300ms
+
+    // Khôi phục cuộn trang khi người dùng không xóa sản phẩm
+    document.body.style.overflow = 'auto';
+    window.removeEventListener('scroll', preventScroll); // Xóa sự kiện cuộn
+  });
+}
+
+// Hàm ngừng cuộn trang
+function preventScroll(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  return false;
+}
+      </script>
   </body>
 </html>
