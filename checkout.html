@@ -924,24 +924,39 @@
   </script>
 
   <script>
-    //========= TẠO ALERT KHI NHẤN VÀO NÚT THÊM VÀO GIỎ HÀNG =====//
-    const addToCartBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Giỏ hàng"]');
+   //=========TẠO ALERT KHI NHẤN VÀO NÚT THÊM VÀO GIỎ HÀNG=====//
+document.addEventListener('DOMContentLoaded', function() {
+  // Chọn tất cả các nút "Thêm vào Giỏ hàng"
+  const addToCartBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Giỏ hàng"]');
 
-    addToCartBtns.forEach(function (btn) {
-      btn.addEventListener("click", function (event) {
-        event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+  addToCartBtns.forEach(function(btn) {
+    btn.addEventListener("click", function(event) {
+      event.preventDefault(); // Ngừng hành động mặc định của liên kết
 
-        // Lấy số lượng review từ thuộc tính data-reviews
-        const reviews = btn.getAttribute("data-reviews") || 0;
+      // Lấy số lượng tồn kho từ thuộc tính data-inventory
+      const inventory = btn.getAttribute("data-inventory") || 0;
 
-        // Lấy số lượng tồn kho từ thuộc tính data-inventory
-        const inventory = btn.getAttribute("data-inventory") || 0;
+      // Tạo phần tử thông báo
+      const successMessage = document.createElement('div');
+      successMessage.textContent = `Đã thêm vào giỏ hàng thành công! Còn ${inventory} sản phẩm trong kho.`;
+      
+      successMessage.classList.add('success-message'); // Thêm lớp CSS cho hiệu ứng
 
-        // Hiển thị thông báo alert
-        alert(`Đã thêm vào giỏ hàng thành công!
-Sản phẩm này còn ${inventory} sản phẩm trong kho.`);
-      });
+      // Thêm thông báo vào body
+      document.body.appendChild(successMessage);
+
+      // Hiển thị thông báo với hiệu ứng
+      setTimeout(function() {
+        successMessage.classList.add('show');
+      }, 50); // Hiển thị với hiệu ứng sau khi tạo phần tử
+
+      // Tự động ẩn sau 3 giây
+      setTimeout(function() {
+        successMessage.classList.remove('show'); // Ẩn thông báo với hiệu ứng
+      }, 2000); // Ẩn sau 3 giây
     });
+  });
+});
   </script>
 
   <script>
