@@ -938,7 +938,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Tạo phần tử thông báo
       const successMessage = document.createElement('div');
-      successMessage.textContent = `Đã thêm vào giỏ hàng thành công! Còn ${inventory} sản phẩm trong kho.`;
+      successMessage.innerHTML = `Đã thêm vào giỏ hàng thành công!<br>Còn lại ${inventory} sản phẩm trong kho.`;
       
       successMessage.classList.add('success-message'); // Thêm lớp CSS cho hiệu ứng
 
