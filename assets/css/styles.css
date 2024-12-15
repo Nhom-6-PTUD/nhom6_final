@@ -1121,16 +1121,16 @@ swiper {
 .tab__btn {
   background-color: var(--container-color); /* Màu nền của nút tab */
   color: var(--title-color); /* Màu chữ của nút tab */
-  padding: 1rem 1.25rem 0.875rem; /* Padding của nút tab */
+  padding: 1rem 1.25rem 0.875rem; /* Khoảng cách giữa nội dung và viền nút */
   font-family: var(--second-font); /* Font chữ của nút tab */
   font-size: var(--small-font-size); /* Kích thước chữ của nút tab */
-  font-weight: var(--weight-600); /* Độ đậm của chữ */
-  cursor: pointer; /* Con trỏ chuột khi hover vào nút tab */
-  border-radius: 0.25rem; /* Bo tròn các góc của nút tab */
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  -ms-border-radius: 0.25rem;
-  -o-border-radius: 0.25rem;
+  font-weight: var(--weight-600); /* Độ đậm của chữ trong nút tab */
+  cursor: pointer; /* Thay đổi con trỏ chuột thành hình bàn tay khi hover vào nút */
+  border-radius: 0.25rem; /* Bo tròn các góc nút tab */
+  -webkit-border-radius: 0.25rem; /* Tương thích với trình duyệt Webkit */
+  -moz-border-radius: 0.25rem; /* Tương thích với trình duyệt Mozilla */
+  -ms-border-radius: 0.25rem; /* Tương thích với trình duyệt Microsoft */
+  -o-border-radius: 0.25rem; /* Tương thích với trình duyệt Opera */
 }
 
 .products__container {
@@ -1138,9 +1138,9 @@ swiper {
 }
 
 .product__item {
-  border: 1px solid var(--border-color); /* Viền của sản phẩm */
-  border-radius: 1.5rem; /* Bo tròn các góc của sản phẩm */
-  transition: all 0.2s var(--transition); /* Hiệu ứng chuyển tiếp khi hover */
+  border: 1px solid var(--border-color); /* Viền bên ngoài của mỗi sản phẩm */
+  border-radius: 1.5rem; /* Bo tròn góc viền sản phẩm */
+  transition: all 0.2s var(--transition); /* Hiệu ứng chuyển đổi khi hover vào sản phẩm */
   -webkit-border-radius: 1.5rem;
   -moz-border-radius: 1.5rem;
   -ms-border-radius: 1.5rem;
@@ -1188,9 +1188,9 @@ swiper {
 }
 
 .product__img.hover {
-  position: absolute; /* Đặt hình ảnh ở vị trí tuyệt đối */
-  top: 0;
-  left: 0;
+  position: absolute; /* Đặt hình ảnh ở vị trí tuyệt đối để căn chỉnh với khung cha */
+  top: 0; /* Căn hình ảnh với cạnh trên của khung */
+  left: 0; /* Căn hình ảnh với cạnh trái của khung */
 }
 
 .product__actions {
@@ -1212,16 +1212,16 @@ swiper {
 }
 
 .action__btn {
-  position: relative; /* Đặt nút hành động ở vị trí tương đối */
-  width: 40px;
-  height: 40px;
-  line-height: 42px;
-  text-align: center; /* Căn giữa văn bản trong nút */
-  background-color: var(--first-color-alt); /* Màu nền của nút hành động */
-  border: 1px solid var(--border-color); /* Viền của nút hành động */
-  color: var(--text-color); /* Màu chữ của nút hành động */
-  font-size: var(--small-font-size); /* Kích thước chữ */
-  border-radius: 50%; /* Bo tròn hình dạng của nút thành hình tròn */
+  position: relative; /* Đặt nút ở vị trí tương đối so với container của nó */
+  width: 40px; /* Chiều rộng của nút hành động */
+  height: 40px; /* Chiều cao của nút hành động */
+  line-height: 42px; /* Căn giữa nội dung nút theo chiều dọc */
+  text-align: center; /* Căn giữa nội dung nút theo chiều ngang */
+  background-color: var(--first-color-alt); /* Màu nền nút hành động */
+  border: 1px solid var(--border-color); /* Đường viền của nút hành động */
+  color: var(--text-color); /* Màu chữ hiển thị trên nút */
+  font-size: var(--small-font-size); /* Kích thước font của chữ */
+  border-radius: 50%; /* Bo tròn góc để nút có hình dạng tròn */
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1320,9 +1320,9 @@ swiper {
 }
 
 .cart__btn {
-  position: absolute; /* Đặt nút vào vị trí tuyệt đối */
-  bottom: 1.6rem;
-  right: 1.25rem; /* Đặt nút ở góc phải dưới */
+  position: absolute; /* Đặt nút vào vị trí tuyệt đối, cho phép nó định vị dựa trên phần tử cha có vị trí tương đối hoặc tuyệt đối */
+  bottom: 1.6rem; /* Căn cách mép dưới của phần tử cha một khoảng 1.6rem */
+  right: 1.25rem; /* Căn cách mép phải của phần tử cha một khoảng 1.25rem */
 }
 
 /*  Tab hoạt động */
@@ -2190,547 +2190,582 @@ swiper {
   border-bottom-right-radius: 50%; /* Bo góc dưới phải thành tròn cho liên kết có icon */
 }
 
-/*=============== DETAILS ===============*/
+/*=============== CHI TIẾT SẢN PHẨM ===============*/
 /* Hiệu ứng chạy sáng cho nhãn */
 @keyframes shine {
   0% {
-    left: -100%;
+    left: -100%; /* Bắt đầu vị trí hiệu ứng ở bên ngoài khung, phía bên trái */
   }
   50% {
-    left: 100%;
+    left: 100%; /* Hiệu ứng chạy ngang qua khung và đến phía bên phải */
   }
   100% {
-    left: 100%;
+    left: 100%; /* Kết thúc hiệu ứng ở bên ngoài khung, phía bên phải */
   }
 }
 
 .shining {
-  position: relative;
+  position: relative; /* Đặt phần tử chứa hiệu ứng ở vị trí tương đối, giúp phần tử con định vị chính xác */
 }
 
 .shining .shine {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
+  position: absolute; /* Đặt hiệu ứng sáng ở vị trí tuyệt đối trong phần tử cha */
+  top: 0; /* Căn mép trên của hiệu ứng với phần tử cha */
+  left: -100%; /* Bắt đầu vị trí hiệu ứng ở bên ngoài, phía trái */
+  width: 100%; /* Độ rộng hiệu ứng bằng kích thước phần tử cha */
+  height: 100%; /* Độ cao hiệu ứng bằng kích thước phần tử cha */
   background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
-  animation: shine 2s infinite;
+  /* Gradient tạo ánh sáng từ mờ ở hai bên đến sáng ở giữa */
+  animation: shine 2s infinite; /* Thêm hiệu ứng sáng với thời gian 2s, lặp vô hạn */
 }
 
 /* Đánh giá số sao */
 .rating__star__form {
-  display: flex;
-  gap: 5px;
-  justify-content: left;
-  padding-bottom: 1rem;
+  display: flex; /* Sử dụng flexbox để căn chỉnh các ngôi sao theo hàng ngang */
+  gap: 5px; /* Khoảng cách giữa các ngôi sao */
+  justify-content: left; /* Căn lề trái cho các ngôi sao */
+  padding-bottom: 1rem; /* Thêm khoảng cách bên dưới để tách biệt với phần tiếp theo */
 }
 
-/* Mặc định màu chữ đen */
 .review-count {
-  color: black;
+  color: black; /* Mặc định màu chữ đen */
   text-decoration: none; /* Không gạch chân khi không hover */
 }
 
-/* Khi hover, đổi màu chữ thành xanh và thêm gạch chân */
 .review-count:hover {
-  color: #ea86cf;
+  color: #ea86cf; /* Khi hover, đổi màu chữ thành hồng và thêm gạch chân */
   text-decoration: underline;
 }
 
 /* Container tổng thể */
 .product-images {
-  margin-top: 20px;
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  max-width: 800px;
-  position: relative;
+  margin-top: 20px; /* Khoảng cách từ phần phía trên */
+  display: flex; /* Sử dụng flexbox để sắp xếp các phần tử bên trong */
+  align-items: flex-start; /* Căn chỉnh các phần tử bên trong theo trục dọc ở đầu */
+  gap: 20px; /* Khoảng cách giữa các phần tử bên trong */
+  max-width: 800px; /* Giới hạn độ rộng tối đa của container */
+  position: relative; /* Đặt container này ở vị trí tương đối để định vị các nút điều hướng */
 }
 
 /* Nút điều hướng thumbnails */
 .carousel-btn {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-}
-
-.prev-btn {
-  left: 0;
-}
-
-.next-btn {
-  right: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền tối với độ trong suốt */
+  color: white; /* Màu chữ trắng cho nút */
+  border: none; /* Loại bỏ đường viền nút */
+  padding: 10px; /* Thêm khoảng cách bên trong nút */
+  cursor: pointer; /* Hiển thị biểu tượng con trỏ khi di chuột */
+  font-size: 18px; /* Kích thước font chữ của nút */
+  position: absolute; /* Đặt nút ở vị trí tuyệt đối để phủ lên phần carousel */
+  top: 50%; /* Căn chỉnh nút ở giữa theo chiều dọc */
+  transform: translateY(-50%); /* Điều chỉnh để nút thật sự nằm chính giữa */
+  z-index: 2; /* Đảm bảo nút hiển thị trên cùng */
 }
 
 /* Carousel chứa thumbnails */
 .thumbnails-carousel {
-  overflow: hidden;
-  max-height: 300px;
-  width: 80px;
-  position: relative;
+  overflow: hidden; /* Ẩn phần nội dung vượt ngoài khung */
+  max-height: 300px; /* Chiều cao tối đa của carousel */
+  width: 80px; /* Độ rộng cố định của carousel */
+  position: relative; /* Vị trí tương đối để quản lý các phần tử con */
 }
 
 .thumbnails {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  transition: transform 0.5s ease;
+  display: flex; /* Sử dụng flexbox để sắp xếp các hình ảnh thumbnail */
+  flex-direction: column; /* Sắp xếp theo chiều dọc */
+  gap: 10px; /* Khoảng cách giữa các hình thumbnail */
+  transition: transform 0.5s ease; /* Hiệu ứng mượt khi cuộn thumbnails */
 }
 
 /* Thumbnails */
 .thumbnail {
-  width: 60px;
-  height: 60px;
-  border: 2px solid #ddd;
-  border-radius: 5px;
-  cursor: pointer;
-  object-fit: cover;
-  transition: border 0.3s, transform 0.3s;
+  width: 60px; /* Độ rộng của mỗi thumbnail */
+  height: 60px; /* Độ cao của mỗi thumbnail */
+  border: 2px solid #ddd; /* Viền của mỗi thumbnail với màu xám nhạt */
+  border-radius: 5px; /* Bo tròn góc của thumbnail */
+  cursor: pointer; /* Con trỏ chuột hiển thị biểu tượng click */
+  object-fit: cover; /* Đảm bảo hình ảnh phù hợp với khung */
+  transition: border 0.3s, transform 0.3s; /* Hiệu ứng mượt khi hover hoặc thay đổi viền */
 }
 
 .thumbnail:hover {
-  border-color: #333;
-  transform: scale(1.05);
+  border-color: #333; /* Đổi màu viền sang màu tối khi hover */
+  transform: scale(1.05); /* Tăng kích thước thumbnail một chút khi hover */
 }
 
 .thumbnail.active {
-  border-color: #f53d2d;
+  border-color: #f53d2d; /* Đổi màu viền sang đỏ để thể hiện trạng thái đang được chọn */
 }
 
 /* Hình ảnh chính */
 .main-image {
-  flex: 1;
-  max-width: 500px;
+  flex: 1; /* Thiết lập phần tử co giãn để chiếm tối đa không gian có thể */
+  max-width: 500px; /* Giới hạn độ rộng tối đa của hình ảnh chính */
 }
 
 .main-image img {
-  width: 100%;
-  border: 2px solid #ddd;
-  border-radius: 10px;
-  object-fit: cover;
-  transition: transform 0.3s;
+  width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ độ rộng của khung cha */
+  border: 2px solid #ddd; /* Thêm viền màu xám nhạt cho hình ảnh */
+  border-radius: 10px; /* Bo tròn các góc của hình ảnh */
+  object-fit: cover; /* Đảm bảo nội dung hình ảnh vừa với khung mà không bị méo */
+  transition: transform 0.3s; /* Thêm hiệu ứng mượt khi thay đổi kích thước */
 }
 
 .main-image img:hover {
-  transform: scale(1.03);
+  transform: scale(1.03); /* Phóng to hình ảnh một chút khi hover vào */
 }
 
-.details__container {grid-template-columns: 5.5fr 6.5fr;
+/* Container thông tin chi tiết sản phẩm */
+.details__container {
+  grid-template-columns: 5.5fr 6.5fr; /* Phân chia container theo tỷ lệ cột 5.5:6.5 */
 }
 
+/* Hình ảnh chi tiết */
 .details__img {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem; /* Khoảng cách dưới của ảnh chi tiết */
 }
 
+/* Nhóm hình ảnh nhỏ đi kèm */
 .details__small-images {
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 0.625rem;
+  grid-template-columns: repeat(4, 1fr); /* Tạo lưới 4 cột, mỗi cột chiếm 1 phần đều nhau */
+  column-gap: 0.625rem; /* Khoảng cách giữa các cột hình ảnh nhỏ */
 }
 
 .details__small-img {
-  cursor: pointer;
+  cursor: pointer; /* Thêm con trỏ biểu thị hình ảnh có thể click vào */
 }
 
+/* Tiêu đề sản phẩm */
 .details__title {
-  margin-top: 20px;
-  font-size: var(--h2-font-size);
+  margin-top: 20px; /* Thêm khoảng cách phía trên tiêu đề */
+  font-size: var(--h2-font-size); /* Kích thước font chữ lớn (h2) */
 }
 
+/* Thương hiệu sản phẩm */
 .details__brand {
-  font-size: var(--small-font-size);
-  margin-block: 1rem;
+  font-size: var(--small-font-size); /* Kích thước chữ nhỏ */
+  margin-block: 1rem; /* Thêm khoảng cách trên và dưới của phần thương hiệu */
 }
 
 .details__brand span {
-  color: var(--first-color);
+  color: var(--first-color); /* Đổi màu phần chữ đặc biệt sang màu chủ đạo */
 }
 
+/* Giá sản phẩm */
 .details__price {
-  border-top: 1px solid var(--border-color-alt);
-  border-bottom: 1px solid var(--border-color-alt);
-  padding-block: 1rem;
-  column-gap: 1rem;
+  border-top: 1px solid var(--border-color-alt); /* Viền trên phân cách */
+  border-bottom: 1px solid var(--border-color-alt); /* Viền dưới phân cách */
+  padding-block: 1rem; /* Thêm khoảng cách trên và dưới trong phần giá */
+  column-gap: 1rem; /* Khoảng cách giữa các cột nếu có */
 }
 
 .details__price .new__price {
-  font-size: var(--h2-font-size);
+  font-size: var(--h2-font-size); /* Kích thước chữ lớn cho giá mới */
 }
+
 .details__price .old__price {
-  font-size: var(--normal-font-size);
-  font-weight: var(--weight-500);
+  font-size: var(--normal-font-size); /* Kích thước chữ thường cho giá cũ */
+  font-weight: var(--weight-500); /* Độ đậm trung bình của chữ */
 }
 
+/* Mô tả ngắn gọn của sản phẩm */
 .short__description {
-  margin-block: 1rem 2rem;
+  margin-block: 1rem 2rem; /* Thêm khoảng cách trên (1rem) và dưới (2rem) */
 }
 
+/* Các mục danh sách hoặc thông tin meta */
 .list__item,
 .meta__list {
-  font-size: var(--small-font-size);
-  margin-bottom: 0.75rem;
+  font-size: var(--small-font-size); /* Kích thước chữ nhỏ cho danh sách */
+  margin-bottom: 0.75rem; /* Khoảng cách phía dưới của mỗi mục trong danh sách */
 }
 
+/* Khoảng cách giữa các mục chi tiết màu sắc và kích thước */
 .details__color,
 .details__size {
-  column-gap: 0.75rem;
+  column-gap: 0.75rem; /* Khoảng cách giữa các phần tử trong cùng một dòng */
 }
 
+/* Phần màu sắc */
 .details__color {
-  margin-block: 2rem 1.5rem;
+  margin-block: 2rem 1.5rem; /* Khoảng cách trên (2rem) và dưới (1.5rem) */
 }
 
+/* Phần kích thước */
 .details__size {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem; /* Khoảng cách phía dưới của phần kích thước */
 }
 
+/* Tiêu đề cho các danh sách chi tiết */
 .details__lettercharm-title,
 .details__decorcharm-title,
 .details__letterinput-title {
-  font-size: var(--small-font-size);
-  font-weight: var(--weight-600);
+  font-size: var(--small-font-size); /* Kích thước chữ nhỏ */
+  font-weight: var(--weight-600); /* Độ đậm chữ */
 }
 
+/* Danh sách các màu và kích thước */
 .color__list,
 .size__list {
-  display: flex;
-  column-gap: 0.25rem;
+  display: flex; /* Hiển thị các phần tử trên một dòng */
+  column-gap: 0.25rem; /* Khoảng cách giữa các mục */
 }
 
+/* Nút chọn màu */
 .color__link {
-  display: inline-block;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  transition: transform 0.3s ease, border 0.3s ease;
+  display: inline-block; /* Hiển thị nút như phần tử dòng */
+  width: 26px; /* Chiều rộng của nút */
+  height: 26px; /* Chiều cao của nút */
+  border-radius: 50%; /* Nút hình tròn */
+  transition: transform 0.3s ease, border 0.3s ease; /* Hiệu ứng mượt khi thay đổi kích thước và viền */
 }
 
+/* Nút màu khi được chọn */
 .color__link.active {
-  transform: scale(1.1);
-  border: 2px solid red;
+  transform: scale(1.1); /* Phóng to nhẹ nút */
+  border: 2px solid red; /* Thêm viền màu đỏ */
 }
 
+/* Hiệu ứng hover cho nút màu */
 .color__link:hover {
-  transform: scale(1.1);
-  border: 2px solid red;
+  transform: scale(1.1); /* Phóng to nhẹ nút khi hover */
+  border: 2px solid red; /* Thêm viền màu đỏ */
 }
 
+/* Nút chọn kích thước */
 .size__link {
-  border: 1px solid var(--border-color-alt);
-  display: inline-block;
-  padding: 0.375rem 0.75rem 0.5rem;
-  color: var(--text-color);
-  position: relative;
-  font-size: var(--small-font-size);
-  transition: border-color 0.3s ease;
-  font-weight: normal;
-  transition: color 0.5s ease, transform 0.5s ease;
+  border: 1px solid var(--border-color-alt); /* Viền của nút */
+  display: inline-block; /* Hiển thị nút như phần tử dòng */
+  padding: 0.375rem 0.75rem 0.5rem; /* Padding cho nút */
+  color: var(--text-color); /* Màu chữ */
+  font-size: var(--small-font-size); /* Kích thước chữ */
+  font-weight: normal; /* Độ đậm mặc định */
+  transition: color 0.5s ease, transform 0.5s ease; /* Hiệu ứng mượt cho màu sắc và kích thước */
 }
 
+/* Nút kích thước khi được chọn */
 .size__link.active {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-  width: 100%;
-  font-weight: bold;
-  color: #ff69b4;
+  transform: scaleX(1); /* Hiển thị toàn bộ chiều rộng khi được chọn */
+  transform-origin: bottom left; /* Điểm gốc transform ở góc dưới bên trái */
+  width: 100%; /* Chiều rộng tối đa */
+  font-weight: bold; /* Đậm chữ */
+  color: #ff69b4; /* Đổi màu chữ sang hồng nhạt */
 }
 
+/* Dải hiệu ứng dưới nút kích thước */
 .size__link::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background-color: pink;
-  bottom: 0;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.3s ease, width 0.3s ease;
+  content: ''; /* Thêm nội dung ảo */
+  position: absolute; /* Đặt hiệu ứng ở vị trí tuyệt đối */
+  width: 100%; /* Chiều rộng hiệu ứng */
+  height: 3px; /* Chiều cao hiệu ứng */
+  background-color: pink; /* Màu nền của dải hiệu ứng */
+  bottom: 0; /* Căn dải hiệu ứng ở đáy */
+  left: 0; /* Căn dải hiệu ứng bên trái */
+  transform: scaleX(0); /* Ban đầu thu nhỏ chiều rộng */
+  transform-origin: bottom right; /* Điểm gốc transform ở đáy bên phải */
+  transition: transform 0.3s ease, width 0.3s ease; /* Hiệu ứng mượt khi thay đổi kích thước */
 }
 
+/* Dải hiệu ứng khi hover vào nút kích thước */
 .size__link:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-  width: 100%;
+  transform: scaleX(1); /* Hiển thị dải hiệu ứng đầy đủ */
+  transform-origin: bottom left; /* Điểm gốc transform ở đáy bên trái */
+  width: 100%; /* Chiều rộng tối đa */
 }
 
+/* Hiệu ứng hover cho nút kích thước */
 .size__link:hover {
-  font-weight: bold;
-  color: #ff69b4;
+  font-weight: bold; /* Đậm chữ khi hover */
+  color: #ff69b4; /* Đổi màu chữ sang hồng nhạt */
 }
 
+/* Hành động của người dùng (thêm vào giỏ hàng, chọn số lượng...) */
 .details__action {
-  display: flex;
-  column-gap: 0.375rem;
-  margin-bottom: 3.25rem;
+  display: flex; /* Hiển thị các hành động trên một dòng */
+  column-gap: 0.375rem; /* Khoảng cách giữa các mục */
+  margin-bottom: 3.25rem; /* Khoảng cách phía dưới */
 }
 
+/* Phần số lượng và nút hành động */
 .quantity,
 .details__action-btn {
-  border: 1px solid var(--border-color-alt);
-  border-radius: 10%;
-  font-size: var(--small-font-size);
+  border: 1px solid var(--border-color-alt); /* Viền của mục */
+  border-radius: 10%; /* Bo góc nhẹ */
+  font-size: var(--small-font-size); /* Kích thước chữ */
 }
 
+/* Khung nhập số lượng */
 .quantity {
-  max-width: 80px;
-  padding-block: 0.5rem;
-  padding-inline: 1rem 0.5rem;
-  border-radius: 0.25rem;
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  -ms-border-radius: 0.25rem;
-  -o-border-radius: 0.25rem;
+  max-width: 80px; /* Giới hạn độ rộng */
+  padding-block: 0.5rem; /* Khoảng cách trên/dưới nội dung */
+  padding-inline: 1rem 0.5rem; /* Khoảng cách trái/phải */
+  border-radius: 0.25rem; /* Bo tròn nhẹ cho khung */
 }
 
+/* Nút hành động */
 .details__action-btn {
-  color: var(--text-color);
-  line-height: 40px;
-  padding-inline: 0.75rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  color: var(--text-color); /* Màu chữ */
+  line-height: 40px; /* Chiều cao dòng chữ */
+  padding-inline: 0.75rem; /* Padding trái/phải */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Hiệu ứng mượt cho nền và transform */
 }
 
-/* Hiệu ứng khi hover vào biểu tượng trái tim */
+/* Hiệu ứng khi hover vào biểu tượng trái tim trong nút hành động */
 .details__action-btn:hover .fi-rs-heart {
-  color: red; /* Màu trái tim chuyển sang đỏ */
+  color: red; /* Biểu tượng trái tim chuyển thành màu đỏ */
 }
 
+/* Phần thông tin meta dưới các hành động */
 .details__meta {
-  border-top: 1px solid var(--border-color-alt);
-  padding-top: 1rem;
+  border-top: 1px solid var(--border-color-alt); /* Đường viền phía trên */
+  padding-top: 1rem; /* Khoảng cách trên của nội dung */
 }
 
 /*=============== DETAILS INFO & REVIEWS ===============*/
+/* Tabs điều hướng phần chi tiết */
 .detail__tabs {
-  display: flex;
-  column-gap: 1.75rem;
-  margin-bottom: 2rem;
+  display: flex; /* Hiển thị các tabs trên một hàng */
+  column-gap: 1.75rem; /* Khoảng cách giữa các tabs */
+  margin-bottom: 2rem; /* Khoảng cách phía dưới tabs */
 }
 
+/* Mỗi tab */
 .detail__tab {
-  font-family: var(--second-font);
-  font-size: var(--large-font-size);
-  font-weight: var(--weight-600);
-  cursor: pointer;
-  border-radius: 5px; /* Bo góc */
-  transition: color 1s ease;
-  padding: 1rem 1.5rem;
+  font-family: var(--second-font); /* Font chữ sử dụng */
+  font-size: var(--large-font-size); /* Kích thước chữ */
+  font-weight: var(--weight-600); /* Độ đậm chữ */
+  cursor: pointer; /* Thay đổi con trỏ thành dạng "chỉ tay" khi hover */
+  border-radius: 5px; /* Bo góc nhẹ cho tab */
+  transition: color 1s ease; /* Hiệu ứng chuyển màu chữ mượt */
+  padding: 1rem 1.5rem; /* Khoảng cách bên trong của tab */
 }
 
+/* Hiệu ứng khi hover vào tab */
 .detail__tab:hover {
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  text-align: center;
-  transition: background-color 0.5s ease, color 0.3s ease;
-  display: inline-block;
-  background-color: pink;
-  color: white;
+  padding: 1rem 1.5rem; /* Giữ nguyên padding */
+  border-radius: 8px; /* Tăng độ bo góc */
+  text-align: center; /* Canh giữa nội dung */
+  transition: background-color 0.5s ease, color 0.3s ease; /* Hiệu ứng mượt khi thay đổi nền và màu chữ */
+  display: inline-block; /* Hiển thị nội dung tab dưới dạng khối nội tuyến */
+  background-color: pink; /* Nền của tab đổi thành màu hồng */
+  color: white; /* Chữ trong tab đổi thành màu trắng */
 }
 
+/* Tab đang được chọn (active) */
 .detail__tab.active-tab {
-  color: var(--first-color);
+  color: var(--first-color); /* Đổi màu chữ sang màu chính được thiết lập */
 }
 
+/* Ẩn nội dung tab không được chọn */
 .details__tab-content:not(.active-tab) {
-  display: none;
+  display: none; /* Ẩn tab không được chọn */
 }
 
+/* Bảng thông tin (ví dụ: bảng thông số kỹ thuật) */
 .info__table tr th,
 .info__table tr td {
-  border: 1px solid var(--border-color-alt);
-  padding: 0.625rem 1.25rem;
+  border: 1px solid var(--border-color-alt); /* Viền xung quanh các ô */
+  padding: 0.625rem 1.25rem; /* Khoảng cách bên trong của ô */
 }
 
+/* Ô tiêu đề trong bảng */
 .info__table tr th {
-  font-weight: var(--weight-500);
-  text-align: left;
+  font-weight: var(--weight-500); /* Độ đậm chữ của tiêu đề */
+  text-align: left; /* Canh trái nội dung */
 }
+
+/* Ô nội dung trong bảng */
 .info__table tr td {
-  color: var(--text-color-light);
+  color: var(--text-color-light); /* Màu chữ nhạt hơn */
 }
 
+/* Container của phần đánh giá (reviews) */
 .reviews__container {
-  padding-bottom: 3rem;
-  row-gap: 1.25rem;
+  padding-bottom: 3rem; /* Khoảng cách phía dưới */
+  row-gap: 1.25rem; /* Khoảng cách giữa các hàng đánh giá */
 }
 
+/* Một đánh giá đơn lẻ */
 .review__single {
-  border-bottom: 1px solid var(--border-color-alt);
-  padding-bottom: 1.25rem;
-  display: flex;
-  align-items: center;
-  column-gap: 1.5rem;
+  border-bottom: 1px solid var(--border-color-alt); /* Đường viền ngăn cách dưới đánh giá */
+  padding-bottom: 1.25rem; /* Khoảng cách dưới của mỗi đánh giá */
+  display: flex; /* Hiển thị nội dung đánh giá trên một hàng */
+  align-items: center; /* Căn giữa dọc các phần tử */
+  column-gap: 1.5rem; /* Khoảng cách giữa hình ảnh và nội dung */
 }
 
+/* Phần đánh giá cuối cùng không cần padding dưới */
 .review__single:last-child {
-  padding-bottom: 3rem;
+  padding-bottom: 3rem; /* Khoảng cách đặc biệt cho mục cuối */
 }
 
+/* Hình ảnh trong đánh giá */
 .review__img {
-  width: 70px;
-  margin-bottom: 0.5rem;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  width: 70px; /* Chiều rộng của hình ảnh */
+  margin-bottom: 0.5rem; /* Khoảng cách dưới hình ảnh */
+  border-radius: 50%; /* Hình ảnh bo tròn */
 }
 
+/* Tiêu đề đánh giá */
 .review__title {
-  font-size: var(--tiny-font-size);
+  font-size: var(--tiny-font-size); /* Kích thước chữ rất nhỏ */
 }
 
+/* Nội dung của đánh giá */
 .review__data {
-  width: calc(100% - 94px);
+  width: calc(100% - 94px); /* Chiều rộng còn lại sau khi trừ kích thước hình ảnh và khoảng cách */
 }
 
+/* Xếp hạng đánh giá */
 .review__rating {
-  color: hsl(24, 100%, 50%);
-  margin-bottom: 0.25rem;
+  color: hsl(24, 100%, 50%); /* Màu vàng sáng nổi bật */
+  margin-bottom: 0.25rem; /* Khoảng cách dưới */
 }
 
+/* Mô tả của đánh giá */
 .review__description {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem; /* Khoảng cách dưới */
 }
 
+/* Kích thước của xếp hạng và ngày đánh giá */
 .review__rating,
 .review__date {
-  font-size: var(--small-font-size);
+  font-size: var(--small-font-size); /* Kích thước chữ nhỏ */
 }
 
+/* Tiêu đề cho biểu mẫu đánh giá */
 .review__form-title {
-  font-size: var(--large-font-size);
-  margin-bottom: 1rem;
+  font-size: var(--large-font-size); /* Kích thước chữ lớn */
+  margin-bottom: 1rem; /* Khoảng cách phía dưới */
 }
 
+/* Container đánh giá sản phẩm */
 .rate__product {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; /* Khoảng cách phía dưới */
 }
 
-/*=============== CART ===============*/
+/* =============== GIỎ HÀNG =============== */
+/* Container chính của trang giỏ hàng */
 .cart-page {
-  display: flex;
-  justify-content: center; /* Căn giữa theo chiều ngang */
-  align-items: top; /* Căn giữa theo chiều dọc (nếu cần) */
+  display: flex; /* Hiển thị nội dung con theo dạng hàng hoặc cột tùy theo flex-direction */
+  justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+  align-items: top; /* Căn chỉnh nội dung theo cạnh trên */
 }
 
+/* Nút "Tiếp tục mua sắm" */
 .continue-shopping {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  font-size: 16px;
-  padding: 10px 20px;
-  transition: all 0.3s ease;
-  border: 2px solid rgb(253, 227, 240);
-  border-radius: 5px;
+  color: rgb(0, 0, 0); /* Màu chữ đen */
+  text-decoration: none; /* Loại bỏ gạch chân cho liên kết */
+  font-size: 16px; /* Kích thước chữ */
+  padding: 10px 20px; /* Khoảng cách bên trong nút */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển đổi mượt mà khi hover */
+  border: 2px solid rgb(253, 227, 240); /* Viền màu hồng nhạt */
+  border-radius: 5px; /* Bo góc nhẹ cho nút */
 }
 
+/* Hiệu ứng khi hover vào nút "Tiếp tục mua sắm" */
 .continue-shopping:hover {
-  color: white;
-  background: rgb(250, 130, 192);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-  border: 2px solid rgba(255, 58, 186, 0.8);
-  transform: scale(1.05);
+  color: white; /* Đổi màu chữ thành trắng */
+  background: rgb(250, 130, 192); /* Đổi màu nền thành hồng đậm */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Thêm hiệu ứng đổ bóng sáng cho chữ */
+  border: 2px solid rgba(255, 58, 186, 0.8); /* Thay đổi màu viền */
+  transform: scale(1.05); /* Phóng to nút nhẹ khi hover */
 }
 
+/* Container cho bảng có cuộn ngang nếu nội dung vượt quá */
 .table__container {
-  overflow-x: auto;
+  overflow-x: auto; /* Hiển thị thanh cuộn ngang nếu nội dung dài hơn khung */
 }
 
+/* Thiết lập cơ bản cho bảng */
 .table {
-  table-layout: fixed;
-  margin-bottom: 15px;
+  table-layout: fixed; /* Bảng có chiều rộng cột cố định */
+  margin-bottom: 15px; /* Khoảng cách dưới của bảng */
 }
 
+/* Các dòng trong phần thân bảng */
 .table tbody tr {
-  border-top: 1px solid var(--border-color-alt);
+  border-top: 1px solid var(--border-color-alt); /* Đường viền giữa các hàng trong bảng */
 }
 
+/* Dòng cuối cùng của bảng */
 .table tr:last-child {
-  border-bottom: 1px solid var(--border-color-alt);
+  border-bottom: 1px solid var(--border-color-alt); /* Viền dưới cùng của bảng */
 }
 
+/* Chiều rộng cụ thể cho các cột trong bảng */
 .table thead tr th:nth-child(1),
 .table tbody tr td:nth-child(1) {
-  width: 216px;
+  width: 216px; /* Cột thứ nhất: 216px */
 }
 
 .table thead tr th:nth-child(2),
 .table tbody tr td:nth-child(2) {
-  width: 400px;
+  width: 400px; /* Cột thứ hai: 400px */
 }
 
 .table thead tr th:nth-child(3),
 .table tbody tr td:nth-child(3) {
-  width: 108px;
+  width: 108px; /* Cột thứ ba: 108px */
 }
 
 .table thead tr th:nth-child(4),
 .table tbody tr td:nth-child(4) {
-  width: 220px;
+  width: 220px; /* Cột thứ tư: 220px */
 }
 
 .table thead tr th:nth-child(5),
 .table tbody tr td:nth-child(5) {
-  width: 200px;
+  width: 200px; /* Cột thứ năm: 200px */
 }
 
 .table thead tr th:nth-child(6),
 .table tbody tr td:nth-child(6) {
-  width: 152px;
+  width: 122px; /* Cột thứ sáu: 122px */
 }
 
-.table thead tr th:nth-child(6),
-.table tbody tr td:nth-child(6) {
-  width: 122px;
-}
-
+/* Hình ảnh trong bảng */
 .table__img {
-  width: 80px;
+  width: 80px; /* Chiều rộng hình ảnh */
 }
 
+/* Thiết lập phần th và td của bảng */
 .table thead tr th,
 .table tbody tr td {
-  padding: 0.7rem 0.5rem;
-  text-align: center;
+  padding: 0.7rem 0.5rem; /* Khoảng cách trong ô của bảng */
+  text-align: center; /* Canh giữa nội dung */
 }
 
+/* Phong cách cho các phần tử trong bảng */
 .table__title,
 .table__description,
 .table__price,
 .table__subtotal,
 .table__trash,
 .table__stock {
-  font-size: var(--small-font-size);
+  font-size: var(--small-font-size); /* Sử dụng kích thước chữ nhỏ */
 }
 
+/* Phần tiêu đề và tồn kho */
 .table__title,
 .table__stock {
-  color: var(--first-color);
+  color: var(--first-color); /* Đổi màu chữ sang màu chính được định nghĩa */
 }
 
+/* Mô tả sản phẩm */
 .table__description {
-  max-width: 250px;
-  margin-inline: auto;
+  max-width: 250px; /* Chiều rộng tối đa của phần mô tả */
+  margin-inline: auto; /* Canh giữa phần mô tả */
 }
 
+/* Biểu tượng thùng rác */
 .table__trash {
-  color: var(--text-color-light);
-  cursor: pointer;
+  color: var(--text-color-light); /* Màu chữ nhạt hơn */
+  cursor: pointer; /* Hiển thị con trỏ "chỉ tay" khi hover */
 }
 
+/* Hiệu ứng hover cho biểu tượng thùng rác */
 .table__trash:hover {
-  color: red;
+  color: red; /* Đổi màu biểu tượng sang đỏ khi hover */
 }
 
 /* Đặt kiểu cơ bản cho ảnh */
@@ -2759,98 +2794,112 @@ td {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Thêm bóng mờ */
 }
 
+/* Hành động trên trang giỏ hàng */
 .cart__actions {
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 30px;
+  display: flex; /* Sử dụng Flexbox để canh chỉnh các nút hành động */
+  justify-content: flex-end; /* Canh các nút sang phía bên phải */
+  flex-wrap: wrap; /* Cho phép các nút tự xuống dòng nếu không đủ không gian */
+  gap: 0.75rem; /* Khoảng cách giữa các phần tử */
+  margin-bottom: 30px; /* Khoảng cách dưới với các thành phần khác */
 }
 
+/* Đường phân cách với văn bản ở giữa */
 .divider {
-  position: relative;
-  text-align: center;
-  margin-block: 3rem;
+  position: relative; /* Cho phép canh chỉnh phần tử bên trong */
+  text-align: center; /* Canh giữa nội dung văn bản */
+  margin-block: 3rem; /* Khoảng cách trên và dưới */
 }
 
+/* Đường kẻ nằm ngang trong phần phân cách */
 .divider::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  border-top: 2px solid var(--border-color-alt);
-  z-index: -1;
+  content: ""; /* Tạo nội dung ảo cho đường kẻ */
+  position: absolute; /* Đặt ở vị trí tuyệt đối trong phần tử cha */
+  top: 50%; /* Đặt giữa chiều cao phần tử */
+  left: 0; /* Bắt đầu từ cạnh trái */
+  width: 100%; /* Chiều dài đường kẻ bằng chiều rộng cha */
+  border-top: 2px solid var(--border-color-alt); /* Đường kẻ mỏng và có màu nhẹ */
+  z-index: -1; /* Đẩy đường kẻ xuống dưới nội dung văn bản */
 }
 
+/* Biểu tượng trong phần phân cách */
 .divider i {
-  color: var(--text-color-light);
-  background-color: var(--body-color);
-  font-size: 1.5rem;
-  padding-inline: 1.25rem;
+  color: var(--text-color-light); /* Màu chữ nhạt hơn */
+  background-color: var(--body-color); /* Nền biểu tượng là màu nền chính */
+  font-size: 1.5rem; /* Kích thước biểu tượng lớn */
+  padding-inline: 1.25rem; /* Khoảng cách ngang giữa biểu tượng và viền */
 }
 
+/* Bố cục nhóm nội dung trong giỏ hàng */
 .cart__group {
-  grid-template-columns: repeat(2, 1fr);
-  align-items: flex-start;
+  grid-template-columns: repeat(2, 1fr); /* Chia bố cục thành hai cột có độ rộng bằng nhau */
+  align-items: flex-start; /* Căn phần tử con theo cạnh trên */
 }
 
+/* Tiêu đề các phần giao hàng, phiếu giảm giá, tổng tiền */
 .cart__shipping .section__title,
 .cart__coupon .section__title,
 .cart__total .section__title {
-  font-size: var(--large-font-size);
-  margin-bottom: 1rem;
+  font-size: var(--large-font-size); /* Sử dụng kích thước chữ lớn */
+  margin-bottom: 1rem; /* Khoảng cách dưới tiêu đề */
 }
 
+/* Phần phiếu giảm giá */
 .cart__coupon {
-  margin-top: 3rem;
+  margin-top: 3rem; /* Khoảng cách trên giữa phần giảm giá và phần trên */
 }
 
+/* Căn giữa các thành phần trong form giảm giá */
 .coupon__form .form__group {
-  align-items: center;
+  align-items: center; /* Canh giữa nội dung theo chiều dọc */
 }
 
+/* Phần tổng tiền */
 .cart__total {
-  text-align: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  border: 2px solid var(--border-color-alt);
-  border-style:dashed;
-  border-color: rgb(248, 126, 199);
-  padding-top: 20px;
-  padding-bottom: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
-  border-radius: 0.25rem;
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  -ms-border-radius: 0.25rem;
-  -o-border-radius: 0.25rem;
+  text-align: center; /* Căn giữa nội dung văn bản */
+  width: 100%; /* Chiều rộng tối đa là 100% */
+  max-width: 1200px; /* Chiều rộng tối đa của phần tử */
+  margin: 0 auto; /* Canh giữa phần tổng tiền trong bố cục */
+  border: 2px solid var(--border-color-alt); /* Viền ngoài phần tổng tiền */
+  border-style: dashed; /* Kiểu viền nét đứt */
+  border-color: rgb(248, 126, 199); /* Màu viền hồng nhạt */
+  padding-top: 20px; /* Khoảng cách bên trên nội dung */
+  padding-bottom: 10px; /* Khoảng cách dưới nội dung */
+  padding-left: 50px; /* Khoảng cách bên trái nội dung */
+  padding-right: 50px; /* Khoảng cách bên phải nội dung */
+  border-radius: 0.25rem; /* Bo góc nhẹ cho phần tổng tiền */
+  -webkit-border-radius: 0.25rem; /* Tương thích trình duyệt Webkit */
+  -moz-border-radius: 0.25rem; /* Tương thích trình duyệt Firefox */
+  -ms-border-radius: 0.25rem; /* Tương thích trình duyệt Internet Explorer */
+  -o-border-radius: 0.25rem; /* Tương thích trình duyệt Opera */
 }
 
+/* Bảng hiển thị chi tiết tổng tiền */
 .cart__total-table {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* Khoảng cách dưới bảng */
 }
 
+/* Các ô trong bảng tổng tiền */
 .cart__total-table tr td {
-  border: 1px solid var(--border-color-alt);
-  padding: 0.75rem 0.5rem;
-  width: 50%;
+  border: 1px solid var(--border-color-alt); /* Viền mỏng cho các ô */
+  padding: 0.75rem 0.5rem; /* Khoảng cách trong ô */
+  width: 50%; /* Các cột có chiều rộng bằng nhau */
 }
 
+/* Tiêu đề nhỏ trong bảng */
 .cart__total-title {
-  font-size: var(--small-font-size);
+  font-size: var(--small-font-size); /* Dùng kích thước chữ nhỏ */
 }
 
+/* Giá trị tổng tiền */
 .cart__total-price {
-  color: var(--first-color);
-  font-weight: var(--weight-700);
+  color: var(--first-color); /* Màu chữ nổi bật */
+  font-weight: var(--weight-700); /* Đậm chữ */
 }
 
+/* Nút bấm trong phần tổng tiền */
 .cart__total .btn {
-  display: inline-flex;
-  width: fit-content;
+  display: inline-flex; /* Hiển thị nút dạng inline và có Flexbox */
+  width: fit-content; /* Chiều rộng tự động vừa nội dung */
 }
 
 /*=============== WISHLIST ===============*/
@@ -2894,80 +2943,95 @@ td {
   transform: translateX(-50%) scale(1); /* Hiệu ứng phóng to (zoom-in) */
   opacity: 1; /* Đảm bảo thông báo hiển thị */
 }
-/*=============== CHECKOUT ===============*/
+/*=============== THANH TOÁN ===============*/
+/* Container chính của phần thanh toán */
 .checkout__container {
-  margin-top: 50px;
-  grid-template-columns: repeat(2, 1fr);
+  margin-top: 50px; /* Khoảng cách phía trên giữa container và phần nội dung trước đó */
+  grid-template-columns: repeat(2, 1fr); /* Chia bố cục thành 2 cột bằng nhau */
 }
 
+/* Nhóm nội dung thứ hai trong phần thanh toán */
 .checkout__group:nth-child(2) {
-  border: 2px solid var(--border-color-alt);
-  padding: 2rem;
-  border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
+  border: 2px solid var(--border-color-alt); /* Viền xung quanh nội dung với màu viền nhẹ */
+  padding: 2rem; /* Khoảng cách bên trong với nội dung */
+  border-radius: 0.5rem; /* Bo góc nội dung */
+  -webkit-border-radius: 0.5rem; /* Tương thích với trình duyệt Webkit */
+  -moz-border-radius: 0.5rem; /* Tương thích với trình duyệt Firefox */
+  -ms-border-radius: 0.5rem; /* Tương thích với trình duyệt Internet Explorer */
+  -o-border-radius: 0.5rem; /* Tương thích với trình duyệt Opera */
 }
 
+/* Tiêu đề của từng nhóm trong trang thanh toán */
 .checkout__group .section__title {
-  font-size: 23px;
+  font-size: 23px; /* Kích thước chữ cho tiêu đề */
 }
 
+/* Tiêu đề nhỏ trong phần thanh toán */
 .checkout__title {
-  font-size: var(--small-font-size);
+  font-size: var(--small-font-size); /* Kích thước chữ nhỏ, áp dụng biến CSS */
 }
 
+/* Thiết kế bảng đơn hàng */
 .order__table thead tr th,
 .order__table tbody tr td {
-  border: 1px solid var(--border-color-alt);
-  padding: 0.5rem;
-  text-align: center;
+  border: 1px solid var(--border-color-alt); /* Viền xung quanh các ô trong bảng */
+  padding: 0.5rem; /* Khoảng cách bên trong các ô */
+  text-align: center; /* Canh giữa nội dung trong các ô */
 }
 
+/* Tiêu đề cột của bảng đơn hàng */
 .order__table thead tr th {
-  color: var(--title-color);
-  font-size: var(--small-font-size);
+  color: var(--title-color); /* Màu chữ nổi bật cho tiêu đề */
+  font-size: var(--small-font-size); /* Kích thước chữ nhỏ */
 }
 
+/* Hình ảnh sản phẩm trong bảng */
 .order__img {
-  width: 80px;
+  width: 80px; /* Chiều rộng của hình ảnh */
 }
 
+/* Thiết kế cột số lượng và tiêu đề nhỏ trong bảng */
 .table__quantity,
 .order__subtitle {
-  font-size: var(--small-font-size);
+  font-size: var(--small-font-size); /* Kích thước chữ nhỏ, sử dụng biến CSS */
 }
 
+/* Phần tổng tiền đơn hàng */
 .order__grand-total {
-  color: var(--first-color);
-  font-size: var(--large-font-size);
-  font-weight: var(--weight-700);
+  color: var(--first-color); /* Màu nổi bật cho tổng tiền */
+  font-size: var(--large-font-size); /* Sử dụng kích thước chữ lớn */
+  font-weight: var(--weight-700); /* Chữ in đậm */
 }
 
+/* Tùy chọn phương thức thanh toán */
 .payment__methods {
-  margin-block: 2.5rem 2.75rem;
+  margin-block: 2.5rem 2.75rem; /* Khoảng cách trên và dưới giữa phần phương thức thanh toán */
 }
 
+/* Tiêu đề phần phương thức thanh toán */
 .payment__title {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem; /* Khoảng cách dưới tiêu đề */
 }
 
+/* Từng tùy chọn trong phần thanh toán */
 .payment__option {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* Khoảng cách dưới mỗi tùy chọn */
 }
 
+/* Input lựa chọn thanh toán */
 .payment__input {
-  accent-color: var(--first-color);
+  accent-color: var(--first-color); /* Màu nhấn cho checkbox/radio button */
 }
 
+/* Nhãn của các phương thức thanh toán */
 .payment__label {
-  font-size: var(--small-font-size);
-  user-select: none;
+  font-size: var(--small-font-size); /* Kích thước chữ nhỏ */
+  user-select: none; /* Ngăn chặn người dùng chọn văn bản nhãn */
 }
 
-.btn btn--sm apply-coupon{
-  font-size: 40px;
+/* Button áp dụng mã giảm giá */
+.btn btn--sm apply-coupon {
+  font-size: 40px; /* Kích thước chữ lớn */
 }
 
 /*=============== ĐĂNG NHẬP VÀ ĐĂNG KÝ ===============*/
@@ -3066,78 +3130,6 @@ td {
     text-align: center;
   }
 }
-
-/*=============== CHECKOUT ===============*/
-.checkout__container {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.checkout__group:nth-child(2) {
-  border: 1px solid var(--border-color-alt);
-  padding: 2rem;
-  border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
-}
-
-.checkout__group .section__title {
-  font-size: var(--large-font-size);
-}
-
-.checkout__title {
-  font-size: var(--small-font-size);
-}
-
-.order__table thead tr th,
-.order__table tbody tr td {
-  border: 1px solid var(--border-color-alt);
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.order__table thead tr th {
-  color: var(--title-color);
-  font-size: var(--small-font-size);
-}
-
-.order__img {
-  width: 80px;
-}
-
-.table__quantity,
-.order__subtitle {
-  font-size: var(--small-font-size);
-}
-
-.order__grand-total {
-  color: var(--first-color);
-  font-size: var(--large-font-size);
-  font-weight: var(--weight-700);
-}
-
-.payment__methods {
-  margin-block: 2.5rem 2.75rem;
-}
-
-.payment__title {
-  margin-bottom: 1.5rem;
-}
-
-.payment__option {
-  margin-bottom: 1rem;
-}
-
-.payment__input {
-  accent-color: var(--first-color);
-}
-
-.payment__label {
-  font-size: var(--small-font-size);
-  user-select: none;
-}
-
 
 /*=============== PHẦN TÀI KHOẢN ===============*/
 .accounts__container {
@@ -3269,391 +3261,461 @@ td {
 #account-wishlist .link:hover {
   color: #ff6aa7;
 }
+
 /*=============== ĐIỀU CHỈNH RESPONSIVE DESIGN ===============*/
-/* Màn hình lớn */
+/* Cho màn hình cỡ lớn */
 @media screen and (max-width: 1400px) {
+  /* Giới hạn chiều rộng container không vượt quá 1140px */
   .container {
-    max-width: 1140px;
+    max-width: 1140px; /* Chiều rộng tối đa của container */
   }
 
+  /* Các container hiển thị 3 cột cho sản phẩm và showcase */
   .products__container,
   .showcase__container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Ba cột cho các container này */
   }
 
+  /* Đối với accounts__container, chia thành 3 cột cho phần đầu và 9 cột cho phần sau */
   .accounts__container {
-    grid-template-columns: 3fr 9fr;
+    grid-template-columns: 3fr 9fr; /* 3 phần đầu và 9 phần sau */
   }
 }
 
+/* Cho màn hình nhỏ hơn hoặc bằng 1200px */
 @media screen and (max-width: 1200px) {
+  /* Giới hạn chiều rộng container không vượt quá 960px */
   .container {
-    max-width: 960px;
+    max-width: 960px; /* Chiều rộng tối đa của container */
   }
 
+  /* Ẩn phần header phía trên khi màn hình nhỏ hơn hoặc bằng 1200px */
   .header__top {
-    display: none;
+    display: none; /* Ẩn header top */
   }
 
+  /* Điều chỉnh chiều cao của navigation */
   .nav {
-    height: calc(var(--header-height) + 1.5rem);
+    height: calc(var(--header-height) + 1.5rem); /* Cập nhật chiều cao của thanh điều hướng */
   }
 
+  /* Giảm kích thước logo của navigation */
   .nav__logo-img {
-    width: 116px;
+    width: 116px; /* Kích thước của logo trong navigation */
   }
 
+  /* Di chuyển menu navigation vào kiểu modal với các thiết lập vị trí và độ rộng */
   .nav__menu {
-    position: fixed;
-    right: -100%;
+    position: fixed; /* Menu sẽ được cố định trên màn hình */
+    right: -100%; /* Ẩn menu khỏi màn hình khi không hiển thị */
     top: 0;
-    max-width: 400px;
-    width: 100%;
+    max-width: 400px; /* Chiều rộng tối đa của menu */
+    width: 100%; /* Chiều rộng của menu luôn chiếm 100% */
     height: 100%;
-    padding: 1.25rem 2rem;
+    padding: 1.25rem 2rem; /* Tạo khoảng trống cho menu */
     background-color: var(--body-color);
-    z-index: 100;
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 2rem;
-    box-shadow: 0 0 15px hsl(0, 0%, 0%, 0.1);
-    transition: right 0.5s ease-in-out;
-    -webkit-transition: right 0.5s ease-in-out;
-    -moz-transition: right 0.5s ease-in-out;
-    -ms-transition: right 0.5s ease-in-out;
-    -o-transition: right 0.5s ease-in-out;
+    z-index: 100; /* Đảm bảo menu luôn trên các phần tử khác */
+    flex-direction: column; /* Cột dọc cho các mục trong menu */
+    align-items: flex-start; /* Căn các mục menu về bên trái */
+    row-gap: 2rem; /* Khoảng cách giữa các mục trong menu */
+    box-shadow: 0 0 15px hsl(0, 0%, 0%, 0.1); /* Thêm bóng mờ cho menu */
+    transition: right 0.5s ease-in-out; /* Hiệu ứng chuyển động cho menu */
   }
 
+  /* Khi menu được kích hoạt, nó sẽ di chuyển vào màn hình */
   .nav__menu.show-menu {
-    right: 0;
+    right: 0; /* Hiển thị menu khi có class show-menu */
   }
 
+  /* Điều chỉnh cách hiển thị các danh mục trong menu */
   .nav__list {
     order: 1;
-    flex-direction: column;
+    flex-direction: column; /* Chuyển các mục menu thành cột */
     align-items: flex-start;
     row-gap: 1.5rem;
   }
 
+  /* Tăng kích thước chữ cho các liên kết trong menu */
   .nav__link {
-    font-size: var(--large-font-size);
+    font-size: var(--large-font-size); /* Kích thước chữ của các liên kết trong menu */
   }
 
+  /* Thêm màu cho border của thanh tìm kiếm */
   .header__search .form__input {
-    border-color: var(--first-color);
+    border-color: var(--first-color); /* Đổi màu border của input search */
   }
 
+  /* Menu phía trên và toggle của menu hiển thị */
   .nav__menu-top,
   .nav__toggle {
-    display: flex;
+    display: flex; /* Sử dụng flex để sắp xếp các phần tử */
   }
 
+  /* Cả hai nút toggle và close đều có thể được nhấn */
   .nav__toggle,
   .nav__close {
-    cursor: pointer;
+    cursor: pointer; /* Thêm con trỏ chuột khi hover */
   }
 
+  /* Thiết lập cấu trúc và khoảng cách của thanh tiêu đề menu */
   .nav__menu-top {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.25rem; /* Khoảng cách dưới menu */
   }
 
+  /* Điều chỉnh kích thước logo của menu */
   .nav__menu-logo img {
-    width: 100px;
+    width: 100px; /* Kích thước logo */
   }
 
+  /* Điều chỉnh kích thước và khoảng cách của nút đóng menu */
   .nav__close {
-    font-size: var(--h1-font-size);
-    margin-right: 10px;
+    font-size: var(--h1-font-size); /* Kích thước chữ của nút đóng menu */
+    margin-right: 10px; /* Khoảng cách giữa nút đóng và bên phải */
   }
 
+  /* Điều chỉnh kích thước của các nút hành động trên header */
   .header__action-btn {
-    width: 21px;
+    width: 21px; /* Kích thước nút hành động */
   }
 
+  /* Sắp xếp các phần trong home container thành 2 cột */
   .home__container {
-    grid-template-columns: 5.5fr 6.5fr;
+    grid-template-columns: 5.5fr 6.5fr; /* Tỉ lệ 5.5 phần và 6.5 phần */
   }
 
+  /* Điều chỉnh khoảng cách giữa các phần tử trong countdown */
   .countdown {
-    column-gap: 1rem;
+    column-gap: 1rem; /* Khoảng cách giữa các phần tử trong countdown */
   }
 
+  /* Đặt kích thước cho từng phần trong countdown */
   .countdown__period {
     width: 36px;
     height: 36px;
-    line-height: 36px;
+    line-height: 36px; /* Căn giữa nội dung */
   }
 
+  /* Tùy chỉnh vị trí của mũi tên trong countdown */
   .countdown__amount::after {
-    right: -25%;
-    top: 12%;
+    right: -25%; /* Di chuyển phần tử một chút sang bên phải */
+    top: 12%; /* Di chuyển phần tử xuống phía dưới */
   }
-/*Nút swiper*/
+
+  /* Điều chỉnh kích thước nút swiper */
   .swiper-button-next,
   .swiper-button-prev {
-    top: -28px;
+    top: -28px; /* Đặt nút swiper lên cao */
     width: 26px;
-    height: 26px;
+    height: 26px; /* Kích thước nút */
   }
 
+  /* Tùy chỉnh vị trí nút quay lại trong swiper */
   .swiper-button-prev {
-    right: 36px;
+    right: 36px; /* Điều chỉnh vị trí nút quay lại */
   }
 
+  /* Điều chỉnh padding cho các tab trong tài khoản */
   .account__tab {
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 1rem; /* Khoảng cách trong tab */
   }
 
+  /* Tăng padding cho nhóm thứ 2 trong checkout */
   .checkout__group:nth-child(2) {
-    padding: 1.5rem;
+    padding: 1.5rem; /* Tạo khoảng trống bên trong nhóm thứ 2 */
   }
 
+  /* Điều chỉnh margin cho nhãn hiệu trong chi tiết sản phẩm */
   .details__brand {
-    margin-block: 0.75rem;
+    margin-block: 0.75rem; /* Margin cho nhãn hiệu */
   }
 
+  /* Thêm padding cho giá trong chi tiết sản phẩm */
   .details__price {
-    padding-block: 0.75rem;
+    padding-block: 0.75rem; /* Padding trên và dưới cho giá */
   }
 
+  /* Thêm margin cho mô tả ngắn trong chi tiết sản phẩm */
   .short__description {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Khoảng cách dưới mô tả ngắn */
   }
 
+  /* Thêm margin cho màu sắc trong chi tiết sản phẩm */
   .details__color {
-    margin-block: 1.75rem;
+    margin-block: 1.75rem; /* Margin cho màu sắc */
   }
 
+  /* Thêm margin dưới cho kích thước sản phẩm */
   .details__size {
-    margin-bottom: 2.25rem;
+    margin-bottom: 2.25rem; /* Khoảng cách dưới phần kích thước */
   }
 
+  /* Điều chỉnh kích thước của các lựa chọn màu sắc */
   .color__link {
     width: 22px;
-    height: 22px;
+    height: 22px; /* Kích thước của ô màu sắc */
   }
 
+  /* Điều chỉnh padding của lựa chọn kích thước */
   .size__link {
-    padding: 0.375rem 0.625rem;
+    padding: 0.375rem 0.625rem; /* Khoảng cách giữa các lựa chọn kích thước */
   }
 
+  /* Thêm margin dưới cho phần hành động trong chi tiết sản phẩm */
   .details__action {
-    margin-bottom: 2.75rem;
+    margin-bottom: 2.75rem; /* Khoảng cách dưới phần hành động */
   }
 }
 
-/* For medium devices */
+/* Cho màn hình cỡ trung bình (<992px) */
 @media screen and (max-width: 992px) {
+  /* Giới hạn chiều rộng container không vượt quá 776px */
   .container {
-    max-width: 776px;
+    max-width: 776px; /* Chiều rộng tối đa của container */
   }
 
+  /* Các container chính sử dụng lưới với 1 cột */
   .home__container,
   .deals__container,
   .checkout__container,
   .newsletter__container,
   .accounts__container,
   .cart__group {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Một cột trên màn hình nhỏ */
   }
 
+  /* Tăng khoảng cách giữa các phần tử trong cart__group */
   .cart__group {
-    row-gap: 2.75rem;
+    row-gap: 2.75rem; /* Khoảng cách giữa các hàng trong nhóm giỏ hàng */
   }
 
+  /* Căn giữa hình ảnh trong home */
   .home__img {
-    justify-self: center;
+    justify-self: center; /* Căn giữa hình ảnh trong layout */
   }
 
+  /* Kích thước nút chuẩn */
   .btn {
-    height: 45px;
-    line-height: 39px;
+    height: 45px;         /* Chiều cao nút */
+    line-height: 39px;    /* Canh giữa nội dung trong nút */
   }
 
+  /* Kích thước nút trung bình */
   .btn--md {
-    height: 42px;
-    line-height: 35px;
+    height: 42px;         /* Chiều cao nút */
+    line-height: 35px;    /* Canh giữa nội dung */
   }
+
+  /* Kích thước nút nhỏ */
   .btn--sm {
-    height: 38px;
-    line-height: 35px;
+    height: 38px;         /* Chiều cao nút */
+    line-height: 35px;    /* Canh giữa nội dung */
   }
 
+  /* Ẩn phần mô tả trong newsletter */
   .newsletter__description {
-    display: none;
+    display: none; /* Ẩn mô tả trong container newsletter */
   }
 
+  /* Các container hiển thị 2 cột cho sản phẩm, showcase, footer và chi tiết */
   .products__container,
   .showcase__container,
   .footer__container,
   .details__container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Hai cột trong các container */
   }
 
+  /* Đệm trong cho form đăng nhập và đăng ký */
   .login,
   .register {
-    padding: 1.25rem;
+    padding: 1.25rem; /* Tạo khoảng cách bên trong các form */
   }
 
+  /* Đặt chiều rộng cho các cột bảng */
   .table thead tr th:nth-child(1),
   .table tbody tr td:nth-child(1) {
-    width: 140px;
+    width: 140px; /* Chiều rộng cho cột đầu tiên */
   }
 
   .table thead tr th:nth-child(2),
   .table tbody tr td:nth-child(2) {
-    width: 330px;
+    width: 330px; /* Chiều rộng cho cột thứ hai */
   }
 
   .table thead tr th:nth-child(3),
   .table tbody tr td:nth-child(3) {
-    width: 80px;
+    width: 80px; /* Chiều rộng cho cột thứ ba */
   }
 
   .table thead tr th:nth-child(4),
   .table tbody tr td:nth-child(4) {
-    width: 220px;
+    width: 220px; /* Chiều rộng cho cột thứ tư */
   }
 
   .table thead tr th:nth-child(5),
   .table tbody tr td:nth-child(5) {
-    width: 160px;
+    width: 160px; /* Chiều rộng cho cột thứ năm */
   }
 
   .table thead tr th:nth-child(6),
   .table tbody tr td:nth-child(6) {
-    width: 100px;
+    width: 100px; /* Chiều rộng cho cột thứ sáu */
   }
 }
 
+/* Cho màn hình <768px */
 @media screen and (max-width: 768px) {
+  /* Giới hạn chiều rộng container không vượt quá 570px */
   .container {
-    max-width: 570px;
+    max-width: 570px; /* Chiều rộng tối đa của container */
   }
 
+  /* Các container chính sử dụng một cột trên màn hình nhỏ */
   .products__container,
   .showcase__container,
   .footer__container,
   .login-register__container,
   .details__container {
-    grid-template-columns: 100%;
+    grid-template-columns: 100%; /* Một cột trên màn hình nhỏ */
   }
 
+  /* Đệm trong cho tiêu đề tab và nội dung tab */
   .tab__header,
   .tab__body {
-    padding: 0.75rem;
+    padding: 0.75rem; /* Tạo khoảng cách trong các tab */
   }
 
+  /* Các ô bảng so sánh hiển thị dưới dạng block để dễ dàng cuộn */
   .compare__table tr td {
-    display: block;
+    display: block; /* Mỗi ô trong bảng hiển thị thành một block riêng biệt */
   }
 
+  /* Hình ảnh trong trang chủ có giới hạn chiều rộng */
   .home__img {
-    max-width: 300px;
+    max-width: 300px; /* Giới hạn chiều rộng hình ảnh trang chủ */
   }
 }
 
-/* For small devices */
+/* Cho màn hình cỡ nhỏ (<576px) */
 @media screen and (max-width: 576px) {
+  /* Các container hiển thị dạng lưới, điều chỉnh số cột tùy theo không gian */
   .products__container,
   .showcase__container,
   .footer__container,
   .login-register__container,
   .details__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Giữ nguyên số cột */
-    overflow-x: auto;           /* Cho phép cuộn ngang nếu không đủ chỗ */
-    column-gap: 1rem;           /* Giữ khoảng cách giữa các cột */
-    padding-bottom: 1rem;       /* Tạo khoảng trống dưới để tránh bị che khuất */
-    white-space: nowrap;        /* Ngăn các phần tử xuống dòng */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Số cột tự điều chỉnh với chiều rộng tối thiểu 200px */
+    overflow-x: auto;           /* Cho phép cuộn ngang nếu các cột không đủ không gian */
+    column-gap: 1rem;           /* Khoảng cách giữa các cột */
+    padding-bottom: 1rem;       /* Khoảng cách dưới cùng của container */
+    white-space: nowrap;        /* Không cho phép các phần tử xuống dòng */
   }
 
+  /* Đảm bảo từng phần tử con trong các container có chiều rộng tối thiểu */
   .products__container > *,
   .showcase__container > *,
   .footer__container > *,
   .login-register__container > *,
   .details__container > * {
-    min-width: 200px;           /* Đảm bảo mỗi phần tử có chiều rộng tối thiểu */
+    min-width: 200px;           /* Mỗi phần tử có chiều rộng tối thiểu là 200px */
   }
 
+  /* Đệm trong cho tiêu đề tab và nội dung tab */
   .tab__header,
   .tab__body {
-    padding: 0.75rem;
+    padding: 0.75rem; /* Tạo khoảng cách bên trong các phần tử */
   }
 
+  /* Bảng so sánh có thể cuộn ngang, đảm bảo hiển thị đầy đủ */
   .compare__table {
-    overflow-x: auto;           /* Cho phép cuộn ngang bảng */
-    display: block;             /* Đảm bảo bảng có thể cuộn */
+    overflow-x: auto;           /* Cho phép cuộn ngang */
+    display: block;             /* Chuyển thành block để cuộn dễ dàng hơn */
   }
 
+  /* Các hàng trong bảng hiển thị trên cùng một dòng */
   .compare__table tr {
-    display: inline-block;      /* Hiển thị các hàng trên cùng một dòng */
+    display: inline-block;      /* Hiển thị các hàng cùng một dòng để cuộn dễ dàng */
   }
 
+  /* Phần tử category có thêm khoảng cách bên dưới */
   .category__item {
-    padding-bottom: 1rem;
+    padding-bottom: 1rem; /* Khoảng cách dưới mỗi phần tử */
   }
 
+  /* Tổng tiền giỏ hàng có thêm đệm trong */
   .cart__total {
-    padding: 1.25rem;
+    padding: 1.25rem; /* Đệm trong giữa nội dung tổng tiền và viền */
   }
 
+  /* Thanh tìm kiếm đảm bảo không tràn ra ngoài màn hình */
   .header__search {
-    max-width: 100%;            /* Đảm bảo thanh tìm kiếm không bị tràn */
+    max-width: 100%; /* Chiều rộng tối đa là 100% màn hình */
   }
 
+  /* Nội dung tab trong phần tài khoản có thể cuộn ngang */
   .accounts .tab__body {
-    overflow-x: auto;           /* Cho phép cuộn ngang cho nội dung tab */
+    overflow-x: auto; /* Cho phép cuộn ngang khi nội dung vượt quá không gian */
   }
 }
 
+/* Cho màn hình rất nhỏ (<350px) */
 @media screen and (max-width: 350px) {
+  /* Kích thước nút hành động nhỏ hơn */
   .action__btn {
-    width: 34px;
-    height: 34px;
-    line-height: 36px;
+    width: 34px;            /* Chiều rộng nút */
+    height: 34px;           /* Chiều cao nút */
+    line-height: 36px;      /* Canh giữa nội dung bên trong nút */
   }
 
+  /* Vị trí nút giỏ hàng được điều chỉnh */
   .cart__btn {
-    bottom: 1.4rem;
-    right: 1.25rem;
+    bottom: 1.4rem;         /* Cách đáy 1.4rem */
+    right: 1.25rem;         /* Cách phải 1.25rem */
   }
 
+  /* Hiển thị khoảng cách cột nhỏ hơn trong showcase */
   .showcase__item {
-    column-gap: 1rem;
+    column-gap: 1rem;       /* Khoảng cách giữa các mục trong showcase */
   }
 
+  /* Kích thước hình ảnh trong showcase giảm */
   .showcase__img {
-    width: 70%;
+    width: 70%;             /* Hình ảnh chiếm 70% chiều rộng */
   }
 
+  /* Nội dung showcase giảm chiều rộng phù hợp */
   .showcase__content {
-    width: calc(100% - 86px);
+    width: calc(100% - 86px); /* Chiều rộng là tổng chiều rộng trừ đi 86px */
   }
 
+  /* Ẩn các nút điều khiển Swiper */
   .swiper-button-next,
   .swiper-button-prev {
-    display: none;
+    display: none; /* Không hiển thị nút điều khiển */
   }
 
+  /* Bảng hiển thị toàn bộ ô trên một dòng */
   .compare__table tr th,
   .cart__total-table tr td {
-    display: block;
-    width: 100%;
+    display: block; /* Mỗi ô hiển thị thành một block riêng biệt */
+    width: 100%;    /* Chiều rộng ô là 100% */
   }
 
+  /* Các hành động giỏ hàng căn giữa */
   .cart__actions {
-    justify-content: center;
+    justify-content: center; /* Căn giữa các hành động */
   }
 
+  /* Ẩn hình ảnh trên trang chủ */
   .home__img {
-    display: none;
+    display: none; /* Ẩn toàn bộ hình ảnh */
   }
 
+  /* Thanh tìm kiếm tối đa là 270px */
   .header__search {
-    max-width: 270px;
+    max-width: 270px; /* Giới hạn chiều rộng thanh tìm kiếm */
   }
 }
