@@ -1377,21 +1377,26 @@
         </div>
       </section>
               
-       <!--=============== REVIEW =====================-->
+       <!--=============== ĐÁNH GIÁ KHÁCH HÀNG =====================-->
        <section id="customer-reviews" class="comments-gallery container section">
+         <!-- Tiêu đề chính của phần đánh giá khách hàng -->
         <h3 class="section__title"><span>ĐÁNH GIÁ</span> CỦA KHÁCH HÀNG</h3>
         <p class="section__subtitle">Hãy Xem Các Khách Hàng Nói Gì Về Chic  <i class="fa-solid fa-comment"></i></p>
-        <div class="comments__container swiper">
+        <!-- Container cho Swiper slider chứa các đánh giá -->
+         <div class="comments__container swiper">
           <div class="swiper-wrapper">
             <!-- Slide 1 -->
             <div class="swiper-slide">
               <div class="comment">
+                 <!-- Hình ảnh sản phẩm trong phần đánh giá -->
                 <div class="comment-image">
                   <img src="assets/img/urbanxmas.png" alt="Product Image" class="product-img" />
                 </div>
+                <!-- Phần nội dung đánh giá của khách hàng -->
                 <div class="comment-text">
                   <pre><strong>Mỹ Hương:</strong> Sản phẩm dễ thương, thuận tiện sử dụng 
                     rất phù hợp để làm quà tặng bạn bè!</pre>
+                  <!-- Hiển thị số sao đánh giá của khách hàng -->
                     <div class="stars">
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
@@ -1406,12 +1411,15 @@
             <!-- Slide 2 -->
             <div class="swiper-slide">
               <div class="comment">
+                 <!-- Hình ảnh sản phẩm trong phần đánh giá -->
                 <div class="comment-image">
                   <img src="assets/img/bellinixmas.png" alt="Product Image" class="product-img" />
                 </div>
+                 <!-- Phần nội dung đánh giá của khách hàng -->
                 <div class="comment-text">
                   <pre><strong>Yahan:</strong> Shop tư vấn nhiệt tình, giao hàng nhanh
                     sản phẩm đóng gói rất chỉnh chu</pre>
+                   <!-- Hiển thị số sao đánh giá của khách hàng -->
                     <div class="stars">
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
@@ -1426,12 +1434,15 @@
             <!-- Slide 3 -->
             <div class="swiper-slide">
               <div class="comment">
+                   <!-- Hình ảnh sản phẩm trong phần đánh giá -->
                 <div class="comment-image">
                   <img src="assets/img/shirleyxmas.png" alt="Product Image" class="product-img" />
                 </div>
+                <!-- Phần nội dung đánh giá của khách hàng -->
                 <div class="comment-text">
                   <pre><strong>Unnhi:</strong> Sản phẩm thời trang phù hợp với giới trẻ
                   trang trí rất dễ thương, độc đáo</pre>
+                  <!-- Hiển thị số sao đánh giá của khách hàng -->
                   <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -1446,12 +1457,15 @@
             <!-- Slide 4 -->
             <div class="swiper-slide">
               <div class="comment">
+                   <!-- Hình ảnh sản phẩm trong phần đánh giá -->
                 <div class="comment-image">
                   <img src="assets/img/urbanchic.png" alt="Product Image" class="product-img" />
                 </div>
+                <!-- Phần nội dung đánh giá của khách hàng -->
                 <div class="comment-text">
                   <pre><strong>Miannas:</strong> Sản phẩm được đóng gói rất kỹ lưỡng
                   shop có nhiều chương trình giảm giá thú vị</pre>
+                  <!-- Hiển thị số sao đánh giá của khách hàng -->
                   <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -1463,10 +1477,10 @@
               </div>
             </div>
       
-            <!-- Thêm các slide bình luận khác ở đây... -->
+           
           </div>
       
-          <!-- Pagination -->
+           <!-- Phần điều hướng cho Swiper slider -->
           <div class="swiper-pagination"></div>
         </div>
         <!-- Form thêm bình luận -->
@@ -1480,66 +1494,62 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.1/swiper-bundle.min.js"></script>
     
     <script>
-        // Initialize Swiper
+        // Initialize Swiper khi DOM được tải xong
         document.addEventListener('DOMContentLoaded', function() {
             const swiper = new Swiper('.comments__container', {
-                // Optional parameters
+                // Tùy chọn Swiper: lặp lại vô hạn
                 loop: true,
                 autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
+                    delay: 5000, // Tự động chuyển slide sau mỗi 5 giây
+                    disableOnInteraction: false, // Không tắt autoplay khi người dùng tương tác
                 },
                 
-                // Pagination
+                // Hiển thị pagination để chuyển slide
                 pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
+                    el: '.swiper-pagination',  // Chọn phần tử pagination
+                    clickable: true,          // Cho phép click vào pagination để chuyển slide
                 },
                 
-                // Responsive breakpoints
+                // Cấu hình responsive breakpoints
                 breakpoints: {
-                    // when window width is >= 320px
-                    320: {
-                        slidesPerView: 1,
-                        spaceBetween: 20
+                   320: {
+                      slidesPerView: 1,    // Hiển thị 1 slide khi màn hình >= 320px
+                      spaceBetween: 20,    // Khoảng cách giữa các slide là 20px
                     },
-                    // when window width is >= 768px
                     768: {
-                        slidesPerView: 1,
-                        spaceBetween: 30
+                      slidesPerView: 1,    // Hiển thị 1 slide khi màn hình >= 768px
+                      spaceBetween: 30,    // Khoảng cách giữa các slide là 30px
                     },
-                    // when window width is >= 1024px
                     1024: {
-                        slidesPerView: 1,
-                        spaceBetween: 40
-                    }
-                },
+                      slidesPerView: 1,    // Hiển thị 1 slide khi màn hình >= 1024px
+                      spaceBetween: 40,    // Khoảng cách giữa các slide là 40px
+                    },
+                  },
                 
                 // Navigation
                 navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                   nextEl: '.swiper-button-next', // Nút chuyển tới slide tiếp theo
+                   prevEl: '.swiper-button-prev', // Nút chuyển về slide trước đó
                 }
             });
 
-            // Comment Form Handling
+            // Xử lý form bình luận
             const commentForm = document.getElementById('comment-form');
             const newCommentTextarea = document.getElementById('new-comment');
 
             commentForm.addEventListener('submit', function(e) {
-                e.preventDefault();
+                e.preventDefault();    // Ngăn chặn reload trang khi submit form
                 
-                // Basic validation
+                // Kiểm tra nếu textarea trống
                 if (newCommentTextarea.value.trim() === '') {
                     alert('Vui lòng nhập bình luận của bạn.');
                     return;
                 }
 
-                // Here you would typically send the comment to a server
-                // For this example, we'll just show an alert
+                // Hiển thị thông báo gửi thành công (thay vì gửi lên server trong ví dụ này)
                 alert('Bình luận của bạn đã được gửi. Cảm ơn!');
                 
-                // Clear the textarea
+                // Xóa nội dung trong textarea sau khi gửi thành công
                 newCommentTextarea.value = '';
             });
         });
