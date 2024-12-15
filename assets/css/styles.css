@@ -1131,8 +1131,8 @@ body {
   
 }
 /*Định dạng Swiper*/
-}
-swiper {
+
+.swiper {
   overflow: initial; /* Cho phép nội dung tràn ra ngoài vùng hiển thị */
 }
 
