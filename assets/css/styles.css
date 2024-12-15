@@ -2493,7 +2493,9 @@ body {
   display: inline-block; /* Hiển thị nút như phần tử dòng */
   padding: 0.375rem 0.75rem 0.5rem; /* Padding cho nút */
   color: var(--text-color); /* Màu chữ */
+  position: relative; /* Vị trí tuyệt đối */
   font-size: var(--small-font-size); /* Kích thước chữ */
+  transition: border-color 0.3s ease;
   font-weight: normal; /* Độ đậm mặc định */
   transition: color 0.5s ease, transform 0.5s ease; /* Hiệu ứng mượt cho màu sắc và kích thước */
 }
