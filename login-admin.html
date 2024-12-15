@@ -126,22 +126,49 @@
     </nav>
   </header>
 
-  <!--=============== LOGIN-ADMIN ===============-->
-  <section class="login-register section--lg">
-    <div class="login-register__container container grid">
-      <div class="login">
-        <h3 class="section__title" style="text-align: center; margin-right: 100px ">Đăng nhập</h3>
-        <form class="form grid" onsubmit="handleLogin(event)">
-          <input type="text" id="username" placeholder="Email / Tên tài khoản" class="form__input" required />
-          <input type="password" id="password" placeholder="Mật khẩu" class="form__input" required />
-
-          <div class="form__btn">
-            <button type="submit" class="btn">Đăng nhập</button>
-          </div>
-        </form>
-      </div>
+ <!--=============== LOGIN-ADMIN ===============-->
+<!-- Phần đăng nhập dành cho quản trị viên -->
+<section class="login-register section--lg">
+  <!-- Container chính chứa nội dung đăng nhập -->
+  <div class="login-register__container container grid">
+    <!-- Khối chứa biểu mẫu đăng nhập -->
+    <div class="login">
+      <!-- Tiêu đề phần đăng nhập -->
+      <h3 class="section__title" style="text-align: center; margin-right: 100px;">
+        Đăng nhập
+      </h3>
+      
+      <!-- Biểu mẫu đăng nhập -->
+      <form class="form grid" onsubmit="handleLogin(event)">
+        <!-- Trường nhập liệu cho tên tài khoản hoặc email -->
+        <input 
+          type="text" 
+          id="username" 
+          placeholder="Email / Tên tài khoản" 
+          class="form__input" 
+          required 
+        />
+        
+        <!-- Trường nhập liệu cho mật khẩu -->
+        <input 
+          type="password" 
+          id="password" 
+          placeholder="Mật khẩu" 
+          class="form__input" 
+          required 
+        />
+        
+        <!-- Nút gửi biểu mẫu -->
+        <div class="form__btn">
+          <button type="submit" class="btn">
+            Đăng nhập
+          </button>
+        </div>
+      </form>
     </div>
-  </section>
+  </div>
+</section>
+
 
     <!--=============== PHẦN ĐĂNG KÝ NHẬN THƯ ===============-->
     <section class="newsletter section home__newsletter">
