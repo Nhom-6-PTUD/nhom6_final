@@ -1387,39 +1387,64 @@
 
   <script>
     /*=============== Xử lý sự kiện nhấn THÊM VÀO WISHLIST/GIỎ HÀNG với nhiều nút ===============*/
-    document.addEventListener("DOMContentLoaded", function () {
-      const addToWishlistBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Wishlist"]');
-      // Lấy tất cả các nút có aria-label "Thêm vào Wishlist"
+ document.addEventListener('DOMContentLoaded', function() {
+  // Lấy tất cả các nút "Thêm vào Wishlist"
+  const addToWishlistBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Wishlist"]');
+  
+  addToWishlistBtns.forEach(function(button) {
+    button.addEventListener('click', function(e) {
+      e.preventDefault(); // Ngừng hành động mặc định của liên kết
 
-      addToWishlistBtns.forEach(function (button) {
-        button.addEventListener("click", function (e) {
-          e.preventDefault();
-          // Ngăn hành động mặc định của nút
-          alert("Đã thêm vào Wishlist thành công!");
-          // Hiển thị thông báo qua `alert`
-        });
-      });
+      // Tạo phần tử thông báo
+      const successMessage = document.createElement('div');
+      successMessage.textContent = 'Đã thêm vào Wishlist thành công!';
+      successMessage.classList.add('success-message'); // Thêm lớp CSS cho hiệu ứng
+
+      // Thêm thông báo vào body
+      document.body.appendChild(successMessage);
+
+      // Hiển thị thông báo với hiệu ứng
+      setTimeout(function() {
+        successMessage.classList.add('show');
+      }, 50); // Hiển thị với hiệu ứng sau khi tạo phần tử
+
+      // Tự động ẩn sau 3 giây
+      setTimeout(function() {
+        successMessage.classList.remove('show'); // Ẩn thông báo với hiệu ứng
+      }, 2000); // Ẩn sau 3 giây
     });
+  });
+});
 
-    const addToCartBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Giỏ hàng"]');
-    // Chọn tất cả các nút có aria-label "Thêm vào Giỏ hàng"
+  
+  document.addEventListener('DOMContentLoaded', function() {
+  // Lấy tất cả các nút "Thêm vào Wishlist"
+  const addToWishlistBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Wishlist"]');
+  
+  addToWishlistBtns.forEach(function(button) {
+    button.addEventListener('click', function(e) {
+      e.preventDefault(); // Ngừng hành động mặc định của liên kết
 
-    addToCartBtns.forEach(function (btn) {
-      btn.addEventListener("click", function (event) {
-        event.preventDefault();
-        // Ngăn hành động mặc định
+      // Tạo phần tử thông báo
+      const successMessage = document.createElement('div');
+      successMessage.textContent = 'Đã thêm vào Wishlist thành công!';
+      successMessage.classList.add('success-message'); // Thêm lớp CSS cho hiệu ứng
 
-        const reviews = btn.getAttribute("data-reviews") || 0;
-        // Lấy số lượt đánh giá từ thuộc tính data-reviews (nếu có)
+      // Thêm thông báo vào body
+      document.body.appendChild(successMessage);
 
-        const inventory = btn.getAttribute("data-inventory") || 0;
-        // Lấy số lượng tồn kho từ thuộc tính data-inventory (nếu có)
+      // Hiển thị thông báo với hiệu ứng
+      setTimeout(function() {
+        successMessage.classList.add('show');
+      }, 50); // Hiển thị với hiệu ứng sau khi tạo phần tử
 
-        alert(`Đã thêm vào giỏ hàng thành công! 
-      Sản phẩm này còn ${inventory} sản phẩm trong kho.`);
-        // Hiển thị thông báo số lượng tồn kho qua `alert`
-      });
+      // Tự động ẩn sau 3 giây
+      setTimeout(function() {
+        successMessage.classList.remove('show'); // Ẩn thông báo với hiệu ứng
+      }, 2000); // Ẩn sau 3 giây
     });
+  });
+});
   </script>
 
   <script>
