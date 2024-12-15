@@ -1844,18 +1844,22 @@ window.onscroll = function() {
 
 
 <script>
-//=========TẠO ALERT KHI NHẤN VÀO NÚT THÊM VÀO WISHLIST=====//
-  document.addEventListener('DOMContentLoaded', function() {
-  // Lấy tất cả các nút "Thêm vào Wishlist"
-  const addToWishlistBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Wishlist"]');
-  
-  addToWishlistBtns.forEach(function(button) {
-    button.addEventListener('click', function(e) {
-      e.preventDefault(); // Ngừng hành động mặc định của liên kết
+//=========TẠO ALERT KHI NHẤN VÀO NÚT THÊM VÀO GIỎ HÀNG=====//
+document.addEventListener('DOMContentLoaded', function() {
+  // Chọn tất cả các nút "Thêm vào Giỏ hàng"
+  const addToCartBtns = document.querySelectorAll('.action__btn[aria-label="Thêm vào Giỏ hàng"]');
+
+  addToCartBtns.forEach(function(btn) {
+    btn.addEventListener("click", function(event) {
+      event.preventDefault(); // Ngừng hành động mặc định của liên kết
+
+      // Lấy số lượng tồn kho từ thuộc tính data-inventory
+      const inventory = btn.getAttribute("data-inventory") || 0;
 
       // Tạo phần tử thông báo
       const successMessage = document.createElement('div');
-      successMessage.textContent = 'Đã thêm vào Wishlist thành công!';
+      successMessage.innerHTML = `Đã thêm vào giỏ hàng thành công!<br>Còn lại ${inventory} sản phẩm trong kho.`;
+      
       successMessage.classList.add('success-message'); // Thêm lớp CSS cho hiệu ứng
 
       // Thêm thông báo vào body
