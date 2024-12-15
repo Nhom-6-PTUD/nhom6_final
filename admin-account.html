@@ -21,37 +21,42 @@
 <link rel="shortcut icon" href="assets/images/favicon.ico" />
 
 
-  <body>
-    <div class="container-scroller">
-      <!-- partial:partials/_navbar.html -->
-      <nav
-        class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row"
+ <body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav
+      class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row"
+    >
+      <!-- Thêm logo thương hiệu -->
+      <div
+        class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center"
       >
-         <!-- Thêm logo thương hiệu -->
-         <div
-         class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center"
-       >
-         <a class="navbar-brand style-logo" href="index.html"> <!--Khi nhấn vào logo sẽ điều hướng về trang chủ-->
-           <img src="assets/img/1.png" alt="logo" class="logo" />
-         </a>
-         
-       </div>
+        <!-- Khi nhấn vào logo sẽ điều hướng về trang chủ -->
+        <a class="navbar-brand style-logo" href="index.html">
+          <img src="assets/img/1.png" alt="logo" class="logo" />
+        </a>
+      </div>
 
-       <div class="navbar-menu-wrapper d-flex align-items-stretch">
-         <div class="search-field d-none d-md-block">
-           <form class="d-flex align-items-center h-100" action="#">
-             <div class="input-group">
-               <div class="input-group-prepend bg-transparent">
-                 <i class="input-group-text border-0 mdi mdi-magnify"></i>
-               </div>
-               <input
-                 type="text"
-                 class="form-control bg-transparent border-0"
-                 placeholder="Bạn muốn tìm kiếm..."
-               />
-             </div>
-           </form>
-         </div>
+      <!-- Phần menu điều hướng -->
+      <div class="navbar-menu-wrapper d-flex align-items-stretch">
+        <!-- Ô tìm kiếm (hiển thị từ màn hình có kích thước trung bình trở lên) -->
+        <div class="search-field d-none d-md-block">
+          <form class="d-flex align-items-center h-100" action="#">
+            <div class="input-group">
+              <!-- Biểu tượng kính lúp bên cạnh ô tìm kiếm -->
+              <div class="input-group-prepend bg-transparent">
+                <i class="input-group-text border-0 mdi mdi-magnify"></i>
+              </div>
+              <!-- Ô nhập liệu để người dùng nhập từ khóa tìm kiếm -->
+              <input
+                type="text"
+                class="form-control bg-transparent border-0"
+                placeholder="Bạn muốn tìm kiếm..."
+              />
+            </div>
+          </form>
+        </div>
+
             <!-- Danh sách các mục menu  -->
          <ul class="navbar-nav navbar-nav-right">
            <li class="nav-item nav-profile dropdown">
