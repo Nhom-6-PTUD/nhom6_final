@@ -1,45 +1,95 @@
 {
-  "name": "purple_admin",
-  "version": "3.0.0",
-  "description": "",
-  "main": "index.html",
-  "dependencies": {
-    "@mdi/font": "3.7.95",
-    "bootstrap": "^5.1.3",
-    "chart.js": "^2.8.0",
-    "jquery": "^3.4.1",
-    "perfect-scrollbar": "^1.4.0",
-    "popper.js": "^1.15.0"
+  "name": "purple_admin", 
+  // Tên của dự án hoặc ứng dụng này. Đây là tên được sử dụng trong các lệnh npm và để nhận diện dự án.
+  
+  "version": "3.0.0", 
+  // Phiên bản của dự án. Đây là thông tin quan trọng trong quá trình phát triển và quản lý các phiên bản của dự án.
+  
+  "description": "", 
+  // Mô tả ngắn gọn về dự án. Trường này có thể để trống hoặc điền thêm thông tin mô tả về dự án của bạn.
+  
+  "main": "index.html", 
+  // Tệp chính của ứng dụng hoặc thư mục, trong trường hợp này là `index.html`. Đây là file được sử dụng làm điểm khởi đầu của dự án.
+
+  "dependencies": { 
+    // Các thư viện và công cụ cần thiết cho dự án trong môi trường sản xuất.
+    "@mdi/font": "3.7.95", 
+    // Thư viện icon Material Design Icons.
+    "bootstrap": "^5.1.3", 
+    // Thư viện CSS phổ biến cho thiết kế giao diện người dùng.
+    "chart.js": "^2.8.0", 
+    // Thư viện JavaScript để tạo biểu đồ.
+    "jquery": "^3.4.1", 
+    // Thư viện JavaScript hỗ trợ thao tác DOM và AJAX.
+    "perfect-scrollbar": "^1.4.0", 
+    // Thư viện tạo thanh cuộn đẹp mắt và mượt mà cho các phần tử.
+    "popper.js": "^1.15.0" 
+    // Thư viện để quản lý các popups, tooltips trong Bootstrap.
   },
-  "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "compass-mixins": "^0.12.10",
-    "del": "^5.0.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-inject": "5.0.2",
-    "gulp-inject-partials": "^1.0.5",
-    "gulp-notify": "^3.2.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-prettify": "^0.5.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-util": "^3.0.8",
-    "merge-stream": "^2.0.0",
-    "minimatch": "^3.0.4",
-    "require-dir": "^1.2.0",
-    "run-sequence": "^2.2.1"
+  
+  "devDependencies": { 
+    // Các công cụ và thư viện cần thiết chỉ trong môi trường phát triển (build, test, v.v.).
+    "browser-sync": "^2.26.7", 
+    // Công cụ tự động làm mới trình duyệt khi thay đổi tệp trong quá trình phát triển.
+    "compass-mixins": "^0.12.10", 
+    // Thư viện cung cấp các mixins cho SASS (CSS preprocessor).
+    "del": "^5.0.0", 
+    // Thư viện giúp xóa các tệp hoặc thư mục.
+    "gulp": "^4.0.2", 
+    // Task runner phổ biến cho tự động hóa các tác vụ như biên dịch, nén, v.v.
+    "gulp-autoprefixer": "^6.1.0", 
+    // Thêm các tiền tố CSS tự động cho các trình duyệt khác nhau.
+    "gulp-clean-css": "^4.2.0", 
+    // Tự động nén và tối ưu hóa file CSS.
+    "gulp-concat": "^2.6.1", 
+    // Kết hợp nhiều file lại thành một file duy nhất.
+    "gulp-htmlmin": "^5.0.1", 
+    // Nén các file HTML để giảm dung lượng.
+    "gulp-inject": "5.0.2", 
+    // Tự động tiêm các tệp CSS và JS vào trong file HTML.
+    "gulp-inject-partials": "^1.0.5", 
+    // Tiêm các file partials (mảnh nhỏ của HTML) vào HTML chính.
+    "gulp-notify": "^3.2.0", 
+    // Hiển thị thông báo khi một task hoàn thành hoặc có lỗi.
+    "gulp-plumber": "^1.2.1", 
+    // Giúp tránh việc dừng gulp khi gặp lỗi.
+    "gulp-prettify": "^0.5.0", 
+    // Format các file HTML, CSS, JS để mã dễ đọc hơn.
+    "gulp-rename": "^1.4.0", 
+    // Đổi tên file trong quá trình xử lý.
+    "gulp-replace": "^1.0.0", 
+    // Tìm và thay thế văn bản trong file.
+    "gulp-sass": "^4.0.2", 
+    // Biên dịch tệp SASS thành CSS.
+    "gulp-sourcemaps": "^2.6.5", 
+    // Tạo các sourcemap cho tệp CSS/JS để dễ dàng gỡ lỗi.
+    "gulp-util": "^3.0.8", 
+    // Cung cấp các tiện ích cho việc phát triển với gulp.
+    "merge-stream": "^2.0.0", 
+    // Hợp nhất các stream của Gulp.
+    "minimatch": "^3.0.4", 
+    // Thư viện hỗ trợ việc tìm kiếm và so khớp tệp tin.
+    "require-dir": "^1.2.0", 
+    // Tự động nạp các thư mục chứa module trong dự án.
+    "run-sequence": "^2.2.1" 
+    // Đảm bảo các task gulp chạy theo đúng trình tự.
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+
+  "scripts": { 
+    // Định nghĩa các lệnh mà bạn có thể chạy trong terminal bằng cách sử dụng `npm run <script-name>`.
+    "test": "echo \"Error: no test specified\" && exit 1" 
+    // Lệnh kiểm tra mặc định (nếu không có kiểm tra cụ thể, sẽ in thông báo lỗi).
   },
-  "author": "bootstrapdash",
-  "url": "http://www.bootstrapdash.com/",
-  "copyright": "",
-  "license": ""
+
+  "author": "bootstrapdash", 
+  // Tên tác giả hoặc tổ chức phát triển dự án.
+
+  "url": "http://www.bootstrapdash.com/", 
+  // Liên kết đến trang web hoặc tài liệu của tác giả.
+
+  "copyright": "", 
+  // Thông tin bản quyền, có thể để trống hoặc điền vào nếu cần.
+
+  "license": "" 
+  // Thông tin về giấy phép của dự án (ví dụ: MIT, GPL). 
 }
