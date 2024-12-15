@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    <!-- Khai báo phiên bản HTML5 -->
     <meta charset="utf-8" />
+    <!-- Thiết lập viewport để giao diện hiển thị tốt trên các thiết bị -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title> Admin</title>
-    <!-- plugins:css -->
+    <!-- Tiêu đề trang web -->
+    <title>Admin</title>
+    <!-- Liên kết đến các plugin CSS cần thiết -->
     <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css" />
     <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
+    <!-- Liên kết đến file CSS tùy chỉnh dành riêng cho giao diện admin -->
     <link rel="stylesheet" href="assets/css/styles-admin.css" />
-    <!-- End layout styles -->
+    <!-- Kết thúc phần định dạng giao diện -->
+    <!-- Liên kết đến favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico" />
   </head>
   <style>
-   * {
+    /* Đặt font chữ mặc định cho toàn bộ trang là Times New Roman */
+    * {
       font-family: "Times New Roman", Times, serif !important;
     }
+    /* Định dạng kích thước logo chính */
     .navbar .navbar-brand-wrapper .navbar-brand img {
       width: 150px;
       height: 100px !important;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease; /* Hiệu ứng phóng to khi hover */
     }
 
+    /* Định dạng kích thước logo nhỏ */
     .logo-mini {
-      width: 50px; /* Kích thước logo nhỏ */
+      width: 50px;
       height: auto;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease; /* Hiệu ứng phóng to khi hover */
     }
 
+    /* Hiệu ứng phóng to logo chính và logo nhỏ khi người dùng di chuột vào */
     .logo:hover,
     .logo-mini:hover {
-      transform: scale(1.1);
+      transform: scale(1.1); /* Phóng to 10% */
     }
 
+    /* Định dạng khoảng cách padding cho vùng chứa logo */
     .navbar-brand-wrapper {
       padding: 10px 0;
     }
 
+    /* Căn giữa logo trong vùng chứa */
     .navbar-brand {
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
+    /* Ẩn logo chính và chỉ hiển thị logo nhỏ trên màn hình nhỏ (dưới 768px) */
     @media (max-width: 768px) {
       .logo {
         display: none;
@@ -54,7 +65,8 @@
         display: block;
       }
     }
-   
+  </style>
+
 
     .table-striped tbody tr:nth-child(odd) {
       background-color: #f9f9f9;
