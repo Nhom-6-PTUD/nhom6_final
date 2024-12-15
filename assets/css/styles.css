@@ -917,12 +917,12 @@ body {
 
 #custom-categories .section__title {
   text-align: left;     /* Căn trái tiêu đề */
-  margin-left: 25rem;   /* Cách lề trái 25rem */
+  margin-left: 4rem;   /* Cách lề trái 25rem */
 }
 
 #custom-categories .section__subtitle {
   text-align: left;      /* Căn trái tiêu đề */
-  margin-left: 25.5rem;  /* Cách lề trái 25.5rem */
+  margin-left: 4.5rem;  /* Cách lề trái 25.5rem */
 }
 
 .custom-categories-grid {
