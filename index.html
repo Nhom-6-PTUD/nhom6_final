@@ -184,7 +184,9 @@
      <main class="main">
       <!--=============== BANNER KHUYẾN MÃI ===============-->
         <section class="home section">
+          <!-- Slider chứa các slide khuyến mãi -->
           <div class="home__slider">
+            <!-- Slide 1: Khuyến mãi Ngày Phụ Nữ Việt Nam -->
               <div class="home__slide active">
                   <div class="home__container container grid">
                       <div class="home__content">
@@ -195,14 +197,16 @@
                           <p class="home__description">
                               Giảm giá 10% tổng giá trị đơn hàng
                           </p>
+                        <!-- Nút điều hướng đến trang mua hàng -->
                           <a href="shop.html" class="btn">Mua Ngay</a>
                       </div>
+                     <!-- Hình ảnh minh họa cho khuyến mãi -->
                       <div class="home__image-container">
                           <img src="assets/img/20thang10.png" class="home__img" alt="Black Friday Sale" />
                       </div>
                   </div>
               </div>
-      
+              <!-- Slide 2: Khuyến mãi ngày đôi 12/12 -->
               <div class="home__slide">
                   <div class="home__container container grid">
                       <div class="home__content">
@@ -213,14 +217,16 @@
                           <p class="home__description">
                               Tưng bừng săn deal cùng Chic
                           </p>
+                          <!-- Nút điều hướng đến trang mua hàng -->
                           <a href="shop.html" class="btn">Khám Phá Ngay</a>
                       </div>
+                    <!-- Hình ảnh minh họa cho khuyến mãi -->
                       <div class="home__image-container">
                           <img src="assets/img/sieusale.png" class="home__img" alt="Winter Collection" />
                       </div>
                   </div>
               </div>
-      
+              <!-- Slide 3: Khuyến mãi cuối năm -->
               <div class="home__slide">
                   <div class="home__container container grid">
                       <div class="home__content">
@@ -231,19 +237,21 @@
                           <p class="home__description">
                               Ưu đãi lên đến 30% cho các sản phẩm mùa lễ hội
                           </p>
+                        <!-- Nút điều hướng đến trang mua hàng -->
                           <a href="shop.html" class="btn">Sắm Ngay</a>
                       </div>
+                    <!-- Hình ảnh minh họa cho khuyến mãi -->
                       <div class="home__image-container">
                           <img src="assets/img/xmasdeal.png" class="home__img" alt="Tech Collection" />
                       </div>
                   </div>
               </div>
-              
+              <!-- Nút điều hướng slider (trái và phải) -->
               <div class="home__navigation">
                   <div class="home__prev-btn">&lt;</div>
                   <div class="home__next-btn">&gt;</div>
               </div>
-              
+              <!-- Thanh phân trang cho slider -->
               <div class="home__pagination">
                   <span class="home__pagination-dot active"></span>
                   <span class="home__pagination-dot"></span>
@@ -255,6 +263,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.3.1/swiper-bundle.min.js"></script>
   
         <script>
+          // Chờ cho DOM tải xong trước khi chạy script
           document.addEventListener('DOMContentLoaded', () => {
               const slider = document.querySelector('.home__slider');
               const slides = document.querySelectorAll('.home__slide');
@@ -262,45 +271,45 @@
               const prevBtn = document.querySelector('.home__prev-btn');
               const nextBtn = document.querySelector('.home__next-btn');
               
-              let currentSlide = 0;
-              const totalSlides = slides.length;
+              let currentSlide = 0;                    // Chỉ số slide hiện tại
+              const totalSlides = slides.length;       // Tổng số slide
       
-              // Function to show specific slide
+              // Hàm hiển thị slide theo chỉ số
               function showSlide(index) {
-                  // Remove active class from all slides and dots
+                  // Xóa class 'active' khỏi tất cả slide và dot
                   slides.forEach(slide => slide.classList.remove('active'));
                   paginationDots.forEach(dot => dot.classList.remove('active'));
       
-                  // Ensure index wraps around
+                 // Đảm bảo chỉ số luôn nằm trong khoảng hợp lệ
                   currentSlide = (index + totalSlides) % totalSlides;
       
-                  // Add active class to current slide and dot
+                  // Thêm class 'active' cho slide và dot tương ứng
                   slides[currentSlide].classList.add('active');
                   paginationDots[currentSlide].classList.add('active');
               }
       
-              // Next slide function
+              // Hàm chuyển sang slide tiếp theo
               function nextSlide() {
                   showSlide(currentSlide + 1);
               }
       
-              // Previous slide function
+              // Hàm chuyển sang slide trước đó
               function prevSlide() {
                   showSlide(currentSlide - 1);
               }
       
-              // Event listeners for navigation buttons
+              // Thêm sự kiện click cho nút điều hướng
               nextBtn.addEventListener('click', nextSlide);
               prevBtn.addEventListener('click', prevSlide);
       
-              // Event listeners for pagination dots
+              // Thêm sự kiện click cho các dot trong thanh phân trang
               paginationDots.forEach((dot, index) => {
                   dot.addEventListener('click', () => {
                       showSlide(index);
                   });
               });
       
-              // Optional: Auto slide every 5 seconds
+              // Tự động chuyển slide mỗi 5 giây
               setInterval(nextSlide, 5000);
           });
       </script>
