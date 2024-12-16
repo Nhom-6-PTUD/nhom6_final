@@ -4,7 +4,7 @@
 https://nhom-6-ptud.github.io/nhom6_final/<br><br>
 * Repository này là source code **Front-end** của đồ án, truy cập source code **Back-end** tại đây:<br>
 https://github.com/Nhom-6-PTUD/nhom6_backend<br><br>
-* Link Source Code tham khảo:<br>
+* Link source code tham khảo:<br>
 https://github.com/billalben/evara-ecommerce<br><br>
 * Link Figma:<br>
 https://www.figma.com/design/9HvNdB6JpKQBAfRA7LafyX/Final_UDTM%C4%90T<br><br>
@@ -12,7 +12,7 @@ https://www.figma.com/design/9HvNdB6JpKQBAfRA7LafyX/Final_UDTM%C4%90T<br><br>
 # TÊN ĐỀ TÀI: THIẾT KẾ WEBSITE CỬA HÀNG PHỤ KIỆN CHICCHARM
                
 Trong những năm gần đây, với sự phát triển mạnh mẽ của thương mại điện tử, hành vi mua sắm của người tiêu dùng đã thay đổi đáng kể, đặc biệt là sau đại dịch Covid-19. Khi việc mua sắm trực tiếp gặp nhiều hạn chế, người tiêu dùng ngày càng chuyển sang các nền tảng trực tuyến để tìm kiếm và mua sắm các sản phẩm. Điều này tạo cơ hội lớn cho các cửa hàng bán lẻ phát triển kinh doanh qua các website thương mại điện tử, giúp mở rộng tệp khách hàng và nâng cao trải nghiệm mua sắm.<br><br>
-Nhóm chúng em quyết định chọn đề tài “Thiết kế website cửa hàng phụ kiện ChicCharm”, một cửa hàng bán lẻ chuyên kinh doanh các sản phẩm phụ kiện thời trang. 
+Nhóm chúng em quyết định chọn đề tài **“Thiết kế website cửa hàng phụ kiện ChicCharm”**, một cửa hàng bán lẻ chuyên kinh doanh các sản phẩm phụ kiện thời trang. 
 
 ## MÔ TẢ, MỤC TIÊU VÀ ĐỐI TƯỢNG DỰ ÁN
 
@@ -35,12 +35,36 @@ Website ChicCharm sẽ cung cấp các tính năng cơ bản như giới thiệu
 -	**Thanh toán (Checkout)**: Cung cấp các bước thanh toán, bao gồm thông tin giao hàng và phương thức thanh toán.<br>
 -	**Thông tin khách hàng (Account)**: Cho phép người dùng quản lý thông tin cá nhân, theo dõi đơn hàng và cập nhật mật khẩu.<br>
 -	**Đăng nhập/ Đăng ký (Login-Register)**: Cho phép người dùng đăng nhập/đăng ký vào tài khoản cá nhân để quản lý thông tin và đơn hàng.<br>
+- **Trang Admin**: Cho phép quản trị viên theo dõi các sự kiện doanh thu, đơn hàng, số lượng khách và thông báo về các tin nhắn từ khách hàng.
+
+## CÁC TRANG THÀNH PHẦN
+
+➢ Trang chủ: index.html
+
+➢ Chi tiết sản phẩm: details.html
+
+➢ Cửa hàng: shop.html, shop2.html
+
+➢ Giỏ hàng: cart.html
+
+➢ Wishlist: wishlist.html
+
+➢ Thanh toán: checkout.html
+
+➢ Đăng nhập: login.html
+
+➢ Đăng ký: register.html
+
+➢ Tài khoản: accounts.html
+
+➢ Trang admin: login-admin.html, admin.html, admin-account.html, create-product.html, edit-product.html, manageProduct.html
+
 
 ## THÀNH VIÊN
 
-* **Nguyễn Minh Anh - 31221021713**
-* **Phạm Mai Hương Giang - 31221023974**
-* **Nguyễn Hoàng Gia Hân - 31221021102**
-* **Nguyễn Hoàng Gia Hân - 31221021102**
-* **Trần Thị Uyển Nhi - 31221024768**
-* **Phạm Nam Phương - 31221020895**
+* Nguyễn Minh Anh - 31221021713
+* Phạm Mai Hương Giang - 31221023974
+* Nguyễn Hoàng Gia Hân - 31221021102
+* Nguyễn Hoàng Gia Hân - 31221021102
+* Trần Thị Uyển Nhi - 31221024768
+* Phạm Nam Phương - 31221020895
