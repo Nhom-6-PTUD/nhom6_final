@@ -690,6 +690,21 @@
         color: #ff69b4;
         /* Màu chữ hồng */
       }
+      .cart__shipping__total {
+            padding: 25px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-image: url('assets/img/product20.3.png'); /* Thêm hình ảnh nền */
+            background-size: cover; /* Làm cho ảnh phủ kín toàn bộ khung */
+            background-position: center; /* Căn giữa ảnh */
+            background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+            color: white; /* Chữ trắng để dễ nhìn khi có nền tối */
+            border-radius: 8px; /* Viền bo tròn cho cột */
+            text-align: center;
+            width: 50%;
+            max-width: 600px;
+            margin: 0 auto;
+        } 
     </style>
 
     <!-- Phần tử div chứa bảng sản phẩm -->
@@ -814,9 +829,8 @@
           <!-- Form nhập địa chỉ và tính toán phí vận chuyển -->
           <form class="cart__shipping-form">
             <!-- Nhóm trường nhập cho Tỉnh/Thành phố -->
-            <div class="form-group">
+            <div class="form-group" style="margin-bottom: 16px;">
               <label for="country">TỈNH/THÀNH PHỐ *</label>
-              <!-- Dropdown chọn Tỉnh/Thành phố -->
               <select id="country" class="cart__shipping-select">
                 <option value="vn">TP. Hồ Chí Minh</option>
                 <option value="us">Hà Nội</option>
@@ -825,9 +839,8 @@
             </div>
 
             <!-- Nhóm trường nhập cho Quận/Huyện -->
-            <div class="form-group">
+            <div class="form-group" style="margin-bottom: 16px;">
               <label for="city">QUẬN/HUYỆN *</label>
-              <!-- Dropdown chọn Quận/Huyện -->
               <select id="city" class="cart__shipping-select">
                 <option value="hanoi">Quận 1</option>
                 <option value="hcm">Quận 3</option>
@@ -840,15 +853,14 @@
             </div>
 
             <!-- Nhóm trường nhập cho Mã ZIP/Bưu điện -->
-            <div class="form-group">
+            <div class="form-group" style="margin-bottom: 16px;">
               <label for="zip">MÃ ZIP/MÃ BƯU ĐIỆN *</label>
-              <!-- Input để nhập mã ZIP/bưu điện -->
               <input type="text" id="zip" class="cart__shipping-input" />
             </div>
 
             <!-- Nút tính toán phí vận chuyển -->
             <a href="#" class="btn flex btn--md">
-              <i class="fi fi-rs-box-alt"></i> TÍNH TOÁN PHÍ VẬN CHUYỂN
+              <i class="fi fi-rs-box-alt" style="margin-right: 8px;"></i> TÍNH TOÁN PHÍ VẬN CHUYỂN
             </a>
           </form>
 
@@ -890,7 +902,7 @@
 
           <!-- Nút chuyển đến bước thanh toán -->
           <a href="checkout.html" class="btn flex btn--md">
-            <i class="fi fi-rs-box-alt"></i> THANH TOÁN
+            <i class="fi fi-rs-box-alt" style="margin-right: 8px;"></i> THANH TOÁN
           </a>
         </div>
       </div>
@@ -907,8 +919,7 @@
       }
 
       /* Định dạng từng cột */
-      .cart__shipping,
-      .cart__shipping__total {
+      .cart__shipping {
         flex: 1;
         /* Cả hai cột có cùng kích thước */
         padding: 20px;
@@ -940,7 +951,7 @@
       .cart__total-title {
         font-weight: bold;
         /* Định dạng chữ đậm cho tiêu đề của bảng */
-        color: rgb(1, 1, 1);
+        color: white;
         /* Màu chữ trắng */
       }
 
