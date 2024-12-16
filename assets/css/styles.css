@@ -2960,6 +2960,10 @@ td {
   width: fit-content; /* Chiều rộng tự động vừa nội dung */
 }
 
+.cart__shipping .form-group {
+  padding-bottom: 1rem;
+}
+
 /*=============== WISHLIST ===============*/
  /*===== HIỆU ỨNG HEADER DANH SÁCH YÊU THÍCH =====*/
  .wishlist__header {
