@@ -2960,6 +2960,10 @@ td {
   width: fit-content; /* Chiều rộng tự động vừa nội dung */
 }
 
+.cart__shipping .form-group {
+  padding-bottom: 1rem;
+}
+
 /*=============== WISHLIST ===============*/
  /*===== HIỆU ỨNG HEADER DANH SÁCH YÊU THÍCH =====*/
  .wishlist__header {
@@ -3741,8 +3745,7 @@ td {
   .products__container,
   .showcase__container,
   .footer__container,
-  .login-register__container,
-  .details__container {
+  .login-register__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Số cột tự điều chỉnh với chiều rộng tối thiểu 200px */
     overflow-x: auto;           /* Cho phép cuộn ngang nếu các cột không đủ không gian */
