@@ -1,11 +1,13 @@
-# NHÓM 6 | PHÁT TRIỂN ỨNG DỤNG THƯƠNG MẠI ĐIỆN TỬ
+# NHÓM 6 | ĐỒ ÁN CUỐI KỲ MÔN PHÁT TRIỂN ỨNG DỤNG THƯƠNG MẠI ĐIỆN TỬ
 
 * Link Preview:<br>
-https://nhom-6-ptud.github.io/nhom6_final/<br>
-* Repository này là source code Front-end của đồ án, còn source code Back-end tại đây:<br>
-[https://nhom-6-ptud.github.io/nhom6_final/](https://github.com/Nhom-6-PTUD/nhom6_backend)<br>
+https://nhom-6-ptud.github.io/nhom6_final/<br><br>
+* Repository này là source code **Front-end** của đồ án, truy cập source code **Back-end** tại đây:<br>
+https://nhom-6-ptud.github.io/nhom6_final/<br><br>
 * Link Source Code tham khảo:<br>
-https://github.com/billalben/evara-ecommerce<br>
+https://github.com/billalben/evara-ecommerce<br><br>
+* Link Figma:<br>
+https://github.com/billalben/evara-ecommerce<br><br>
 
 ## TÊN ĐỀ TÀI: THIẾT KẾ WEBSITE CỬA HÀNG PHỤ KIỆN CHICCHARM
                
