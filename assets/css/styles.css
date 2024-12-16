@@ -3009,7 +3009,7 @@ td {
   left: 50%;
   transform: translateX(-50%);
   background-color: #fecde9; /* Màu đỏ nhạt */
-  color: #000000; /* Màu đỏ */
+  color: #000000; /* Màu đen */
   padding: 15px 30px;
   border-radius: 8px;
   font-size: 16px;
@@ -3019,19 +3019,24 @@ td {
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease;
+
+  /* Dùng flexbox để căn chỉnh nội dung */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .custom-alert-message.show {
-  display: block;
+  display: flex;
   opacity: 1;
 }
 
 .custom-alert-message button {
-  background-color: #fe8bcc; /* Màu xanh lá */
+  background-color: #fe8bcc; /* Màu hồng */
   color: white;
   border: none;
   padding: 5px 15px;
-  margin-left: 10px;
   cursor: pointer;
   border-radius: 5px;
   font-weight: bold;
@@ -3044,6 +3049,37 @@ td {
 .custom-alert-message button:hover {
   opacity: 0.8;
 }
+
+/* Responsive: Giảm padding và kích thước chữ cho màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .custom-alert-message {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .custom-alert-message button {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Responsive: Hiển thị chiếm toàn chiều ngang và giảm lề cho màn hình nhỏ hơn 480px */
+@media (max-width: 480px) {
+  .custom-alert-message {
+    top: 10px;
+    width: 90%;
+    left: 5%;
+    transform: none;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .custom-alert-message button {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+}
+
 /*=============== THANH TOÁN ===============*/
 /* Container chính của phần thanh toán */
 .checkout__container {
