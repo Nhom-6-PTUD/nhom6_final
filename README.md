@@ -3,15 +3,16 @@
 * Link Preview:<br>
 https://nhom-6-ptud.github.io/nhom6_final/<br><br>
 * Repository này là source code **Front-end** của đồ án, truy cập source code **Back-end** tại đây:<br>
-https://nhom-6-ptud.github.io/nhom6_final/<br><br>
+https://github.com/Nhom-6-PTUD/nhom6_backend<br><br>
 * Link Source Code tham khảo:<br>
 https://github.com/billalben/evara-ecommerce<br><br>
 * Link Figma:<br>
-https://github.com/billalben/evara-ecommerce<br><br>
+https://www.figma.com/design/9HvNdB6JpKQBAfRA7LafyX/Final_UDTM%C4%90T<br><br>
 
-## TÊN ĐỀ TÀI: THIẾT KẾ WEBSITE CỬA HÀNG PHỤ KIỆN CHICCHARM
+# TÊN ĐỀ TÀI: THIẾT KẾ WEBSITE CỬA HÀNG PHỤ KIỆN CHICCHARM
                
-Trong những năm gần đây, với sự phát triển mạnh mẽ của thương mại điện tử, hành vi mua sắm của người tiêu dùng đã thay đổi đáng kể, đặc biệt là sau đại dịch Covid-19. Khi việc mua sắm trực tiếp gặp nhiều hạn chế, người tiêu dùng ngày càng chuyển sang các nền tảng trực tuyến để tìm kiếm và mua sắm các sản phẩm. Điều này tạo cơ hội lớn cho các cửa hàng bán lẻ phát triển kinh doanh qua các website thương mại điện tử, giúp mở rộng tệp khách hàng và nâng cao trải nghiệm mua sắm. Nhóm chúng em quyết định chọn đề tài “Thiết kế website cửa hàng phụ kiện ChicCharm”, một cửa hàng bán lẻ chuyên kinh doanh các sản phẩm phụ kiện thời trang. 
+Trong những năm gần đây, với sự phát triển mạnh mẽ của thương mại điện tử, hành vi mua sắm của người tiêu dùng đã thay đổi đáng kể, đặc biệt là sau đại dịch Covid-19. Khi việc mua sắm trực tiếp gặp nhiều hạn chế, người tiêu dùng ngày càng chuyển sang các nền tảng trực tuyến để tìm kiếm và mua sắm các sản phẩm. Điều này tạo cơ hội lớn cho các cửa hàng bán lẻ phát triển kinh doanh qua các website thương mại điện tử, giúp mở rộng tệp khách hàng và nâng cao trải nghiệm mua sắm.<br><br>
+Nhóm chúng em quyết định chọn đề tài “Thiết kế website cửa hàng phụ kiện ChicCharm”, một cửa hàng bán lẻ chuyên kinh doanh các sản phẩm phụ kiện thời trang. 
 
 ## MÔ TẢ, MỤC TIÊU VÀ ĐỐI TƯỢNG DỰ ÁN
 
