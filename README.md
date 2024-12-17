@@ -65,6 +65,6 @@ Website ChicCharm sẽ cung cấp các tính năng cơ bản như giới thiệu
 * Nguyễn Minh Anh - 31221021713
 * Phạm Mai Hương Giang - 31221023974
 * Nguyễn Hoàng Gia Hân - 31221021102
-* Nguyễn Hoàng Gia Hân - 31221021102
+* Nguyễn Ngọc Mỹ Hương - 31221023633
 * Trần Thị Uyển Nhi - 31221024768
 * Phạm Nam Phương - 31221020895
